@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id "org.jetbrains.kotlin.jvm" version '1.2.31'
+}
+
+group 'gogo'
+version '0.0.1'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    compileOnly files('SlayTheSpire/mods/BaseMod.jar')
+    compileOnly files('SlayTheSpire/ModTheSpire.jar')
+    compileOnly files('SlayTheSpire/desktop-1.0.jar')
+}
+
+jar {
+    from {
+        configurations.runtime.collect { zipTree(it) }
+    }
+}
+task copyJar(type: Copy) {
+    from file("build/libs/demomod-${version}.jar")
+    into file('SlayTheSpire/mods')
+}
+copyJar.dependsOn jar
+
+task run(type: Exec) {
+    workingDir 'SlayTheSpire'
+    commandLine "$workingDir/jre/bin/javaw.exe", "-jar", "$workingDir/ModTheSpire.jar"
+}
+
+run.dependsOn copyJar
