@@ -16,14 +16,14 @@ class CharacterColor internal constructor(
     fun register() {
         BaseMod.addColor(cardColor.toString(),
                 color, color, color, color, color, color, color,
-                "img/512/bg_attack_$name.png",
-                "img/512/bg_skill_$name.png",
-                "img/512/bg_power_$name.png",
-                "img/512/card_${name}_orb.png",
-                "img/1024/bg_attack_$name.png",
-                "img/1024/bg_skill_$name.png",
-                "img/1024/bg_power_$name.png",
-                "img/1024/card_${name}_orb.png")
+                "images/512/cardui/bg_attack_$name.png",
+                "images/512/cardui/bg_skill_$name.png",
+                "images/512/cardui/bg_power_$name.png",
+                "images/512/cardui/card_${name}_orb.png",
+                "images/cardui/1024/bg_attack_$name.png",
+                "images/cardui/1024/bg_skill_$name.png",
+                "images/cardui/1024/bg_power_$name.png",
+                "images/cardui/1024/card_${name}_orb.png")
     }
 
 }

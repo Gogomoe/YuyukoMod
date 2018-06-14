@@ -7,7 +7,7 @@ import basemod.interfaces.PostInitializeSubscriber
 import com.badlogic.gdx.graphics.Texture
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
 import demo.patches.CardColorEnum
-import demo.reimu.Reimu
+import demo.characters.Reimu
 import org.apache.logging.log4j.LogManager
 
 
@@ -15,8 +15,7 @@ import org.apache.logging.log4j.LogManager
 class DemoMod : PostInitializeSubscriber {
 
     companion object {
-        @JvmField
-        val MODNAME = "DemoMod"
+        const val MODNAME = "DemoMod"
         @JvmField
         val AUTHOR = "Gogo"
         @JvmField
@@ -26,25 +25,26 @@ class DemoMod : PostInitializeSubscriber {
 
         @JvmStatic
         fun initialize() {
+            logger.info("========================= DEMOMOD INIT =========================")
+
             val mod = DemoMod()
+
+            logger.info("======================= DEMOMOD INIT DONE ======================")
         }
     }
 
     init {
-        logger.info("========================= DEMOMOD INIT =========================")
 
-        logger.info("subscribe PostInitializeSubscriber")
+        logger.info("subscribing to PostInitializeSubscriber")
         BaseMod.subscribe(this, PostInitializeSubscriber::class.java)
 
         logger.info("creating the color " + CardColorEnum.REIMU_COLOR.toString())
         Reimu.color.register()
 
-        logger.info("======================= DEMOMOD INIT DONE ======================")
-
     }
 
     override fun receivePostInitialize() {
-        val badgeTexture = Texture("img/DemoModBadge.png")
+        val badgeTexture = Texture("images/DemoModBadge.png")
         val panel = ModPanel()
         val label = ModLabel("This mod does not have any settings.",
                 400.0f, 700.0f, panel, { it -> })

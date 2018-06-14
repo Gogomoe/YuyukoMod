@@ -1,0 +1,9 @@
+{
+	"modid": "demomod",
+	"name": "DemoMod",
+	"author_list": ["Gogo"],
+	"description": "A demo mod",
+	"dependencies": ["basemod"],
+	"version": "0.0.0"
+}
+	
