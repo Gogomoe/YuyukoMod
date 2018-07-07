@@ -1,12 +1,12 @@
 package demo.patches
 
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum
-import com.megacrit.cardcrawl.helpers.CardLibrary
+import com.megacrit.cardcrawl.characters.AbstractPlayer
 
-class LibraryTypeEnum {
+class PlayerClassEnum {
     companion object {
         @SpireEnum
         @JvmField
-        var REIMU_COLOR: CardLibrary.LibraryType? = null
+        var REIMU: AbstractPlayer.PlayerClass? = null
     }
 }
