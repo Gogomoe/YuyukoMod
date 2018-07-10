@@ -2,5 +2,29 @@
   "Strike_Reimu": {
     "NAME": "打击",
     "DESCRIPTION": "造成 !D! 点伤害."
+  },
+  "Fantasy Butterflies": {
+    "NAME": "幻之蝶",
+    "DESCRIPTION": "对敌方全体造成 !D! 点伤害 NL 升级所有 蝶"
+  },
+  "Dreamy Sakura": {
+    "NAME": "梦之樱",
+    "DESCRIPTION": "获得 !M! 层 虚化 NL 升级所有 樱"
+  },
+  "Deathly Ground": {
+    "NAME": "死还的大地",
+    "DESCRIPTION": "获得 !M! 层 幽灵 ."
+  },
+  "Faramita's Temptation": {
+    "NAME": "对岸的引诱",
+    "DESCRIPTION": "敌人每有 X+ !M! 生命值 NL 就给予1层 无实体 与 消逝 ."
+  },
+  "Sakura": {
+    "NAME": "樱",
+    "DESCRIPTION": "回复 !M! 点生命,抽1张牌 NL 可多次升级, 重置 ."
+  },
+  "Butterfly": {
+    "NAME": "蝶",
+    "DESCRIPTION": "造成 !D! 点伤害,抽1张牌 NL 可多次升级, 重置 ."
   }
 }

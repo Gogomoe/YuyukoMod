@@ -9,5 +9,8 @@ class CardColorEnum {
         @SpireEnum
         @JvmField
         var REIMU_COLOR: AbstractCard.CardColor? = null
+        @SpireEnum
+        @JvmField
+        var YUYUKO_COLOR: AbstractCard.CardColor? = null
     }
 }

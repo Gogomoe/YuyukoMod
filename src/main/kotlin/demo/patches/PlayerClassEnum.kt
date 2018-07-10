@@ -8,5 +8,8 @@ class PlayerClassEnum {
         @SpireEnum
         @JvmField
         var REIMU: AbstractPlayer.PlayerClass? = null
+        @SpireEnum
+        @JvmField
+        var YUYOKO: AbstractPlayer.PlayerClass? = null
     }
 }

@@ -8,5 +8,8 @@ class LibraryTypeEnum {
         @SpireEnum
         @JvmField
         var REIMU_COLOR: CardLibrary.LibraryType? = null
+        @SpireEnum
+        @JvmField
+        var YUYUKO_COLOR: CardLibrary.LibraryType? = null
     }
 }

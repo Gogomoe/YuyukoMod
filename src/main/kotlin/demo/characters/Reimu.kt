@@ -4,10 +4,6 @@ import basemod.abstracts.CustomPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.core.EnergyManager
 import com.megacrit.cardcrawl.screens.CharSelectInfo
-import demo.CharacterColor
-import demo.cards.reimu.Strike_Reimu
-import demo.cards.reimu.Strike_Reimu.Companion
-import demo.patches.CardColorEnum
 import demo.patches.PlayerClassEnum
 
 class Reimu(name: String, setClass: PlayerClass) : CustomPlayer(
