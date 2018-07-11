@@ -25,7 +25,7 @@ jar {
     }
 }
 task copyJar(type: Copy) {
-    from file("build/libs/demomod-${version}.jar")
+    from file("build/libs/YuyukoMod-${version}.jar")
     into file('SlayTheSpire/mods')
 }
 copyJar.dependsOn jar

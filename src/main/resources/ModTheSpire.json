@@ -1,9 +1,14 @@
 {
-	"modid": "demomod",
-	"name": "DemoMod",
-	"author_list": ["Gogo"],
-	"description": "A demo mod",
-	"dependencies": ["basemod"],
-	"version": "0.0.0"
+  "modid": "YuyukoMod",
+  "name": "Yuyuko Mod",
+  "author_list": [
+    "Gogo",
+    "若然"
+  ],
+  "description": "Yuyuko Mod",
+  "dependencies": [
+    "basemod"
+  ],
+  "version": "0.0.1"
 }
 	
