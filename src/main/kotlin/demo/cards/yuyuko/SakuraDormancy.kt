@@ -1,6 +1,7 @@
 package demo.cards.yuyuko
 
 import basemod.abstracts.CustomCard
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.actions.common.DrawCardAction
 import com.megacrit.cardcrawl.actions.common.HealAction
 import com.megacrit.cardcrawl.cards.AbstractCard
@@ -8,17 +9,17 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import demo.cards.yuyuko.Butterfly.Companion
 import demo.patches.CardColorEnum
+import demo.powers.DiaphaneityPower
 
-class Sakura : CustomCard(
+class SakuraDormancy : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
         AbstractCard.CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
         AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.SELF
 ) {
     companion object {
         @JvmStatic
-        val ID = "Sakura"
+        val ID = "Sakura (Dormancy)"
         val IMAGE_PATH = "images/yuyuko/cards/sakura.png"
         val COST = 0
         val HEAL_AMOUNT = 1
@@ -33,7 +34,7 @@ class Sakura : CustomCard(
         this.magicNumber = HEAL_AMOUNT
     }
 
-    override fun makeCopy(): AbstractCard = Sakura()
+    override fun makeCopy(): AbstractCard = SakuraDormancy()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         AbstractDungeon.actionManager.addToBottom(
@@ -41,6 +42,13 @@ class Sakura : CustomCard(
         )
         AbstractDungeon.actionManager.addToBottom(
                 DrawCardAction(self, 1, false)
+        )
+        AbstractDungeon.actionManager.addToBottom(
+                ApplyPowerAction(
+                        self, self,
+                        DiaphaneityPower(self!!, 2),
+                        2
+                )
         )
         degradeToInitiation()
 

@@ -23,8 +23,40 @@
     "NAME": "樱",
     "DESCRIPTION": "回复 !M! 点生命,抽1张牌 NL 可多次升级, 重置 ."
   },
+  "Sakura (Seal)": {
+    "NAME": "樱 (封印)",
+    "DESCRIPTION": "回复 !M! 点生命,抽1张牌 NL 获得4点护甲 NL 可多次升级, 重置 ."
+  },
+  "Sakura (Suicide)": {
+    "NAME": "樱 (亡我)",
+    "DESCRIPTION": "回复 !M! 点生命,抽1张牌 NL 获得1层 幽灵 NL 可多次升级, 重置 ."
+  },
+  "Sakura (Dormancy)": {
+    "NAME": "樱 (春眠)",
+    "DESCRIPTION": "回复 !M! 点生命,抽1张牌 NL 升级所有 樱 NL 可多次升级, 重置 ."
+  },
+  "Sakura (Bloom)": {
+    "NAME": "樱 (开花)",
+    "DESCRIPTION": "回复 !M! 点生命,抽1张牌 NL 获得1层 幽灵 NL 可多次升级, 重置 ."
+  },
   "Butterfly": {
     "NAME": "蝶",
     "DESCRIPTION": "造成 !D! 点伤害,抽1张牌 NL 可多次升级, 重置 ."
+  },
+  "Butterfly (Ghost)": {
+    "NAME": "蝶 (亡灵)",
+    "DESCRIPTION": "造成 !D! 点伤害,抽1张牌 NL 给予1层 缠绕 NL 可多次升级, 重置 ."
+  },
+  "Butterfly (Swallowtail)": {
+    "NAME": "蝶 (扬羽)",
+    "DESCRIPTION": "造成 !D! 点伤害,抽1张牌 NL 升级所有 蝶 NL 可多次升级, 重置 ."
+  },
+  "Butterfly (Deep Rooted)": {
+    "NAME": "蝶 (执念)",
+    "DESCRIPTION": "造成 !D! 点体力流失,抽1张牌 NL 可多次升级, 重置 ."
+  },
+  "Butterfly (Delusion)": {
+    "NAME": "蝶 (妄想)",
+    "DESCRIPTION": "造成 !D! 点伤害,抽1张牌 NL 给予2层 虚化 NL 可多次升级, 重置 ."
   }
 }

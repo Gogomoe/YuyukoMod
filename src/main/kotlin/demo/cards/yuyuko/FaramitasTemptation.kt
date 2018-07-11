@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.powers.FadingPower
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel
 import demo.patches.CardColorEnum
+import kotlin.math.max
 
 class FaramitasTemptation : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
@@ -40,7 +41,7 @@ class FaramitasTemptation : CustomCard(
         if (this.energyOnUse < EnergyPanel.totalCount) {
             this.energyOnUse = EnergyPanel.totalCount
         }
-        val turns = target!!.currentHealth / (this.energyOnUse + this.magicNumber)
+        val turns = max(target!!.currentHealth / (this.energyOnUse + this.magicNumber), 1)
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(
                         target, self,

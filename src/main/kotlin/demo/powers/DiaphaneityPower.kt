@@ -44,13 +44,13 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
 
     override fun atDamageGive(damage: Float, type: DamageType?): Float {
         return if (type == DamageType.NORMAL)
-            damage * (1 + 0.1f * amount)
+            damage * (1 + 0.05f * amount)
         else
             damage
     }
 
     override fun atDamageReceive(damage: Float, damageType: DamageType?): Float {
-        return max(damage * (1 - 0.1f * amount), 0f)
+        return max(damage * (1 - 0.05f * amount), 0f)
     }
 
     override fun atEndOfRound() {

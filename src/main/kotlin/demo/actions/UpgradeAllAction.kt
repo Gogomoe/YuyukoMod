@@ -27,7 +27,7 @@ class UpgradeAllAction(val cardID: String) : AbstractGameAction() {
 
     private fun upgradeAllCardsInGroup(cardGroup: CardGroup) {
         cardGroup.group.filter {
-            it.cardID == cardID
+            it.cardID == cardID || it.cardID.matches(Regex("""$cardID \(.*\)"""))
         }.forEach { card ->
             if (card.canUpgrade()) {
                 if (cardGroup.type == CardGroup.CardGroupType.HAND) {

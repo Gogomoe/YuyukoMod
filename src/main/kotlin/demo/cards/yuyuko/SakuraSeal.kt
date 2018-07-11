@@ -8,21 +8,21 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import demo.cards.yuyuko.Butterfly.Companion
 import demo.patches.CardColorEnum
 
-class Sakura : CustomCard(
+class SakuraSeal : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
         AbstractCard.CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
         AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.SELF
 ) {
     companion object {
         @JvmStatic
-        val ID = "Sakura"
+        val ID = "Sakura (Seal)"
         val IMAGE_PATH = "images/yuyuko/cards/sakura.png"
         val COST = 0
         val HEAL_AMOUNT = 1
         val UPGRADE_PLUS_AMOUNT = 1
+        val BLOCK_AMOUNT = 4
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
@@ -31,9 +31,10 @@ class Sakura : CustomCard(
     init {
         this.baseMagicNumber = HEAL_AMOUNT
         this.magicNumber = HEAL_AMOUNT
+        this.baseBlock = BLOCK_AMOUNT
     }
 
-    override fun makeCopy(): AbstractCard = Sakura()
+    override fun makeCopy(): AbstractCard = SakuraSeal()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         AbstractDungeon.actionManager.addToBottom(
