@@ -63,9 +63,9 @@ class DiscoverAction(val numCards: Int) : AbstractGameAction() {
             repeat(numCards) {
                 val rarity = rollRarity()
                 c = AbstractDungeon.getCard(rarity)
-                avoidRepeatedCard@ repeat(10) {
+                avoidRepeatedCard@ for (i in 1..10) {
                     if (c != null && !retVal.contains(c!!)) {
-                        return@avoidRepeatedCard
+                        break@avoidRepeatedCard
                     }
                     c = AbstractDungeon.getCard(rarity) ?: c
                 }
