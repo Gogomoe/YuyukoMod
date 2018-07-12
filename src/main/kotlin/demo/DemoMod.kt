@@ -26,6 +26,7 @@ import demo.cards.yuyuko.ButterflyGhost
 import demo.cards.yuyuko.ButterflySwallowtail
 import demo.cards.yuyuko.DeathlyGround
 import demo.cards.yuyuko.DreamySakura
+import demo.cards.yuyuko.Explore
 import demo.cards.yuyuko.FantasyButterflies
 import demo.cards.yuyuko.FaramitasTemptation
 import demo.cards.yuyuko.Sakura
@@ -113,7 +114,7 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
     }
 
     override fun receiveEditCards() {
-        BaseMod.addCard(Strike_Reimu())
+        // BaseMod.addCard(Strike_Reimu())
 
         BaseMod.addCard(FantasyButterflies())
         BaseMod.addCard(DreamySakura())
@@ -131,6 +132,8 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(ButterflySwallowtail())
         BaseMod.addCard(ButterflyDeepRooted())
         BaseMod.addCard(ButterflyDelusion())
+
+        BaseMod.addCard(Explore())
     }
 
     override fun receiveEditRelics() {
@@ -142,6 +145,7 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         GhostPower.POWER_ID.loadKerwordsString()
         "UpgradeAll".loadKerwordsString()
         "Reset".loadKerwordsString()
+        "Discover".loadKerwordsString()
     }
 
     private fun String.loadKerwordsString() {

@@ -58,5 +58,10 @@
   "Butterfly (Delusion)": {
     "NAME": "蝶 (妄想)",
     "DESCRIPTION": "造成 !D! 点伤害,抽1张牌 NL 给予2层 虚化 NL 可多次升级, 重置 ."
+  },
+  "Explore":{
+    "NAME": "探索",
+    "DESCRIPTION": " 发现 1张牌 NL 消耗 "
+    "UPGRADE_DESCRIPTION":  " 发现 1张牌,获得2层 虚化 NL 消耗 "
   }
 }
