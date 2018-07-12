@@ -57,12 +57,12 @@ class Butterfly : CustomCard(
     }
 
     private fun degradeToInitiation() {
-        this.timesUpgraded = 0
         this.upgraded = false
         this.name = NAME
-        this.initializeTitle()
-        this.baseDamage -= UPGRADE_PLUS_DMG
+        this.baseDamage -= UPGRADE_PLUS_DMG * this.timesUpgraded
         this.upgradedDamage = false
+        this.timesUpgraded = 0
+        this.initializeTitle()
     }
 
 }

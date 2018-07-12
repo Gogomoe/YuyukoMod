@@ -54,12 +54,12 @@ class Sakura : CustomCard(
     }
 
     private fun degradeToInitiation() {
-        this.timesUpgraded = 0
         this.upgraded = false
         this.name = NAME
-        this.initializeTitle()
-        this.baseMagicNumber -= UPGRADE_PLUS_AMOUNT
+        this.baseMagicNumber -= UPGRADE_PLUS_AMOUNT * this.timesUpgraded
         this.upgradedMagicNumber = false
+        this.timesUpgraded = 0
+        this.initializeTitle()
     }
 
 }

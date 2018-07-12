@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.actions.common.DamageAction
 import com.megacrit.cardcrawl.actions.common.DrawCardAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.cards.DamageInfo
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType.HP_LOSS
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
@@ -61,12 +60,12 @@ class ButterflyDeepRooted : CustomCard(
     }
 
     private fun degradeToInitiation() {
-        this.timesUpgraded = 0
         this.upgraded = false
         this.name = NAME
-        this.initializeTitle()
-        this.baseDamage -= UPGRADE_PLUS_DMG
+        this.baseDamage -= UPGRADE_PLUS_DMG * this.timesUpgraded
         this.upgradedDamage = false
+        this.timesUpgraded = 0
+        this.initializeTitle()
     }
 
 }
