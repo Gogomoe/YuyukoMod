@@ -2,27 +2,30 @@ package demo.cards.yuyuko
 
 import basemod.abstracts.CustomCard
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction
 import com.megacrit.cardcrawl.cards.AbstractCard
+import com.megacrit.cardcrawl.cards.DamageInfo.DamageType
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import demo.actions.UpgradeAllAction
+import com.megacrit.cardcrawl.powers.IntangiblePlayerPower
 import demo.patches.CardColorEnum
 
-class FantasyButterflies : CustomCard(
+class Bomb : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
         CardType.ATTACK, CardColorEnum.YUYUKO_COLOR,
-        CardRarity.BASIC, CardTarget.ALL_ENEMY
+        CardRarity.UNCOMMON, CardTarget.ALL_ENEMY
 ) {
     companion object {
         @JvmStatic
-        val ID = "Fantasy Butterflies"
-        val IMAGE_PATH = "images/yuyuko/cards/attack.png"
-        val COST = 1
-        val ATTACK_DMG = 2
-        val UPGRADE_PLUS_DMG = 1
+        val ID = "Bomb"
+        val IMAGE_PATH = "images/yuyuko/cards/attack2.png"
+        val COST = 3
+        val ATTACK_DMG = 9
+        val UPGRADE_PLUS_DMG = 6
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
@@ -30,27 +33,38 @@ class FantasyButterflies : CustomCard(
 
     init {
         this.baseDamage = ATTACK_DMG
+        this.exhaust = true
     }
 
-    override fun makeCopy(): AbstractCard = FantasyButterflies()
+    override fun makeCopy(): AbstractCard = Bomb()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         AbstractDungeon.actionManager.addToBottom(
                 DamageAllEnemiesAction(
-                        self, this.multiDamage, this.damageTypeForTurn,
-                        AttackEffect.SLASH_HEAVY
+                        self,
+                        this.multiDamage,
+                        DamageType.NORMAL,
+                        AttackEffect.SLASH_DIAGONAL
                 )
         )
         AbstractDungeon.actionManager.addToBottom(
-                UpgradeAllAction(Butterfly.ID)
+                ApplyPowerAction(
+                        self, self,
+                        IntangiblePlayerPower(self, 1),
+                        1
+                )
+        )
+    }
+
+    override fun onMoveToDiscard() {
+        AbstractDungeon.actionManager.addToBottom(
+                MakeTempCardInDiscardAction(this.makeCopy(), 1)
         )
     }
 
     override fun upgrade() {
-        if (!upgraded) {
-            upgradeName()
-            upgradeDamage(UPGRADE_PLUS_DMG)
-        }
+        upgradeName()
+        upgradeDamage(UPGRADE_PLUS_DMG)
     }
 
 }

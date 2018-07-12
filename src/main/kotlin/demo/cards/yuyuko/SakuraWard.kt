@@ -1,58 +1,57 @@
 package demo.cards.yuyuko
 
 import basemod.abstracts.CustomCard
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
+import com.megacrit.cardcrawl.actions.common.GainBlockAction
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import demo.actions.UpgradeAllAction
 import demo.patches.CardColorEnum
-import demo.powers.DiaphaneityPower
 
-class DreamySakura : CustomCard(
+class SakuraWard : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
         CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
-        CardRarity.BASIC, CardTarget.SELF
+        CardRarity.UNCOMMON, CardTarget.SELF
 ) {
     companion object {
         @JvmStatic
-        val ID = "Dreamy Sakura"
-        val IMAGE_PATH = "images/yuyuko/cards/skill.png"
+        val ID = "Sakura Ward"
+        val IMAGE_PATH = "images/yuyuko/cards/skill2.png"
         val COST = 1
-        val DIAPHANEITY_AMOUNT = 2
-        val UPGRADE_PLUS_AMOUNT = 1
+        val BLOCK_AMOUNT = 5
+        val UPGRADE_PLUS_BLOCK = 3
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
+        val UPDEAGE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION!!
+
     }
 
     init {
-        this.baseMagicNumber = DIAPHANEITY_AMOUNT
-        this.magicNumber = DIAPHANEITY_AMOUNT
+        this.baseBlock = BLOCK_AMOUNT
     }
 
-    override fun makeCopy(): AbstractCard = DreamySakura()
+    override fun makeCopy(): AbstractCard = SakuraWard()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         AbstractDungeon.actionManager.addToBottom(
-                ApplyPowerAction(
-                        self, self,
-                        DiaphaneityPower(self!!, this.magicNumber),
-                        this.magicNumber
-                )
+                GainBlockAction(self, self, this.block)
         )
         AbstractDungeon.actionManager.addToBottom(
-                UpgradeAllAction(Sakura.ID)
+                MakeTempCardInDrawPileAction(
+                        SakuraSeal(), 1, true, true
+                )
         )
     }
 
     override fun upgrade() {
-        if (!upgraded) {
-            upgradeName()
-            upgradeMagicNumber(UPGRADE_PLUS_AMOUNT)
-        }
+        upgradeName()
+        upgradeBlock(UPGRADE_PLUS_BLOCK)
+        this.isInnate = true
+        this.rawDescription = UPDEAGE_DESCRIPTION
     }
+
 
 }

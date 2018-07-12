@@ -15,8 +15,8 @@ import kotlin.math.max
 
 class FaramitasTemptation : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
-        AbstractCard.CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
-        AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.ENEMY
+        CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
+        CardRarity.BASIC, CardTarget.ENEMY
 ) {
     companion object {
         @JvmStatic

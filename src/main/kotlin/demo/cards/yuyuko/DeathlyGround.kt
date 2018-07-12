@@ -12,8 +12,8 @@ import demo.powers.GhostPower
 
 class DeathlyGround : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
-        AbstractCard.CardType.ATTACK, CardColorEnum.YUYUKO_COLOR,
-        AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF
+        CardType.ATTACK, CardColorEnum.YUYUKO_COLOR,
+        CardRarity.BASIC, CardTarget.SELF
 ) {
     companion object {
         @JvmStatic

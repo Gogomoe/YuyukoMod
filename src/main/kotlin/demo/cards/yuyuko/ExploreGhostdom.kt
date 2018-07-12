@@ -1,27 +1,22 @@
 package demo.cards.yuyuko
 
 import basemod.abstracts.CustomCard
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import demo.actions.DiscoverAction
 import demo.patches.CardColorEnum
-import demo.powers.DiaphaneityPower
 
-
-class Explore : CustomCard(
+class ExploreGhostdom : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
         CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
-        CardRarity.SPECIAL, CardTarget.SELF
+        CardRarity.RARE, CardTarget.SELF
 ) {
     companion object {
         @JvmStatic
-        val ID = "Explore"
-        val IMAGE_PATH = "images/yuyuko/cards/explore.png"
-        val COST = 0
+        val ID = "Explore Ghostdom"
+        val IMAGE_PATH = "images/yuyuko/cards/skill2.png"
+        val COST = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
@@ -32,29 +27,32 @@ class Explore : CustomCard(
         this.exhaust = true
     }
 
-
-    override fun makeCopy(): AbstractCard = Explore()
+    override fun makeCopy(): AbstractCard = ExploreGhostdom()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        AbstractDungeon.actionManager.addToBottom(
-                DiscoverAction(1)
-        )
-        if (upgraded) {
-            AbstractDungeon.actionManager.addToBottom(
-                    ApplyPowerAction(
-                            self, self,
-                            DiaphaneityPower(self!!, this.magicNumber),
-                            this.magicNumber
-                    )
-            )
-        }
+        self!!
+        val constructor: () -> AbstractCard =
+                if (upgraded) { ->
+                    Explore().apply { upgrade() }
+                } else { ->
+                    Explore()
+                }
+        val groups = listOf(self.hand, self.drawPile, self.discardPile)
 
+        groups.forEach { group ->
+            val toChange = group.group
+                    .filter { it.rarity != CardRarity.SPECIAL && it != this }
+
+            toChange.forEach {
+                group.removeCard(it)
+                group.addToBottom(constructor())
+            }
+        }
     }
 
     override fun upgrade() {
         upgradeName()
         this.rawDescription = UPDEAGE_DESCRIPTION
-        this.initializeDescription()
     }
 
 

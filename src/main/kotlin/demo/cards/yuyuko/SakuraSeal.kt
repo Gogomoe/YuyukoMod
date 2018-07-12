@@ -2,6 +2,7 @@ package demo.cards.yuyuko
 
 import basemod.abstracts.CustomCard
 import com.megacrit.cardcrawl.actions.common.DrawCardAction
+import com.megacrit.cardcrawl.actions.common.GainBlockAction
 import com.megacrit.cardcrawl.actions.common.HealAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
@@ -12,8 +13,8 @@ import demo.patches.CardColorEnum
 
 class SakuraSeal : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
-        AbstractCard.CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
-        AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.SELF
+        CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
+        CardRarity.SPECIAL, CardTarget.SELF
 ) {
     companion object {
         @JvmStatic
@@ -41,6 +42,9 @@ class SakuraSeal : CustomCard(
                 HealAction(self, self, this.magicNumber)
         )
         AbstractDungeon.actionManager.addToBottom(
+                GainBlockAction(self, self, this.block)
+        )
+        AbstractDungeon.actionManager.addToBottom(
                 DrawCardAction(self, 1, false)
         )
         degradeToInitiation()
@@ -52,6 +56,13 @@ class SakuraSeal : CustomCard(
     override fun upgrade() {
         upgradeName()
         upgradeMagicNumber(UPGRADE_PLUS_AMOUNT)
+    }
+
+    override fun upgradeName() {
+        ++this.timesUpgraded
+        this.upgraded = true
+        this.name = "$NAME+$timesUpgraded"
+        this.initializeTitle()
     }
 
     private fun degradeToInitiation() {

@@ -19,6 +19,8 @@ import com.megacrit.cardcrawl.localization.KeywordStrings
 import com.megacrit.cardcrawl.localization.PowerStrings
 import com.megacrit.cardcrawl.localization.RelicStrings
 import demo.cards.reimu.Strike_Reimu
+import demo.cards.yuyuko.Bloom
+import demo.cards.yuyuko.Bomb
 import demo.cards.yuyuko.Butterfly
 import demo.cards.yuyuko.ButterflyDeepRooted
 import demo.cards.yuyuko.ButterflyDelusion
@@ -27,13 +29,17 @@ import demo.cards.yuyuko.ButterflySwallowtail
 import demo.cards.yuyuko.DeathlyGround
 import demo.cards.yuyuko.DreamySakura
 import demo.cards.yuyuko.Explore
+import demo.cards.yuyuko.ExploreGhostdom
 import demo.cards.yuyuko.FantasyButterflies
 import demo.cards.yuyuko.FaramitasTemptation
+import demo.cards.yuyuko.GauzySakura
+import demo.cards.yuyuko.GhostdomSakura
 import demo.cards.yuyuko.Sakura
 import demo.cards.yuyuko.SakuraBloom
 import demo.cards.yuyuko.SakuraDormancy
 import demo.cards.yuyuko.SakuraSeal
 import demo.cards.yuyuko.SakuraSuicide
+import demo.cards.yuyuko.SakuraWard
 import demo.characters.Yuyuko
 import demo.patches.CardColorEnum
 import demo.patches.PlayerClassEnum
@@ -134,6 +140,15 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(ButterflyDelusion())
 
         BaseMod.addCard(Explore())
+
+
+        BaseMod.addCard(GhostdomSakura())
+        BaseMod.addCard(GauzySakura())
+        BaseMod.addCard(Bloom())
+        BaseMod.addCard(SakuraWard())
+        BaseMod.addCard(Bomb())
+        BaseMod.addCard(ExploreGhostdom())
+
     }
 
     override fun receiveEditRelics() {

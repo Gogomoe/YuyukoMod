@@ -5,11 +5,11 @@
   },
   "Fantasy Butterflies": {
     "NAME": "幻之蝶",
-    "DESCRIPTION": "对敌方全体造成 !D! 点伤害 NL 升级所有 蝶"
+    "DESCRIPTION": "对敌方全体造成 !D! 点伤害, NL 升级所有 蝶"
   },
   "Dreamy Sakura": {
     "NAME": "梦之樱",
-    "DESCRIPTION": "获得 !M! 层 虚化 NL 升级所有 樱"
+    "DESCRIPTION": "获得 !M! 层 虚化, NL 升级所有 樱"
   },
   "Deathly Ground": {
     "NAME": "死还的大地",
@@ -17,51 +17,77 @@
   },
   "Faramita's Temptation": {
     "NAME": "对岸的引诱",
-    "DESCRIPTION": "敌人每有 X+ !M! 生命值 NL 就给予1层 无实体 与 消逝 ."
+    "DESCRIPTION": "敌人每有 X+ !M! 生命值, NL 就给予1层 无实体 与 消逝 ."
   },
   "Sakura": {
     "NAME": "樱",
-    "DESCRIPTION": "回复 !M! 点生命,抽1张牌 NL 可多次升级, 重置 ."
+    "DESCRIPTION": "回复 !M! 点生命,抽1张牌, NL 可多次升级, 重置 ."
   },
   "Sakura (Seal)": {
     "NAME": "樱 (封印)",
-    "DESCRIPTION": "回复 !M! 点生命,抽1张牌 NL 获得4点护甲 NL 可多次升级, 重置 ."
+    "DESCRIPTION": "回复 !M! 点生命,抽1张牌, NL 获得4点 格挡 , NL 可多次升级, 重置 ."
   },
   "Sakura (Suicide)": {
     "NAME": "樱 (亡我)",
-    "DESCRIPTION": "回复 !M! 点生命,抽1张牌 NL 获得1层 幽灵 NL 可多次升级, 重置 ."
+    "DESCRIPTION": "回复 !M! 点生命,抽1张牌, NL 获得1层 幽灵 , NL 可多次升级, 重置 ."
   },
   "Sakura (Dormancy)": {
     "NAME": "樱 (春眠)",
-    "DESCRIPTION": "回复 !M! 点生命,抽1张牌 NL 升级所有 樱 NL 可多次升级, 重置 ."
+    "DESCRIPTION": "回复 !M! 点生命,抽1张牌, NL 获得2层 虚化 , NL 可多次升级, 重置 ."
   },
   "Sakura (Bloom)": {
     "NAME": "樱 (开花)",
-    "DESCRIPTION": "回复 !M! 点生命,抽1张牌 NL 获得1层 幽灵 NL 可多次升级, 重置 ."
+    "DESCRIPTION": "回复 !M! 点生命,抽1张牌, NL 升级所有 樱 , NL 可多次升级, 重置 ."
   },
   "Butterfly": {
     "NAME": "蝶",
-    "DESCRIPTION": "造成 !D! 点伤害,抽1张牌 NL 可多次升级, 重置 ."
+    "DESCRIPTION": "造成 !D! 点伤害,抽1张牌, NL 可多次升级, 重置 ."
   },
   "Butterfly (Ghost)": {
     "NAME": "蝶 (亡灵)",
-    "DESCRIPTION": "造成 !D! 点伤害,抽1张牌 NL 给予1层 缠绕 NL 可多次升级, 重置 ."
+    "DESCRIPTION": "造成 !D! 点伤害,抽1张牌, NL 给予1层 缠绕 , NL 可多次升级, 重置 ."
   },
   "Butterfly (Swallowtail)": {
     "NAME": "蝶 (扬羽)",
-    "DESCRIPTION": "造成 !D! 点伤害,抽1张牌 NL 升级所有 蝶 NL 可多次升级, 重置 ."
+    "DESCRIPTION": "造成 !D! 点伤害,抽1张牌, NL 升级所有 蝶 , NL 可多次升级, 重置 ."
   },
   "Butterfly (Deep Rooted)": {
     "NAME": "蝶 (执念)",
-    "DESCRIPTION": "造成 !D! 点体力流失,抽1张牌 NL 可多次升级, 重置 ."
+    "DESCRIPTION": "造成 !D! 点体力流失,抽1张牌, NL 可多次升级, 重置 ."
   },
   "Butterfly (Delusion)": {
     "NAME": "蝶 (妄想)",
-    "DESCRIPTION": "造成 !D! 点伤害,抽1张牌 NL 给予2层 虚化 NL 可多次升级, 重置 ."
+    "DESCRIPTION": "造成 !D! 点伤害,抽1张牌, NL 给予2层 虚化 , NL 可多次升级, 重置 ."
   },
-  "Explore":{
+  "Explore": {
     "NAME": "探索",
-    "DESCRIPTION": " 发现 1张牌 NL 消耗 "
-    "UPGRADE_DESCRIPTION":  " 发现 1张牌,获得2层 虚化 NL 消耗 "
+    "DESCRIPTION": " 发现 1张牌, NL 消耗 ",
+    "UPGRADE_DESCRIPTION": " 发现 1张牌, NL 获得2层 虚化 , 消耗 "
+  },
+  "Ghostdom Sakura": {
+    "NAME": "诱魂的落樱",
+    "DESCRIPTION": "将1张 樱(亡我) 洗入牌堆, NL 升级所有 樱,抽1张牌"
+  },
+  "Gauzy Sakura": {
+    "NAME": "绢彻的樱雨",
+    "DESCRIPTION": "将1张 樱(春眠) 洗入牌堆, NL 升级所有 樱,抽1张牌"
+  },
+  "Bloom": {
+    "NAME": "绽放",
+    "DESCRIPTION": "升级所有 樱 , NL 抽 !M! 张牌"
+  },
+  "Sakura Ward": {
+    "NAME": "樱花结界",
+    "DESCRIPTION": "获得 !B! 点 格挡 , NL 将1张 樱(封印) 洗入牌堆",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 , NL 将1张 樱(封印) 洗入牌堆, 固有 "
+  },
+  "Bomb": {
+    "NAME": "灵击",
+    "DESCRIPTION": "对敌方全体造成 !D! 点伤害, NL 获得1层 无实体 , NL 弃置时,复制1张洗入牌堆, 消耗 "
+  },
+  "Explore Ghostdom": {
+    "NAME": "探索冥界",
+    "DESCRIPTION": "除了衍生以外的牌全部变形为 探索 , NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "除了衍生以外的牌全部变形为 探索+ , NL 消耗 "
   }
 }

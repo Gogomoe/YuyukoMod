@@ -61,7 +61,7 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
     }
 
     override fun updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]
+        this.description = DESCRIPTIONS[0] + this.amount * 5 + DESCRIPTIONS[1]
     }
 
 }

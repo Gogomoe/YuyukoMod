@@ -10,28 +10,45 @@ import com.megacrit.cardcrawl.core.Settings
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import demo.randomInt
 
-//TODO to be tested
+
 class DiscoverAction(val numCards: Int) : AbstractGameAction() {
 
     init {
         this.duration = Settings.ACTION_DUR_MED
-        this.actionType = AbstractGameAction.ActionType.WAIT
+        this.actionType = ActionType.CARD_MANIPULATION
+        this.duration = Settings.ACTION_DUR_FAST
     }
 
     override fun update() {
-        openSelectScreen()
-
-        AbstractDungeon.gridSelectScreen.selectedCards.forEach {
-            AbstractDungeon.actionManager.addToBottom(
-                    MakeTempCardInDrawPileAction(
-                            it, 1, true, true
-                    )
-            )
+        if (this.duration == Settings.ACTION_DUR_FAST) {
+            if (numCards == 1) {
+                addOneCard()
+                this.isDone = true
+            } else {
+                openSelectScreen()
+            }
+        } else {
+            AbstractDungeon.gridSelectScreen.selectedCards.forEach {
+                addToDrawPile(it)
+            }
+            AbstractDungeon.gridSelectScreen.selectedCards.clear()
+            this.isDone = true
         }
 
-        AbstractDungeon.gridSelectScreen.selectedCards.clear()
-
         this.tickDuration()
+    }
+
+    private fun addOneCard() {
+        val card = discoverCards(1).first()
+        addToDrawPile(card)
+    }
+
+    private fun addToDrawPile(card: AbstractCard) {
+        AbstractDungeon.actionManager.addToBottom(
+                MakeTempCardInDrawPileAction(
+                        card, 1, true, true
+                )
+        )
     }
 
     private fun openSelectScreen() {
@@ -54,7 +71,6 @@ class DiscoverAction(val numCards: Int) : AbstractGameAction() {
     }
 
     companion object {
-
 
         private fun discoverCards(numCards: Int): List<AbstractCard> {
             val retVal = mutableListOf<AbstractCard>()

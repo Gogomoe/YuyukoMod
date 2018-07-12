@@ -8,13 +8,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import demo.cards.yuyuko.Butterfly.Companion
 import demo.patches.CardColorEnum
 
 class Sakura : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
-        AbstractCard.CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
-        AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.SELF
+        CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
+        CardRarity.SPECIAL, CardTarget.SELF
 ) {
     companion object {
         @JvmStatic
@@ -51,6 +50,13 @@ class Sakura : CustomCard(
     override fun upgrade() {
         upgradeName()
         upgradeMagicNumber(UPGRADE_PLUS_AMOUNT)
+    }
+
+    override fun upgradeName() {
+        ++this.timesUpgraded
+        this.upgraded = true
+        this.name = "$NAME+$timesUpgraded"
+        this.initializeTitle()
     }
 
     private fun degradeToInitiation() {

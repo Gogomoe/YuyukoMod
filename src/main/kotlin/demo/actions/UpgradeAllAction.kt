@@ -10,7 +10,7 @@ class UpgradeAllAction(val cardID: String) : AbstractGameAction() {
 
     init {
         this.duration = Settings.ACTION_DUR_MED
-        this.actionType = AbstractGameAction.ActionType.WAIT
+        this.actionType = ActionType.CARD_MANIPULATION
     }
 
     override fun update() {

@@ -15,8 +15,8 @@ import demo.patches.CardColorEnum
 
 class ButterflySwallowtail : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
-        AbstractCard.CardType.ATTACK, CardColorEnum.YUYUKO_COLOR,
-        AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.ENEMY
+        CardType.ATTACK, CardColorEnum.YUYUKO_COLOR,
+        CardRarity.SPECIAL, CardTarget.ENEMY
 ) {
     companion object {
         @JvmStatic
@@ -58,6 +58,13 @@ class ButterflySwallowtail : CustomCard(
     override fun upgrade() {
         upgradeName()
         upgradeDamage(UPGRADE_PLUS_DMG)
+    }
+
+    override fun upgradeName() {
+        ++this.timesUpgraded
+        this.upgraded = true
+        this.name = "$NAME+$timesUpgraded"
+        this.initializeTitle()
     }
 
     private fun degradeToInitiation() {

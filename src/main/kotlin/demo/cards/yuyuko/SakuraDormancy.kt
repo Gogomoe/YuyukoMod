@@ -14,8 +14,8 @@ import demo.powers.DiaphaneityPower
 
 class SakuraDormancy : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
-        AbstractCard.CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
-        AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.SELF
+        CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
+        CardRarity.SPECIAL, CardTarget.SELF
 ) {
     companion object {
         @JvmStatic
@@ -59,6 +59,13 @@ class SakuraDormancy : CustomCard(
     override fun upgrade() {
         upgradeName()
         upgradeMagicNumber(UPGRADE_PLUS_AMOUNT)
+    }
+
+    override fun upgradeName() {
+        ++this.timesUpgraded
+        this.upgraded = true
+        this.name = "$NAME+$timesUpgraded"
+        this.initializeTitle()
     }
 
     private fun degradeToInitiation() {
