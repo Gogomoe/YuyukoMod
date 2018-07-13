@@ -21,17 +21,20 @@ class Yuyukosfan : CustomRelic(
         val IMAGE_PATH = "images/relics/relic.png"
     }
 
+    var sakuraAmount = 5
+    var butterflyAmount = 5
+
     //TODO 格挡不会消失
 
     override fun atBattleStartPreDraw() {
         AbstractDungeon.actionManager.addToBottom(
                 MakeTempCardInDrawPileAction(
-                        Sakura(), 5, true, true
+                        Sakura(), sakuraAmount, true, true
                 )
         )
         AbstractDungeon.actionManager.addToBottom(
                 MakeTempCardInDrawPileAction(
-                        Butterfly(), 5, true, true
+                        Butterfly(), butterflyAmount, true, true
                 )
         )
     }

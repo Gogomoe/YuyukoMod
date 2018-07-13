@@ -14,7 +14,6 @@ import demo.randomInt
 class DiscoverAction(val numCards: Int) : AbstractGameAction() {
 
     init {
-        this.duration = Settings.ACTION_DUR_MED
         this.actionType = ActionType.CARD_MANIPULATION
         this.duration = Settings.ACTION_DUR_FAST
     }

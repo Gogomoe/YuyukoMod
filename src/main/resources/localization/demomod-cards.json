@@ -89,5 +89,35 @@
     "NAME": "探索冥界",
     "DESCRIPTION": "除了衍生以外的牌全部变形为 探索 , NL 消耗 ",
     "UPGRADE_DESCRIPTION": "除了衍生以外的牌全部变形为 探索+ , NL 消耗 "
+  },
+  "Reverse The Screen": {
+    "NAME": "逆转屏风",
+    "DESCRIPTION": "与一个敌人交换虚化层数，然后获得等同于层数之差的格挡",
+    "UPGRADE_DESCRIPTION": "与一个敌人交换虚化层数,然后获得等同于层数之差的 格挡 , 藏匿 "
+  },
+  "Unborn Light": {
+    "NAME": "未生之光",
+    "DESCRIPTION": "对敌方全体造成 !D! 点伤害, NL 给予 !D! 层 虚化 "
+  },
+  "Elegance": {
+    "NAME": "幽雅",
+    "DESCRIPTION": "获得幽幽扇中樱数量层 虚化 , NL 升级所有 樱",
+    "UPGRADE_DESCRIPTION": "获得幽幽扇中樱数量层 虚化 , NL 将1张樱洗入牌堆, 升级所有 樱"
+  },
+  "Snow": {
+    "NAME": "雪",
+    "DESCRIPTION": "获得 !M! 层 虚化 "
+  },
+  "Nihility": {
+    "NAME": "虚无之境",
+    "DESCRIPTION": "打出这张牌后,你在这个回合内每打出1张牌, NL 给予自己与全体敌人 !M! 层 虚化 "
+  },
+  "Death Dancing": {
+    "NAME": "殒命之舞",
+    "DESCRIPTION": "给予 !M! 层 虚化 , NL 造成等同于其 虚化 层数的伤害"
+  },
+  "Ghost Butterflies": {
+    "NAME": "幽蝴蝶",
+    "DESCRIPTION": "将所有 没有额外效果的蝶 变形为 蝶(妄想) "
   }
 }
