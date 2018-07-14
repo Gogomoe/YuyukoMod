@@ -21,7 +21,7 @@ class RetrievalAction(val cardID: String, val count: Int = 1) : AbstractGameActi
         val groups = listOf(player.drawPile, player.discardPile)
 
         repeat(count) {
-            groups.forEach { group ->
+            for (group in groups) {
                 val card = when (cardID) {
                     Butterfly.ID -> group.findCardByCondition(AbstractCard::isButterfly)
                     Sakura.ID -> group.findCardByCondition(AbstractCard::isSakura)
@@ -31,6 +31,7 @@ class RetrievalAction(val cardID: String, val count: Int = 1) : AbstractGameActi
                     group.removeCard(card)
                     player.hand.addToTop(card)
                     player.hand.refreshHandLayout()
+                    break
                 }
             }
         }

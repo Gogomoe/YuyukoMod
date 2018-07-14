@@ -24,7 +24,15 @@ class Yuyukosfan : CustomRelic(
     var sakuraAmount = 5
     var butterflyAmount = 5
 
-    //TODO 格挡不会消失
+    private var lostBlock = 0
+
+    override fun atTurnStart() {
+        lostBlock = AbstractDungeon.player.currentBlock
+    }
+
+    override fun atTurnStartPostDraw() {
+        AbstractDungeon.player.currentBlock = lostBlock
+    }
 
     override fun atBattleStartPreDraw() {
         AbstractDungeon.actionManager.addToBottom(
