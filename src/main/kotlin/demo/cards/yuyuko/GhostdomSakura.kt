@@ -38,9 +38,6 @@ class GhostdomSakura : CustomCard(
         AbstractDungeon.actionManager.addToBottom(
                 UpgradeAllAction(Sakura.ID)
         )
-        AbstractDungeon.actionManager.addToBottom(
-                DrawCardAction(self, 1)
-        )
 
     }
 

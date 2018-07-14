@@ -1,7 +1,7 @@
 package demo.actions
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity
 import com.megacrit.cardcrawl.cards.CardGroup
@@ -28,7 +28,7 @@ class DiscoverAction(val numCards: Int) : AbstractGameAction() {
             }
         } else {
             AbstractDungeon.gridSelectScreen.selectedCards.forEach {
-                addToDrawPile(it)
+                addToHand(it)
             }
             AbstractDungeon.gridSelectScreen.selectedCards.clear()
             this.isDone = true
@@ -39,14 +39,12 @@ class DiscoverAction(val numCards: Int) : AbstractGameAction() {
 
     private fun addOneCard() {
         val card = discoverCards(1).first()
-        addToDrawPile(card)
+        addToHand(card)
     }
 
-    private fun addToDrawPile(card: AbstractCard) {
+    private fun addToHand(card: AbstractCard) {
         AbstractDungeon.actionManager.addToBottom(
-                MakeTempCardInDrawPileAction(
-                        card, 1, true, true
-                )
+                MakeTempCardInHandAction(card, 1)
         )
     }
 

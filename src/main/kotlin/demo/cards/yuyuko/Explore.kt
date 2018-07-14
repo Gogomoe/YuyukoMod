@@ -37,14 +37,14 @@ class Explore : CustomCard(
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         AbstractDungeon.actionManager.addToBottom(
-                DiscoverAction(1)
+                DiscoverAction(3)
         )
         if (upgraded) {
             AbstractDungeon.actionManager.addToBottom(
                     ApplyPowerAction(
                             self, self,
-                            DiaphaneityPower(self!!, this.magicNumber),
-                            this.magicNumber
+                            DiaphaneityPower(self!!, 2),
+                            2
                     )
             )
         }

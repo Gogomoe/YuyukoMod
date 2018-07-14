@@ -20,8 +20,8 @@ class Snow : CustomCard(
         val ID = "Snow"
         val IMAGE_PATH = "images/yuyuko/cards/skill3.png"
         val COST = 0
-        val DIAPHANEITY_AMOUNT = 6
-        val UPGRADE_PLUS_AMOUNT = 4
+        val DIAPHANEITY_AMOUNT = 3
+        val UPGRADE_PLUS_AMOUNT = 2
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
