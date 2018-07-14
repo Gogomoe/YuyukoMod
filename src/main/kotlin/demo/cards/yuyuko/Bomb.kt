@@ -32,9 +32,9 @@ class Bomb : CustomCard(
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
 
         init {
-            CardProperty.put<AbstractCard.(Boolean) -> Unit>("$ID:triggerOnDiscard") {
+            CardProperty.put<AbstractCard.(isEndTurn: Boolean) -> Unit>("$ID:triggerOnDiscard") {
                 AbstractDungeon.actionManager.addToBottom(
-                        MakeTempCardInDiscardAction(this.makeCopy(), 1)
+                        MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1)
                 )
             }
         }

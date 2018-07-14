@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import demo.addToRandomSpotIfIsDrawPile
 import demo.patches.CardColorEnum
 
 class ExploreGhostdom : CustomCard(
@@ -45,7 +46,7 @@ class ExploreGhostdom : CustomCard(
 
             toChange.forEach {
                 group.removeCard(it)
-                group.addToBottom(constructor())
+                group.addToRandomSpotIfIsDrawPile(constructor())
             }
         }
 

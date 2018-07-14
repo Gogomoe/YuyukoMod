@@ -13,6 +13,6 @@ object CardProperty {
 }
 
 fun AbstractCard.triggerOnDiscard(isEndTurn: Boolean) {
-    val func = CardProperty.get<AbstractCard.(Boolean) -> Unit>("${this.cardID}:triggerOnDiscard") ?: return
+    val func = CardProperty.get<AbstractCard.(isEndTurn: Boolean) -> Unit>("${this.cardID}:triggerOnDiscard") ?: return
     this.func(isEndTurn)
 }

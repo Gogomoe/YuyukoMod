@@ -42,15 +42,12 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
         }
     }
 
-    override fun atDamageGive(damage: Float, type: DamageType?): Float {
-        return if (type == DamageType.NORMAL)
-            damage * (1 + 0.05f * amount)
-        else
-            damage
-    }
-
     override fun atDamageReceive(damage: Float, damageType: DamageType?): Float {
-        return max(damage * (1 - 0.05f * amount), 0f)
+        return when {
+            damageType != DamageType.NORMAL -> damage
+            this.owner == AbstractDungeon.player -> max(damage * (1 - 0.05f * amount), 0f)
+            else -> damage * (1 + 0.05f * amount)
+        }
     }
 
     override fun atEndOfRound() {
@@ -61,7 +58,11 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
     }
 
     override fun updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount * 5 + DESCRIPTIONS[1]
+        this.description = if (this.owner == AbstractDungeon.player) {
+            DESCRIPTIONS[0] + this.amount * 5 + DESCRIPTIONS[2]
+        } else {
+            DESCRIPTIONS[1] + this.amount * 5 + DESCRIPTIONS[2]
+        }
     }
 
 }
