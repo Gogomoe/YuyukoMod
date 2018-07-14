@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'gogo'
-version '0.0.3'
+version 'v0.0.3'
 
 sourceCompatibility = 1.8
 
@@ -30,9 +30,9 @@ task copyJar(type: Copy) {
 }
 copyJar.dependsOn jar
 
-task run(type: Exec) {
+task start(type: Exec) {
     workingDir 'SlayTheSpire'
     commandLine "$workingDir/jre/bin/javaw.exe", "-jar", "$workingDir/ModTheSpire.jar"
 }
 
-run.dependsOn copyJar
+start.dependsOn copyJar
