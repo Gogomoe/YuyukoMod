@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower
+import demo.cards.CardProperty
 import demo.patches.CardColorEnum
 
 class Bomb : CustomCard(
@@ -29,6 +30,14 @@ class Bomb : CustomCard(
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
+
+        init {
+            CardProperty.put<AbstractCard.(Boolean) -> Unit>("$ID:triggerOnDiscard") {
+                AbstractDungeon.actionManager.addToBottom(
+                        MakeTempCardInDiscardAction(this.makeCopy(), 1)
+                )
+            }
+        }
     }
 
     init {
@@ -53,12 +62,6 @@ class Bomb : CustomCard(
                         IntangiblePlayerPower(self, 1),
                         1
                 )
-        )
-    }
-
-    override fun onMoveToDiscard() {
-        AbstractDungeon.actionManager.addToBottom(
-                MakeTempCardInDiscardAction(this.makeCopy(), 1)
         )
     }
 

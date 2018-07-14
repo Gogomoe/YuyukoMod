@@ -48,6 +48,8 @@ class ExploreGhostdom : CustomCard(
                 group.addToBottom(constructor())
             }
         }
+
+        self.hand.refreshHandLayout()
     }
 
     override fun upgrade() {
