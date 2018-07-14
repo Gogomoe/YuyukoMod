@@ -26,6 +26,7 @@ class Elegance : CustomCard(
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
+        val UPDEAGE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION!!
     }
 
     override fun makeCopy(): AbstractCard = Elegance()
@@ -54,7 +55,9 @@ class Elegance : CustomCard(
 
     override fun upgrade() {
         if (!this.upgraded) {
-            upgradeName()
+            this.upgradeName()
+            this.rawDescription = UPDEAGE_DESCRIPTION
+            this.initializeDescription()
         }
     }
 
