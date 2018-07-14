@@ -54,8 +54,11 @@ class ExploreGhostdom : CustomCard(
     }
 
     override fun upgrade() {
-        upgradeName()
-        this.rawDescription = UPDEAGE_DESCRIPTION
+        if (!this.upgraded) {
+            upgradeName()
+            this.rawDescription = UPDEAGE_DESCRIPTION
+            this.initializeDescription()
+        }
     }
 
 

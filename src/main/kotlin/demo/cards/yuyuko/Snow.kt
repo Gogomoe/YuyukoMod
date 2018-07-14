@@ -45,8 +45,10 @@ class Snow : CustomCard(
     }
 
     override fun upgrade() {
-        upgradeName()
-        upgradeMagicNumber(UPGRADE_PLUS_AMOUNT)
+        if (!this.upgraded) {
+            upgradeName()
+            upgradeMagicNumber(UPGRADE_PLUS_AMOUNT)
+        }
     }
 
 }

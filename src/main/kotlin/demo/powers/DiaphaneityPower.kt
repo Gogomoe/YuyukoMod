@@ -27,7 +27,7 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
         this.owner = owner
         this.amount = min(max(amount, 0), 999)
         this.updateDescription()
-        this.type = PowerType.BUFF
+        this.type = if (owner == AbstractDungeon.player) PowerType.BUFF else PowerType.DEBUFF
         this.isTurnBased = true
         this.img = Texture("images/powers/power.png")
     }

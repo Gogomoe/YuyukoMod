@@ -52,8 +52,10 @@ class GhostButterflies : CustomCard(
     }
 
     override fun upgrade() {
-        upgradeName()
-        upgradeBaseCost(0)
+        if (!this.upgraded) {
+            upgradeName()
+            upgradeBaseCost(0)
+        }
     }
 
 }

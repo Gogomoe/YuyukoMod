@@ -4,6 +4,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction
 import com.megacrit.cardcrawl.cards.CardGroup
 import com.megacrit.cardcrawl.core.Settings
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
+import demo.cards.isButterfly
+import demo.cards.isSakura
+import demo.cards.yuyuko.Butterfly
+import demo.cards.yuyuko.Sakura
 
 
 class UpgradeAllAction(val cardID: String) : AbstractGameAction() {
@@ -27,7 +31,11 @@ class UpgradeAllAction(val cardID: String) : AbstractGameAction() {
 
     private fun upgradeAllCardsInGroup(cardGroup: CardGroup) {
         cardGroup.group.filter {
-            it.cardID == cardID || it.cardID.matches(Regex("""$cardID \(.*\)"""))
+            when (cardID) {
+                Butterfly.ID -> it.isButterfly()
+                Sakura.ID -> it.isSakura()
+                else -> it.cardID == cardID
+            }
         }.forEach { card ->
             if (card.canUpgrade()) {
                 if (cardGroup.type == CardGroup.CardGroupType.HAND) {

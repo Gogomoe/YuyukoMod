@@ -17,10 +17,12 @@ fun <E> List<E>.getRandom(): E? {
 
 fun randomInt(range: Int): Int = rng.nextInt(range)
 
+fun randomBoolean(rarity: Float): Boolean = rng.nextFloat() <= rarity
+
 fun CardGroup.addToRandomSpotIfIsDrawPile(card: AbstractCard) {
-    if (this.type == CardGroupType.DRAW_PILE) {
-        this.addToRandomSpot(card)
-    } else {
-        this.addToBottom(card)
+    when (this.type) {
+        CardGroupType.DRAW_PILE -> this.addToRandomSpot(card)
+        CardGroupType.HAND -> addToTop(card)
+        else -> this.addToBottom(card)
     }
 }

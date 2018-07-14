@@ -1,52 +1,57 @@
 package demo.cards.yuyuko
 
 import basemod.abstracts.CustomCard
-import com.megacrit.cardcrawl.actions.common.DrawCardAction
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import demo.actions.RetrievalAction
 import demo.actions.UpgradeAllAction
 import demo.patches.CardColorEnum
 
-class GauzySakura : CustomCard(
+class FondlingOfPapilio : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
         CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
         CardRarity.COMMON, CardTarget.SELF
 ) {
     companion object {
         @JvmStatic
-        val ID = "Gauzy Sakura"
-        val IMAGE_PATH = "images/yuyuko/cards/skill2.png"
+        val ID = "Fondling of Papilio"
+        val IMAGE_PATH = "images/yuyuko/cards/skill4.png"
         val COST = 1
+        val BUTTERFLY_AMOUNT = 1
+        val UPGRADE_PLUS_AMOUNT = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
     }
 
+    init {
+        this.baseMagicNumber = BUTTERFLY_AMOUNT
+        this.magicNumber = BUTTERFLY_AMOUNT
+    }
 
-    override fun makeCopy(): AbstractCard = GauzySakura()
+    override fun makeCopy(): AbstractCard = FondlingOfPapilio()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        AbstractDungeon.actionManager.addToBottom(
-                MakeTempCardInDrawPileAction(
-                        SakuraDormancy(), 1, true, true
-                )
-        )
-        AbstractDungeon.actionManager.addToBottom(
-                UpgradeAllAction(Sakura.ID)
-        )
-
+        repeat(this.magicNumber) {
+            AbstractDungeon.actionManager.addToBottom(
+                    RetrievalAction(Butterfly.ID)
+            )
+        }
+        repeat(this.magicNumber) {
+            AbstractDungeon.actionManager.addToBottom(
+                    UpgradeAllAction(Butterfly.ID)
+            )
+        }
     }
 
     override fun upgrade() {
         if (!this.upgraded) {
-            upgradeName()
-            upgradeBaseCost(0)
+            this.upgradeName()
+            upgradeMagicNumber(UPGRADE_PLUS_AMOUNT)
         }
     }
-
 
 }

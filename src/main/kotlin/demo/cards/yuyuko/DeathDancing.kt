@@ -50,8 +50,10 @@ class DeathDancing : CustomCard(
 
 
     override fun upgrade() {
-        upgradeName()
-        upgradeDamage(UPGRADE_PLUS_AMOUNT)
+        if (!this.upgraded) {
+            upgradeName()
+            upgradeDamage(UPGRADE_PLUS_AMOUNT)
+        }
     }
 
 }

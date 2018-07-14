@@ -20,11 +20,13 @@ import com.megacrit.cardcrawl.localization.PowerStrings
 import com.megacrit.cardcrawl.localization.RelicStrings
 import demo.cards.yuyuko.Bloom
 import demo.cards.yuyuko.Bomb
+import demo.cards.yuyuko.ButterfliesRainbow
 import demo.cards.yuyuko.Butterfly
 import demo.cards.yuyuko.ButterflyDeepRooted
 import demo.cards.yuyuko.ButterflyDelusion
 import demo.cards.yuyuko.ButterflyGhost
 import demo.cards.yuyuko.ButterflySwallowtail
+import demo.cards.yuyuko.DancingButterflies
 import demo.cards.yuyuko.DeathDancing
 import demo.cards.yuyuko.DeathlyGround
 import demo.cards.yuyuko.DreamySakura
@@ -33,7 +35,9 @@ import demo.cards.yuyuko.Explore
 import demo.cards.yuyuko.ExploreGhostdom
 import demo.cards.yuyuko.FantasyButterflies
 import demo.cards.yuyuko.FaramitasTemptation
+import demo.cards.yuyuko.FondlingOfPapilio
 import demo.cards.yuyuko.GauzySakura
+import demo.cards.yuyuko.GhastlyDream
 import demo.cards.yuyuko.GhostButterflies
 import demo.cards.yuyuko.GhostdomSakura
 import demo.cards.yuyuko.Nihility
@@ -164,6 +168,12 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(DeathDancing())
         BaseMod.addCard(GhostButterflies())
 
+
+        BaseMod.addCard(DancingButterflies())
+        BaseMod.addCard(FondlingOfPapilio())
+        BaseMod.addCard(ButterfliesRainbow())
+        BaseMod.addCard(GhastlyDream())
+
     }
 
     override fun receiveEditRelics() {
@@ -177,6 +187,7 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         "Reset".loadKerwordsString()
         "Discover".loadKerwordsString()
         "Hide".loadKerwordsString()
+        "Retrieval".loadKerwordsString()
     }
 
     private fun String.loadKerwordsString() {

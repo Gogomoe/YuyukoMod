@@ -45,8 +45,10 @@ class Nihility : CustomCard(
     }
 
     override fun upgrade() {
-        upgradeName()
-        upgradeMagicNumber(UPGRADE_PLUS_AMOUNT)
+        if (!this.upgraded) {
+            this.upgradeName()
+            upgradeMagicNumber(UPGRADE_PLUS_AMOUNT)
+        }
     }
 
 }

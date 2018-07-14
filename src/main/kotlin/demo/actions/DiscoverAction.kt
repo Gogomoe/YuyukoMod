@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.CardGroup
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType
 import com.megacrit.cardcrawl.core.Settings
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
+import demo.randomBoolean
 import demo.randomInt
 
 
@@ -72,19 +73,24 @@ class DiscoverAction(val numCards: Int) : AbstractGameAction() {
         private fun discoverCards(numCards: Int): List<AbstractCard> {
             val retVal = mutableListOf<AbstractCard>()
 
-            var c: AbstractCard?
             repeat(numCards) {
                 val rarity = rollRarity()
-                c = AbstractDungeon.getCard(rarity)
+                var c = AbstractDungeon.getCard(rarity)
                 avoidRepeatedCard@ for (i in 1..10) {
-                    if (c != null && !retVal.contains(c!!)) {
+                    if (c != null && !retVal.contains(c)) {
                         break@avoidRepeatedCard
                     }
                     c = AbstractDungeon.getCard(rarity) ?: c
                 }
 
-                retVal.add(c!!)
+                c!!
+                if (shouldUpgrade(c)) {
+                    c.upgrade()
+                }
+
+                retVal.add(c)
             }
+
             return retVal
 
         }
@@ -97,6 +103,18 @@ class DiscoverAction(val numCards: Int) : AbstractGameAction() {
                 else -> CardRarity.COMMON
             }
         }
+
+        private fun shouldUpgrade(c: AbstractCard): Boolean =
+                when (c.rarity) {
+                    CardRarity.RARE -> false
+                    CardRarity.UNCOMMON -> {
+                        randomBoolean(0.125f)
+                    }
+                    CardRarity.COMMON -> {
+                        randomBoolean(0.25f)
+                    }
+                    else -> false
+                }
     }
 
 

@@ -52,9 +52,11 @@ class Explore : CustomCard(
     }
 
     override fun upgrade() {
-        upgradeName()
-        this.rawDescription = UPDEAGE_DESCRIPTION
-        this.initializeDescription()
+        if (!this.upgraded) {
+            upgradeName()
+            this.rawDescription = UPDEAGE_DESCRIPTION
+            this.initializeDescription()
+        }
     }
 
 

@@ -45,8 +45,10 @@ class Bloom : CustomCard(
     }
 
     override fun upgrade() {
-        upgradeName()
-        upgradeMagicNumber(UPGRADE_PLUS_AMOUNT)
+        if (!this.upgraded) {
+            this.upgradeName()
+            this.upgradeMagicNumber(UPGRADE_PLUS_AMOUNT)
+        }
     }
 
 

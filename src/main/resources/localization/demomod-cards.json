@@ -119,5 +119,22 @@
   "Ghost Butterflies": {
     "NAME": "幽蝴蝶",
     "DESCRIPTION": "将所有 没有额外效果的蝶 变形为 蝶(妄想) "
+  },
+  "Dancing Butterflies": {
+    "NAME": "蝴蝶梦之舞",
+    "DESCRIPTION": "对敌方全体造成幽幽扇中蝶数量的伤害, NL 升级所有 蝶 ",
+    "UPGRADE_DESCRIPTION": "对敌方全体造成幽幽扇中蝶数量的伤害, NL 将1张蝶洗入牌堆 , 升级所有 蝶 "
+  },
+  "Fondling of Papilio": {
+    "NAME": "凤尾蝶之抚",
+    "DESCRIPTION": " 检索 !M! 张 蝶 , NL 升级所有 蝶 !M! 次"
+  },
+  "Butterflies Rainbow": {
+    "NAME": "七色的蝴蝶",
+    "DESCRIPTION": "将1张有属性的随机 蝶 洗入牌堆, NL 升级所有 蝶 "
+  },
+  "Ghastly Dream": {
+    "NAME": "惊梦",
+    "DESCRIPTION": " 检索 蝶 直到填满手牌. NL 直到回合结束,你的 蝶 会格外打出 !M! 次"
   }
 }

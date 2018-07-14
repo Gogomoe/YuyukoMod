@@ -47,10 +47,13 @@ class SakuraWard : CustomCard(
     }
 
     override fun upgrade() {
-        upgradeName()
-        upgradeBlock(UPGRADE_PLUS_BLOCK)
-        this.isInnate = true
-        this.rawDescription = UPDEAGE_DESCRIPTION
+        if (!this.upgraded) {
+            upgradeName()
+            upgradeBlock(UPGRADE_PLUS_BLOCK)
+            this.isInnate = true
+            this.rawDescription = UPDEAGE_DESCRIPTION
+            this.initializeDescription()
+        }
     }
 
 

@@ -58,8 +58,10 @@ class UnbornLight : CustomCard(
     }
 
     override fun upgrade() {
-        upgradeName()
-        upgradeDamage(UPGRADE_PLUS_DMG)
+        if (!this.upgraded) {
+            upgradeName()
+            upgradeDamage(UPGRADE_PLUS_DMG)
+        }
     }
 
 }

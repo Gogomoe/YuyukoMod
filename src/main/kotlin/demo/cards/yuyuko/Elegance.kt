@@ -53,7 +53,9 @@ class Elegance : CustomCard(
     }
 
     override fun upgrade() {
-        upgradeName()
+        if (!this.upgraded) {
+            upgradeName()
+        }
     }
 
 }
