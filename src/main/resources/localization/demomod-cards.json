@@ -126,6 +126,14 @@
     "DESCRIPTION": "对敌方全体造成幽幽扇中蝶数量的伤害, NL 升级所有 蝶 ",
     "UPGRADE_DESCRIPTION": "对敌方全体造成幽幽扇中蝶数量的伤害, NL 将1张蝶洗入牌堆 , 升级所有 蝶 "
   },
+  "Spear of Papilio": {
+    "NAME": "凤蝶纹之枪",
+    "DESCRIPTION": "造成 !D! 点体力流失, NL 将 !M! 张 蝶(执念) 洗入牌堆, NL 升级所有 蝶 "
+  },
+  "Song of Papilio": {
+    "NAME": "凤尾蝶之歌",
+    "DESCRIPTION": "将1张 蝶(扬羽) 洗入牌堆, NL 升级所有 蝶 "
+  },
   "Fondling of Papilio": {
     "NAME": "凤尾蝶之抚",
     "DESCRIPTION": " 检索 !M! 张 蝶 , NL 升级所有 蝶 !M! 次"
@@ -137,6 +145,11 @@
   "Ghastly Dream": {
     "NAME": "惊梦",
     "DESCRIPTION": " 检索 蝶 直到填满手牌. NL 直到回合结束,你的 蝶 会格外打出 !M! 次"
+  },
+  "Float on Moon": {
+    "NAME": "死蝶浮月",
+    "DESCRIPTION": "回合开始时, 升级所有 蝶 3次, NL 你的 蝶 会造成3倍伤害并 消耗 ",
+    "UPGRADE_DESCRIPTION": "回合开始时, 升级所有 蝶 3次, NL 你的 蝶 会造成3倍伤害并 消耗 , 固有 "
   },
   "All Wander": {
     "NAME": "悉皆彷徨",
@@ -154,5 +167,10 @@
   "Ghost Gift": {
     "NAME": "故人的遗物",
     "DESCRIPTION": "每回合结束时,获得1层 幽灵 "
+  },
+  "Dying Dream": {
+    "NAME": "无寿之梦",
+    "DESCRIPTION": "损失所有 幽灵 层数, NL 对敌方全体造成等同于其10倍的伤害与 缠绕 , 消耗 ",
+    "UPGRADE_DESCRIPTION": "损失所有 幽灵 层数, NL 对敌方全体造成等同于其10倍的伤害与 缠绕 , 消耗 , 藏匿 "
   }
 }

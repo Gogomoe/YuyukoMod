@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import demo.patches.CardColorEnum
+import demo.powers.FloatOnMoonPower
 
 class ButterflyDeepRooted : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
@@ -37,6 +38,12 @@ class ButterflyDeepRooted : CustomCard(
     }
 
     override fun makeCopy(): AbstractCard = ButterflyDeepRooted()
+
+    override fun calculateCardDamage(mo: AbstractMonster?) {
+        val times = AbstractDungeon.player.getPower(FloatOnMoonPower.POWER_ID)?.amount ?: 1
+        this.baseDamage = this.baseDamage * times
+        super.calculateCardDamage(mo)
+    }
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         AbstractDungeon.actionManager.addToBottom(

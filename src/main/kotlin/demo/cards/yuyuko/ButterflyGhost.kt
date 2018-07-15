@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import com.megacrit.cardcrawl.powers.ConstrictedPower
 import demo.patches.CardColorEnum
+import demo.powers.FloatOnMoonPower
 
 class ButterflyGhost : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
@@ -36,6 +37,12 @@ class ButterflyGhost : CustomCard(
     }
 
     override fun makeCopy(): AbstractCard = ButterflyGhost()
+
+    override fun calculateCardDamage(mo: AbstractMonster?) {
+        val times = AbstractDungeon.player.getPower(FloatOnMoonPower.POWER_ID)?.amount ?: 1
+        this.baseDamage = this.baseDamage * times
+        super.calculateCardDamage(mo)
+    }
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         AbstractDungeon.actionManager.addToBottom(

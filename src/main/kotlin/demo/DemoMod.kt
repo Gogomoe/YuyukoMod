@@ -32,11 +32,13 @@ import demo.cards.yuyuko.DancingButterflies
 import demo.cards.yuyuko.DeathDancing
 import demo.cards.yuyuko.DeathlyGround
 import demo.cards.yuyuko.DreamySakura
+import demo.cards.yuyuko.DyingDream
 import demo.cards.yuyuko.Elegance
 import demo.cards.yuyuko.Explore
 import demo.cards.yuyuko.ExploreGhostdom
 import demo.cards.yuyuko.FantasyButterflies
 import demo.cards.yuyuko.FaramitasTemptation
+import demo.cards.yuyuko.FloatOnMoon
 import demo.cards.yuyuko.FondlingOfPapilio
 import demo.cards.yuyuko.GauzySakura
 import demo.cards.yuyuko.GhastlyDream
@@ -52,6 +54,8 @@ import demo.cards.yuyuko.SakuraSeal
 import demo.cards.yuyuko.SakuraSuicide
 import demo.cards.yuyuko.SakuraWard
 import demo.cards.yuyuko.Snow
+import demo.cards.yuyuko.SongOfPapilio
+import demo.cards.yuyuko.SpearOfPapilio
 import demo.cards.yuyuko.SweetOfGhost
 import demo.cards.yuyuko.UnbornLight
 import demo.characters.Yuyuko
@@ -174,15 +178,19 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
 
 
         BaseMod.addCard(DancingButterflies())
+        BaseMod.addCard(SpearOfPapilio())
+        BaseMod.addCard(SongOfPapilio())
         BaseMod.addCard(FondlingOfPapilio())
         BaseMod.addCard(ButterfliesRainbow())
         BaseMod.addCard(GhastlyDream())
+        BaseMod.addCard(FloatOnMoon())
 
 
         BaseMod.addCard(AllWander())
         BaseMod.addCard(BecomeGhost())
         BaseMod.addCard(SweetOfGhost())
         BaseMod.addCard(GhostGift())
+        BaseMod.addCard(DyingDream())
 
     }
 
@@ -193,11 +201,21 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
     override fun receiveEditKeywords() {
         DiaphaneityPower.POWER_ID.loadKeywordsString()
         GhostPower.POWER_ID.loadKeywordsString()
+        "Constricted".loadKeywordsString()
         "UpgradeAll".loadKeywordsString()
         "Reset".loadKeywordsString()
         "Discover".loadKeywordsString()
         "Hide".loadKeywordsString()
         "Retrieval".loadKeywordsString()
+
+        "Sakura(Seal)".loadKeywordsString()
+        "Sakura(Suicide)".loadKeywordsString()
+        "Sakura(Dormancy)".loadKeywordsString()
+        "Sakura(Bloom)".loadKeywordsString()
+        "Butterfly(Ghost)".loadKeywordsString()
+        "Butterfly(Swallowtail)".loadKeywordsString()
+        "Butterfly(Deep Rooted)".loadKeywordsString()
+        "Butterfly(Delusion)".loadKeywordsString()
     }
 
     private fun String.loadKeywordsString() {

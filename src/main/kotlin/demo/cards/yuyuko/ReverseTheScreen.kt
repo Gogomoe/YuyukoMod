@@ -71,6 +71,9 @@ class ReverseTheScreen : CustomCard(
     }
 
     override fun triggerWhenDrawn() {
+        if (!upgraded) {
+            return
+        }
         val player = AbstractDungeon.player
         val drawPile = AbstractDungeon.player.drawPile.group
         val remain = drawPile.filter { it.isHide() }
