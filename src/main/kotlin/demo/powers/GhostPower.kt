@@ -54,7 +54,18 @@ class GhostPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
             return
         }
         val player = AbstractDungeon.player
+
+        if (player.hasPower(BecomeGhostPower.POWER_ID)) {
+            return
+        }
+
+        onSpecificTrigger()
+    }
+
+    override fun onSpecificTrigger() {
+        val player = AbstractDungeon.player
         val cardsRemain = player.hand.group.size
+
         if (cardsRemain < 1) {
             return
         }
@@ -76,6 +87,7 @@ class GhostPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
                     )
             )
         }
+
     }
 
     override fun atStartOfTurnPostDraw() {

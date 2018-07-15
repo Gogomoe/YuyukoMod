@@ -27,5 +27,18 @@
       "直到回合结束,你的 蝶 会格外打出打出 #b",
       " 次"
     ]
+  },
+  "Dizziness": {
+    "NAME": "眩晕",
+    "DESCRIPTIONS": [
+      "使敌人跳过下一回合"
+    ]
+  },
+  "Become Ghost": {
+    "NAME": "好死之灵",
+    "DESCRIPTIONS": [
+      "每回合结束时，获得 #b",
+      " 层 幽灵 "
+    ]
   }
 }

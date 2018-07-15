@@ -110,7 +110,8 @@
   },
   "Nihility": {
     "NAME": "虚无之境",
-    "DESCRIPTION": "打出这张牌后,你在这个回合内每打出1张牌, NL 给予自己与全体敌人 !M! 层 虚化 "
+    "DESCRIPTION": "打出这张牌后,你在这个回合内每打出1张牌, NL 给予自己与全体敌人 !M! 层 虚化 ",
+    "UPGRADE_DESCRIPTION": "抽一张牌, NL 打出这张牌后,你在这个回合内每打出1张牌, NL 给予自己与全体敌人 !M! 层 虚化 "
   },
   "Death Dancing": {
     "NAME": "殒命之舞",
@@ -136,5 +137,22 @@
   "Ghastly Dream": {
     "NAME": "惊梦",
     "DESCRIPTION": " 检索 蝶 直到填满手牌. NL 直到回合结束,你的 蝶 会格外打出 !M! 次"
+  },
+  "All Wander": {
+    "NAME": "悉皆彷徨",
+    "DESCRIPTION": "获得 !M! 层 幽灵 , NL 若你此回合未使用过任何其他卡牌, 并立即结束回合, 并使敌方跳过下一回合"
+  },
+  "Become Ghost": {
+    "NAME": "好死之灵",
+    "DESCRIPTION": " 检索 并 消耗 1张 蝶 , NL 每回合结束时,获得1层 幽灵 , 消耗 ",
+    "UPGRADE_DESCRIPTION": " 检索 并 消耗 1张 蝶 , NL 每回合结束时,获得1层 幽灵 "
+  },
+  "Sweet of Ghost": {
+    "NAME": "诱灵的甘蜜",
+    "DESCRIPTION": "获得 !M! 层 幽灵 , NL 给予 !M! 层 缠绕 , NL 抽 !M! 张牌"
+  },
+  "Ghost Gift": {
+    "NAME": "故人的遗物",
+    "DESCRIPTION": "每回合结束时,获得1层 幽灵 "
   }
 }

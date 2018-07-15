@@ -18,6 +18,8 @@ import com.megacrit.cardcrawl.localization.CharacterStrings
 import com.megacrit.cardcrawl.localization.KeywordStrings
 import com.megacrit.cardcrawl.localization.PowerStrings
 import com.megacrit.cardcrawl.localization.RelicStrings
+import demo.cards.yuyuko.AllWander
+import demo.cards.yuyuko.BecomeGhost
 import demo.cards.yuyuko.Bloom
 import demo.cards.yuyuko.Bomb
 import demo.cards.yuyuko.ButterfliesRainbow
@@ -39,6 +41,7 @@ import demo.cards.yuyuko.FondlingOfPapilio
 import demo.cards.yuyuko.GauzySakura
 import demo.cards.yuyuko.GhastlyDream
 import demo.cards.yuyuko.GhostButterflies
+import demo.cards.yuyuko.GhostGift
 import demo.cards.yuyuko.GhostdomSakura
 import demo.cards.yuyuko.Nihility
 import demo.cards.yuyuko.ReverseTheScreen
@@ -49,6 +52,7 @@ import demo.cards.yuyuko.SakuraSeal
 import demo.cards.yuyuko.SakuraSuicide
 import demo.cards.yuyuko.SakuraWard
 import demo.cards.yuyuko.Snow
+import demo.cards.yuyuko.SweetOfGhost
 import demo.cards.yuyuko.UnbornLight
 import demo.characters.Yuyuko
 import demo.patches.CardColorEnum
@@ -174,6 +178,12 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(ButterfliesRainbow())
         BaseMod.addCard(GhastlyDream())
 
+
+        BaseMod.addCard(AllWander())
+        BaseMod.addCard(BecomeGhost())
+        BaseMod.addCard(SweetOfGhost())
+        BaseMod.addCard(GhostGift())
+
     }
 
     override fun receiveEditRelics() {
@@ -181,16 +191,16 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
     }
 
     override fun receiveEditKeywords() {
-        DiaphaneityPower.POWER_ID.loadKerwordsString()
-        GhostPower.POWER_ID.loadKerwordsString()
-        "UpgradeAll".loadKerwordsString()
-        "Reset".loadKerwordsString()
-        "Discover".loadKerwordsString()
-        "Hide".loadKerwordsString()
-        "Retrieval".loadKerwordsString()
+        DiaphaneityPower.POWER_ID.loadKeywordsString()
+        GhostPower.POWER_ID.loadKeywordsString()
+        "UpgradeAll".loadKeywordsString()
+        "Reset".loadKeywordsString()
+        "Discover".loadKeywordsString()
+        "Hide".loadKeywordsString()
+        "Retrieval".loadKeywordsString()
     }
 
-    private fun String.loadKerwordsString() {
+    private fun String.loadKeywordsString() {
         val strings = CardCrawlGame.languagePack.getKeywordString(this)
         BaseMod.addKeyword(strings.TEXT.copyOfRange(0, strings.TEXT.size - 1), strings.TEXT.last())
     }

@@ -2,49 +2,50 @@ package demo.cards.yuyuko
 
 import basemod.abstracts.CustomCard
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
-import com.megacrit.cardcrawl.actions.common.DrawCardAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import demo.actions.BecomeGhostAction
+import demo.actions.RetrievalAction
 import demo.patches.CardColorEnum
-import demo.powers.NihilityPower
+import demo.powers.BecomeGhostPower
 
-class Nihility : CustomCard(
+class BecomeGhost : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
         CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
-        CardRarity.UNCOMMON, CardTarget.SELF
+        CardRarity.COMMON, CardTarget.SELF
 ) {
     companion object {
         @JvmStatic
-        val ID = "Nihility"
-        val IMAGE_PATH = "images/yuyuko/cards/skill3.png"
-        val COST = 0
+        val ID = "Become Ghost"
+        val IMAGE_PATH = "images/yuyuko/cards/skill5.png"
+        val COST = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
-        val UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION
+        val UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION!!
     }
 
     init {
-        this.baseMagicNumber = 1
-        this.magicNumber = 1
+        this.exhaust = true
     }
 
-    override fun makeCopy(): AbstractCard = Nihility()
+    override fun makeCopy(): AbstractCard = BecomeGhost()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        if (upgraded) {
-            AbstractDungeon.actionManager.addToBottom(
-                    DrawCardAction(self, 1)
-            )
-        }
+        AbstractDungeon.actionManager.addToBottom(
+                RetrievalAction(Butterfly.ID)
+        )
+        AbstractDungeon.actionManager.addToBottom(
+                BecomeGhostAction()
+        )
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(
                         self, self,
-                        NihilityPower(this.magicNumber),
-                        this.magicNumber
+                        BecomeGhostPower(),
+                        1
                 )
         )
     }
@@ -52,9 +53,11 @@ class Nihility : CustomCard(
     override fun upgrade() {
         if (!this.upgraded) {
             this.upgradeName()
+            this.exhaust = false
             this.rawDescription = UPGRADE_DESCRIPTION
             this.initializeDescription()
         }
     }
+
 
 }
