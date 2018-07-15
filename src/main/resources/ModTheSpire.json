@@ -1,6 +1,6 @@
 {
-  "modid": "YuyukoMod",
-  "name": "Yuyuko Mod",
+  "modid": "Team TouhouSpire 04 - Yukoko",
+  "name": "Team TouhouSpire 04 - Yukoko",
   "author_list": [
     "Gogo",
     "若然"
@@ -9,6 +9,6 @@
   "dependencies": [
     "basemod"
   ],
-  "version": "v0.0.5"
+  "version": "v0.0.6"
 }
 	
