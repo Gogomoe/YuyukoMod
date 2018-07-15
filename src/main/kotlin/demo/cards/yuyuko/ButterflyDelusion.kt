@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster
 import demo.patches.CardColorEnum
 import demo.powers.DiaphaneityPower
 import demo.powers.FloatOnMoonPower
+import demo.powers.GhastlyDreamPower
 
 class ButterflyDelusion : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
@@ -40,7 +41,7 @@ class ButterflyDelusion : CustomCard(
 
     override fun calculateCardDamage(mo: AbstractMonster?) {
         val times = AbstractDungeon.player.getPower(FloatOnMoonPower.POWER_ID)?.amount ?: 1
-        this.baseDamage = this.baseDamage * times
+        this.baseDamage = (this.timesUpgraded + 1) * times
         super.calculateCardDamage(mo)
     }
 
@@ -62,6 +63,13 @@ class ButterflyDelusion : CustomCard(
                         2
                 )
         )
+
+        /**
+         * 惊梦效果，如果此时降级了，重发打出的蝶无法获得等级
+         */
+        if (self!!.hasPower(GhastlyDreamPower.POWER_ID)) {
+            return
+        }
         degradeToInitiation()
     }
 
@@ -79,7 +87,7 @@ class ButterflyDelusion : CustomCard(
         this.initializeTitle()
     }
 
-    private fun degradeToInitiation() {
+    fun degradeToInitiation() {
         this.upgraded = false
         this.name = NAME
         this.baseDamage -= UPGRADE_PLUS_DMG * this.timesUpgraded

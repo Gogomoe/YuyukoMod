@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import demo.actions.UpgradeAllAction
 import demo.getRandom
 import demo.patches.CardColorEnum
 
@@ -36,19 +35,36 @@ class ButterfliesRainbow : CustomCard(
                 ButterflySwallowtail()
         )
         val card = cards.getRandom()!!
+        repeat(timesUpgraded) {
+            card.upgrade()
+        }
         AbstractDungeon.actionManager.addToBottom(
                 MakeTempCardInDrawPileAction(card, 1, true, true)
         )
-        AbstractDungeon.actionManager.addToBottom(
-                UpgradeAllAction(Butterfly.ID)
-        )
     }
 
+
+    override fun canUpgrade(): Boolean = true
+
     override fun upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName()
-            this.upgradeBaseCost(0)
-        }
+        upgradeName()
+        upgradeBaseCost(0)
+    }
+
+    override fun upgradeName() {
+        ++this.timesUpgraded
+        this.upgraded = true
+        this.name = "$NAME+$timesUpgraded"
+        this.initializeTitle()
+    }
+
+    fun degradeToInitiation() {
+        this.upgraded = false
+        this.name = NAME
+        this.baseDamage -= Butterfly.UPGRADE_PLUS_DMG * this.timesUpgraded
+        this.upgradedDamage = false
+        this.timesUpgraded = 0
+        this.initializeTitle()
     }
 
 }

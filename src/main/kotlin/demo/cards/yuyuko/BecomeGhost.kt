@@ -2,15 +2,15 @@ package demo.cards.yuyuko
 
 import basemod.abstracts.CustomCard
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import demo.actions.BecomeGhostAction
-import demo.actions.RetrievalAction
 import demo.patches.CardColorEnum
 import demo.powers.BecomeGhostPower
+import demo.powers.FanPower
 
 class BecomeGhost : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
@@ -36,10 +36,7 @@ class BecomeGhost : CustomCard(
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         AbstractDungeon.actionManager.addToBottom(
-                RetrievalAction(Butterfly.ID)
-        )
-        AbstractDungeon.actionManager.addToBottom(
-                BecomeGhostAction()
+                ReducePowerAction(self, self, FanPower.POWER_ID, 1)
         )
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(

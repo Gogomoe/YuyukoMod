@@ -2,13 +2,14 @@ package demo.relics
 
 import basemod.abstracts.CustomRelic
 import com.badlogic.gdx.graphics.Texture
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction
-import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.helpers.PowerTip
 import com.megacrit.cardcrawl.relics.AbstractRelic
 import demo.cards.yuyuko.Butterfly
 import demo.cards.yuyuko.Sakura
+import demo.powers.FanPower
 
 
 class Yuyukosfan : CustomRelic(
@@ -23,10 +24,10 @@ class Yuyukosfan : CustomRelic(
         val IMAGE_PATH = "images/relics/relic.png"
     }
 
-    var sakuraAmount = 5
-    var butterflyAmount = 5
+    var fanAmount = 5
 
     init {
+        this.counter = fanAmount
         updateDescription()
     }
 
@@ -41,19 +42,28 @@ class Yuyukosfan : CustomRelic(
     }
 
     override fun atBattleStartPreDraw() {
+        val player = AbstractDungeon.player
         AbstractDungeon.actionManager.addToBottom(
-                MakeTempCardInDrawPileAction(
-                        Sakura(), sakuraAmount, true, true
+                ApplyPowerAction(
+                        player, player,
+                        FanPower(fanAmount),
+                        fanAmount
                 )
         )
         AbstractDungeon.actionManager.addToBottom(
                 MakeTempCardInDrawPileAction(
-                        Butterfly(), butterflyAmount, true, true
+                        Sakura(), fanAmount, true, true
+                )
+        )
+        AbstractDungeon.actionManager.addToBottom(
+                MakeTempCardInDrawPileAction(
+                        Butterfly(), fanAmount, true, true
                 )
         )
     }
 
     fun updateDescription() {
+        this.counter = fanAmount
         this.description = updatedDescription
         initializeTips()
         this.tips.removeAt(0)
@@ -61,7 +71,7 @@ class Yuyukosfan : CustomRelic(
     }
 
     override fun getUpdatedDescription(): String {
-        return DESCRIPTIONS[0] + sakuraAmount + DESCRIPTIONS[1] + butterflyAmount + DESCRIPTIONS[2]
+        return DESCRIPTIONS[0] + fanAmount + DESCRIPTIONS[1] + fanAmount + DESCRIPTIONS[2]
     }
 
     override fun makeCopy(): AbstractRelic {

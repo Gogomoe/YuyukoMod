@@ -13,7 +13,7 @@
   },
   "Deathly Ground": {
     "NAME": "死还的大地",
-    "DESCRIPTION": "获得 !M! 层 幽灵 ."
+    "DESCRIPTION": "造成 !D! 点伤害, NL 获得 !M! 层 幽灵 ."
   },
   "Faramita's Temptation": {
     "NAME": "对岸的引诱",
@@ -101,8 +101,8 @@
   },
   "Elegance": {
     "NAME": "幽雅",
-    "DESCRIPTION": "获得幽幽扇中樱数量层 虚化 , NL 升级所有 樱",
-    "UPGRADE_DESCRIPTION": "获得幽幽扇中樱数量层 虚化 , NL 将1张樱洗入牌堆, 升级所有 樱"
+    "DESCRIPTION": "获得扇层数的 虚化 , NL 升级所有 樱",
+    "UPGRADE_DESCRIPTION": "获得扇层数的 虚化 , NL 将1张樱洗入牌堆, 升级所有 樱"
   },
   "Snow": {
     "NAME": "雪",
@@ -123,8 +123,8 @@
   },
   "Dancing Butterflies": {
     "NAME": "蝴蝶梦之舞",
-    "DESCRIPTION": "对敌方全体造成幽幽扇中蝶数量的伤害, NL 升级所有 蝶 ",
-    "UPGRADE_DESCRIPTION": "对敌方全体造成幽幽扇中蝶数量的伤害, NL 将1张蝶洗入牌堆 , 升级所有 蝶 "
+    "DESCRIPTION": "对敌方全体造成扇层数的伤害, NL 升级所有 蝶 ",
+    "UPGRADE_DESCRIPTION": "对敌方全体造成扇层数的伤害, NL 将1张蝶洗入牌堆 , 升级所有 蝶 "
   },
   "Spear of Papilio": {
     "NAME": "凤蝶纹之枪",
@@ -140,11 +140,11 @@
   },
   "Butterflies Rainbow": {
     "NAME": "七色的蝴蝶",
-    "DESCRIPTION": "将1张有属性的随机 蝶 洗入牌堆, NL 升级所有 蝶 "
+    "DESCRIPTION": "是 蝶 . NL 将1张同等级有额外效果的随机 蝶 洗入牌堆, NL 可多次升级, 重置 "
   },
   "Ghastly Dream": {
     "NAME": "惊梦",
-    "DESCRIPTION": " 检索 蝶 直到填满手牌. NL 直到回合结束,你的 蝶 会格外打出 !M! 次"
+    "DESCRIPTION": " 检索 蝶 直到填满手牌. NL 本回合你的 蝶 会额外打出 !M! 次 , NL 本回合你不能再抽牌"
   },
   "Float on Moon": {
     "NAME": "死蝶浮月",
@@ -153,12 +153,13 @@
   },
   "All Wander": {
     "NAME": "悉皆彷徨",
-    "DESCRIPTION": "获得 !M! 层 幽灵 , NL 若你此回合未使用过任何其他卡牌, 并立即结束回合, 并使敌方跳过下一回合"
+    "DESCRIPTION": "获得 X 层 幽灵 , NL 若你此回合未使用过任何其他卡牌, 并立即结束回合, 并使敌方跳过下一回合",
+    "UPGRADE_DESCRIPTION": "获得 X+1 层 幽灵 , NL 若你此回合未使用过任何其他卡牌, 并立即结束回合, 并使敌方跳过下一回合"
   },
   "Become Ghost": {
     "NAME": "好死之灵",
-    "DESCRIPTION": " 检索 并 消耗 1张 蝶 , NL 每回合结束时,获得1层 幽灵 , 消耗 ",
-    "UPGRADE_DESCRIPTION": " 检索 并 消耗 1张 蝶 , NL 每回合结束时,获得1层 幽灵 "
+    "DESCRIPTION": "减少1层 扇 , NL 每回合结束时,获得1层 幽灵 , NL 消耗",
+    "UPGRADE_DESCRIPTION": "减少1层 扇 , NL 每回合结束时,获得1层 幽灵 "
   },
   "Sweet of Ghost": {
     "NAME": "诱灵的甘蜜",
@@ -170,7 +171,7 @@
   },
   "Dying Dream": {
     "NAME": "无寿之梦",
-    "DESCRIPTION": "损失所有 幽灵 层数, NL 对敌方全体造成等同于其10倍的伤害与 缠绕 , 消耗 ",
-    "UPGRADE_DESCRIPTION": "损失所有 幽灵 层数, NL 对敌方全体造成等同于其10倍的伤害与 缠绕 , 消耗 , 藏匿 "
+    "DESCRIPTION": "损失所有 幽灵 层数, NL 对敌方全体造成等同于其5倍的伤害与 缠绕 , 消耗 ",
+    "UPGRADE_DESCRIPTION": "损失所有 幽灵 层数, NL 对敌方全体造成等同于其5倍的伤害与 缠绕 , 消耗 , 藏匿 "
   }
 }

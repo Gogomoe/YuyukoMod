@@ -41,7 +41,7 @@ class DyingDream : CustomCard(
 
     override fun calculateCardDamage(mo: AbstractMonster?) {
         val amount = AbstractDungeon.player.getPower(GhostPower.POWER_ID)?.amount ?: 0
-        this.baseDamage = amount * 10
+        this.baseDamage = amount * 5
         super.calculateCardDamage(mo)
     }
 
@@ -60,7 +60,7 @@ class DyingDream : CustomCard(
                     ApplyPowerAction(
                             it, self,
                             ConstrictedPower(it, self, amount),
-                            amount * 10
+                            amount * 5
                     )
             )
         }

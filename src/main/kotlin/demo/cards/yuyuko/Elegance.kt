@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster
 import demo.actions.UpgradeAllAction
 import demo.patches.CardColorEnum
 import demo.powers.DiaphaneityPower
-import demo.relics.Yuyukosfan
+import demo.powers.FanPower
 
 class Elegance : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
@@ -43,7 +43,7 @@ class Elegance : CustomCard(
                 UpgradeAllAction(Sakura.ID)
         )
 
-        val amount = (self!!.getRelic(Yuyukosfan.ID) as Yuyukosfan?)?.sakuraAmount ?: return
+        val amount = self!!.getPower(FanPower.POWER_ID)?.amount ?: 0
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(
                         self, self,

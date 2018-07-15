@@ -43,8 +43,8 @@ class Explore : CustomCard(
             AbstractDungeon.actionManager.addToBottom(
                     ApplyPowerAction(
                             self, self,
-                            DiaphaneityPower(self!!, 2),
-                            2
+                            DiaphaneityPower(self!!, 1),
+                            1
                     )
             )
         }

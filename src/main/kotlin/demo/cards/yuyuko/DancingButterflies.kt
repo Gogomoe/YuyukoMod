@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import demo.actions.UpgradeAllAction
 import demo.patches.CardColorEnum
-import demo.relics.Yuyukosfan
+import demo.powers.FanPower
 
 class DancingButterflies : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
@@ -34,7 +34,7 @@ class DancingButterflies : CustomCard(
     override fun makeCopy(): AbstractCard = DancingButterflies()
 
     override fun calculateCardDamage(mo: AbstractMonster?) {
-        this.baseDamage = (AbstractDungeon.player.getRelic(Yuyukosfan.ID) as Yuyukosfan?)?.butterflyAmount ?: 0
+        this.baseDamage = AbstractDungeon.player.getPower(FanPower.POWER_ID)?.amount ?: 0
         super.calculateCardDamage(mo)
     }
 

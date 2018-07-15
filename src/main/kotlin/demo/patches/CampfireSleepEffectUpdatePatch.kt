@@ -20,8 +20,7 @@ class CampfireSleepEffectUpdatePatch {
         fun Insert(instance: CampfireSleepEffect) {
             val fan = AbstractDungeon.player.getRelic(Yuyukosfan.ID) as Yuyukosfan?
             if (fan != null) {
-                fan.butterflyAmount += 1
-                fan.sakuraAmount += 1
+                fan.fanAmount += 1
                 fan.updateDescription()
                 fan.flash()
             }

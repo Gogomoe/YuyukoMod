@@ -1,6 +1,7 @@
 package demo.cards
 
 import com.megacrit.cardcrawl.cards.AbstractCard
+import demo.cards.yuyuko.ButterfliesRainbow
 import demo.cards.yuyuko.Butterfly
 import demo.cards.yuyuko.ButterflyDeepRooted
 import demo.cards.yuyuko.ButterflyDelusion
@@ -30,12 +31,23 @@ fun AbstractCard.triggerOnDiscard(isEndTurn: Boolean) {
 
 private val ButterflyIDS = listOf(
         Butterfly.ID, ButterflySwallowtail.ID, ButterflyGhost.ID,
-        ButterflyDeepRooted.ID, ButterflyDelusion.ID
+        ButterflyDeepRooted.ID, ButterflyDelusion.ID, ButterfliesRainbow.ID
 )
 private val SakuraIDS = listOf(
+        Sakura.ID, SakuraBloom.ID, SakuraDormancy.ID,
+        SakuraSeal.ID, SakuraSuicide.ID
+)
+private val SpecialButterflyIDS = listOf(
+        Butterfly.ID, ButterflySwallowtail.ID, ButterflyGhost.ID,
+        ButterflyDeepRooted.ID, ButterflyDelusion.ID
+)
+private val SpecialSakuraIDS = listOf(
         Sakura.ID, SakuraBloom.ID, SakuraDormancy.ID,
         SakuraSeal.ID, SakuraSuicide.ID
 )
 
 fun AbstractCard.isButterfly(): Boolean = this.cardID in ButterflyIDS
 fun AbstractCard.isSakura(): Boolean = this.cardID in SakuraIDS
+
+fun AbstractCard.isSpecialButterfly(): Boolean = this.cardID in SpecialButterflyIDS
+fun AbstractCard.isSpecialSakura(): Boolean = this.cardID in SpecialSakuraIDS

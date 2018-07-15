@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import com.megacrit.cardcrawl.powers.NoDrawPower
 import demo.actions.RetrievalAction
 import demo.patches.CardColorEnum
 import demo.powers.GhastlyDreamPower
@@ -47,6 +48,14 @@ class GhastlyDream : CustomCard(
                         this.magicNumber
                 )
         )
+        AbstractDungeon.actionManager.addToBottom(
+                ApplyPowerAction(
+                        self, self,
+                        NoDrawPower(self),
+                        1
+                )
+        )
+
     }
 
     override fun upgrade() {

@@ -1,4 +1,11 @@
 {
+  "Fan": {
+    "NAME": "扇",
+    "DESCRIPTIONS": [
+      "打出一张 樱 或 蝶 时，若其同类牌总数量大于 #b",
+      " ,将其 消耗 "
+    ]
+  },
   "Diaphaneity": {
     "NAME": "虚化",
     "DESCRIPTIONS": [
