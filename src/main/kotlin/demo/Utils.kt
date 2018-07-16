@@ -22,7 +22,6 @@ fun randomBoolean(rarity: Float): Boolean = rng.nextFloat() <= rarity
 fun CardGroup.addToRandomSpotIfIsDrawPile(card: AbstractCard) {
     when (this.type) {
         CardGroupType.DRAW_PILE -> this.addToRandomSpot(card)
-        CardGroupType.HAND -> addToTop(card)
-        else -> this.addToBottom(card)
+        else -> this.addToTop(card)
     }
 }

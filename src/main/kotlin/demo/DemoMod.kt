@@ -22,6 +22,7 @@ import demo.cards.yuyuko.AllWander
 import demo.cards.yuyuko.BecomeGhost
 import demo.cards.yuyuko.Bloom
 import demo.cards.yuyuko.Bomb
+import demo.cards.yuyuko.ButterfliesLoveFlowers
 import demo.cards.yuyuko.ButterfliesRainbow
 import demo.cards.yuyuko.Butterfly
 import demo.cards.yuyuko.ButterflyDeepRooted
@@ -32,6 +33,7 @@ import demo.cards.yuyuko.DancingButterflies
 import demo.cards.yuyuko.DeathDancing
 import demo.cards.yuyuko.DeathlyGround
 import demo.cards.yuyuko.DreamySakura
+import demo.cards.yuyuko.DyingButterflies
 import demo.cards.yuyuko.DyingDream
 import demo.cards.yuyuko.Elegance
 import demo.cards.yuyuko.Explore
@@ -45,6 +47,7 @@ import demo.cards.yuyuko.GhastlyDream
 import demo.cards.yuyuko.GhostButterflies
 import demo.cards.yuyuko.GhostGift
 import demo.cards.yuyuko.GhostdomSakura
+import demo.cards.yuyuko.Lunch
 import demo.cards.yuyuko.Nihility
 import demo.cards.yuyuko.ReverseTheScreen
 import demo.cards.yuyuko.Sakura
@@ -56,8 +59,12 @@ import demo.cards.yuyuko.SakuraWard
 import demo.cards.yuyuko.Snow
 import demo.cards.yuyuko.SongOfPapilio
 import demo.cards.yuyuko.SpearOfPapilio
+import demo.cards.yuyuko.SteamedGhost
+import demo.cards.yuyuko.Suicide
 import demo.cards.yuyuko.SweetOfGhost
 import demo.cards.yuyuko.UnbornLight
+import demo.cards.yuyuko.UnfulfillingAttachment
+import demo.cards.yuyuko.WanderingSoul
 import demo.characters.Yuyuko
 import demo.patches.CardColorEnum
 import demo.patches.PlayerClassEnum
@@ -163,9 +170,14 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(GhostdomSakura())
         BaseMod.addCard(GauzySakura())
         BaseMod.addCard(Bloom())
+        BaseMod.addCard(WanderingSoul())
+        BaseMod.addCard(Suicide())
+        BaseMod.addCard(ButterfliesLoveFlowers())
         BaseMod.addCard(SakuraWard())
         BaseMod.addCard(Bomb())
+        BaseMod.addCard(Lunch())
         BaseMod.addCard(ExploreGhostdom())
+        BaseMod.addCard(UnfulfillingAttachment())
 
 
         BaseMod.addCard(ReverseTheScreen())
@@ -189,6 +201,8 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(AllWander())
         BaseMod.addCard(BecomeGhost())
         BaseMod.addCard(SweetOfGhost())
+        BaseMod.addCard(SteamedGhost())
+        BaseMod.addCard(DyingButterflies())
         BaseMod.addCard(GhostGift())
         BaseMod.addCard(DyingDream())
 

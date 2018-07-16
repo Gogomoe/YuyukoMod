@@ -76,6 +76,19 @@
     "NAME": "绽放",
     "DESCRIPTION": "升级所有 樱 , NL 抽 !M! 张牌"
   },
+  "Wandering Soul": {
+    "NAME": "彷徨的灵魂",
+    "DESCRIPTION": "生命值高于一半时,获得 !M! 点 力量 , NL 否则获得 !M! 点 敏捷 "
+  },
+  "Suicide": {
+    "NAME": "自尽",
+    "DESCRIPTION": "将自己的生命值降为1, NL 获得等同扣减值的格挡, NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "将自己的生命值降为1, NL 获得等同扣减值的格挡, NL 固有 , 消耗 "
+  },
+  "Butterflies Love Flowers": {
+    "NAME": "蝶恋花",
+    "DESCRIPTION": "同时是樱和蝶. NL 选择一项：洗入1张同等级的樱或蝶, NL 可多次升级, 消耗 "
+  },
   "Sakura Ward": {
     "NAME": "樱花结界",
     "DESCRIPTION": "获得 !B! 点 格挡 , NL 将1张 樱(封印) 洗入牌堆",
@@ -85,10 +98,18 @@
     "NAME": "灵击",
     "DESCRIPTION": "对敌方全体造成 !D! 点伤害, NL 获得1层 无实体 , NL 弃置时,复制1张洗入牌堆, 消耗 "
   },
+  "Lunch": {
+    "NAME": "午餐",
+    "DESCRIPTION": " 发现 !M! 张牌, NL 消耗 "
+  },
   "Explore Ghostdom": {
     "NAME": "探索冥界",
     "DESCRIPTION": "除了衍生以外的牌全部变形为 探索 , NL 消耗 ",
     "UPGRADE_DESCRIPTION": "除了衍生以外的牌全部变形为 探索+ , NL 消耗 "
+  },
+  "Unfulfilling Attachment": {
+    "NAME": "依恋未酌宴",
+    "DESCRIPTION": "将所有 没有额外效果的樱 变形为 樱(开花) "
   },
   "Reverse The Screen": {
     "NAME": "逆转屏风",
@@ -165,9 +186,21 @@
     "NAME": "诱灵的甘蜜",
     "DESCRIPTION": "获得 !M! 层 幽灵 , NL 给予 !M! 层 缠绕 , NL 抽 !M! 张牌"
   },
+  "Steamed Ghost": {
+    "NAME": "幽灵馒头",
+    "DESCRIPTION": "损失1层 幽灵 , NL 回复已损失生命值的50%",
+    "UPGRADE_DESCRIPTION": "损失1层 幽灵 , NL 回复已损失生命值的75%",
+    "EXTENDED_DESCRIPTION": [
+      "我没有幽灵了"
+    ]
+  },
   "Ghost Gift": {
     "NAME": "故人的遗物",
     "DESCRIPTION": "获得1层 幽灵 , NL 每回合开始时,获得1层 幽灵 "
+  },
+  "Dying Butterflies": {
+    "NAME": "死蝶灵",
+    "DESCRIPTION": "是蝶,获得 !M! 层 幽灵, NL 可多次升级, 重置 "
   },
   "Dying Dream": {
     "NAME": "无寿之梦",

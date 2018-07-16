@@ -1,12 +1,14 @@
 package demo.cards
 
 import com.megacrit.cardcrawl.cards.AbstractCard
+import demo.cards.yuyuko.ButterfliesLoveFlowers
 import demo.cards.yuyuko.ButterfliesRainbow
 import demo.cards.yuyuko.Butterfly
 import demo.cards.yuyuko.ButterflyDeepRooted
 import demo.cards.yuyuko.ButterflyDelusion
 import demo.cards.yuyuko.ButterflyGhost
 import demo.cards.yuyuko.ButterflySwallowtail
+import demo.cards.yuyuko.DyingButterflies
 import demo.cards.yuyuko.Sakura
 import demo.cards.yuyuko.SakuraBloom
 import demo.cards.yuyuko.SakuraDormancy
@@ -31,11 +33,15 @@ fun AbstractCard.triggerOnDiscard(isEndTurn: Boolean) {
 
 private val ButterflyIDS = listOf(
         Butterfly.ID, ButterflySwallowtail.ID, ButterflyGhost.ID,
-        ButterflyDeepRooted.ID, ButterflyDelusion.ID, ButterfliesRainbow.ID
+        ButterflyDeepRooted.ID, ButterflyDelusion.ID,
+
+        ButterfliesRainbow.ID, ButterfliesLoveFlowers.ID, DyingButterflies.ID
 )
 private val SakuraIDS = listOf(
         Sakura.ID, SakuraBloom.ID, SakuraDormancy.ID,
-        SakuraSeal.ID, SakuraSuicide.ID
+        SakuraSeal.ID, SakuraSuicide.ID,
+
+        ButterfliesLoveFlowers.ID
 )
 private val SpecialButterflyIDS = listOf(
         Butterfly.ID, ButterflySwallowtail.ID, ButterflyGhost.ID,
