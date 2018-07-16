@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import demo.patches.CardColorEnum
 import demo.powers.BecomeGhostPower
+import demo.powers.GhostPower
 
 class GhostGift : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
@@ -32,6 +33,13 @@ class GhostGift : CustomCard(
                 ApplyPowerAction(
                         self, self,
                         BecomeGhostPower(1),
+                        1
+                )
+        )
+        AbstractDungeon.actionManager.addToBottom(
+                ApplyPowerAction(
+                        self, self,
+                        GhostPower(self!!, 1),
                         1
                 )
         )

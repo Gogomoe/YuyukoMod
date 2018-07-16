@@ -62,6 +62,12 @@ class Yuyukosfan : CustomRelic(
         )
     }
 
+    override fun onRest() {
+        fanAmount += 1
+        updateDescription()
+        flash()
+    }
+
     fun updateDescription() {
         this.counter = fanAmount
         this.description = updatedDescription

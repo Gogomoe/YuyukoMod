@@ -49,26 +49,18 @@ class GhostPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
         }
     }
 
+
     override fun atEndOfTurn(isPlayer: Boolean) {
         if (!isPlayer) {
             return
         }
         val player = AbstractDungeon.player
+        val handSize = player.hand.group.size
 
-        if (player.hasPower(BecomeGhostPower.POWER_ID)) {
+        if (handSize < 1) {
             return
         }
 
-        onSpecificTrigger()
-    }
-
-    override fun onSpecificTrigger() {
-        val player = AbstractDungeon.player
-        val cardsRemain = player.hand.group.size
-
-        if (cardsRemain < 1) {
-            return
-        }
         this.flash()
 
         repeat(amount) {
@@ -80,15 +72,15 @@ class GhostPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
                             monster,
                             DamageInfo(
                                     AbstractDungeon.player,
-                                    cardsRemain,
+                                    handSize,
                                     DamageType.NORMAL
                             ),
                             AttackEffect.SLASH_DIAGONAL
                     )
             )
         }
-
     }
+
 
     override fun atStartOfTurnPostDraw() {
         val player = AbstractDungeon.player

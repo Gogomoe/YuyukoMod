@@ -158,8 +158,8 @@
   },
   "Become Ghost": {
     "NAME": "好死之灵",
-    "DESCRIPTION": "减少1层 扇 , NL 每回合结束时,获得1层 幽灵 , NL 消耗",
-    "UPGRADE_DESCRIPTION": "减少1层 扇 , NL 每回合结束时,获得1层 幽灵 "
+    "DESCRIPTION": "减少1层 扇 ,获得1层 幽灵 , NL 每回合开始时,获得1层 幽灵 , NL 消耗",
+    "UPGRADE_DESCRIPTION": "减少1层 扇 ,获得1层 幽灵 , NL 每回合开始时,获得1层 幽灵 "
   },
   "Sweet of Ghost": {
     "NAME": "诱灵的甘蜜",
@@ -167,7 +167,7 @@
   },
   "Ghost Gift": {
     "NAME": "故人的遗物",
-    "DESCRIPTION": "每回合结束时,获得1层 幽灵 "
+    "DESCRIPTION": "获得1层 幽灵 , NL 每回合开始时,获得1层 幽灵 "
   },
   "Dying Dream": {
     "NAME": "无寿之梦",

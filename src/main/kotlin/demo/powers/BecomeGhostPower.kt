@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.powers.AbstractPower
-import demo.actions.TriggerGhostPowerAction
 import kotlin.math.max
 import kotlin.math.min
 
@@ -30,20 +29,14 @@ class BecomeGhostPower(amount: Int = 1) : AbstractPower() {
         this.img = Texture("images/powers/power.png")
     }
 
-    override fun atEndOfTurn(isPlayer: Boolean) {
-        if (!isPlayer) {
-            return
-        }
 
+    override fun atStartOfTurn() {
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(
                         owner, owner,
                         GhostPower(owner, amount),
                         amount
                 )
-        )
-        AbstractDungeon.actionManager.addToBottom(
-                TriggerGhostPowerAction()
         )
     }
 
