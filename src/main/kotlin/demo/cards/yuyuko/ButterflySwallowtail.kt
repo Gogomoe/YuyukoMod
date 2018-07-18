@@ -17,7 +17,7 @@ import demo.powers.GhastlyDreamPower
 
 class ButterflySwallowtail : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
-        CardType.ATTACK, CardColorEnum.YUYUKO_COLOR,
+        CardType.STATUS, CardColorEnum.YUYUKO_COLOR,
         CardRarity.SPECIAL, CardTarget.ENEMY
 ) {
     companion object {
@@ -43,6 +43,9 @@ class ButterflySwallowtail : CustomCard(
         this.baseDamage = (this.timesUpgraded + 1) * times
         super.calculateCardDamage(mo)
     }
+
+    override fun canUse(p: AbstractPlayer?, m: AbstractMonster?): Boolean =
+            this.cardPlayable(m) && this.hasEnoughEnergy()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         AbstractDungeon.actionManager.addToBottom(

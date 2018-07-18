@@ -64,6 +64,10 @@
     "DESCRIPTION": " 发现 3张牌, NL 消耗 ",
     "UPGRADE_DESCRIPTION": " 发现 1张牌, NL 获得2层 虚化 , 消耗 "
   },
+  "Photo": {
+    "NAME": "照片",
+    "DESCRIPTION": "将生命值置为 !M! , NL 消耗"
+  },
   "Ghostdom Sakura": {
     "NAME": "诱魂的落樱",
     "DESCRIPTION": "将1张 樱(亡我) 洗入牌堆, NL 升级所有 樱"
@@ -102,6 +106,10 @@
     "NAME": "午餐",
     "DESCRIPTION": " 发现 !M! 张牌, NL 消耗 "
   },
+  "Mirror of Mind": {
+    "NAME": "心灵写真",
+    "DESCRIPTION": "将你当前的生命值记录为 !M! 张照片洗入牌堆, 消耗 "
+  },
   "Explore Ghostdom": {
     "NAME": "探索冥界",
     "DESCRIPTION": "除了衍生以外的牌全部变形为 探索 , NL 消耗 ",
@@ -118,7 +126,7 @@
   },
   "Unborn Light": {
     "NAME": "未生之光",
-    "DESCRIPTION": "对敌方全体造成 !D! 点伤害, NL 给予 !D! 层 虚化 "
+    "DESCRIPTION": " 给予敌方全体 !D! 层 虚化 , NL 造成 !D! 点伤害 "
   },
   "Elegance": {
     "NAME": "幽雅",

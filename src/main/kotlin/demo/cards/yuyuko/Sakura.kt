@@ -12,7 +12,7 @@ import demo.patches.CardColorEnum
 
 class Sakura : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
-        CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
+        CardType.STATUS, CardColorEnum.YUYUKO_COLOR,
         CardRarity.SPECIAL, CardTarget.SELF
 ) {
     companion object {
@@ -33,6 +33,9 @@ class Sakura : CustomCard(
     }
 
     override fun makeCopy(): AbstractCard = Sakura()
+
+    override fun canUse(p: AbstractPlayer?, m: AbstractMonster?): Boolean =
+            this.cardPlayable(m) && this.hasEnoughEnergy()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         AbstractDungeon.actionManager.addToBottom(

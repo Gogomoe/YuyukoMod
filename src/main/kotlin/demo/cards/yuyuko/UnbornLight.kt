@@ -23,7 +23,7 @@ class UnbornLight : CustomCard(
         val ID = "Unborn Light"
         val IMAGE_PATH = "images/yuyuko/cards/attack3.png"
         val COST = 2
-        val ATTACK_DMG = 6
+        val ATTACK_DMG = 8
         val UPGRADE_PLUS_DMG = 4
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
@@ -40,11 +40,6 @@ class UnbornLight : CustomCard(
         val monsters = AbstractDungeon.getCurrRoom().monsters.monsters
                 .filter { !it.isDeadOrEscaped }
 
-        AbstractDungeon.actionManager.addToBottom(
-                DamageAllEnemiesAction(
-                        self, this.multiDamage, NORMAL, AttackEffect.SLASH_DIAGONAL
-                )
-        )
         monsters.forEach {
             AbstractDungeon.actionManager.addToBottom(
                     ApplyPowerAction(
@@ -54,6 +49,11 @@ class UnbornLight : CustomCard(
                     )
             )
         }
+        AbstractDungeon.actionManager.addToBottom(
+                DamageAllEnemiesAction(
+                        self, this.multiDamage, NORMAL, AttackEffect.SLASH_DIAGONAL
+                )
+        )
 
     }
 

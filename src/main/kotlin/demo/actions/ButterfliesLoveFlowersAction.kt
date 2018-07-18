@@ -7,15 +7,7 @@ import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType.UNSPECIFIED
 import com.megacrit.cardcrawl.core.Settings
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import demo.cards.yuyuko.Butterfly
-import demo.cards.yuyuko.ButterflyDeepRooted
-import demo.cards.yuyuko.ButterflyDelusion
-import demo.cards.yuyuko.ButterflyGhost
-import demo.cards.yuyuko.ButterflySwallowtail
 import demo.cards.yuyuko.Sakura
-import demo.cards.yuyuko.SakuraBloom
-import demo.cards.yuyuko.SakuraDormancy
-import demo.cards.yuyuko.SakuraSeal
-import demo.cards.yuyuko.SakuraSuicide
 
 class ButterfliesLoveFlowersAction(val timesUpgraded: Int) : AbstractGameAction() {
 
@@ -44,11 +36,7 @@ class ButterfliesLoveFlowersAction(val timesUpgraded: Int) : AbstractGameAction(
     private fun openSelectScreen() {
         val group = CardGroup(UNSPECIFIED)
 
-        val cards = listOf(
-                Sakura(), SakuraSuicide(), SakuraSeal(), SakuraDormancy(), SakuraBloom(),
-                Butterfly(), ButterflyDelusion(), ButterflyDeepRooted(),
-                ButterflyGhost(), ButterflySwallowtail()
-        )
+        val cards = listOf(Sakura(), Butterfly())
 
         cards.forEach { card ->
             repeat(timesUpgraded) {

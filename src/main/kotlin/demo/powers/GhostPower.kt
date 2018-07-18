@@ -73,7 +73,7 @@ class GhostPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
                             DamageInfo(
                                     AbstractDungeon.player,
                                     handSize,
-                                    DamageType.NORMAL
+                                    DamageType.HP_LOSS
                             ),
                             AttackEffect.SLASH_DIAGONAL
                     )

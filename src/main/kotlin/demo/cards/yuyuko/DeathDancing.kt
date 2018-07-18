@@ -21,8 +21,8 @@ class DeathDancing : CustomCard(
         val ID = "Death Dancing"
         val IMAGE_PATH = "images/yuyuko/cards/attack3.png"
         val COST = 1
-        val DIAPHANEITY_AMOUNT = 6
-        val UPGRADE_PLUS_AMOUNT = 4
+        val DIAPHANEITY_AMOUNT = 7
+        val UPGRADE_PLUS_AMOUNT = 3
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!

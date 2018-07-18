@@ -46,7 +46,7 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
         return when {
             damageType != DamageType.NORMAL -> damage
             this.owner == AbstractDungeon.player -> max(damage * (1 - 0.05f * amount), 0f)
-            else -> damage * (1 + 0.05f * amount)
+            else -> damage * min((1 + 0.05f * amount), 2f)
         }
     }
 
@@ -59,9 +59,9 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
 
     override fun updateDescription() {
         this.description = if (this.owner == AbstractDungeon.player) {
-            DESCRIPTIONS[0] + this.amount * 5 + DESCRIPTIONS[2]
+            DESCRIPTIONS[0] + min(this.amount * 5, 100) + DESCRIPTIONS[2]
         } else {
-            DESCRIPTIONS[1] + this.amount * 5 + DESCRIPTIONS[2]
+            DESCRIPTIONS[1] + min(this.amount * 5, 100) + DESCRIPTIONS[2]
         }
     }
 

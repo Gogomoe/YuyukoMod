@@ -48,7 +48,9 @@ import demo.cards.yuyuko.GhostButterflies
 import demo.cards.yuyuko.GhostGift
 import demo.cards.yuyuko.GhostdomSakura
 import demo.cards.yuyuko.Lunch
+import demo.cards.yuyuko.MirrorOfMind
 import demo.cards.yuyuko.Nihility
+import demo.cards.yuyuko.Photo
 import demo.cards.yuyuko.ReverseTheScreen
 import demo.cards.yuyuko.Sakura
 import demo.cards.yuyuko.SakuraBloom
@@ -101,8 +103,8 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         logger.info("subscribing to subscriber")
         BaseMod.subscribe(this)
 
-        logger.info("creating the color ReimuColor")
-        CharacterColor(CardColorEnum.REIMU_COLOR!!, "reimu", 238f, 48f, 48f).register()
+        //logger.info("creating the color ReimuColor")
+        //CharacterColor(CardColorEnum.REIMU_COLOR!!, "reimu", 238f, 48f, 48f).register()
 
         logger.info("creating the color YuyukoColor")
         CharacterColor(CardColorEnum.YUYUKO_COLOR!!, "yuyuko", 227f, 48f, 255f).register()
@@ -165,6 +167,7 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(ButterflyDelusion())
 
         BaseMod.addCard(Explore())
+        BaseMod.addCard(Photo())
 
 
         BaseMod.addCard(GhostdomSakura())
@@ -176,6 +179,7 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(SakuraWard())
         BaseMod.addCard(Bomb())
         BaseMod.addCard(Lunch())
+        BaseMod.addCard(MirrorOfMind())
         BaseMod.addCard(ExploreGhostdom())
         BaseMod.addCard(UnfulfillingAttachment())
 
