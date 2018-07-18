@@ -36,6 +36,7 @@ import demo.cards.yuyuko.DreamySakura
 import demo.cards.yuyuko.DyingButterflies
 import demo.cards.yuyuko.DyingDream
 import demo.cards.yuyuko.Elegance
+import demo.cards.yuyuko.EndOfFaramita
 import demo.cards.yuyuko.Explore
 import demo.cards.yuyuko.ExploreGhostdom
 import demo.cards.yuyuko.FantasyButterflies
@@ -47,6 +48,7 @@ import demo.cards.yuyuko.GhastlyDream
 import demo.cards.yuyuko.GhostButterflies
 import demo.cards.yuyuko.GhostGift
 import demo.cards.yuyuko.GhostdomSakura
+import demo.cards.yuyuko.Gone
 import demo.cards.yuyuko.Lunch
 import demo.cards.yuyuko.MirrorOfMind
 import demo.cards.yuyuko.Nihility
@@ -63,9 +65,12 @@ import demo.cards.yuyuko.SongOfPapilio
 import demo.cards.yuyuko.SpearOfPapilio
 import demo.cards.yuyuko.SteamedGhost
 import demo.cards.yuyuko.Suicide
+import demo.cards.yuyuko.SupernaturalNether
 import demo.cards.yuyuko.SweetOfGhost
+import demo.cards.yuyuko.TheNether
 import demo.cards.yuyuko.UnbornLight
 import demo.cards.yuyuko.UnfulfillingAttachment
+import demo.cards.yuyuko.Unreal
 import demo.cards.yuyuko.WanderingSoul
 import demo.characters.Yuyuko
 import demo.patches.CardColorEnum
@@ -187,10 +192,15 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(ReverseTheScreen())
         BaseMod.addCard(UnbornLight())
         BaseMod.addCard(Elegance())
+        BaseMod.addCard(EndOfFaramita())
+        BaseMod.addCard(Gone())
+        BaseMod.addCard(TheNether())
+        BaseMod.addCard(Unreal())
         BaseMod.addCard(Snow())
         BaseMod.addCard(Nihility())
         BaseMod.addCard(DeathDancing())
         BaseMod.addCard(GhostButterflies())
+        BaseMod.addCard(SupernaturalNether())
 
 
         BaseMod.addCard(DancingButterflies())

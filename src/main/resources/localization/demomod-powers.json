@@ -55,5 +55,18 @@
       " 次, NL 你的 蝶 会造成 #b",
       " 倍伤害并 消耗 "
     ]
+  },
+  "Supernatural Nether": {
+    "NAME": "冥界灵异点",
+    "DESCRIPTIONS": [
+      "接下来 #b",
+      "回合 中, 当任何目标的虚化层数低于20层时，回复至20层"
+    ]
+  },
+  "Prepare Supernatural Nether": {
+    "NAME": "准备-冥界灵异点",
+    "DESCRIPTIONS": [
+      "本轮结束时获得 冥界灵异点"
+    ]
   }
 }

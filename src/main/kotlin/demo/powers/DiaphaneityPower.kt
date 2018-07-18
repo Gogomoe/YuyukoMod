@@ -35,9 +35,12 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
 
     override fun reducePower(reduceAmount: Int) {
         super.reducePower(reduceAmount)
+        if (AbstractDungeon.player.hasPower(SupernaturalNetherPower.POWER_ID) && this.amount < 20) {
+            this.amount = 20
+        }
         if (this.amount == 0) {
             AbstractDungeon.actionManager.addToTop(
-                    RemoveSpecificPowerAction(this.owner, this.owner, NAME)
+                    RemoveSpecificPowerAction(this.owner, this.owner, this)
             )
         }
     }
@@ -52,8 +55,8 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
 
     override fun atEndOfRound() {
         val reduceAmount = this.amount / 2
-        AbstractDungeon.actionManager.addToTop(
-                ReducePowerAction(this.owner, this.owner, POWER_ID, reduceAmount)
+        AbstractDungeon.actionManager.addToBottom(
+                ReducePowerAction(this.owner, this.owner, this, reduceAmount)
         )
     }
 

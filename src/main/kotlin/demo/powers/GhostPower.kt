@@ -44,7 +44,7 @@ class GhostPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
         super.reducePower(reduceAmount)
         if (this.amount == 0) {
             AbstractDungeon.actionManager.addToTop(
-                    RemoveSpecificPowerAction(this.owner, this.owner, NAME)
+                    RemoveSpecificPowerAction(this.owner, this.owner, this)
             )
         }
     }

@@ -32,6 +32,11 @@ class FanPower(amount: Int) : AbstractPower() {
         this.img = Texture("images/powers/power.png")
     }
 
+    override fun reducePower(reduceAmount: Int) {
+        super.reducePower(reduceAmount)
+        this.amount = min(max(amount, 0), 999)
+    }
+
     override fun onUseCard(card: AbstractCard?, action: UseCardAction?) {
         if (card!!.isSpecialSakura() && count(AbstractCard::isSpecialSakura) > amount) {
             this.flash()

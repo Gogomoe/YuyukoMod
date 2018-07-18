@@ -133,6 +133,23 @@
     "DESCRIPTION": "获得扇层数的 虚化 , NL 升级所有 樱",
     "UPGRADE_DESCRIPTION": "获得扇层数的 虚化 , NL 将1张樱洗入牌堆, 升级所有 樱"
   },
+  "End of Faramita": {
+    "NAME": "彼岸的终点",
+    "DESCRIPTION": "如果敌人的 虚化 层数低于20,将其翻倍, NL 虚无 "
+  },
+  "Gone": {
+    "NAME": "逝往",
+    "DESCRIPTION": "给予敌方全体自身 虚化 层数层虚化"
+  },
+  "The Nether": {
+    "NAME": "幽明之境",
+    "DESCRIPTION": "对全体敌方造成伤害,并回复自身生命, NL 数值等同于目标的 虚化 层数, 虚无 ",
+    "UPGRADE_DESCRIPTION": "对全体敌方造成伤害,并回复自身生命, NL 数值等同于目标的 虚化 层数"
+  },
+  "Unreal": {
+    "NAME": "虚幻",
+    "DESCRIPTION": "获得敌人 虚化 层数层虚化"
+  },
   "Snow": {
     "NAME": "雪",
     "DESCRIPTION": "获得 !M! 层 虚化 "
@@ -149,6 +166,10 @@
   "Ghost Butterflies": {
     "NAME": "幽蝴蝶",
     "DESCRIPTION": "将所有 没有额外效果的蝶 变形为 蝶(妄想) "
+  },
+  "Supernatural Nether": {
+    "NAME": "冥界灵异点",
+    "DESCRIPTION": "在之后的的 !M! 个回合内,当任何目标的 虚化 层数低于20层时,回复至20层"
   },
   "Dancing Butterflies": {
     "NAME": "蝴蝶梦之舞",

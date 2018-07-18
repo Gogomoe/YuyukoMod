@@ -82,7 +82,7 @@ class GhastlyDreamPower(amount: Int) : AbstractPower() {
     override fun atEndOfTurn(isPlayer: Boolean) {
         if (isPlayer) {
             AbstractDungeon.actionManager.addToBottom(
-                    RemoveSpecificPowerAction(owner, owner, POWER_ID)
+                    RemoveSpecificPowerAction(owner, owner, this)
             )
             usedButterfly.forEach {
                 when (it) {
