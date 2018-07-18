@@ -17,7 +17,7 @@ class ButterfliesLoveFlowers : CustomCard(
     companion object {
         @JvmStatic
         val ID = "Butterflies Love Flowers"
-        val IMAGE_PATH = "images/yuyuko/cards/skill.png"
+        val IMAGE_PATH = "images/yuyuko/cards/skill2.png"
         val COST = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
