@@ -54,6 +54,10 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
     }
 
     override fun atEndOfRound() {
+        val player = AbstractDungeon.player
+        if (owner != player && player.hasPower(LivingToDiePower.POWER_ID)) {
+            return
+        }
         val reduceAmount = this.amount / 2
         AbstractDungeon.actionManager.addToBottom(
                 ReducePowerAction(this.owner, this.owner, this, reduceAmount)

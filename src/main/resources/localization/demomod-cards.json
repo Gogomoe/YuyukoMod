@@ -167,6 +167,10 @@
     "NAME": "幽蝴蝶",
     "DESCRIPTION": "将所有 没有额外效果的蝶 变形为 蝶(妄想) "
   },
+  "Living to Die": {
+    "NAME": "生者必灭之理",
+    "DESCRIPTION": "敌人的 虚化 不会在回合开始时减少, NL 到达100层时，给予1层 无实体 与 消逝 "
+  },
   "Supernatural Nether": {
     "NAME": "冥界灵异点",
     "DESCRIPTION": "在之后的的 !M! 个回合内,当任何目标的 虚化 层数低于20层时,回复至20层"

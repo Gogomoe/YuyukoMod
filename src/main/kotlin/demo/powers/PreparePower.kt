@@ -14,6 +14,7 @@ class PreparePower(ID: String, val toRun: () -> Unit) : AbstractPower() {
         val strings = CardCrawlGame.languagePack.getPowerStrings(this.ID)
         this.name = strings.NAME
         this.description = strings.DESCRIPTIONS[0]
+        this.amount = -1
         this.updateDescription()
 
         this.owner = AbstractDungeon.player

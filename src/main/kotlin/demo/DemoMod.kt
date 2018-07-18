@@ -49,6 +49,7 @@ import demo.cards.yuyuko.GhostButterflies
 import demo.cards.yuyuko.GhostGift
 import demo.cards.yuyuko.GhostdomSakura
 import demo.cards.yuyuko.Gone
+import demo.cards.yuyuko.LivingToDie
 import demo.cards.yuyuko.Lunch
 import demo.cards.yuyuko.MirrorOfMind
 import demo.cards.yuyuko.Nihility
@@ -201,6 +202,7 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(DeathDancing())
         BaseMod.addCard(GhostButterflies())
         BaseMod.addCard(SupernaturalNether())
+        BaseMod.addCard(LivingToDie())
 
 
         BaseMod.addCard(DancingButterflies())
