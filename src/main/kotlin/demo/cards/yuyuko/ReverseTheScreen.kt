@@ -76,8 +76,8 @@ class ReverseTheScreen : CustomCard(
         }
         val player = AbstractDungeon.player
         val drawPile = AbstractDungeon.player.drawPile.group
-        val remain = drawPile.filter { it.isHide() }
-        if (drawPile.size != remain.size) {
+        val remain = drawPile.count { it.isHide() }
+        if (drawPile.size != remain) {
             AbstractDungeon.actionManager.addToBottom(
                     HideAction(this)
             )

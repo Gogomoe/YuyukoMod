@@ -9,6 +9,8 @@ import demo.cards.yuyuko.ButterflyDelusion
 import demo.cards.yuyuko.ButterflyGhost
 import demo.cards.yuyuko.ButterflySwallowtail
 import demo.cards.yuyuko.DyingButterflies
+import demo.cards.yuyuko.Explore
+import demo.cards.yuyuko.Photo
 import demo.cards.yuyuko.Sakura
 import demo.cards.yuyuko.SakuraBloom
 import demo.cards.yuyuko.SakuraDormancy
@@ -51,9 +53,18 @@ private val SpecialSakuraIDS = listOf(
         Sakura.ID, SakuraBloom.ID, SakuraDormancy.ID,
         SakuraSeal.ID, SakuraSuicide.ID
 )
+private val SpecialCardIDS = listOf(
+        Sakura.ID, SakuraBloom.ID, SakuraDormancy.ID,
+        SakuraSeal.ID, SakuraSuicide.ID,
+        Butterfly.ID, ButterflySwallowtail.ID, ButterflyGhost.ID,
+        ButterflyDeepRooted.ID, ButterflyDelusion.ID,
+        Explore.ID, Photo.ID
+)
 
 fun AbstractCard.isButterfly(): Boolean = this.cardID in ButterflyIDS
 fun AbstractCard.isSakura(): Boolean = this.cardID in SakuraIDS
 
 fun AbstractCard.isSpecialButterfly(): Boolean = this.cardID in SpecialButterflyIDS
 fun AbstractCard.isSpecialSakura(): Boolean = this.cardID in SpecialSakuraIDS
+
+fun AbstractCard.isSpecial(): Boolean = this.cardID in SpecialCardIDS

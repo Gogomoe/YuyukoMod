@@ -49,10 +49,11 @@ class TheNether : CustomCard(
                                     SLASH_HEAVY
                             )
                     )
-                    AbstractDungeon.actionManager.addToBottom(
-                            HealAction(self, self, amount)
-                    )
                 }
+        val amount = self!!.getPower(DiaphaneityPower.POWER_ID)?.amount ?: return
+        AbstractDungeon.actionManager.addToBottom(
+                HealAction(self, self, amount)
+        )
     }
 
     override fun upgrade() {

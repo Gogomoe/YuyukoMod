@@ -135,7 +135,10 @@
   },
   "End of Faramita": {
     "NAME": "彼岸的终点",
-    "DESCRIPTION": "如果敌人的 虚化 层数低于20,将其翻倍, NL 虚无 "
+    "DESCRIPTION": "如果敌人的 虚化 层数低于20,将其翻倍, NL 虚无 ",
+    "EXTENDED_DESCRIPTION": [
+      "它的虚化太多了"
+    ]
   },
   "Gone": {
     "NAME": "逝往",
@@ -204,6 +207,25 @@
     "NAME": "死亡的救赎",
     "DESCRIPTION": "对敌方全体造成 !D! 点伤害, NL 反魂 蝶 "
   },
+  "Gather the Spring": {
+    "NAME": "收集春度",
+    "DESCRIPTION": "减少1层 扇 , NL 对敌方全体造成 !D! 点伤害, NL 将1张 樱 洗入牌堆",
+    "EXTENDED_DESCRIPTION": [
+      "我没有扇了"
+    ]
+  },
+  "Unpaved Way": {
+    "NAME": "无道之路",
+    "DESCRIPTION": "在你的手牌中有至少3张 衍生 时才能打出, NL 对敌方全体造成 !D! 点伤害",
+    "EXTENDED_DESCRIPTION": [
+      "我没有足够的衍生"
+    ]
+  },
+  "Infinite Sin": {
+    "NAME": "宿罪",
+    "DESCRIPTION": "消耗牌库中所有 蝶 , NL 造成等同于10倍张数的伤害 ( !D! 点伤害)",
+    "UPGRADE_DESCRIPTION": "消耗牌库中所有 蝶 , NL 造成等同于10倍张数的伤害, ( !D! 点伤害), 藏匿 "
+  },
   "Butterflies Rainbow": {
     "NAME": "七色的蝴蝶",
     "DESCRIPTION": "是 蝶 . NL 将1张同等级有额外效果的随机 蝶 洗入牌堆, NL 可多次升级, 重置 "
@@ -225,7 +247,10 @@
   "Become Ghost": {
     "NAME": "好死之灵",
     "DESCRIPTION": "减少1层 扇 ,获得1层 幽灵 , NL 每回合开始时,获得1层 幽灵 , NL 消耗",
-    "UPGRADE_DESCRIPTION": "减少1层 扇 ,获得1层 幽灵 , NL 每回合开始时,获得1层 幽灵 "
+    "UPGRADE_DESCRIPTION": "减少1层 扇 ,获得1层 幽灵 , NL 每回合开始时,获得1层 幽灵 ",
+    "EXTENDED_DESCRIPTION": [
+      "我没有扇了"
+    ]
   },
   "Sweet of Ghost": {
     "NAME": "诱灵的甘蜜",
@@ -239,13 +264,17 @@
       "我没有幽灵了"
     ]
   },
-  "Ghost Gift": {
-    "NAME": "故人的遗物",
-    "DESCRIPTION": "获得1层 幽灵 , NL 每回合开始时,获得1层 幽灵 "
+  "Immigrant Ghost": {
+    "NAME": "幽灵移民计划",
+    "DESCRIPTION": "损失一半 幽灵 , 给予等同于其 !M! 倍层的 缠绕 "
   },
   "Dying Butterflies": {
     "NAME": "死蝶灵",
     "DESCRIPTION": "是蝶,获得 !M! 层 幽灵, NL 可多次升级, 重置 "
+  },
+  "Ghost Gift": {
+    "NAME": "故人的遗物",
+    "DESCRIPTION": "获得1层 幽灵 , NL 每回合开始时,获得1层 幽灵 "
   },
   "Dying Dream": {
     "NAME": "无寿之梦",

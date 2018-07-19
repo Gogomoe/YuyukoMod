@@ -1,40 +1,42 @@
 package demo.cards.yuyuko
 
 import basemod.abstracts.CustomCard
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
+import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction
 import com.megacrit.cardcrawl.cards.AbstractCard
+import com.megacrit.cardcrawl.cards.DamageInfo.DamageType
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import demo.patches.CardColorEnum
-import demo.powers.BecomeGhostPower
 import demo.powers.FanPower
-import demo.powers.GhostPower
 
-class BecomeGhost : CustomCard(
+class GatherTheSpring : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
-        CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
-        CardRarity.COMMON, CardTarget.SELF
+        CardType.ATTACK, CardColorEnum.YUYUKO_COLOR,
+        CardRarity.COMMON, CardTarget.ALL_ENEMY
 ) {
     companion object {
         @JvmStatic
-        val ID = "Become Ghost"
-        val IMAGE_PATH = "images/yuyuko/cards/skill5.png"
+        val ID = "Gather the Spring"
+        val IMAGE_PATH = "images/yuyuko/cards/attack4.png"
         val COST = 1
+        val ATTACK_DMG = 11
+        val UPGRADE_PLUS_DMG = 5
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
-        val UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION!!
         val EXTENDED_DESCRIPTION = CARD_STRINGS.EXTENDED_DESCRIPTION!!
     }
 
     init {
-        this.exhaust = true
+        this.baseDamage = ATTACK_DMG
     }
 
-    override fun makeCopy(): AbstractCard = BecomeGhost()
+    override fun makeCopy(): AbstractCard = GatherTheSpring()
 
     override fun canUse(self: AbstractPlayer?, target: AbstractMonster?): Boolean {
         if (!super.canUse(self, target)) {
@@ -53,29 +55,23 @@ class BecomeGhost : CustomCard(
                 ReducePowerAction(self, self, FanPower.POWER_ID, 1)
         )
         AbstractDungeon.actionManager.addToBottom(
-                ApplyPowerAction(
-                        self, self,
-                        BecomeGhostPower(),
-                        1
+                DamageAllEnemiesAction(
+                        self,
+                        this.multiDamage,
+                        DamageType.NORMAL,
+                        AttackEffect.SLASH_DIAGONAL
                 )
         )
         AbstractDungeon.actionManager.addToBottom(
-                ApplyPowerAction(
-                        self, self,
-                        GhostPower(self!!, 1),
-                        1
-                )
+                MakeTempCardInDrawPileAction(Sakura(), 1, true, true)
         )
     }
 
     override fun upgrade() {
         if (!this.upgraded) {
             this.upgradeName()
-            this.exhaust = false
-            this.rawDescription = UPGRADE_DESCRIPTION
-            this.initializeDescription()
+            this.upgradeDamage(UPGRADE_PLUS_DMG)
         }
     }
-
 
 }

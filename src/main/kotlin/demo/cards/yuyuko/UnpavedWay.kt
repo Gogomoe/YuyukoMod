@@ -1,25 +1,29 @@
 package demo.cards.yuyuko
 
 import basemod.abstracts.CustomCard
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
+import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction
 import com.megacrit.cardcrawl.cards.AbstractCard
+import com.megacrit.cardcrawl.cards.DamageInfo.DamageType
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import demo.cards.isSpecial
 import demo.patches.CardColorEnum
-import demo.powers.DiaphaneityPower
 
-class EndOfFaramita : CustomCard(
+class UnpavedWay : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
-        CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
-        CardRarity.COMMON, CardTarget.ENEMY
+        CardType.ATTACK, CardColorEnum.YUYUKO_COLOR,
+        CardRarity.UNCOMMON, CardTarget.ALL_ENEMY
 ) {
     companion object {
         @JvmStatic
-        val ID = "End of Faramita"
-        val IMAGE_PATH = "images/yuyuko/cards/skill3.png"
-        val COST = 1
+        val ID = "Unpaved Way"
+        val IMAGE_PATH = "images/yuyuko/cards/attack4.png"
+        val COST = 2
+        val ATTACK_DMG = 24
+        val UPGRADE_PLUS_DMG = 12
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
@@ -27,33 +31,32 @@ class EndOfFaramita : CustomCard(
     }
 
     init {
-        this.isEthereal = true
+        this.baseDamage = ATTACK_DMG
     }
 
-    override fun makeCopy(): AbstractCard = EndOfFaramita()
+    override fun makeCopy(): AbstractCard = UnpavedWay()
 
     override fun canUse(self: AbstractPlayer?, target: AbstractMonster?): Boolean {
         if (!super.canUse(self, target)) {
             return false
         }
-        val amount = target?.getPower(DiaphaneityPower.POWER_ID)?.amount ?: 0
-        if (amount >= 20) {
-            this.cantUseMessage = EXTENDED_DESCRIPTION[0]
-            return false
+        val count = AbstractDungeon.player.hand.group.count { it.isSpecial() }
+
+        if (count >= 3) {
+            return true
         }
-        return true
+
+        this.cantUseMessage = EXTENDED_DESCRIPTION[0]
+        return false
     }
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        val amount = target!!.getPower(DiaphaneityPower.POWER_ID)?.amount ?: return
-        if (amount >= 20) {
-            return
-        }
         AbstractDungeon.actionManager.addToBottom(
-                ApplyPowerAction(
-                        target, self,
-                        DiaphaneityPower(target, amount),
-                        amount
+                DamageAllEnemiesAction(
+                        self,
+                        this.multiDamage,
+                        DamageType.NORMAL,
+                        AttackEffect.SLASH_DIAGONAL
                 )
         )
     }
@@ -61,9 +64,8 @@ class EndOfFaramita : CustomCard(
     override fun upgrade() {
         if (!this.upgraded) {
             this.upgradeName()
-            this.upgradeBaseCost(0)
+            this.upgradeDamage(UPGRADE_PLUS_DMG)
         }
     }
-
 
 }

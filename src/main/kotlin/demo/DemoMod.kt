@@ -43,12 +43,15 @@ import demo.cards.yuyuko.FantasyButterflies
 import demo.cards.yuyuko.FaramitasTemptation
 import demo.cards.yuyuko.FloatOnMoon
 import demo.cards.yuyuko.FondlingOfPapilio
+import demo.cards.yuyuko.GatherTheSpring
 import demo.cards.yuyuko.GauzySakura
 import demo.cards.yuyuko.GhastlyDream
 import demo.cards.yuyuko.GhostButterflies
 import demo.cards.yuyuko.GhostGift
 import demo.cards.yuyuko.GhostdomSakura
 import demo.cards.yuyuko.Gone
+import demo.cards.yuyuko.ImmigrantGhost
+import demo.cards.yuyuko.InfiniteSin
 import demo.cards.yuyuko.LivingToDie
 import demo.cards.yuyuko.Lunch
 import demo.cards.yuyuko.MirrorOfMind
@@ -73,6 +76,7 @@ import demo.cards.yuyuko.SweetOfGhost
 import demo.cards.yuyuko.TheNether
 import demo.cards.yuyuko.UnbornLight
 import demo.cards.yuyuko.UnfulfillingAttachment
+import demo.cards.yuyuko.UnpavedWay
 import demo.cards.yuyuko.Unreal
 import demo.cards.yuyuko.WanderingSoul
 import demo.characters.Yuyuko
@@ -213,6 +217,9 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(SongOfPapilio())
         BaseMod.addCard(FondlingOfPapilio())
         BaseMod.addCard(RedemptionOfDeath())
+        BaseMod.addCard(GatherTheSpring())
+        BaseMod.addCard(UnpavedWay())
+        BaseMod.addCard(InfiniteSin())
         BaseMod.addCard(ButterfliesRainbow())
         BaseMod.addCard(GhastlyDream())
         BaseMod.addCard(FloatOnMoon())
@@ -222,6 +229,7 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(BecomeGhost())
         BaseMod.addCard(SweetOfGhost())
         BaseMod.addCard(SteamedGhost())
+        BaseMod.addCard(ImmigrantGhost())
         BaseMod.addCard(DyingButterflies())
         BaseMod.addCard(GhostGift())
         BaseMod.addCard(DyingDream())
@@ -233,6 +241,7 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
     }
 
     override fun receiveEditKeywords() {
+        "Derivate".loadKeywordsString()
         DiaphaneityPower.POWER_ID.loadKeywordsString()
         GhostPower.POWER_ID.loadKeywordsString()
         "Constricted".loadKeywordsString()
