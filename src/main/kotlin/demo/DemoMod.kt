@@ -54,6 +54,7 @@ import demo.cards.yuyuko.Lunch
 import demo.cards.yuyuko.MirrorOfMind
 import demo.cards.yuyuko.Nihility
 import demo.cards.yuyuko.Photo
+import demo.cards.yuyuko.RedemptionOfDeath
 import demo.cards.yuyuko.ReverseTheScreen
 import demo.cards.yuyuko.Sakura
 import demo.cards.yuyuko.SakuraBloom
@@ -65,6 +66,7 @@ import demo.cards.yuyuko.Snow
 import demo.cards.yuyuko.SongOfPapilio
 import demo.cards.yuyuko.SpearOfPapilio
 import demo.cards.yuyuko.SteamedGhost
+import demo.cards.yuyuko.Stifle
 import demo.cards.yuyuko.Suicide
 import demo.cards.yuyuko.SupernaturalNether
 import demo.cards.yuyuko.SweetOfGhost
@@ -197,6 +199,7 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(Gone())
         BaseMod.addCard(TheNether())
         BaseMod.addCard(Unreal())
+        BaseMod.addCard(Stifle())
         BaseMod.addCard(Snow())
         BaseMod.addCard(Nihility())
         BaseMod.addCard(DeathDancing())
@@ -209,6 +212,7 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(SpearOfPapilio())
         BaseMod.addCard(SongOfPapilio())
         BaseMod.addCard(FondlingOfPapilio())
+        BaseMod.addCard(RedemptionOfDeath())
         BaseMod.addCard(ButterfliesRainbow())
         BaseMod.addCard(GhastlyDream())
         BaseMod.addCard(FloatOnMoon())
@@ -237,6 +241,7 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         "Discover".loadKeywordsString()
         "Hide".loadKeywordsString()
         "Retrieval".loadKeywordsString()
+        "Revive".loadKeywordsString()
 
         "Sakura(Seal)".loadKeywordsString()
         "Sakura(Suicide)".loadKeywordsString()

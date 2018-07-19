@@ -8,6 +8,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.powers.AbstractPower
 import com.megacrit.cardcrawl.powers.FadingPower
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower
+import demo.event.EndOfRoundDiaphaneityReduceEvent
+import demo.event.EventDispenser
+import demo.event.Observer
 
 class LivingToDiePower : AbstractPower() {
 
@@ -29,6 +32,21 @@ class LivingToDiePower : AbstractPower() {
         this.isTurnBased = false
         this.img = Texture("images/powers/power.png")
     }
+
+    private var observer: Observer<EndOfRoundDiaphaneityReduceEvent>? = null
+
+    override fun onInitialApplication() {
+        observer = EventDispenser.subscribe(EndOfRoundDiaphaneityReduceEvent.ID) {
+            if (it.power.owner != AbstractDungeon.player) {
+                it.cancel()
+            }
+        }
+    }
+
+    override fun onRemove() {
+        EventDispenser.unsubscribe(EndOfRoundDiaphaneityReduceEvent.ID, observer!!)
+    }
+
 
     override fun onApplyPower(power: AbstractPower?, target: AbstractCreature?, source: AbstractCreature?) {
         if (power!!.ID != DiaphaneityPower.POWER_ID || target == AbstractDungeon.player) {

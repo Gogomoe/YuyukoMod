@@ -1,6 +1,7 @@
 package demo.actions
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction
+import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType.DAMAGE
 import com.megacrit.cardcrawl.actions.common.DamageAction
 import com.megacrit.cardcrawl.cards.DamageInfo
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType
@@ -13,6 +14,7 @@ class DeathDancingAction(target: AbstractCreature, source: AbstractCreature) : A
     init {
         this.target = target
         this.source = source
+        this.actionType = DAMAGE
     }
 
     override fun update() {

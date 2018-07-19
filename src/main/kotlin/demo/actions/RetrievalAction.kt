@@ -2,7 +2,7 @@ package demo.actions
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction
 import com.megacrit.cardcrawl.cards.AbstractCard
-import com.megacrit.cardcrawl.cards.CardGroup
+import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType.DRAW_PILE
 import com.megacrit.cardcrawl.core.Settings
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import demo.cards.isButterfly
@@ -14,6 +14,7 @@ class RetrievalAction(val cardID: String, val count: Int = 1) : AbstractGameActi
 
     init {
         this.duration = Settings.ACTION_DUR_MED
+        this.actionType = ActionType.CARD_MANIPULATION
     }
 
     override fun update() {
@@ -22,12 +23,23 @@ class RetrievalAction(val cardID: String, val count: Int = 1) : AbstractGameActi
 
         repeat(count) {
             for (group in groups) {
-                val card = when (cardID) {
-                    Butterfly.ID -> group.findCardByCondition(AbstractCard::isButterfly)
-                    Sakura.ID -> group.findCardByCondition(AbstractCard::isSakura)
-                    else -> group.findCardByName(cardID)
+
+                val list = if (group.type == DRAW_PILE) {
+                    group.group.reversed()
+                } else {
+                    group.group
                 }
+
+                val condition = when (cardID) {
+                    Butterfly.ID -> AbstractCard::isButterfly
+                    Sakura.ID -> AbstractCard::isSakura
+                    else -> ({ card: AbstractCard -> card.cardID == cardID } as (AbstractCard) -> Boolean)
+                }
+
+                val card = list.find(condition)
+
                 if (card != null) {
+                    card.unhover()
                     group.removeCard(card)
                     player.hand.addToTop(card)
                     player.hand.refreshHandLayout()
@@ -36,22 +48,6 @@ class RetrievalAction(val cardID: String, val count: Int = 1) : AbstractGameActi
             }
         }
         this.isDone = true
-    }
-
-
-    private fun CardGroup.findCardByCondition(condition: (AbstractCard) -> Boolean): AbstractCard? {
-        val var2 = this.group.iterator()
-
-        var c: AbstractCard
-        do {
-            if (!var2.hasNext()) {
-                return null
-            }
-
-            c = var2.next()
-        } while (!condition(c))
-
-        return c
     }
 
 }

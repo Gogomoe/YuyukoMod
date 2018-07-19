@@ -14,7 +14,7 @@ class HideAction(val card: AbstractCard) : AbstractGameAction() {
     override fun update() {
         val player = AbstractDungeon.player
         player.hand.removeCard(card)
-        player.drawPile.addToTop(card)
+        player.drawPile.addToBottom(card)
         this.isDone = true
     }
 

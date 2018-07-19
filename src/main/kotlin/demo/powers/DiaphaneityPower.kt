@@ -1,13 +1,15 @@
 package demo.powers
 
 import com.badlogic.gdx.graphics.Texture
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType
 import com.megacrit.cardcrawl.core.AbstractCreature
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.powers.AbstractPower
+import demo.event.EndOfRoundDiaphaneityReduceEvent
+import demo.event.EventDispenser
+import demo.event.PostDiaphaneityReduceEvent
 import kotlin.math.max
 import kotlin.math.min
 
@@ -35,9 +37,7 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
 
     override fun reducePower(reduceAmount: Int) {
         super.reducePower(reduceAmount)
-        if (AbstractDungeon.player.hasPower(SupernaturalNetherPower.POWER_ID) && this.amount < 20) {
-            this.amount = 20
-        }
+        EventDispenser.emit(PostDiaphaneityReduceEvent(this))
         if (this.amount == 0) {
             AbstractDungeon.actionManager.addToTop(
                     RemoveSpecificPowerAction(this.owner, this.owner, this)
@@ -54,14 +54,8 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
     }
 
     override fun atEndOfRound() {
-        val player = AbstractDungeon.player
-        if (owner != player && player.hasPower(LivingToDiePower.POWER_ID)) {
-            return
-        }
         val reduceAmount = this.amount / 2
-        AbstractDungeon.actionManager.addToBottom(
-                ReducePowerAction(this.owner, this.owner, this, reduceAmount)
-        )
+        EventDispenser.emit(EndOfRoundDiaphaneityReduceEvent(this, reduceAmount))
     }
 
     override fun updateDescription() {

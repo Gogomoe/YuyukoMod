@@ -2,10 +2,14 @@ package demo.powers
 
 import com.badlogic.gdx.graphics.Texture
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.powers.AbstractPower
+import demo.event.EventDispenser
+import demo.event.Observer
+import demo.event.PostDiaphaneityReduceEvent
 import kotlin.math.max
 import kotlin.math.min
 
@@ -30,6 +34,20 @@ class SupernaturalNetherPower(amount: Int = 1) : AbstractPower() {
         this.img = Texture("images/powers/power.png")
     }
 
+    private var observer: Observer<PostDiaphaneityReduceEvent>? = null
+
+    override fun onInitialApplication() {
+        observer = EventDispenser.subscribe(PostDiaphaneityReduceEvent.ID) {
+            it.diaphaneityPower.amount = 20
+        }
+        onSpecificTrigger()
+    }
+
+    override fun onRemove() {
+        EventDispenser.unsubscribe(PostDiaphaneityReduceEvent.ID, observer!!)
+    }
+
+
     override fun reducePower(reduceAmount: Int) {
         super.reducePower(reduceAmount)
         if (this.amount == 0) {
@@ -44,9 +62,6 @@ class SupernaturalNetherPower(amount: Int = 1) : AbstractPower() {
         onSpecificTrigger()
     }
 
-    override fun onInitialApplication() {
-        onSpecificTrigger()
-    }
 
     override fun onSpecificTrigger() {
         val monsters = AbstractDungeon.getCurrRoom().monsters.monsters
@@ -68,12 +83,12 @@ class SupernaturalNetherPower(amount: Int = 1) : AbstractPower() {
         }
     }
 
-    override fun atEndOfTurn(isPlayer: Boolean) {
-        if(!isPlayer){
-            this.reducePower(1)
-            if (this.amount != 0) {
-                onSpecificTrigger()
-            }
+    override fun atEndOfRound() {
+        AbstractDungeon.actionManager.addToBottom(
+                ReducePowerAction(owner, owner, this, 1)
+        )
+        if (this.amount - 1 != 0) {
+            onSpecificTrigger()
         }
     }
 

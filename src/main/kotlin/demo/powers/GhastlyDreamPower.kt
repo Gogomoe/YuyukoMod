@@ -11,12 +11,17 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import com.megacrit.cardcrawl.powers.AbstractPower
 import demo.cards.isButterfly
+import demo.cards.yuyuko.ButterfliesLoveFlowers
 import demo.cards.yuyuko.ButterfliesRainbow
 import demo.cards.yuyuko.Butterfly
 import demo.cards.yuyuko.ButterflyDeepRooted
 import demo.cards.yuyuko.ButterflyDelusion
 import demo.cards.yuyuko.ButterflyGhost
 import demo.cards.yuyuko.ButterflySwallowtail
+import demo.cards.yuyuko.DyingButterflies
+import demo.event.DegradeEvent
+import demo.event.EventDispenser
+import demo.event.Observer
 import kotlin.math.max
 import kotlin.math.min
 
@@ -43,9 +48,26 @@ class GhastlyDreamPower(amount: Int) : AbstractPower() {
 
     private val usedButterfly = mutableListOf<AbstractCard>()
 
+    private var observer: Observer<DegradeEvent>? = null
+
+    override fun onInitialApplication() {
+        observer = EventDispenser.subscribe(DegradeEvent.ID) {
+            if (it.card.isButterfly()){
+                it.cancel()
+            }
+        }
+    }
+
+    override fun onRemove() {
+        EventDispenser.unsubscribe(DegradeEvent.ID, observer!!)
+    }
+
     override fun onUseCard(card: AbstractCard?, action: UseCardAction?) {
         if (card!!.isButterfly()) {
-
+            /**
+             * 保留额外打出蝶的等级
+             * @see Butterfly.use 等
+             */
             usedButterfly.add(card)
 
             repeat(amount) {
@@ -92,6 +114,9 @@ class GhastlyDreamPower(amount: Int) : AbstractPower() {
                     is ButterflyGhost -> it.degradeToInitiation()
                     is ButterflySwallowtail -> it.degradeToInitiation()
                     is ButterfliesRainbow -> it.degradeToInitiation()
+                    is ButterfliesLoveFlowers -> {
+                    }
+                    is DyingButterflies -> it.degradeToInitiation()
                     else -> throw RuntimeException("我是不是漏了什么")
                 }
             }

@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import demo.event.DegradeEvent
+import demo.event.EventDispenser
 import demo.getRandom
 import demo.patches.CardColorEnum
 
@@ -41,6 +43,8 @@ class ButterfliesRainbow : CustomCard(
         AbstractDungeon.actionManager.addToBottom(
                 MakeTempCardInDrawPileAction(card, 1, true, true)
         )
+
+        EventDispenser.emit(DegradeEvent(this, this::degradeToInitiation))
     }
 
 

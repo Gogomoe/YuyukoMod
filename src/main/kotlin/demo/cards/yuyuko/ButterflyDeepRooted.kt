@@ -11,9 +11,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import demo.event.DegradeEvent
+import demo.event.EventDispenser
 import demo.patches.CardColorEnum
 import demo.powers.FloatOnMoonPower
-import demo.powers.GhastlyDreamPower
 
 class ButterflyDeepRooted : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
@@ -61,13 +62,7 @@ class ButterflyDeepRooted : CustomCard(
                 DrawCardAction(self, 1, false)
         )
 
-        /**
-         * 惊梦效果，如果此时降级了，重发打出的蝶无法获得等级
-         */
-        if (self!!.hasPower(GhastlyDreamPower.POWER_ID)) {
-            return
-        }
-        degradeToInitiation()
+        EventDispenser.emit(DegradeEvent(this, this::degradeToInitiation))
     }
 
     override fun canUpgrade(): Boolean = true

@@ -8,6 +8,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.powers.AbstractPower
 import demo.cards.isSpecialButterfly
 import demo.cards.isSpecialSakura
+import demo.event.DegradeEvent
+import demo.event.EventDispenser
+import demo.event.Observer
 import kotlin.math.max
 import kotlin.math.min
 
@@ -30,6 +33,23 @@ class FanPower(amount: Int) : AbstractPower() {
         this.type = PowerType.BUFF
         this.isTurnBased = false
         this.img = Texture("images/powers/power.png")
+    }
+
+
+    /**
+     * 防止消耗的 樱 蝶 降级
+     */
+    private var observer: Observer<DegradeEvent>? = null
+
+    override fun onInitialApplication() {
+        observer = EventDispenser.subscribe(DegradeEvent.ID) {
+            if (it.card.isSpecialSakura() && count(AbstractCard::isSpecialSakura) > amount) {
+                it.cancel()
+            }
+            if (it.card.isSpecialButterfly() && count(AbstractCard::isSpecialButterfly) > amount) {
+                it.cancel()
+            }
+        }
     }
 
     override fun reducePower(reduceAmount: Int) {

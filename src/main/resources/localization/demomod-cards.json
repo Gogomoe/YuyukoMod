@@ -150,6 +150,14 @@
     "NAME": "虚幻",
     "DESCRIPTION": "获得敌人 虚化 层数层虚化"
   },
+  "Stifle": {
+    "NAME": "送葬",
+    "DESCRIPTION": "只有敌人拥有20层及以上的 虚化 层数时才能打出, NL 减少20层虚化层数并使其生命值减半, NL 虚无 ",
+    "UPGRADE_DESCRIPTION": "只有敌人拥有20层及以上的 虚化 层数时才能打出, NL 减少20层虚化层数并使其生命值减半",
+    "EXTENDED_DESCRIPTION": [
+      "它的虚化不足"
+    ]
+  },
   "Snow": {
     "NAME": "雪",
     "DESCRIPTION": "获得 !M! 层 虚化 "
@@ -191,6 +199,10 @@
   "Fondling of Papilio": {
     "NAME": "凤尾蝶之抚",
     "DESCRIPTION": " 检索 !M! 张 蝶 , NL 升级所有 蝶 !M! 次"
+  },
+  "Redemption of Death": {
+    "NAME": "死亡的救赎",
+    "DESCRIPTION": "对敌方全体造成 !D! 点伤害, NL 反魂 蝶 "
   },
   "Butterflies Rainbow": {
     "NAME": "七色的蝴蝶",

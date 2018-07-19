@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import demo.actions.UpgradeAllAction
+import demo.event.DegradeEvent
+import demo.event.EventDispenser
 import demo.patches.CardColorEnum
 
 class SakuraBloom : CustomCard(
@@ -48,7 +50,8 @@ class SakuraBloom : CustomCard(
         AbstractDungeon.actionManager.addToBottom(
                 UpgradeAllAction(Sakura.ID)
         )
-        degradeToInitiation()
+
+        EventDispenser.emit(DegradeEvent(this, this::degradeToInitiation))
 
     }
 
