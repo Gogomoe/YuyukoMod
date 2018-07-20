@@ -36,7 +36,7 @@ class GhostPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
         this.updateDescription()
         this.type = PowerType.BUFF
         this.isTurnBased = true
-        this.img = Texture("images/powers/power.png")
+        this.img = Texture("images/powers/ghost.png")
     }
 
 

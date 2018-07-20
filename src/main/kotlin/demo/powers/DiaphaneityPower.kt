@@ -31,7 +31,7 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
         this.updateDescription()
         this.type = if (owner == AbstractDungeon.player) PowerType.BUFF else PowerType.DEBUFF
         this.isTurnBased = true
-        this.img = Texture("images/powers/power.png")
+        this.img = Texture("images/powers/diaphaneity.png")
     }
 
 

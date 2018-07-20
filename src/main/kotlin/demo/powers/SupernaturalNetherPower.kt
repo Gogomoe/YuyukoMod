@@ -31,7 +31,7 @@ class SupernaturalNetherPower(amount: Int = 1) : AbstractPower() {
         this.updateDescription()
         this.type = PowerType.BUFF
         this.isTurnBased = true
-        this.img = Texture("images/powers/power.png")
+        this.img = Texture("images/powers/supernaturalNether.png")
     }
 
     private var observer: Observer<PostDiaphaneityReduceEvent>? = null

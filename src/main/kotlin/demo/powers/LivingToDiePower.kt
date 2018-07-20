@@ -30,7 +30,7 @@ class LivingToDiePower : AbstractPower() {
         this.updateDescription()
         this.type = PowerType.BUFF
         this.isTurnBased = false
-        this.img = Texture("images/powers/power.png")
+        this.img = Texture("images/powers/livingToDie.png")
     }
 
     private var observer: Observer<EndOfRoundDiaphaneityReduceEvent>? = null

@@ -19,7 +19,7 @@ class PreparePower(ID: String, val toRun: () -> Unit) : AbstractPower() {
 
         this.owner = AbstractDungeon.player
         this.isTurnBased = true
-        this.img = Texture("images/powers/power.png")
+        this.img = Texture("images/powers/prepare.png")
     }
 
     override fun atEndOfRound() {

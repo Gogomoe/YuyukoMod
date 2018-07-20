@@ -27,7 +27,7 @@ class DizzinessPower : AbstractPower() {
         this.updateDescription()
         this.type = PowerType.BUFF
         this.isTurnBased = true
-        this.img = Texture("images/powers/power.png")
+        this.img = Texture("images/powers/dizziness.png")
     }
 
     override fun reducePower(reduceAmount: Int) {

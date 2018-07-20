@@ -32,7 +32,7 @@ class FanPower(amount: Int) : AbstractPower() {
         this.updateDescription()
         this.type = PowerType.BUFF
         this.isTurnBased = false
-        this.img = Texture("images/powers/power.png")
+        this.img = Texture("images/powers/fan.png")
     }
 
 
