@@ -62,9 +62,9 @@ class DyingButterflies : CustomCard(
 
     fun degradeToInitiation() {
         this.upgraded = false
-        this.name = Butterfly.NAME
-        this.baseDamage -= Butterfly.UPGRADE_PLUS_DMG * this.timesUpgraded
-        this.upgradedDamage = false
+        this.name = NAME
+        this.baseMagicNumber -= this.timesUpgraded
+        this.upgradedMagicNumber = false
         this.timesUpgraded = 0
         this.initializeTitle()
     }

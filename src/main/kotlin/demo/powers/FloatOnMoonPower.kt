@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.powers.AbstractPower
 import demo.actions.UpgradeAllAction
-import demo.cards.isButterfly
+import demo.cards.isSpecialButterfly
 import demo.cards.yuyuko.Butterfly
 import kotlin.math.max
 import kotlin.math.min
@@ -42,7 +42,7 @@ class FloatOnMoonPower(amount: Int) : AbstractPower() {
     }
 
     override fun onUseCard(card: AbstractCard?, action: UseCardAction?) {
-        if (card!!.isButterfly()) {
+        if (card!!.isSpecialButterfly()) {
             this.flash()
             action!!.exhaustCard = true
         }

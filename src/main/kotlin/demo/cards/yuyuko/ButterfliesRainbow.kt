@@ -65,8 +65,6 @@ class ButterfliesRainbow : CustomCard(
     fun degradeToInitiation() {
         this.upgraded = false
         this.name = NAME
-        this.baseDamage -= Butterfly.UPGRADE_PLUS_DMG * this.timesUpgraded
-        this.upgradedDamage = false
         this.timesUpgraded = 0
         this.initializeTitle()
     }
