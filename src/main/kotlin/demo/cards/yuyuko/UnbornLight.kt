@@ -37,18 +37,19 @@ class UnbornLight : CustomCard(
     override fun makeCopy(): AbstractCard = UnbornLight()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        val monsters = AbstractDungeon.getCurrRoom().monsters.monsters
-                .filter { !it.isDeadOrEscaped }
 
-        monsters.forEach {
-            AbstractDungeon.actionManager.addToBottom(
-                    ApplyPowerAction(
-                            it, self,
-                            DiaphaneityPower(it, this.damage),
-                            this.damage
+        AbstractDungeon.getCurrRoom().monsters.monsters
+                .filter { !it.isDeadOrEscaped }
+                .forEach {
+                    AbstractDungeon.actionManager.addToBottom(
+                            ApplyPowerAction(
+                                    it, self,
+                                    DiaphaneityPower(it, this.damage),
+                                    this.damage
+                            )
                     )
-            )
-        }
+                }
+
         AbstractDungeon.actionManager.addToBottom(
                 DamageAllEnemiesAction(
                         self, this.multiDamage, NORMAL, AttackEffect.SLASH_DIAGONAL

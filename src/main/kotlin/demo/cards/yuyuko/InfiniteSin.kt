@@ -3,7 +3,6 @@ package demo.cards.yuyuko
 import basemod.abstracts.CustomCard
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.SLASH_HEAVY
 import com.megacrit.cardcrawl.actions.common.DamageAction
-import com.megacrit.cardcrawl.actions.common.DrawCardAction
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.cards.DamageInfo
@@ -12,8 +11,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import demo.actions.HideAction
-import demo.cards.isSpecialButterfly
+import demo.cards.isButterfly
 import demo.patches.CardColorEnum
 
 class InfiniteSin : CustomCard(
@@ -39,7 +37,7 @@ class InfiniteSin : CustomCard(
         val groups = listOf(player.hand, player.drawPile, player.discardPile)
         val count = groups
                 .map {
-                    it.group.count { it.isSpecialButterfly() }
+                    it.group.count { it.isButterfly() }
                 }
                 .reduce { acc, i -> acc + i }
 
@@ -50,7 +48,7 @@ class InfiniteSin : CustomCard(
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         listOf(self!!.hand, self.drawPile, self.discardPile)
                 .map {
-                    it to it.group.filter { it.isSpecialButterfly() }
+                    it to it.group.filter { it.isButterfly() }
                 }
                 .forEach { (group, cards) ->
                     cards.forEach {
@@ -70,28 +68,7 @@ class InfiniteSin : CustomCard(
     }
 
     override fun triggerWhenDrawn() {
-        val player = AbstractDungeon.player
-        val groups = listOf(player.hand, player.drawPile, player.discardPile)
-        val count = groups
-                .map {
-                    it.group.count { it.isSpecialButterfly() }
-                }
-                .reduce { acc, i -> acc + i }
-        this.baseDamage = count * 10
-
-        if (!upgraded) {
-            return
-        }
-        val drawPile = AbstractDungeon.player.drawPile.group
-        val remain = drawPile.count { it.isHide() }
-        if (drawPile.size != remain) {
-            AbstractDungeon.actionManager.addToBottom(
-                    HideAction(this)
-            )
-            AbstractDungeon.actionManager.addToBottom(
-                    DrawCardAction(player, 1)
-            )
-        }
+        calculateCardDamage(null)
     }
 
     override fun upgrade() {
