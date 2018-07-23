@@ -2,53 +2,63 @@ package demo.cards.yuyuko
 
 import basemod.abstracts.CustomCard
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import com.megacrit.cardcrawl.powers.ConstrictedPower
 import demo.patches.CardColorEnum
-import demo.powers.BecomeGhostPower
 import demo.powers.GhostPower
 
-class GhostGift : CustomCard(
+class ImmigrantPhantom : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
-        CardType.POWER, CardColorEnum.YUYUKO_COLOR,
-        CardRarity.UNCOMMON, CardTarget.SELF
+        CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
+        CardRarity.UNCOMMON, CardTarget.ENEMY
 ) {
     companion object {
         @JvmStatic
-        val ID = "Ghost Gift"
-        val IMAGE_PATH = "images/yuyuko/cards/power.png"
+        val ID = "Immigrant Phantom"
+        val IMAGE_PATH = "images/yuyuko/cards/skill5.png"
         val COST = 1
+        val TIMES = 2
+        val UPGRADE_PLUS_TIMES = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
     }
 
-    override fun makeCopy(): AbstractCard = GhostGift()
+    init {
+        this.baseMagicNumber = TIMES
+        this.magicNumber = TIMES
+    }
+
+    override fun makeCopy(): AbstractCard = ImmigrantPhantom()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
+        var amount = (self!!.getPower(GhostPower.POWER_ID)?.amount ?: 0) / 2
+        if (amount <= 0) {
+            return
+        }
+        amount *= this.magicNumber
+
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(
-                        self, self,
-                        BecomeGhostPower(1),
-                        1
+                        target, self,
+                        ConstrictedPower(target, self, amount),
+                        amount
                 )
         )
         AbstractDungeon.actionManager.addToBottom(
-                ApplyPowerAction(
-                        self, self,
-                        GhostPower(self!!, 1),
-                        1
-                )
+                ReducePowerAction(self, self, GhostPower.POWER_ID, amount)
         )
     }
 
     override fun upgrade() {
         if (!this.upgraded) {
             this.upgradeName()
-            this.upgradeBaseCost(0)
+            this.upgradeMagicNumber(UPGRADE_PLUS_TIMES)
         }
     }
 

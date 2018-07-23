@@ -174,7 +174,7 @@
     "NAME": "殒命之舞",
     "DESCRIPTION": "给予 !M! 层 虚化 , NL 造成等同于其 虚化 层数的伤害"
   },
-  "Ghost Butterflies": {
+  "Phantom Butterflies": {
     "NAME": "幽蝴蝶",
     "DESCRIPTION": "将所有 没有额外效果的蝶 变形为 蝶(妄想) "
   },
@@ -209,7 +209,7 @@
   },
   "Gather the Spring": {
     "NAME": "收集春度",
-    "DESCRIPTION": "减少1层 扇 , NL 对敌方全体造成 !D! 点伤害, NL 将1张 樱 洗入牌堆",
+    "DESCRIPTION": "减少1层 扇 , NL 对敌方全体造成 !D! 点伤害, NL 将1张 樱(春眠) 洗入牌堆",
     "EXTENDED_DESCRIPTION": [
       "我没有扇了"
     ]
@@ -252,11 +252,11 @@
       "我没有扇了"
     ]
   },
-  "Sweet of Ghost": {
+  "Sweet of Phantom": {
     "NAME": "诱灵的甘蜜",
     "DESCRIPTION": "获得 !M! 层 幽灵 , NL 给予 !M! 层 缠绕 , NL 抽 !M! 张牌"
   },
-  "Steamed Ghost": {
+  "Steamed Phantom": {
     "NAME": "幽灵馒头",
     "DESCRIPTION": "损失1层 幽灵 , NL 回复已损失生命值的50%",
     "UPGRADE_DESCRIPTION": "损失1层 幽灵 , NL 回复已损失生命值的75%",
@@ -264,15 +264,15 @@
       "我没有幽灵了"
     ]
   },
-  "Immigrant Ghost": {
+  "Immigrant Phantom": {
     "NAME": "幽灵移民计划",
     "DESCRIPTION": "损失一半 幽灵 , 给予等同于其 !M! 倍层的 缠绕 "
   },
   "Dying Butterflies": {
     "NAME": "死蝶灵",
-    "DESCRIPTION": "是蝶,获得 !M! 层 幽灵, NL 可多次升级, 重置 "
+    "DESCRIPTION": "是蝶,获得 !M! 层 幽灵,最多5层, NL 可多次升级, 重置 "
   },
-  "Ghost Gift": {
+  "Phantom Gift": {
     "NAME": "故人的遗物",
     "DESCRIPTION": "获得1层 幽灵 , NL 每回合开始时,获得1层 幽灵 "
   },

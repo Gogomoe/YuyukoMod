@@ -45,12 +45,14 @@ class DyingButterflies : CustomCard(
         EventDispenser.emit(DegradeEvent(this, this::degradeToInitiation))
     }
 
-    override fun canUpgrade(): Boolean = true
+    override fun canUpgrade(): Boolean = this.timesUpgraded < 4
 
     override fun upgrade() {
-        this.upgradeName()
-        this.upgradeBaseCost(0)
-        this.upgradeMagicNumber(1)
+        if (this.timesUpgraded < 4) {
+            this.upgradeName()
+            this.upgradeBaseCost(0)
+            this.upgradeMagicNumber(1)
+        }
     }
 
     override fun upgradeName() {

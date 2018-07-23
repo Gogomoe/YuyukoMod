@@ -8,14 +8,14 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster
 import demo.addToRandomSpotIfIsDrawPile
 import demo.patches.CardColorEnum
 
-class GhostButterflies : CustomCard(
+class PhantomButterflies : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
         CardType.POWER, CardColorEnum.YUYUKO_COLOR,
         CardRarity.UNCOMMON, CardTarget.SELF
 ) {
     companion object {
         @JvmStatic
-        val ID = "Ghost Butterflies"
+        val ID = "Phantom Butterflies"
         val IMAGE_PATH = "images/yuyuko/cards/power.png"
         val COST = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
@@ -23,7 +23,7 @@ class GhostButterflies : CustomCard(
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
     }
 
-    override fun makeCopy(): AbstractCard = GhostButterflies()
+    override fun makeCopy(): AbstractCard = PhantomButterflies()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         self!!

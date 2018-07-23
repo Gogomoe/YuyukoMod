@@ -63,7 +63,7 @@ class GatherTheSpring : CustomCard(
                 )
         )
         AbstractDungeon.actionManager.addToBottom(
-                MakeTempCardInDrawPileAction(Sakura(), 1, true, true)
+                MakeTempCardInDrawPileAction(SakuraDormancy(), 1, true, true)
         )
     }
 

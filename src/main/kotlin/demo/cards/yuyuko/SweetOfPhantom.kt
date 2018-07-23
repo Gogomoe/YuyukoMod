@@ -12,14 +12,14 @@ import com.megacrit.cardcrawl.powers.ConstrictedPower
 import demo.patches.CardColorEnum
 import demo.powers.GhostPower
 
-class SweetOfGhost : CustomCard(
+class SweetOfPhantom : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
         CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
         CardRarity.COMMON, CardTarget.ENEMY
 ) {
     companion object {
         @JvmStatic
-        val ID = "Sweet of Ghost"
+        val ID = "Sweet of Phantom"
         val IMAGE_PATH = "images/yuyuko/cards/skill5.png"
         val COST = 0
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
@@ -32,7 +32,7 @@ class SweetOfGhost : CustomCard(
         this.magicNumber = 1
     }
 
-    override fun makeCopy(): AbstractCard = SweetOfGhost()
+    override fun makeCopy(): AbstractCard = SweetOfPhantom()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         AbstractDungeon.actionManager.addToBottom(

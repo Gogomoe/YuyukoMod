@@ -12,14 +12,14 @@ import demo.patches.CardColorEnum
 import demo.powers.GhostPower
 import kotlin.math.ceil
 
-class SteamedGhost : CustomCard(
+class SteamedPhantom : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
         CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
         CardRarity.COMMON, CardTarget.SELF
 ) {
     companion object {
         @JvmStatic
-        val ID = "Steamed Ghost"
+        val ID = "Steamed Phantom"
         val IMAGE_PATH = "images/yuyuko/cards/skill5.png"
         val COST = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
@@ -29,7 +29,7 @@ class SteamedGhost : CustomCard(
         val EXTENDED_DESCRIPTION = CARD_STRINGS.EXTENDED_DESCRIPTION!!
     }
 
-    override fun makeCopy(): AbstractCard = SteamedGhost()
+    override fun makeCopy(): AbstractCard = SteamedPhantom()
 
     override fun canUse(self: AbstractPlayer?, target: AbstractMonster?): Boolean {
         if (!super.canUse(self, target)) {

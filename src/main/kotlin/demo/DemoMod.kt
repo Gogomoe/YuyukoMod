@@ -46,16 +46,16 @@ import demo.cards.yuyuko.FondlingOfPapilio
 import demo.cards.yuyuko.GatherTheSpring
 import demo.cards.yuyuko.GauzySakura
 import demo.cards.yuyuko.GhastlyDream
-import demo.cards.yuyuko.GhostButterflies
-import demo.cards.yuyuko.GhostGift
 import demo.cards.yuyuko.GhostdomSakura
 import demo.cards.yuyuko.Gone
-import demo.cards.yuyuko.ImmigrantGhost
+import demo.cards.yuyuko.ImmigrantPhantom
 import demo.cards.yuyuko.InfiniteSin
 import demo.cards.yuyuko.LivingToDie
 import demo.cards.yuyuko.Lunch
 import demo.cards.yuyuko.MirrorOfMind
 import demo.cards.yuyuko.Nihility
+import demo.cards.yuyuko.PhantomButterflies
+import demo.cards.yuyuko.PhantomGift
 import demo.cards.yuyuko.Photo
 import demo.cards.yuyuko.RedemptionOfDeath
 import demo.cards.yuyuko.ReverseTheScreen
@@ -68,11 +68,11 @@ import demo.cards.yuyuko.SakuraWard
 import demo.cards.yuyuko.Snow
 import demo.cards.yuyuko.SongOfPapilio
 import demo.cards.yuyuko.SpearOfPapilio
-import demo.cards.yuyuko.SteamedGhost
+import demo.cards.yuyuko.SteamedPhantom
 import demo.cards.yuyuko.Stifle
 import demo.cards.yuyuko.Suicide
 import demo.cards.yuyuko.SupernaturalNether
-import demo.cards.yuyuko.SweetOfGhost
+import demo.cards.yuyuko.SweetOfPhantom
 import demo.cards.yuyuko.TheNether
 import demo.cards.yuyuko.UnbornLight
 import demo.cards.yuyuko.UnfulfillingAttachment
@@ -207,7 +207,7 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(Snow())
         BaseMod.addCard(Nihility())
         BaseMod.addCard(DeathDancing())
-        BaseMod.addCard(GhostButterflies())
+        BaseMod.addCard(PhantomButterflies())
         BaseMod.addCard(SupernaturalNether())
         BaseMod.addCard(LivingToDie())
 
@@ -227,11 +227,11 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
 
         BaseMod.addCard(AllWander())
         BaseMod.addCard(BecomeGhost())
-        BaseMod.addCard(SweetOfGhost())
-        BaseMod.addCard(SteamedGhost())
-        BaseMod.addCard(ImmigrantGhost())
+        BaseMod.addCard(SweetOfPhantom())
+        BaseMod.addCard(SteamedPhantom())
+        BaseMod.addCard(ImmigrantPhantom())
         BaseMod.addCard(DyingButterflies())
-        BaseMod.addCard(GhostGift())
+        BaseMod.addCard(PhantomGift())
         BaseMod.addCard(DyingDream())
 
     }
