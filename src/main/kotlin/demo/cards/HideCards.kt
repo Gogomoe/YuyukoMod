@@ -4,6 +4,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import demo.cards.yuyuko.DyingDream
 import demo.cards.yuyuko.InfiniteSin
+import demo.cards.yuyuko.MonsterCherryTree
+import demo.cards.yuyuko.RemainHere
 import demo.cards.yuyuko.ReverseTheScreen
 
 fun AbstractCard.isHide(): Boolean =
@@ -11,6 +13,8 @@ fun AbstractCard.isHide(): Boolean =
             this.cardID == ReverseTheScreen.ID && this.upgraded -> true
             this.cardID == DyingDream.ID && this.upgraded -> true
             this.cardID == InfiniteSin.ID && this.upgraded -> true
+            this.cardID == MonsterCherryTree.ID -> true
+            this.cardID == RemainHere.ID && !this.upgraded -> true
             else -> false
         }
 

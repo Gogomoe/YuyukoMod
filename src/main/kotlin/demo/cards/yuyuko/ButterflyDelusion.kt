@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import demo.event.DegradeEvent
+import demo.event.DegradeEvent.DegradeReason.USE
 import demo.event.EventDispenser
 import demo.patches.CardColorEnum
 import demo.powers.DiaphaneityPower
@@ -68,7 +69,7 @@ class ButterflyDelusion : CustomCard(
                 )
         )
 
-        EventDispenser.emit(DegradeEvent(this, this::degradeToInitiation))
+        EventDispenser.emit(DegradeEvent(this, USE, this::degradeToInitiation))
     }
 
     override fun canUpgrade(): Boolean = true

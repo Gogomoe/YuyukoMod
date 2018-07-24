@@ -60,19 +60,27 @@
     "NAME": "冥界灵异点",
     "DESCRIPTIONS": [
       "接下来 #b",
-      "回合 中, 当任何目标的虚化层数低于20层时，回复至20层"
-    ]
-  },
-  "Prepare Supernatural Nether": {
-    "NAME": "准备-冥界灵异点",
-    "DESCRIPTIONS": [
-      "本轮结束时获得 冥界灵异点"
+      " 个回合开始时,当任何目标的虚化层数低于20层时,回复至20层"
     ]
   },
   "Living to Die": {
-    "NAME": "冥界灵异点",
+    "NAME": "生者必灭之理",
     "DESCRIPTIONS": [
       "敌人的 虚化 不会在回合开始时减少, NL 到达100层时, 给予1层 无实体 与 消逝 "
+    ]
+  },
+  "Showy Withering": {
+    "NAME": "繁花艳丽,终或凋零",
+    "DESCRIPTIONS": [
+      "回合开始时,升级樱 #b",
+      " 次,检索樱 #b",
+      " 次. NL 你每打出3张樱,下1张樱将被消耗"
+    ]
+  },
+  "Remain Here": {
+    "NAME": "蝶之风暂留此世",
+    "DESCRIPTIONS": [
+      "每回合结束时减少 #b10 层扇"
     ]
   }
 }

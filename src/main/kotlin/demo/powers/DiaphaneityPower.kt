@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.powers.AbstractPower
 import demo.event.EndOfRoundDiaphaneityReduceEvent
 import demo.event.EventDispenser
-import demo.event.PostDiaphaneityReduceEvent
 import kotlin.math.max
 import kotlin.math.min
 
@@ -37,7 +36,6 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
 
     override fun reducePower(reduceAmount: Int) {
         super.reducePower(reduceAmount)
-        EventDispenser.emit(PostDiaphaneityReduceEvent(this))
         if (this.amount == 0) {
             AbstractDungeon.actionManager.addToTop(
                     RemoveSpecificPowerAction(this.owner, this.owner, this)

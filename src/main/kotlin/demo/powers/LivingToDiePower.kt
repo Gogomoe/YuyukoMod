@@ -2,6 +2,7 @@ package demo.powers
 
 import com.badlogic.gdx.graphics.Texture
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction
 import com.megacrit.cardcrawl.core.AbstractCreature
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
@@ -54,6 +55,9 @@ class LivingToDiePower : AbstractPower() {
         }
         val amount = power.amount + (target!!.getPower(DiaphaneityPower.POWER_ID)?.amount ?: 0)
         if (amount >= 100) {
+            AbstractDungeon.actionManager.addToBottom(
+                    RemoveSpecificPowerAction(target, source, DiaphaneityPower.POWER_ID)
+            )
             AbstractDungeon.actionManager.addToBottom(
                     ApplyPowerAction(
                             target, source,

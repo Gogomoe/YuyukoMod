@@ -114,6 +114,11 @@
     "NAME": "午餐",
     "DESCRIPTION": " 发现 !M! 张牌, NL 消耗 "
   },
+  "Showy Withering": {
+    "NAME": "繁花艳丽,终或凋零",
+    "DESCRIPTION": "回合开始时,升级 樱 ,检索樱. NL 你每打出3张樱,下1张樱将被消耗",
+    "UPGRADE_DESCRIPTION": "回合开始时,升级 樱 ,检索樱. NL 你每打出3张樱,下1张樱将被消耗, NL 固有 "
+  },
   "Mirror of Mind": {
     "NAME": "心灵写真",
     "DESCRIPTION": "将你当前的生命值记录为 !M! 张照片洗入牌堆, 消耗 "
@@ -127,6 +132,11 @@
     "NAME": "依恋未酌宴",
     "DESCRIPTION": "将所有 没有额外效果的樱 变形为 樱(开花) "
   },
+  "Remain Here": {
+    "NAME": "蝶之风暂留此世",
+    "DESCRIPTION": "获得100层扇,每回合结束时减少10层, NL 藏匿 ",
+    "UPGRADE_DESCRIPTION": "获得100层扇,每回合结束时减少10层"
+  },
   "Reverse The Screen": {
     "NAME": "逆转屏风",
     "DESCRIPTION": "与一个敌人交换虚化层数，然后获得等同于层数之差的格挡",
@@ -134,7 +144,7 @@
   },
   "Unborn Light": {
     "NAME": "未生之光",
-    "DESCRIPTION": " 给予敌方全体 !D! 层 虚化 , NL 造成 !D! 点伤害 "
+    "DESCRIPTION": " 给予敌方全体 !M! 层 虚化 , NL 造成 !D! 点伤害 "
   },
   "Elegance": {
     "NAME": "幽雅",
@@ -188,11 +198,11 @@
   },
   "Living to Die": {
     "NAME": "生者必灭之理",
-    "DESCRIPTION": "敌人的 虚化 不会在回合开始时减少, NL 到达100层时，给予1层 无实体 与 消逝 "
+    "DESCRIPTION": "敌人的 虚化 不会在回合开始时减少, NL 到达100层时清零,给予1层 无实体 与 消逝 "
   },
   "Supernatural Nether": {
     "NAME": "冥界灵异点",
-    "DESCRIPTION": "在之后的的 !M! 个回合内,当任何目标的 虚化 层数低于20层时,回复至20层"
+    "DESCRIPTION": "在之后的的 !M! 个回合开始时,将所有目标的虚化层数增加至20层"
   },
   "Dancing Butterflies": {
     "NAME": "蝴蝶梦之舞",

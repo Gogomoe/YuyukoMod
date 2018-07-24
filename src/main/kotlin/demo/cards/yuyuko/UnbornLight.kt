@@ -32,6 +32,8 @@ class UnbornLight : CustomCard(
 
     init {
         this.baseDamage = ATTACK_DMG
+        this.baseMagicNumber = ATTACK_DMG
+        this.magicNumber = ATTACK_DMG
     }
 
     override fun makeCopy(): AbstractCard = UnbornLight()
@@ -45,7 +47,7 @@ class UnbornLight : CustomCard(
                             ApplyPowerAction(
                                     it, self,
                                     DiaphaneityPower(it, this.damage),
-                                    this.damage
+                                    this.magicNumber
                             )
                     )
                 }
@@ -62,6 +64,7 @@ class UnbornLight : CustomCard(
         if (!this.upgraded) {
             upgradeName()
             upgradeDamage(UPGRADE_PLUS_DMG)
+            upgradeMagicNumber(UPGRADE_PLUS_DMG)
         }
     }
 

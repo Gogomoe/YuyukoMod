@@ -60,6 +60,7 @@ import demo.cards.yuyuko.PhantomButterflies
 import demo.cards.yuyuko.PhantomGift
 import demo.cards.yuyuko.Photo
 import demo.cards.yuyuko.RedemptionOfDeath
+import demo.cards.yuyuko.RemainHere
 import demo.cards.yuyuko.ReverseTheScreen
 import demo.cards.yuyuko.Sakura
 import demo.cards.yuyuko.SakuraBloom
@@ -67,6 +68,7 @@ import demo.cards.yuyuko.SakuraDormancy
 import demo.cards.yuyuko.SakuraSeal
 import demo.cards.yuyuko.SakuraSuicide
 import demo.cards.yuyuko.SakuraWard
+import demo.cards.yuyuko.ShowyWithering
 import demo.cards.yuyuko.Snow
 import demo.cards.yuyuko.SongOfPapilio
 import demo.cards.yuyuko.SpearOfPapilio
@@ -195,9 +197,11 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(SakuraWard())
         BaseMod.addCard(Bomb())
         BaseMod.addCard(Lunch())
+        BaseMod.addCard(ShowyWithering())
         BaseMod.addCard(MirrorOfMind())
         BaseMod.addCard(ExploreGhostdom())
         BaseMod.addCard(UnfulfillingAttachment())
+        BaseMod.addCard(RemainHere())
 
 
         BaseMod.addCard(ReverseTheScreen())
