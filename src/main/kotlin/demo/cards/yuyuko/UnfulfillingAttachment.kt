@@ -4,8 +4,9 @@ import basemod.abstracts.CustomCard
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import demo.addToRandomSpotIfIsDrawPile
+import demo.actions.ChangeAllAction
 import demo.patches.CardColorEnum
 
 class UnfulfillingAttachment : CustomCard(
@@ -27,29 +28,13 @@ class UnfulfillingAttachment : CustomCard(
     override fun makeCopy(): AbstractCard = UnfulfillingAttachment()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        self!!
 
-        val constructor: (Int) -> AbstractCard = { shouldUpgradeTimes ->
-            SakuraBloom().apply {
-                repeat(shouldUpgradeTimes) {
-                    upgrade()
-                }
-            }
-        }
+        val condition: (AbstractCard) -> Boolean = { it.cardID == Sakura.ID }
+        val toChange = listOf(::SakuraBloom)
 
-        val groups = listOf(self.hand, self.drawPile, self.discardPile)
-
-        groups.forEach { group ->
-            val toChange = group.group
-                    .filter { it.cardID == Sakura.ID }
-
-            toChange.forEach {
-                group.removeCard(it)
-                val card = constructor(it.timesUpgraded)
-                group.addToRandomSpotIfIsDrawPile(card)
-            }
-        }
-        self.hand.refreshHandLayout()
+        AbstractDungeon.actionManager.addToBottom(
+                ChangeAllAction(condition, toChange)
+        )
     }
 
     override fun upgrade() {

@@ -7,40 +7,53 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import demo.actions.ChangeAllAction
+import demo.actions.HideAction
+import demo.cards.HideCards
+import demo.cards.isSpecialSakura
 import demo.patches.CardColorEnum
 
-class PhantomButterflies : CustomCard(
+class MonsterCherryTree : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
         CardType.POWER, CardColorEnum.YUYUKO_COLOR,
         CardRarity.UNCOMMON, CardTarget.SELF
 ) {
     companion object {
         @JvmStatic
-        val ID = "Phantom Butterflies"
-        val IMAGE_PATH = "images/yuyuko/cards/power.png"
+        val ID = "Monster Cherry Tree"
+        val IMAGE_PATH = "images/yuyuko/cards/skill2.png"
         val COST = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
     }
 
-    override fun makeCopy(): AbstractCard = PhantomButterflies()
+    override fun makeCopy(): AbstractCard = MonsterCherryTree()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
 
-        val condition: (AbstractCard) -> Boolean = { it.cardID == Butterfly.ID }
-        val toChange = listOf(::ButterflyDelusion)
+        val specialSakuras = listOf<() -> AbstractCard>(
+                ::SakuraBloom, ::SakuraDormancy, ::SakuraSeal, ::SakuraSuicide
+        )
 
         AbstractDungeon.actionManager.addToBottom(
-                ChangeAllAction(condition, toChange)
+                ChangeAllAction(AbstractCard::isSpecialSakura, specialSakuras)
         )
+    }
+
+    override fun triggerWhenDrawn() {
+        if (HideCards.shouldHide()) {
+            AbstractDungeon.actionManager.addToBottom(
+                    HideAction(this)
+            )
+        }
     }
 
     override fun upgrade() {
         if (!this.upgraded) {
-            upgradeName()
-            upgradeBaseCost(0)
+            this.upgradeName()
+            this.upgradeBaseCost(0)
         }
     }
+
 
 }

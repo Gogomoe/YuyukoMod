@@ -53,7 +53,9 @@ import demo.cards.yuyuko.InfiniteSin
 import demo.cards.yuyuko.LivingToDie
 import demo.cards.yuyuko.Lunch
 import demo.cards.yuyuko.MirrorOfMind
+import demo.cards.yuyuko.MonsterCherryTree
 import demo.cards.yuyuko.Nihility
+import demo.cards.yuyuko.OpenTheFan
 import demo.cards.yuyuko.PhantomButterflies
 import demo.cards.yuyuko.PhantomGift
 import demo.cards.yuyuko.Photo
@@ -186,7 +188,9 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(GauzySakura())
         BaseMod.addCard(Bloom())
         BaseMod.addCard(WanderingSoul())
+        BaseMod.addCard(OpenTheFan())
         BaseMod.addCard(Suicide())
+        BaseMod.addCard(MonsterCherryTree())
         BaseMod.addCard(ButterfliesLoveFlowers())
         BaseMod.addCard(SakuraWard())
         BaseMod.addCard(Bomb())

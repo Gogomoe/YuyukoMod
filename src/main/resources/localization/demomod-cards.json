@@ -84,10 +84,18 @@
     "NAME": "彷徨的灵魂",
     "DESCRIPTION": "生命值高于一半时,获得 !M! 点 力量 , NL 否则获得 !M! 点 敏捷 "
   },
+  "Open The Fan": {
+    "NAME": "开扇",
+    "DESCRIPTION": "获得1层 扇 , NL 抽 !M! 张牌 "
+  },
   "Suicide": {
     "NAME": "自尽",
     "DESCRIPTION": "将自己的生命值降为1, NL 获得等同扣减值的格挡, NL 消耗 ",
     "UPGRADE_DESCRIPTION": "将自己的生命值降为1, NL 获得等同扣减值的格挡, NL 固有 , 消耗 "
+  },
+  "Monster Cherry Tree": {
+    "NAME": "妖怪樱",
+    "DESCRIPTION": "将所有 樱 变形为有额外效果的随机 樱 , NL 藏匿"
   },
   "Butterflies Love Flowers": {
     "NAME": "蝶恋花",

@@ -4,7 +4,6 @@ import basemod.abstracts.CustomCard
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.SLASH_VERTICAL
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction
-import com.megacrit.cardcrawl.actions.common.DrawCardAction
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType.NORMAL
@@ -14,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import com.megacrit.cardcrawl.powers.ConstrictedPower
 import demo.actions.HideAction
+import demo.cards.HideCards
 import demo.patches.CardColorEnum
 import demo.powers.GhostPower
 
@@ -75,15 +75,9 @@ class DyingDream : CustomCard(
         if (!upgraded) {
             return
         }
-        val player = AbstractDungeon.player
-        val drawPile = AbstractDungeon.player.drawPile.group
-        val remain = drawPile.count { it.isHide() }
-        if (drawPile.size != remain) {
+        if (HideCards.shouldHide()) {
             AbstractDungeon.actionManager.addToBottom(
                     HideAction(this)
-            )
-            AbstractDungeon.actionManager.addToBottom(
-                    DrawCardAction(player, 1)
             )
         }
     }

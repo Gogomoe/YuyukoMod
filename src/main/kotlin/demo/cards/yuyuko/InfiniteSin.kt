@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import demo.actions.HideAction
+import demo.cards.HideCards
 import demo.cards.isButterfly
 import demo.patches.CardColorEnum
 
@@ -69,6 +71,14 @@ class InfiniteSin : CustomCard(
 
     override fun triggerWhenDrawn() {
         calculateCardDamage(null)
+        if (!upgraded) {
+            return
+        }
+        if (HideCards.shouldHide()) {
+            AbstractDungeon.actionManager.addToBottom(
+                    HideAction(this)
+            )
+        }
     }
 
     override fun upgrade() {

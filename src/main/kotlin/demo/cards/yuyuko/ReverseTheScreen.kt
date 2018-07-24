@@ -2,7 +2,6 @@ package demo.cards.yuyuko
 
 import basemod.abstracts.CustomCard
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
-import com.megacrit.cardcrawl.actions.common.DrawCardAction
 import com.megacrit.cardcrawl.actions.common.GainBlockAction
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction
 import com.megacrit.cardcrawl.cards.AbstractCard
@@ -12,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import demo.actions.HideAction
+import demo.cards.HideCards
 import demo.patches.CardColorEnum
 import demo.powers.DiaphaneityPower
 import kotlin.math.abs
@@ -74,15 +74,9 @@ class ReverseTheScreen : CustomCard(
         if (!upgraded) {
             return
         }
-        val player = AbstractDungeon.player
-        val drawPile = AbstractDungeon.player.drawPile.group
-        val remain = drawPile.count { it.isHide() }
-        if (drawPile.size != remain) {
+        if (HideCards.shouldHide()) {
             AbstractDungeon.actionManager.addToBottom(
                     HideAction(this)
-            )
-            AbstractDungeon.actionManager.addToBottom(
-                    DrawCardAction(player, 1)
             )
         }
     }
