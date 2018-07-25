@@ -1,6 +1,5 @@
 package demo.powers
 
-import com.badlogic.gdx.graphics.Texture
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction
 import com.megacrit.cardcrawl.actions.utility.UseCardAction
 import com.megacrit.cardcrawl.cards.AbstractCard
@@ -8,6 +7,7 @@ import com.megacrit.cardcrawl.cards.CardQueueItem
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.core.Settings
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
+import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import com.megacrit.cardcrawl.powers.AbstractPower
 import demo.cards.isButterfly
@@ -43,7 +43,7 @@ class GhastlyDreamPower(amount: Int) : AbstractPower() {
         this.updateDescription()
         this.type = PowerType.BUFF
         this.isTurnBased = true
-        this.img = Texture("images/powers/ghastlyDream.png")
+        this.img = ImageMaster.loadImage("images/powers/ghastlyDream.png")
     }
 
     private val usedButterfly = mutableListOf<AbstractCard>()

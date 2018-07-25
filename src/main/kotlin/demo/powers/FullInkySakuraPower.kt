@@ -1,6 +1,5 @@
 package demo.powers
 
-import com.badlogic.gdx.graphics.Texture
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction
 import com.megacrit.cardcrawl.actions.utility.UseCardAction
@@ -8,6 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
+import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.powers.AbstractPower
 import demo.cards.isButterfly
 import demo.cards.isSakura
@@ -33,7 +33,7 @@ class FullInkySakuraPower(amount: Int = 1) : AbstractPower() {
         this.updateDescription()
         this.type = PowerType.BUFF
         this.isTurnBased = false
-        this.img = Texture("images/powers/power.png")
+        this.img = ImageMaster.loadImage("images/powers/power.png")
     }
 
     var count = 0

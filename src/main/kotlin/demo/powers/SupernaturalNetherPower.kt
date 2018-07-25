@@ -1,10 +1,10 @@
 package demo.powers
 
-import com.badlogic.gdx.graphics.Texture
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
+import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.powers.AbstractPower
 import demo.actions.SupernaturalNetherAction
 import kotlin.math.max
@@ -28,7 +28,7 @@ class SupernaturalNetherPower(amount: Int = 1) : AbstractPower() {
         this.updateDescription()
         this.type = PowerType.BUFF
         this.isTurnBased = true
-        this.img = Texture("images/powers/supernaturalNether.png")
+        this.img = ImageMaster.loadImage("images/powers/supernaturalNether.png")
     }
 
     override fun reducePower(reduceAmount: Int) {

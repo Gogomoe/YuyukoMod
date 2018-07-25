@@ -10,9 +10,9 @@ import basemod.interfaces.EditRelicsSubscriber
 import basemod.interfaces.EditStringsSubscriber
 import basemod.interfaces.PostInitializeSubscriber
 import com.badlogic.gdx.Gdx
-import com.badlogic.gdx.graphics.Texture
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
 import com.megacrit.cardcrawl.core.CardCrawlGame
+import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.localization.CardStrings
 import com.megacrit.cardcrawl.localization.CharacterStrings
 import com.megacrit.cardcrawl.localization.KeywordStrings
@@ -131,7 +131,7 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
     }
 
     override fun receivePostInitialize() {
-        val badgeTexture = Texture("images/DemoModBadge.png")
+        val badgeTexture = ImageMaster.loadImage("images/DemoModBadge.png")
         val panel = ModPanel()
         val label = ModLabel("This mod does not have any settings.",
                 400.0f, 700.0f, panel) { }

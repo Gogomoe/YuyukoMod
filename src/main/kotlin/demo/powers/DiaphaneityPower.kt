@@ -1,11 +1,11 @@
 package demo.powers
 
-import com.badlogic.gdx.graphics.Texture
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType
 import com.megacrit.cardcrawl.core.AbstractCreature
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
+import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.powers.AbstractPower
 import demo.event.EndOfRoundDiaphaneityReduceEvent
 import demo.event.EventDispenser
@@ -30,7 +30,7 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
         this.updateDescription()
         this.type = if (owner == AbstractDungeon.player) PowerType.BUFF else PowerType.DEBUFF
         this.isTurnBased = true
-        this.img = Texture("images/powers/diaphaneity.png")
+        this.img = ImageMaster.loadImage("images/powers/diaphaneity.png")
     }
 
 

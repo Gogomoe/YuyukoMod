@@ -1,12 +1,12 @@
 package demo.powers
 
-import com.badlogic.gdx.graphics.Texture
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction
 import com.megacrit.cardcrawl.actions.utility.UseCardAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
+import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.powers.AbstractPower
 import kotlin.math.max
 import kotlin.math.min
@@ -29,7 +29,7 @@ class NihilityPower(amount: Int) : AbstractPower() {
         this.updateDescription()
         this.type = PowerType.BUFF
         this.isTurnBased = true
-        this.img = Texture("images/powers/nihility.png")
+        this.img = ImageMaster.loadImage("images/powers/nihility.png")
     }
 
     override fun onUseCard(card: AbstractCard?, action: UseCardAction?) {

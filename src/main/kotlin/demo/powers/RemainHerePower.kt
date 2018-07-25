@@ -1,9 +1,9 @@
 package demo.powers
 
-import com.badlogic.gdx.graphics.Texture
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
+import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.powers.AbstractPower
 
 class RemainHerePower : AbstractPower() {
@@ -23,7 +23,7 @@ class RemainHerePower : AbstractPower() {
         this.updateDescription()
         this.type = PowerType.DEBUFF
         this.isTurnBased = true
-        this.img = Texture("images/powers/power.png")
+        this.img = ImageMaster.loadImage("images/powers/power.png")
     }
 
 

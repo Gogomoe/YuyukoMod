@@ -1,10 +1,10 @@
 package demo.relics
 
 import basemod.abstracts.CustomRelic
-import com.badlogic.gdx.graphics.Texture
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
+import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.helpers.PowerTip
 import com.megacrit.cardcrawl.relics.AbstractRelic
 import demo.cards.yuyuko.Butterfly
@@ -15,7 +15,7 @@ import demo.powers.FanPower
 
 class Yuyukosfan : CustomRelic(
         ID,
-        Texture(IMAGE_PATH),
+        ImageMaster.loadImage(IMAGE_PATH),
         RelicTier.STARTER,
         LandingSound.MAGICAL
 ) {
@@ -25,10 +25,11 @@ class Yuyukosfan : CustomRelic(
         val IMAGE_PATH = "images/relics/relic.png"
     }
 
-    var fanAmount = 5
+    val fanAmount: Int
+        get() = counter
 
     init {
-        this.counter = fanAmount
+        this.counter = 5
         updateDescription()
     }
 
@@ -44,6 +45,7 @@ class Yuyukosfan : CustomRelic(
 
     override fun atBattleStartPreDraw() {
         EventDispenser.clear()
+        this.updateDescription()
 
         val player = AbstractDungeon.player
         AbstractDungeon.actionManager.addToBottom(
@@ -66,13 +68,12 @@ class Yuyukosfan : CustomRelic(
     }
 
     override fun onRest() {
-        fanAmount += 1
+        counter += 1
         updateDescription()
         flash()
     }
 
     fun updateDescription() {
-        this.counter = fanAmount
         this.description = updatedDescription
         initializeTips()
         this.tips.removeAt(0)

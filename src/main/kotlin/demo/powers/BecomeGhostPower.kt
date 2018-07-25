@@ -1,9 +1,9 @@
 package demo.powers
 
-import com.badlogic.gdx.graphics.Texture
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
+import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.powers.AbstractPower
 import kotlin.math.max
 import kotlin.math.min
@@ -26,7 +26,7 @@ class BecomeGhostPower(amount: Int = 1) : AbstractPower() {
         this.updateDescription()
         this.type = PowerType.BUFF
         this.isTurnBased = false
-        this.img = Texture("images/powers/becomeGhost.png")
+        this.img = ImageMaster.loadImage("images/powers/becomeGhost.png")
     }
 
 

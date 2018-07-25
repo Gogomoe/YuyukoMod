@@ -1,7 +1,6 @@
 package demo.powers
 
 
-import com.badlogic.gdx.graphics.Texture
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.actions.common.DamageAction
@@ -12,6 +11,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo.DamageType
 import com.megacrit.cardcrawl.core.AbstractCreature
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
+import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.powers.AbstractPower
 import com.megacrit.cardcrawl.powers.ConstrictedPower
 import demo.getRandom
@@ -36,7 +36,7 @@ class GhostPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
         this.updateDescription()
         this.type = PowerType.BUFF
         this.isTurnBased = true
-        this.img = Texture("images/powers/ghost.png")
+        this.img = ImageMaster.loadImage("images/powers/ghost.png")
     }
 
 

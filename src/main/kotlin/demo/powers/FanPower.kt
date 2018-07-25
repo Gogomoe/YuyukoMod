@@ -1,10 +1,10 @@
 package demo.powers
 
-import com.badlogic.gdx.graphics.Texture
 import com.megacrit.cardcrawl.actions.utility.UseCardAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
+import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.powers.AbstractPower
 import demo.cards.isSpecialButterfly
 import demo.cards.isSpecialSakura
@@ -32,7 +32,7 @@ class FanPower(amount: Int) : AbstractPower() {
         this.updateDescription()
         this.type = PowerType.BUFF
         this.isTurnBased = false
-        this.img = Texture("images/powers/fan.png")
+        this.img = ImageMaster.loadImage("images/powers/fan.png")
     }
 
 
