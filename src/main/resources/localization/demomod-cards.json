@@ -137,6 +137,20 @@
     "DESCRIPTION": "获得100层扇,每回合结束时减少10层, NL 藏匿 ",
     "UPGRADE_DESCRIPTION": "获得100层扇,每回合结束时减少10层"
   },
+  "Full Inky Sakura": {
+    "NAME": "完全墨染的樱花",
+    "DESCRIPTION": "在你打出1张 樱 后, NL 下1张 蝶 会对敌方全体附加最大生命上限5%的体力流失, NL 藏匿",
+    "UPGRADE_DESCRIPTION": "在你打出1张 樱 后, NL 下1张 蝶 会对敌方全体附加最大生命上限5%的体力流失"
+  },
+  "Bury in The Template": {
+    "NAME": "埋骨于弘川",
+    "DESCRIPTION": "这张卡打出 !M! 次后胜利,同名卡分别计数, NL 藏匿"
+  },
+  "Scenery of Papilio": {
+    "NAME": "花蝶风月",
+    "DESCRIPTION": "复制所有衍生并洗入弃牌堆, NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "复制所有衍生并洗入弃牌堆, NL 消耗 , 藏匿 "
+  },
   "Reverse The Screen": {
     "NAME": "逆转屏风",
     "DESCRIPTION": "与一个敌人交换虚化层数，然后获得等同于层数之差的格挡",

@@ -22,6 +22,7 @@ import demo.cards.yuyuko.AllWander
 import demo.cards.yuyuko.BecomeGhost
 import demo.cards.yuyuko.Bloom
 import demo.cards.yuyuko.Bomb
+import demo.cards.yuyuko.BuryInTheTemplate
 import demo.cards.yuyuko.ButterfliesLoveFlowers
 import demo.cards.yuyuko.ButterfliesRainbow
 import demo.cards.yuyuko.Butterfly
@@ -43,6 +44,7 @@ import demo.cards.yuyuko.FantasyButterflies
 import demo.cards.yuyuko.FaramitasTemptation
 import demo.cards.yuyuko.FloatOnMoon
 import demo.cards.yuyuko.FondlingOfPapilio
+import demo.cards.yuyuko.FullInkySakura
 import demo.cards.yuyuko.GatherTheSpring
 import demo.cards.yuyuko.GauzySakura
 import demo.cards.yuyuko.GhastlyDream
@@ -68,6 +70,7 @@ import demo.cards.yuyuko.SakuraDormancy
 import demo.cards.yuyuko.SakuraSeal
 import demo.cards.yuyuko.SakuraSuicide
 import demo.cards.yuyuko.SakuraWard
+import demo.cards.yuyuko.SceneryOfPapilio
 import demo.cards.yuyuko.ShowyWithering
 import demo.cards.yuyuko.Snow
 import demo.cards.yuyuko.SongOfPapilio
@@ -202,6 +205,9 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(ExploreGhostdom())
         BaseMod.addCard(UnfulfillingAttachment())
         BaseMod.addCard(RemainHere())
+        BaseMod.addCard(FullInkySakura())
+        BaseMod.addCard(BuryInTheTemplate())
+        BaseMod.addCard(SceneryOfPapilio())
 
 
         BaseMod.addCard(ReverseTheScreen())

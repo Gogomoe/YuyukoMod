@@ -25,3 +25,13 @@ fun CardGroup.addToRandomSpotIfIsDrawPile(card: AbstractCard) {
         else -> this.addToTop(card)
     }
 }
+
+inline fun <S, T> Iterable<T>.reduce(start: S, operation: (acc: S, T) -> S): S {
+    val iterator = this.iterator()
+    if (!iterator.hasNext()) throw UnsupportedOperationException("Empty collection can't be reduced.")
+    var accumulator: S = start
+    while (iterator.hasNext()) {
+        accumulator = operation(accumulator, iterator.next())
+    }
+    return accumulator
+}
