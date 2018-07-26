@@ -95,7 +95,7 @@
   },
   "Monster Cherry Tree": {
     "NAME": "妖怪樱",
-    "DESCRIPTION": "将所有 樱 变形为有额外效果的随机 樱 , NL 藏匿"
+    "DESCRIPTION": "将所有 衍生樱 变形为有额外效果的随机 衍生樱 , NL 藏匿"
   },
   "Butterflies Love Flowers": {
     "NAME": "蝶恋花",
@@ -125,12 +125,12 @@
   },
   "Explore Ghostdom": {
     "NAME": "探索冥界",
-    "DESCRIPTION": "除了衍生以外的牌全部变形为 探索 , NL 消耗 ",
-    "UPGRADE_DESCRIPTION": "除了衍生以外的牌全部变形为 探索+ , NL 消耗 "
+    "DESCRIPTION": "除了 衍生 以外的牌全部变形为 探索 , NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "除了 衍生 以外的牌全部变形为 探索+ , NL 消耗 "
   },
   "Unfulfilling Attachment": {
     "NAME": "依恋未酌宴",
-    "DESCRIPTION": "将所有 没有额外效果的樱 变形为 樱(开花) "
+    "DESCRIPTION": "将所有 没有额外效果的 衍生樱 变形为 樱(开花) "
   },
   "Remain Here": {
     "NAME": "蝶之风暂留此世",
@@ -148,8 +148,8 @@
   },
   "Scenery of Papilio": {
     "NAME": "花蝶风月",
-    "DESCRIPTION": "复制所有衍生并洗入弃牌堆, NL 消耗 ",
-    "UPGRADE_DESCRIPTION": "复制所有衍生并洗入弃牌堆, NL 消耗 , 藏匿 "
+    "DESCRIPTION": "复制所有 衍生 并洗入弃牌堆, NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "复制所有 衍生 并洗入弃牌堆, NL 消耗 , 藏匿 "
   },
   "Reverse The Screen": {
     "NAME": "逆转屏风",
@@ -212,7 +212,7 @@
   },
   "Phantom Butterflies": {
     "NAME": "幽蝴蝶",
-    "DESCRIPTION": "将所有 没有额外效果的蝶 变形为 蝶(妄想) "
+    "DESCRIPTION": "将所有 没有额外效果的 衍生蝶 变形为 蝶(妄想) "
   },
   "Snowing Sakura": {
     "NAME": "西行寺樱吹雪",
@@ -278,7 +278,7 @@
   },
   "Butterflies Rainbow": {
     "NAME": "七色的蝴蝶",
-    "DESCRIPTION": "是 蝶 . NL 将1张同等级有额外效果的随机 蝶 洗入牌堆, NL 可多次升级, 重置 "
+    "DESCRIPTION": "是 蝶 . NL 将1张同等级有额外效果的随机 衍生蝶 洗入牌堆, NL 可多次升级, 重置 "
   },
   "Ghastly Dream": {
     "NAME": "惊梦",
@@ -286,8 +286,8 @@
   },
   "Float on Moon": {
     "NAME": "死蝶浮月",
-    "DESCRIPTION": "回合开始时, 升级所有 蝶 3次, NL 你的 蝶 会造成3倍伤害并 消耗 ",
-    "UPGRADE_DESCRIPTION": "回合开始时, 升级所有 蝶 3次, NL 你的 蝶 会造成3倍伤害并 消耗 , 固有 "
+    "DESCRIPTION": "回合开始时, 升级所有 蝶 3次, NL 你的 衍生蝶 会造成3倍伤害并 消耗 ",
+    "UPGRADE_DESCRIPTION": "回合开始时, 升级所有 蝶 3次, NL 你的 衍生蝶 会造成3倍伤害并 消耗 , 固有 "
   },
   "Revive The Butterflies": {
     "NAME": "反魂蝶",

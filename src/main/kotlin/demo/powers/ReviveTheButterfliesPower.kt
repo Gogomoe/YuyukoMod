@@ -26,7 +26,7 @@ class ReviveTheButterfliesPower : AbstractPower() {
         this.updateDescription()
         this.type = PowerType.BUFF
         this.isTurnBased = false
-        this.img = ImageMaster.loadImage("images/powers/power.png")
+        this.img = ImageMaster.loadImage("images/powers/reviveTheButterflies.png")
     }
 
     override fun onAfterCardPlayed(usedCard: AbstractCard?) {

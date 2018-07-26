@@ -23,7 +23,7 @@ class RemainHerePower : AbstractPower() {
         this.updateDescription()
         this.type = PowerType.DEBUFF
         this.isTurnBased = true
-        this.img = ImageMaster.loadImage("images/powers/power.png")
+        this.img = ImageMaster.loadImage("images/powers/remainHere.png")
     }
 
 

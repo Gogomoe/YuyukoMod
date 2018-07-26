@@ -272,6 +272,8 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
 
     override fun receiveEditKeywords() {
         "Derivate".loadKeywordsString()
+        "Derivate Sakura".loadKeywordsString()
+        "Derivate Butterfly".loadKeywordsString()
         DiaphaneityPower.POWER_ID.loadKeywordsString()
         GhostPower.POWER_ID.loadKeywordsString()
         "Constricted".loadKeywordsString()

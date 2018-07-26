@@ -33,7 +33,7 @@ class FullInkySakuraPower(amount: Int = 1) : AbstractPower() {
         this.updateDescription()
         this.type = PowerType.BUFF
         this.isTurnBased = false
-        this.img = ImageMaster.loadImage("images/powers/power.png")
+        this.img = ImageMaster.loadImage("images/powers/fullInkySakura.png")
     }
 
     var available = false

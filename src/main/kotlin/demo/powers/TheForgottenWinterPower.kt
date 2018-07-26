@@ -30,7 +30,7 @@ class TheForgottenWinterPower(amount: Int = 1) : AbstractPower() {
         this.updateDescription()
         this.type = PowerType.BUFF
         this.isTurnBased = true
-        this.img = ImageMaster.loadImage("images/powers/power.png")
+        this.img = ImageMaster.loadImage("images/powers/theForgottenWinter.png")
     }
 
     private var observer: Observer<EndOfRoundDiaphaneityReduceEvent>? = null
