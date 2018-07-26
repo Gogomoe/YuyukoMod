@@ -2,26 +2,26 @@ package demo.cards.yuyuko
 
 import basemod.abstracts.CustomCard
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
+import com.megacrit.cardcrawl.actions.common.DrawCardAction
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import demo.actions.HideAction
-import demo.cards.HideCards
+import com.megacrit.cardcrawl.powers.ConstrictedPower
 import demo.patches.CardColorEnum
-import demo.powers.FanPower
-import demo.powers.RemainHerePower
+import demo.powers.GhostPower
 
-class RemainHere : CustomCard(
+class PhantomVillage : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
-        CardType.POWER, CardColorEnum.YUYUKO_COLOR,
-        CardRarity.RARE, CardTarget.SELF
+        CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
+        CardRarity.UNCOMMON, CardTarget.ALL_ENEMY
 ) {
     companion object {
         @JvmStatic
-        val ID = "Remain Here"
-        val IMAGE_PATH = "images/yuyuko/cards/power2.png"
+        val ID = "Phantom Village"
+        val IMAGE_PATH = "images/yuyuko/cards/skill5.png"
         val COST = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
@@ -29,41 +29,43 @@ class RemainHere : CustomCard(
         val UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION!!
     }
 
-    override fun makeCopy(): AbstractCard = RemainHere()
-
-    override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        AbstractDungeon.actionManager.addToBottom(
-                ApplyPowerAction(
-                        self, self,
-                        FanPower(100),
-                        100
-                )
-        )
-        AbstractDungeon.actionManager.addToBottom(
-                ApplyPowerAction(
-                        self, self,
-                        RemainHerePower()
-                )
-        )
+    init {
+        this.baseMagicNumber = 4
+        this.magicNumber = 4
     }
 
-    override fun triggerWhenDrawn() {
-        if (upgraded) {
-            return
-        }
-        if (HideCards.shouldHide()) {
-            AbstractDungeon.actionManager.addToTop(
-                    HideAction(this)
-            )
-        }
+    override fun makeCopy(): AbstractCard = PhantomVillage()
+
+    override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
+        var count = 0
+        AbstractDungeon.getCurrRoom().monsters.monsters
+                .filter { !it.isDeadOrEscaped }
+                .forEach {
+                    count += it.getPower(ConstrictedPower.POWER_ID)?.amount ?: 0
+                    AbstractDungeon.actionManager.addToBottom(
+                            RemoveSpecificPowerAction(it, self, ConstrictedPower.POWER_ID)
+                    )
+                }
+        AbstractDungeon.actionManager.addToBottom(
+                ApplyPowerAction(
+                        self, self,
+                        GhostPower(self!!, count),
+                        count
+                )
+        )
+        AbstractDungeon.actionManager.addToBottom(
+                DrawCardAction(self, count / magicNumber)
+        )
     }
 
     override fun upgrade() {
         if (!this.upgraded) {
             this.upgradeName()
+            this.upgradeMagicNumber(-1)
             this.rawDescription = UPGRADE_DESCRIPTION
             this.initializeDescription()
         }
     }
+
 
 }

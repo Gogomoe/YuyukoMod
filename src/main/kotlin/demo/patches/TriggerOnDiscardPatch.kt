@@ -10,7 +10,7 @@ import demo.cards.triggerOnDiscard
         cls = "com.megacrit.cardcrawl.cards.CardGroup",
         method = "moveToDiscardPile"
 )
-class BombPatch {
+class TriggerOnDiscardPatch {
 
     companion object {
         @JvmStatic

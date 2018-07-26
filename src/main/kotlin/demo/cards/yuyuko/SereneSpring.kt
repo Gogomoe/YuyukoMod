@@ -3,7 +3,7 @@ package demo.cards.yuyuko
 import basemod.abstracts.CustomCard
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.SLASH_HEAVY
 import com.megacrit.cardcrawl.actions.common.DamageAction
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.cards.DamageInfo
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType.NORMAL
@@ -13,53 +13,39 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import demo.actions.HideAction
 import demo.cards.HideCards
-import demo.cards.isButterfly
 import demo.patches.CardColorEnum
 
-class InfiniteSin : CustomCard(
+class SereneSpring : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
         CardType.ATTACK, CardColorEnum.YUYUKO_COLOR,
         CardRarity.UNCOMMON, CardTarget.ENEMY
 ) {
     companion object {
         @JvmStatic
-        val ID = "Infinite Sin"
+        val ID = "Serene Spring"
         val IMAGE_PATH = "images/yuyuko/cards/attack4.png"
         val COST = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
-        val UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION!!
     }
 
-    override fun makeCopy(): AbstractCard = InfiniteSin()
+    init {
+        this.baseDamage = 10
+        this.isEthereal = true
+    }
+
+    override fun makeCopy(): AbstractCard = SereneSpring()
 
     override fun calculateCardDamage(mo: AbstractMonster?) {
-        val player = AbstractDungeon.player
-        val groups = listOf(player.hand, player.drawPile, player.discardPile)
-        val count = groups
-                .map {
-                    it.group.count { it.isButterfly() }
-                }
-                .reduce { acc, i -> acc + i }
-
-        this.baseDamage = count * 10
         super.calculateCardDamage(mo)
+        val isHealthLessThanPercent = mo!!.currentHealth <= mo.maxHealth * (baseDamage.toFloat() / 100)
+        if (isHealthLessThanPercent) {
+            this.damage = mo.currentHealth + mo.currentBlock
+        }
     }
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        listOf(self!!.hand, self.drawPile, self.discardPile)
-                .map {
-                    it to it.group.filter { it.isButterfly() }
-                }
-                .forEach { (group, cards) ->
-                    cards.forEach {
-                        AbstractDungeon.actionManager.addToBottom(
-                                ExhaustSpecificCardAction(it, group)
-                        )
-                    }
-                }
-
         AbstractDungeon.actionManager.addToBottom(
                 DamageAction(
                         target,
@@ -67,13 +53,14 @@ class InfiniteSin : CustomCard(
                         SLASH_HEAVY
                 )
         )
+        AbstractDungeon.actionManager.addToBottom(
+                MakeTempCardInDrawPileAction(
+                        SakuraDormancy(), 1, true, true
+                )
+        )
     }
 
     override fun triggerWhenDrawn() {
-        calculateCardDamage(null)
-        if (!upgraded) {
-            return
-        }
         if (HideCards.shouldHide()) {
             AbstractDungeon.actionManager.addToTop(
                     HideAction(this)
@@ -81,11 +68,11 @@ class InfiniteSin : CustomCard(
         }
     }
 
+
     override fun upgrade() {
         if (!this.upgraded) {
             this.upgradeName()
-            this.rawDescription = UPGRADE_DESCRIPTION
-            this.initializeDescription()
+            this.upgradeDamage(5)
         }
     }
 

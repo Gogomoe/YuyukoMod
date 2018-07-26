@@ -176,6 +176,10 @@
     "NAME": "逝往",
     "DESCRIPTION": "给予敌方全体自身 虚化 层数层虚化"
   },
+  "The Forgotten Winter": {
+    "NAME": "被遗忘的冬日",
+    "DESCRIPTION": "下回合开始时,你的虚化不会减少, NL 虚无 "
+  },
   "The Nether": {
     "NAME": "幽明之境",
     "DESCRIPTION": "对全体敌方造成伤害,并回复自身生命, NL 数值等同于目标的 虚化 层数, 虚无 ",
@@ -209,6 +213,11 @@
   "Phantom Butterflies": {
     "NAME": "幽蝴蝶",
     "DESCRIPTION": "将所有 没有额外效果的蝶 变形为 蝶(妄想) "
+  },
+  "Snowing Sakura": {
+    "NAME": "西行寺樱吹雪",
+    "DESCRIPTION": "减少1层扇. NL 你每有1张 樱 ,获得1层 虚化 ,NL 每有5层虚化,获得1点能量, NL 每有3点能量，洗入1张 樱(开花) ,NL 消耗",
+    "UPGRADE_DESCRIPTION": "减少1层扇. NL 你每有1张 樱 ,获得1层 虚化 ,NL 每有5层虚化,获得1点能量, NL 每有3点能量，洗入1张 樱(开花) ,NL 重置"
   },
   "Living to Die": {
     "NAME": "生者必灭之理",
@@ -246,12 +255,21 @@
       "我没有扇了"
     ]
   },
+  "Final of Final": {
+    "NAME": "最后的最后",
+    "DESCRIPTION": "造成牌堆与弃牌堆牌数差值的伤害",
+    "UPGRADE_DESCRIPTION": "造成牌堆与弃牌堆牌数差值的伤害, NL 藏匿"
+  },
   "Unpaved Way": {
     "NAME": "无道之路",
     "DESCRIPTION": "在你的手牌中有至少3张 衍生 时才能打出, NL 对敌方全体造成 !D! 点伤害",
     "EXTENDED_DESCRIPTION": [
       "我没有足够的衍生"
     ]
+  },
+  "Serene Spring": {
+    "NAME": "安详的春眠",
+    "DESCRIPTION": "杀死生命值低于 !D! %的敌人, NL 或者造成 !D! 点伤害, NL 将1张 樱(春眠) 洗入牌堆, NL 虚无 , 藏匿"
   },
   "Infinite Sin": {
     "NAME": "宿罪",
@@ -270,6 +288,10 @@
     "NAME": "死蝶浮月",
     "DESCRIPTION": "回合开始时, 升级所有 蝶 3次, NL 你的 蝶 会造成3倍伤害并 消耗 ",
     "UPGRADE_DESCRIPTION": "回合开始时, 升级所有 蝶 3次, NL 你的 蝶 会造成3倍伤害并 消耗 , 固有 "
+  },
+  "Revive The Butterflies": {
+    "NAME": "反魂蝶",
+    "DESCRIPTION": "失去所有扇,将你的生命值置1, NL 获得4层无实体。打出非 衍生 后, 反魂 蝶"
   },
   "All Wander": {
     "NAME": "悉皆彷徨",
@@ -296,9 +318,22 @@
       "我没有幽灵了"
     ]
   },
+  "Unstable Ward": {
+    "NAME": "不稳定的结界",
+    "DESCRIPTION": "损失1层 幽灵 ,抽1张牌, 发现 3张牌",
+    "UPGRADE_DESCRIPTION": "损失1层 幽灵 ,抽2张牌, 发现 5张牌",
+    "EXTENDED_DESCRIPTION": [
+      "我没有幽灵了"
+    ]
+  },
   "Immigrant Phantom": {
     "NAME": "幽灵移民计划",
     "DESCRIPTION": "损失一半 幽灵 , 给予等同于其 !M! 倍层的 缠绕 "
+  },
+  "Phantom Village": {
+    "NAME": "迷途之家",
+    "DESCRIPTION": "清除所有敌人的 缠绕 ,获得等量的 幽灵 , NL 每获得 !M! 层幽灵,抽1张牌",
+    "UPGRADE_DESCRIPTION": "清除所有敌人的 缠绕 ,获得等量的 幽灵 , NL 每获得 !M! 层幽灵,抽1张牌, 藏匿"
   },
   "Dying Butterflies": {
     "NAME": "死蝶灵",
@@ -312,5 +347,9 @@
     "NAME": "无寿之梦",
     "DESCRIPTION": "损失所有 幽灵 层数, NL 对敌方全体造成等同于其5倍的伤害与 缠绕 , 消耗 ",
     "UPGRADE_DESCRIPTION": "损失所有 幽灵 层数, NL 对敌方全体造成等同于其5倍的伤害与 缠绕 , 消耗 , 藏匿 "
+  },
+  "Gather The Phantom": {
+    "NAME": "幽魂聚地",
+    "DESCRIPTION": "获得10层 幽灵 , NL 消耗"
   }
 }

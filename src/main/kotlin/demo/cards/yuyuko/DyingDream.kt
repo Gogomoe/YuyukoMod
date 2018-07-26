@@ -76,7 +76,7 @@ class DyingDream : CustomCard(
             return
         }
         if (HideCards.shouldHide()) {
-            AbstractDungeon.actionManager.addToBottom(
+            AbstractDungeon.actionManager.addToTop(
                     HideAction(this)
             )
         }

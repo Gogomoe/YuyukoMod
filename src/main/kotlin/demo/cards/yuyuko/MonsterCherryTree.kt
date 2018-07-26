@@ -42,7 +42,7 @@ class MonsterCherryTree : CustomCard(
 
     override fun triggerWhenDrawn() {
         if (HideCards.shouldHide()) {
-            AbstractDungeon.actionManager.addToBottom(
+            AbstractDungeon.actionManager.addToTop(
                     HideAction(this)
             )
         }

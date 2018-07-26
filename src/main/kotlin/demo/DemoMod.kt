@@ -42,9 +42,11 @@ import demo.cards.yuyuko.Explore
 import demo.cards.yuyuko.ExploreGhostdom
 import demo.cards.yuyuko.FantasyButterflies
 import demo.cards.yuyuko.FaramitasTemptation
+import demo.cards.yuyuko.FinalOfFinal
 import demo.cards.yuyuko.FloatOnMoon
 import demo.cards.yuyuko.FondlingOfPapilio
 import demo.cards.yuyuko.FullInkySakura
+import demo.cards.yuyuko.GatherThePhantom
 import demo.cards.yuyuko.GatherTheSpring
 import demo.cards.yuyuko.GauzySakura
 import demo.cards.yuyuko.GhastlyDream
@@ -60,10 +62,12 @@ import demo.cards.yuyuko.Nihility
 import demo.cards.yuyuko.OpenTheFan
 import demo.cards.yuyuko.PhantomButterflies
 import demo.cards.yuyuko.PhantomGift
+import demo.cards.yuyuko.PhantomVillage
 import demo.cards.yuyuko.Photo
 import demo.cards.yuyuko.RedemptionOfDeath
 import demo.cards.yuyuko.RemainHere
 import demo.cards.yuyuko.ReverseTheScreen
+import demo.cards.yuyuko.ReviveTheButterflies
 import demo.cards.yuyuko.Sakura
 import demo.cards.yuyuko.SakuraBloom
 import demo.cards.yuyuko.SakuraDormancy
@@ -71,8 +75,10 @@ import demo.cards.yuyuko.SakuraSeal
 import demo.cards.yuyuko.SakuraSuicide
 import demo.cards.yuyuko.SakuraWard
 import demo.cards.yuyuko.SceneryOfPapilio
+import demo.cards.yuyuko.SereneSpring
 import demo.cards.yuyuko.ShowyWithering
 import demo.cards.yuyuko.Snow
+import demo.cards.yuyuko.SnowingSakura
 import demo.cards.yuyuko.SongOfPapilio
 import demo.cards.yuyuko.SpearOfPapilio
 import demo.cards.yuyuko.SteamedPhantom
@@ -80,11 +86,13 @@ import demo.cards.yuyuko.Stifle
 import demo.cards.yuyuko.Suicide
 import demo.cards.yuyuko.SupernaturalNether
 import demo.cards.yuyuko.SweetOfPhantom
+import demo.cards.yuyuko.TheForgottenWinter
 import demo.cards.yuyuko.TheNether
 import demo.cards.yuyuko.UnbornLight
 import demo.cards.yuyuko.UnfulfillingAttachment
 import demo.cards.yuyuko.UnpavedWay
 import demo.cards.yuyuko.Unreal
+import demo.cards.yuyuko.UnstableWard
 import demo.cards.yuyuko.WanderingSoul
 import demo.characters.Yuyuko
 import demo.patches.CardColorEnum
@@ -215,6 +223,7 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(Elegance())
         BaseMod.addCard(EndOfFaramita())
         BaseMod.addCard(Gone())
+        BaseMod.addCard(TheForgottenWinter())
         BaseMod.addCard(TheNether())
         BaseMod.addCard(Unreal())
         BaseMod.addCard(Stifle())
@@ -223,6 +232,7 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(DeathDancing())
         BaseMod.addCard(PhantomButterflies())
         BaseMod.addCard(SupernaturalNether())
+        BaseMod.addCard(SnowingSakura())
         BaseMod.addCard(LivingToDie())
 
 
@@ -232,21 +242,27 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
         BaseMod.addCard(FondlingOfPapilio())
         BaseMod.addCard(RedemptionOfDeath())
         BaseMod.addCard(GatherTheSpring())
+        BaseMod.addCard(FinalOfFinal())
         BaseMod.addCard(UnpavedWay())
+        BaseMod.addCard(SereneSpring())
         BaseMod.addCard(InfiniteSin())
         BaseMod.addCard(ButterfliesRainbow())
         BaseMod.addCard(GhastlyDream())
         BaseMod.addCard(FloatOnMoon())
+        BaseMod.addCard(ReviveTheButterflies())
 
 
         BaseMod.addCard(AllWander())
         BaseMod.addCard(BecomeGhost())
         BaseMod.addCard(SweetOfPhantom())
         BaseMod.addCard(SteamedPhantom())
+        BaseMod.addCard(UnstableWard())
         BaseMod.addCard(ImmigrantPhantom())
+        BaseMod.addCard(PhantomVillage())
         BaseMod.addCard(DyingButterflies())
         BaseMod.addCard(PhantomGift())
         BaseMod.addCard(DyingDream())
+        BaseMod.addCard(GatherThePhantom())
 
     }
 
