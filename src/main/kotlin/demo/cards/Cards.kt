@@ -27,10 +27,10 @@ object CardProperty {
     fun <T : Any> get(id: String): T? = map[id] as T?
 }
 
-fun AbstractCard.triggerOnDiscard(isEndTurn: Boolean) {
+fun AbstractCard.triggerOnDiscard() {
     val func = CardProperty
-            .get<AbstractCard.(isEndTurn: Boolean) -> Unit>("${this.cardID}:triggerOnDiscard") ?: return
-    this.func(isEndTurn)
+            .get<AbstractCard.() -> Unit>("${this.cardID}:triggerOnDiscard") ?: return
+    this.func()
 }
 
 private val ButterflyIDS = listOf(

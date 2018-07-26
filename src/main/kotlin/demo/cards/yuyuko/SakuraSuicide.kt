@@ -24,7 +24,7 @@ class SakuraSuicide : CustomCard(
         @JvmStatic
         val ID = "Sakura (Suicide)"
         val IMAGE_PATH = "images/yuyuko/cards/sakura.png"
-        val COST = 0
+        val COST = -2
         val HEAL_AMOUNT = 1
         val UPGRADE_PLUS_AMOUNT = 1
         val GHOST_AMOUNT = 1

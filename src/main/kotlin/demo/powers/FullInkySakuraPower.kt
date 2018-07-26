@@ -36,16 +36,17 @@ class FullInkySakuraPower(amount: Int = 1) : AbstractPower() {
         this.img = ImageMaster.loadImage("images/powers/power.png")
     }
 
-    var count = 0
+    var available = false
 
     override fun onUseCard(card: AbstractCard?, action: UseCardAction?) {
         if (card!!.isSakura()) {
             this.flash()
-            count++
+            available = true
+            return
         }
-        if (card.isButterfly() && count > 0) {
+        if (card.isButterfly() && available) {
             this.flash()
-            count--
+            available = false
 
             val monsters = AbstractDungeon.getCurrRoom().monsters.monsters
             val damage = IntArray(monsters.size)

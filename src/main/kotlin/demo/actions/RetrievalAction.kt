@@ -39,10 +39,7 @@ class RetrievalAction(val cardID: String, val count: Int = 1) : AbstractGameActi
                 val card = list.find(condition)
 
                 if (card != null) {
-                    card.unhover()
-                    group.removeCard(card)
-                    player.hand.addToTop(card)
-                    player.hand.refreshHandLayout()
+                    group.moveToHand(card, group)
                     break
                 }
             }

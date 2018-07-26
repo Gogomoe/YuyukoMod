@@ -33,10 +33,7 @@ class ReviveAction(val cardID: String) : AbstractGameAction() {
 
         if (card != null) {
             card.unfadeOut()
-            card.unhover()
-            group.removeCard(card)
-            player.hand.addToTop(card)
-            player.hand.refreshHandLayout()
+            group.moveToHand(card, group)
         }
 
         this.isDone = true

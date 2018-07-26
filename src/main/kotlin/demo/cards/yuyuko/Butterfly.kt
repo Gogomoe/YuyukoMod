@@ -25,7 +25,7 @@ class Butterfly : CustomCard(
         @JvmStatic
         val ID = "Butterfly"
         val IMAGE_PATH = "images/yuyuko/cards/butterfly.png"
-        val COST = 0
+        val COST = -2
         val ATTACK_DMG = 1
         val UPGRADE_PLUS_DMG = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)

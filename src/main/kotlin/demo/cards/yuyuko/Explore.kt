@@ -21,7 +21,7 @@ class Explore : CustomCard(
         @JvmStatic
         val ID = "Explore"
         val IMAGE_PATH = "images/yuyuko/cards/explore.png"
-        val COST = 0
+        val COST = -2
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
