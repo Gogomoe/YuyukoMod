@@ -101,5 +101,13 @@
     "DESCRIPTIONS": [
       "打出非 衍生 后, 反魂 蝶"
     ]
+  },
+  "Postpone Bloom": {
+    "NAME": "紫色彼岸樱推迟绽放",
+    "DESCRIPTIONS": [
+      "升级樱时计数. NL 下次洗牌时,升级所有 樱 #b",
+      " 次,抽 #b",
+      " 张牌"
+    ]
   }
 }

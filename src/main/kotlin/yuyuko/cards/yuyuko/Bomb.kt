@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower
-import yuyuko.cards.CardProperty
+import yuyuko.Property
 import yuyuko.patches.CardColorEnum
 
 class Bomb : CustomCard(
@@ -32,7 +32,7 @@ class Bomb : CustomCard(
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
 
         init {
-            CardProperty.put<AbstractCard.() -> Unit>("$ID:triggerOnDiscard") {
+            Property.put<AbstractCard.() -> Unit>("$ID:triggerOnDiscard") {
                 AbstractDungeon.actionManager.addToBottom(
                         MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1)
                 )

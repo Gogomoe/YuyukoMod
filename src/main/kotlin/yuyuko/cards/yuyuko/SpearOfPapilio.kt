@@ -11,7 +11,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import yuyuko.actions.UpgradeAllAction
+import yuyuko.event.EventDispenser
+import yuyuko.event.UpgradeAllEvent
 import yuyuko.patches.CardColorEnum
 
 class SpearOfPapilio : CustomCard(
@@ -53,9 +54,7 @@ class SpearOfPapilio : CustomCard(
                         true
                 )
         )
-        AbstractDungeon.actionManager.addToBottom(
-                UpgradeAllAction(Butterfly.ID)
-        )
+        EventDispenser.emit(UpgradeAllEvent(Butterfly.ID))
     }
 
     override fun upgrade() {

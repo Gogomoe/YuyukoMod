@@ -151,6 +151,11 @@
     "DESCRIPTION": "复制所有 衍生 并洗入弃牌堆, NL 消耗 ",
     "UPGRADE_DESCRIPTION": "复制所有 衍生 并洗入弃牌堆, NL 消耗 , 藏匿 "
   },
+  "Postpone Bloom": {
+    "NAME": "紫色彼岸樱推迟绽放",
+    "DESCRIPTION": "升级樱时计数. NL 下次洗牌时,升级所有 樱 计数次,抽等量的牌",
+    "UPGRADE_DESCRIPTION": "升级樱时计数. NL 下次洗牌时,升级所有 樱 计数次,抽等量的牌, NL 固有 "
+  },
   "Reverse The Screen": {
     "NAME": "逆转屏风",
     "DESCRIPTION": "与一个敌人交换虚化层数，然后获得等同于层数之差的格挡",

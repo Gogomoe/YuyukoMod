@@ -7,50 +7,42 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import yuyuko.event.EventDispenser
-import yuyuko.event.UpgradeAllEvent
 import yuyuko.patches.CardColorEnum
-import yuyuko.powers.DiaphaneityPower
 
-class DreamySakura : CustomCard(
+class PostponeBloom : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
-        CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
-        CardRarity.BASIC, CardTarget.SELF
+        CardType.POWER, CardColorEnum.YUYUKO_COLOR,
+        CardRarity.RARE, CardTarget.SELF
 ) {
     companion object {
         @JvmStatic
-        val ID = "Dreamy Sakura"
-        val IMAGE_PATH = "images/yuyuko/cards/skill.png"
+        val ID = "Postpone Bloom"
+        val IMAGE_PATH = "images/yuyuko/cards/power.png"
         val COST = 1
-        val DIAPHANEITY_AMOUNT = 2
-        val UPGRADE_PLUS_AMOUNT = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
+        val UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION!!
     }
 
-    init {
-        this.baseMagicNumber = DIAPHANEITY_AMOUNT
-        this.magicNumber = DIAPHANEITY_AMOUNT
-    }
-
-    override fun makeCopy(): AbstractCard = DreamySakura()
+    override fun makeCopy(): AbstractCard = PostponeBloom()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(
                         self, self,
-                        DiaphaneityPower(self!!, this.magicNumber),
-                        this.magicNumber
+                        yuyuko.powers.PostponeBloomPower(),
+                        1
                 )
         )
-        EventDispenser.emit(UpgradeAllEvent(Sakura.ID))
     }
 
     override fun upgrade() {
-        if (!upgraded) {
-            upgradeName()
-            upgradeMagicNumber(UPGRADE_PLUS_AMOUNT)
+        if (!this.upgraded) {
+            this.upgradeName()
+            this.isInnate = true
+            this.rawDescription = UPGRADE_DESCRIPTION
+            this.initializeDescription()
         }
     }
 

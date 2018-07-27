@@ -8,7 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import yuyuko.actions.UpgradeAllAction
+import yuyuko.event.EventDispenser
+import yuyuko.event.UpgradeAllEvent
 import yuyuko.patches.CardColorEnum
 import yuyuko.powers.DiaphaneityPower
 import yuyuko.powers.FanPower
@@ -39,9 +40,7 @@ class Elegance : CustomCard(
                     )
             )
         }
-        AbstractDungeon.actionManager.addToBottom(
-                UpgradeAllAction(Sakura.ID)
-        )
+        EventDispenser.emit(UpgradeAllEvent(Sakura.ID))
 
         val amount = self!!.getPower(FanPower.POWER_ID)?.amount ?: 0
         AbstractDungeon.actionManager.addToBottom(

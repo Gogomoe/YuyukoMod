@@ -7,7 +7,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.actions.RetrievalAction
-import yuyuko.actions.UpgradeAllAction
+import yuyuko.event.EventDispenser
+import yuyuko.event.UpgradeAllEvent
 import yuyuko.patches.CardColorEnum
 
 class FondlingOfPapilio : CustomCard(
@@ -40,11 +41,7 @@ class FondlingOfPapilio : CustomCard(
                     RetrievalAction(Butterfly.ID)
             )
         }
-        repeat(this.magicNumber) {
-            AbstractDungeon.actionManager.addToBottom(
-                    UpgradeAllAction(Butterfly.ID)
-            )
-        }
+        EventDispenser.emit(UpgradeAllEvent(Butterfly.ID, this.magicNumber))
     }
 
     override fun upgrade() {

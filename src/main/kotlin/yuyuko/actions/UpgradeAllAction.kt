@@ -10,7 +10,7 @@ import yuyuko.cards.yuyuko.Butterfly
 import yuyuko.cards.yuyuko.Sakura
 
 
-class UpgradeAllAction(val cardID: String) : AbstractGameAction() {
+class UpgradeAllAction(val cardID: String, val times: Int = 1) : AbstractGameAction() {
 
     init {
         this.duration = Settings.ACTION_DUR_MED
@@ -18,14 +18,14 @@ class UpgradeAllAction(val cardID: String) : AbstractGameAction() {
     }
 
     override fun update() {
-        if (this.duration == Settings.ACTION_DUR_MED) {
-            val p = AbstractDungeon.player
+        val p = AbstractDungeon.player
+        repeat(times) {
             this.upgradeAllCardsInGroup(p.hand)
             this.upgradeAllCardsInGroup(p.drawPile)
             this.upgradeAllCardsInGroup(p.discardPile)
             this.upgradeAllCardsInGroup(p.exhaustPile)
-            this.isDone = true
         }
+        this.isDone = true
 
     }
 

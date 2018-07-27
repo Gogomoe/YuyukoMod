@@ -65,6 +65,7 @@ import yuyuko.cards.yuyuko.PhantomButterflies
 import yuyuko.cards.yuyuko.PhantomGift
 import yuyuko.cards.yuyuko.PhantomVillage
 import yuyuko.cards.yuyuko.Photo
+import yuyuko.cards.yuyuko.PostponeBloom
 import yuyuko.cards.yuyuko.RedemptionOfDeath
 import yuyuko.cards.yuyuko.RemainHere
 import yuyuko.cards.yuyuko.ReverseTheScreen
@@ -205,6 +206,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         BaseMod.addCard(FullInkySakura())
         BaseMod.addCard(BuryInTheTemplate())
         BaseMod.addCard(SceneryOfPapilio())
+        BaseMod.addCard(PostponeBloom())
 
 
         BaseMod.addCard(ReverseTheScreen())

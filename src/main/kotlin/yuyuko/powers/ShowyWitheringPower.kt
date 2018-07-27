@@ -7,13 +7,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.powers.AbstractPower
 import yuyuko.actions.RetrievalAction
-import yuyuko.actions.UpgradeAllAction
 import yuyuko.cards.isSakura
 import yuyuko.cards.yuyuko.Sakura
 import yuyuko.event.DegradeEvent
 import yuyuko.event.DegradeEvent.DegradeReason.USE
 import yuyuko.event.EventDispenser
 import yuyuko.event.Observer
+import yuyuko.event.UpgradeAllEvent
 import kotlin.math.max
 import kotlin.math.min
 
@@ -54,11 +54,7 @@ class ShowyWitheringPower(amount: Int = 1) : AbstractPower() {
 
     override fun atStartOfTurn() {
         this.flash()
-        repeat(this.amount) {
-            AbstractDungeon.actionManager.addToBottom(
-                    UpgradeAllAction(Sakura.ID)
-            )
-        }
+        EventDispenser.emit(UpgradeAllEvent(Sakura.ID, amount))
         AbstractDungeon.actionManager.addToBottom(
                 RetrievalAction(Sakura.ID, this.amount)
         )
