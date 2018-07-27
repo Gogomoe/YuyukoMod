@@ -2,7 +2,6 @@ package yuyuko.cards.yuyuko
 
 import basemod.abstracts.CustomCard
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType.NORMAL
@@ -10,8 +9,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import yuyuko.event.ApplyDiaphaneityPowerEvent
+import yuyuko.event.ApplyDiaphaneityPowerEvent.ApplyDiaphaneityPower.CARD
+import yuyuko.event.EventDispenser
 import yuyuko.patches.CardColorEnum
-import yuyuko.powers.DiaphaneityPower
 
 class UnbornLight : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
@@ -43,13 +44,8 @@ class UnbornLight : CustomCard(
         AbstractDungeon.getCurrRoom().monsters.monsters
                 .filter { !it.isDeadOrEscaped }
                 .forEach {
-                    AbstractDungeon.actionManager.addToBottom(
-                            ApplyPowerAction(
-                                    it, self,
-                                    DiaphaneityPower(it, this.damage),
-                                    this.magicNumber
-                            )
-                    )
+                    EventDispenser.emit(ApplyDiaphaneityPowerEvent(it, self!!, this.magicNumber, CARD))
+
                 }
 
         AbstractDungeon.actionManager.addToBottom(

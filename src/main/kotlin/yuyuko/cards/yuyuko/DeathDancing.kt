@@ -1,15 +1,16 @@
 package yuyuko.cards.yuyuko
 
 import basemod.abstracts.CustomCard
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.actions.DeathDancingAction
+import yuyuko.event.ApplyDiaphaneityPowerEvent
+import yuyuko.event.ApplyDiaphaneityPowerEvent.ApplyDiaphaneityPower.CARD
+import yuyuko.event.EventDispenser
 import yuyuko.patches.CardColorEnum
-import yuyuko.powers.DiaphaneityPower
 
 class DeathDancing : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
@@ -36,15 +37,10 @@ class DeathDancing : CustomCard(
     override fun makeCopy(): AbstractCard = DeathDancing()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
+        EventDispenser.emit(ApplyDiaphaneityPowerEvent(target!!, self!!, this.magicNumber, CARD))
+
         AbstractDungeon.actionManager.addToBottom(
-                ApplyPowerAction(
-                        target, self,
-                        DiaphaneityPower(target!!, this.magicNumber),
-                        this.magicNumber
-                )
-        )
-        AbstractDungeon.actionManager.addToBottom(
-                DeathDancingAction(target, self!!)
+                DeathDancingAction(target, self)
         )
     }
 

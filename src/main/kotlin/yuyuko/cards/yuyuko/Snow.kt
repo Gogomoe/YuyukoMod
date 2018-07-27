@@ -1,14 +1,14 @@
 package yuyuko.cards.yuyuko
 
 import basemod.abstracts.CustomCard
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import yuyuko.event.ApplyDiaphaneityPowerEvent
+import yuyuko.event.ApplyDiaphaneityPowerEvent.ApplyDiaphaneityPower.CARD
+import yuyuko.event.EventDispenser
 import yuyuko.patches.CardColorEnum
-import yuyuko.powers.DiaphaneityPower
 
 class Snow : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
@@ -35,13 +35,7 @@ class Snow : CustomCard(
     override fun makeCopy(): AbstractCard = Snow()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        AbstractDungeon.actionManager.addToBottom(
-                ApplyPowerAction(
-                        self, self,
-                        DiaphaneityPower(self!!, this.magicNumber),
-                        this.magicNumber
-                )
-        )
+        EventDispenser.emit(ApplyDiaphaneityPowerEvent(self!!, self, this.magicNumber, CARD))
     }
 
     override fun upgrade() {

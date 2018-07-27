@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import yuyuko.powers.DiaphaneityPower
 
-class EndOfRoundDiaphaneityReduceEvent(val power: DiaphaneityPower, val reduceAmount: Int) : Event(ID) {
+class EndOfRoundDiaphaneityReduceEvent(val power: DiaphaneityPower, var reduceAmount: Int) : Event(ID) {
 
     companion object {
         val ID = "End of Round Diaphaneity Reduce"

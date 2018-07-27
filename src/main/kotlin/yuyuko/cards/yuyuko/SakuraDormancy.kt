@@ -1,7 +1,6 @@
 package yuyuko.cards.yuyuko
 
 import basemod.abstracts.CustomCard
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.actions.common.DrawCardAction
 import com.megacrit.cardcrawl.actions.common.HealAction
 import com.megacrit.cardcrawl.cards.AbstractCard
@@ -9,11 +8,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import yuyuko.event.ApplyDiaphaneityPowerEvent
+import yuyuko.event.ApplyDiaphaneityPowerEvent.ApplyDiaphaneityPower.CARD
 import yuyuko.event.DegradeEvent
 import yuyuko.event.DegradeEvent.DegradeReason.USE
 import yuyuko.event.EventDispenser
 import yuyuko.patches.CardColorEnum
-import yuyuko.powers.DiaphaneityPower
 
 class SakuraDormancy : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
@@ -49,13 +49,8 @@ class SakuraDormancy : CustomCard(
         AbstractDungeon.actionManager.addToBottom(
                 DrawCardAction(self, 1, false)
         )
-        AbstractDungeon.actionManager.addToBottom(
-                ApplyPowerAction(
-                        self, self,
-                        DiaphaneityPower(self!!, 2),
-                        2
-                )
-        )
+        EventDispenser.emit(ApplyDiaphaneityPowerEvent(self!!, self, 2, CARD))
+
 
         EventDispenser.emit(DegradeEvent(this, USE, this::degradeToInitiation))
 

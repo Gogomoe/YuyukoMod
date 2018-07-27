@@ -2,7 +2,6 @@ package yuyuko.cards.yuyuko
 
 import basemod.abstracts.CustomCard
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.actions.common.DamageAction
 import com.megacrit.cardcrawl.actions.common.DrawCardAction
 import com.megacrit.cardcrawl.cards.AbstractCard
@@ -11,11 +10,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import yuyuko.event.ApplyDiaphaneityPowerEvent
+import yuyuko.event.ApplyDiaphaneityPowerEvent.ApplyDiaphaneityPower.CARD
 import yuyuko.event.DegradeEvent
 import yuyuko.event.DegradeEvent.DegradeReason.USE
 import yuyuko.event.EventDispenser
 import yuyuko.patches.CardColorEnum
-import yuyuko.powers.DiaphaneityPower
 import yuyuko.powers.FloatOnMoonPower
 
 class ButterflyDelusion : CustomCard(
@@ -61,13 +61,8 @@ class ButterflyDelusion : CustomCard(
         AbstractDungeon.actionManager.addToBottom(
                 DrawCardAction(self, 1, false)
         )
-        AbstractDungeon.actionManager.addToBottom(
-                ApplyPowerAction(
-                        target, self,
-                        DiaphaneityPower(target!!, 2),
-                        2
-                )
-        )
+        EventDispenser.emit(ApplyDiaphaneityPowerEvent(target!!, self!!, 2, CARD))
+
 
         EventDispenser.emit(DegradeEvent(this, USE, this::degradeToInitiation))
     }

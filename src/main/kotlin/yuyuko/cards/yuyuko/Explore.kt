@@ -1,15 +1,16 @@
 package yuyuko.cards.yuyuko
 
 import basemod.abstracts.CustomCard
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.actions.DiscoverAction
+import yuyuko.event.ApplyDiaphaneityPowerEvent
+import yuyuko.event.ApplyDiaphaneityPowerEvent.ApplyDiaphaneityPower.CARD
+import yuyuko.event.EventDispenser
 import yuyuko.patches.CardColorEnum
-import yuyuko.powers.DiaphaneityPower
 
 
 class Explore : CustomCard(
@@ -40,13 +41,8 @@ class Explore : CustomCard(
                 DiscoverAction(3)
         )
         if (upgraded) {
-            AbstractDungeon.actionManager.addToBottom(
-                    ApplyPowerAction(
-                            self, self,
-                            DiaphaneityPower(self!!, 1),
-                            1
-                    )
-            )
+            EventDispenser.emit(ApplyDiaphaneityPowerEvent(self!!, self, 1, CARD))
+
         }
 
     }

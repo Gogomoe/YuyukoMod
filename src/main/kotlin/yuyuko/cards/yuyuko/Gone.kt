@@ -1,12 +1,14 @@
 package yuyuko.cards.yuyuko
 
 import basemod.abstracts.CustomCard
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import yuyuko.event.ApplyDiaphaneityPowerEvent
+import yuyuko.event.ApplyDiaphaneityPowerEvent.ApplyDiaphaneityPower.CARD
+import yuyuko.event.EventDispenser
 import yuyuko.patches.CardColorEnum
 import yuyuko.powers.DiaphaneityPower
 
@@ -33,13 +35,8 @@ class Gone : CustomCard(
         AbstractDungeon.getCurrRoom().monsters.monsters
                 .filter { !it.isDeadOrEscaped }
                 .forEach {
-                    AbstractDungeon.actionManager.addToBottom(
-                            ApplyPowerAction(
-                                    it, self,
-                                    DiaphaneityPower(it, amount),
-                                    amount
-                            )
-                    )
+                    EventDispenser.emit(ApplyDiaphaneityPowerEvent(it, self, amount, CARD))
+
                 }
     }
 

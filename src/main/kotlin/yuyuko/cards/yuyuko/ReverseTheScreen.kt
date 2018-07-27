@@ -1,7 +1,6 @@
 package yuyuko.cards.yuyuko
 
 import basemod.abstracts.CustomCard
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.actions.common.GainBlockAction
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction
 import com.megacrit.cardcrawl.cards.AbstractCard
@@ -12,6 +11,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.actions.HideAction
 import yuyuko.cards.HideCards
+import yuyuko.event.ApplyDiaphaneityPowerEvent
+import yuyuko.event.ApplyDiaphaneityPowerEvent.ApplyDiaphaneityPower.EFFECT
+import yuyuko.event.EventDispenser
 import yuyuko.patches.CardColorEnum
 import yuyuko.powers.DiaphaneityPower
 import kotlin.math.abs
@@ -56,13 +58,8 @@ class ReverseTheScreen : CustomCard(
     }
 
     private fun exchangePower(source: AbstractPlayer?, toStack: AbstractCreature, toReduce: AbstractCreature, diff: Int) {
-        AbstractDungeon.actionManager.addToBottom(
-                ApplyPowerAction(
-                        toStack, source,
-                        DiaphaneityPower(toStack, diff),
-                        diff
-                )
-        )
+        EventDispenser.emit(ApplyDiaphaneityPowerEvent(toStack, source!!, diff, EFFECT))
+
         AbstractDungeon.actionManager.addToBottom(
                 ReducePowerAction(
                         toReduce, source, DiaphaneityPower.POWER_ID, diff

@@ -2,7 +2,6 @@ package yuyuko.cards.yuyuko
 
 import basemod.abstracts.CustomCard
 import com.megacrit.cardcrawl.actions.AbstractGameAction
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction
@@ -13,6 +12,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel
 import yuyuko.cards.isSakura
+import yuyuko.event.ApplyDiaphaneityPowerEvent
+import yuyuko.event.ApplyDiaphaneityPowerEvent.ApplyDiaphaneityPower.CARD
+import yuyuko.event.EventDispenser
 import yuyuko.patches.CardColorEnum
 import yuyuko.powers.DiaphaneityPower
 import yuyuko.powers.FanPower
@@ -48,13 +50,8 @@ class SnowingSakura : CustomCard(
                 )
         )
         var count = countSakura()
-        AbstractDungeon.actionManager.addToBottom(
-                ApplyPowerAction(
-                        self, self,
-                        DiaphaneityPower(self!!, count),
-                        count
-                )
-        )
+        EventDispenser.emit(ApplyDiaphaneityPowerEvent(self!!, self, count, CARD))
+
         count += self.getPower(DiaphaneityPower.POWER_ID)?.amount ?: 0
         AbstractDungeon.actionManager.addToBottom(
                 GainEnergyAction(count / 5)

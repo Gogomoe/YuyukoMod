@@ -52,7 +52,7 @@ class GhastlyDreamPower(amount: Int) : AbstractPower() {
 
     override fun onInitialApplication() {
         observer = EventDispenser.subscribe(DegradeEvent.ID) {
-            if (it.card.isButterfly()){
+            if (it.card.isButterfly()) {
                 it.cancel()
             }
         }

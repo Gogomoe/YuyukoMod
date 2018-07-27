@@ -109,5 +109,18 @@
       " 次,抽 #b",
       " 张牌"
     ]
+  },
+  "Prepare Triple Snow": {
+    "NAME": "准备-三倍雪花",
+    "DESCRIPTIONS": [
+      "回合结束时获得三倍雪花"
+    ]
+  },
+  "Triple Snow": {
+    "NAME": "三倍雪花",
+    "DESCRIPTIONS": [
+      "你从卡牌中获得的 虚化 层数将会有 #b",
+      " 倍"
+    ]
   }
 }

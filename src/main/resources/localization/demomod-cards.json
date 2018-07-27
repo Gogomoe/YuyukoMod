@@ -206,6 +206,10 @@
     "NAME": "雪",
     "DESCRIPTION": "获得 !M! 层 虚化 "
   },
+  "Triple Snow": {
+    "NAME": "三倍雪花",
+    "DESCRIPTION": "下个回合, 你从卡牌中获得的 虚化 层数将会有3倍, NL 消耗"
+  },
   "Nihility": {
     "NAME": "虚无之境",
     "DESCRIPTION": "打出这张牌后,你在这个回合内每打出1张牌, NL 给予自己与全体敌人 !M! 层 虚化 ",

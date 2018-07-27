@@ -90,6 +90,7 @@ import yuyuko.cards.yuyuko.SupernaturalNether
 import yuyuko.cards.yuyuko.SweetOfPhantom
 import yuyuko.cards.yuyuko.TheForgottenWinter
 import yuyuko.cards.yuyuko.TheNether
+import yuyuko.cards.yuyuko.TripleSnow
 import yuyuko.cards.yuyuko.UnbornLight
 import yuyuko.cards.yuyuko.UnfulfillingAttachment
 import yuyuko.cards.yuyuko.UnpavedWay
@@ -219,6 +220,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         BaseMod.addCard(Unreal())
         BaseMod.addCard(Stifle())
         BaseMod.addCard(Snow())
+        BaseMod.addCard(TripleSnow())
         BaseMod.addCard(Nihility())
         BaseMod.addCard(DeathDancing())
         BaseMod.addCard(PhantomButterflies())
