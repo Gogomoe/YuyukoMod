@@ -1,0 +1,70 @@
+package yuyuko.cards
+
+import com.megacrit.cardcrawl.cards.AbstractCard
+import yuyuko.cards.yuyuko.ButterfliesLoveFlowers
+import yuyuko.cards.yuyuko.ButterfliesRainbow
+import yuyuko.cards.yuyuko.Butterfly
+import yuyuko.cards.yuyuko.ButterflyDeepRooted
+import yuyuko.cards.yuyuko.ButterflyDelusion
+import yuyuko.cards.yuyuko.ButterflyGhost
+import yuyuko.cards.yuyuko.ButterflySwallowtail
+import yuyuko.cards.yuyuko.DyingButterflies
+import yuyuko.cards.yuyuko.Explore
+import yuyuko.cards.yuyuko.Photo
+import yuyuko.cards.yuyuko.Sakura
+import yuyuko.cards.yuyuko.SakuraBloom
+import yuyuko.cards.yuyuko.SakuraDormancy
+import yuyuko.cards.yuyuko.SakuraSeal
+import yuyuko.cards.yuyuko.SakuraSuicide
+
+@Suppress("UNCHECKED_CAST")
+object CardProperty {
+    private val map = mutableMapOf<String, Any>()
+    fun <T : Any> put(id: String, value: T) {
+        map[id] = value
+    }
+
+    fun <T : Any> get(id: String): T? = map[id] as T?
+}
+
+fun AbstractCard.triggerOnDiscard() {
+    val func = CardProperty
+            .get<AbstractCard.() -> Unit>("${this.cardID}:triggerOnDiscard") ?: return
+    this.func()
+}
+
+private val ButterflyIDS = setOf(
+        Butterfly.ID, ButterflySwallowtail.ID, ButterflyGhost.ID,
+        ButterflyDeepRooted.ID, ButterflyDelusion.ID,
+
+        ButterfliesRainbow.ID, ButterfliesLoveFlowers.ID, DyingButterflies.ID
+)
+private val SakuraIDS = setOf(
+        Sakura.ID, SakuraBloom.ID, SakuraDormancy.ID,
+        SakuraSeal.ID, SakuraSuicide.ID,
+
+        ButterfliesLoveFlowers.ID
+)
+private val SpecialButterflyIDS = setOf(
+        Butterfly.ID, ButterflySwallowtail.ID, ButterflyGhost.ID,
+        ButterflyDeepRooted.ID, ButterflyDelusion.ID
+)
+private val SpecialSakuraIDS = setOf(
+        Sakura.ID, SakuraBloom.ID, SakuraDormancy.ID,
+        SakuraSeal.ID, SakuraSuicide.ID
+)
+private val SpecialCardIDS = setOf(
+        Sakura.ID, SakuraBloom.ID, SakuraDormancy.ID,
+        SakuraSeal.ID, SakuraSuicide.ID,
+        Butterfly.ID, ButterflySwallowtail.ID, ButterflyGhost.ID,
+        ButterflyDeepRooted.ID, ButterflyDelusion.ID,
+        Explore.ID, Photo.ID
+)
+
+fun AbstractCard.isButterfly(): Boolean = this.cardID in ButterflyIDS
+fun AbstractCard.isSakura(): Boolean = this.cardID in SakuraIDS
+
+fun AbstractCard.isSpecialButterfly(): Boolean = this.cardID in SpecialButterflyIDS
+fun AbstractCard.isSpecialSakura(): Boolean = this.cardID in SpecialSakuraIDS
+
+fun AbstractCard.isSpecial(): Boolean = this.cardID in SpecialCardIDS
