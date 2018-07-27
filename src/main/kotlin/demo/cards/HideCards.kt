@@ -13,20 +13,21 @@ import demo.cards.yuyuko.ReverseTheScreen
 import demo.cards.yuyuko.SceneryOfPapilio
 import demo.cards.yuyuko.SereneSpring
 
-fun AbstractCard.isHide(): Boolean =
-        when {
-            this.cardID == ReverseTheScreen.ID && this.upgraded -> true
-            this.cardID == DyingDream.ID && this.upgraded -> true
-            this.cardID == InfiniteSin.ID && this.upgraded -> true
-            this.cardID == MonsterCherryTree.ID -> true
-            this.cardID == RemainHere.ID && !this.upgraded -> true
-            this.cardID == FullInkySakura.ID && !this.upgraded -> true
-            this.cardID == BuryInTheTemplate.ID -> true
-            this.cardID == SceneryOfPapilio.ID && this.upgraded -> true
-            this.cardID == FinalOfFinal.ID && this.upgraded -> true
-            this.cardID == SereneSpring.ID -> true
-            else -> false
-        }
+private val hideCards = mapOf(
+        ReverseTheScreen.ID to setOf(true),
+        DyingDream.ID to setOf(true),
+        InfiniteSin.ID to setOf(true),
+        MonsterCherryTree.ID to setOf(true, false),
+        RemainHere.ID to setOf(false),
+        FullInkySakura.ID to setOf(false),
+        BuryInTheTemplate.ID to setOf(true, false),
+        SceneryOfPapilio.ID to setOf(true),
+        FinalOfFinal.ID to setOf(true),
+        SereneSpring.ID to setOf(true, false)
+)
+
+fun AbstractCard.isHide(): Boolean = this.upgraded in hideCards[this.cardID] ?: emptySet()
+
 
 object HideCards {
 

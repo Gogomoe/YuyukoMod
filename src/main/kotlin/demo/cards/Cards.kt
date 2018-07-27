@@ -33,27 +33,27 @@ fun AbstractCard.triggerOnDiscard() {
     this.func()
 }
 
-private val ButterflyIDS = listOf(
+private val ButterflyIDS = setOf(
         Butterfly.ID, ButterflySwallowtail.ID, ButterflyGhost.ID,
         ButterflyDeepRooted.ID, ButterflyDelusion.ID,
 
         ButterfliesRainbow.ID, ButterfliesLoveFlowers.ID, DyingButterflies.ID
 )
-private val SakuraIDS = listOf(
+private val SakuraIDS = setOf(
         Sakura.ID, SakuraBloom.ID, SakuraDormancy.ID,
         SakuraSeal.ID, SakuraSuicide.ID,
 
         ButterfliesLoveFlowers.ID
 )
-private val SpecialButterflyIDS = listOf(
+private val SpecialButterflyIDS = setOf(
         Butterfly.ID, ButterflySwallowtail.ID, ButterflyGhost.ID,
         ButterflyDeepRooted.ID, ButterflyDelusion.ID
 )
-private val SpecialSakuraIDS = listOf(
+private val SpecialSakuraIDS = setOf(
         Sakura.ID, SakuraBloom.ID, SakuraDormancy.ID,
         SakuraSeal.ID, SakuraSuicide.ID
 )
-private val SpecialCardIDS = listOf(
+private val SpecialCardIDS = setOf(
         Sakura.ID, SakuraBloom.ID, SakuraDormancy.ID,
         SakuraSeal.ID, SakuraSuicide.ID,
         Butterfly.ID, ButterflySwallowtail.ID, ButterflyGhost.ID,
