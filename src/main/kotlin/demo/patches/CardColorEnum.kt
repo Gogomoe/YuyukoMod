@@ -6,9 +6,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard
 
 class CardColorEnum {
     companion object {
-//        @SpireEnum
-//        @JvmField
-//        var REIMU_COLOR: AbstractCard.CardColor? = null
         @SpireEnum
         @JvmField
         var YUYUKO_COLOR: AbstractCard.CardColor? = null

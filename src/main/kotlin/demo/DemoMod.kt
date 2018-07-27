@@ -149,17 +149,7 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
     }
 
     override fun receiveEditCharacters() {
-        logger.info("add Reimu")
-//        BaseMod.addCharacter(
-//                Reimu::class.java,
-//                Reimu.NAME,
-//                "Reimu class string",
-//                CardColorEnum.REIMU_COLOR.toString(),
-//                Reimu.NAME,
-//                "images/charSelect/reimuButton.png",
-//                "images/charSelect/reimuPortrait.jpg",
-//                PlayerClassEnum.REIMU.toString()
-//        )
+        logger.info("add Yuyuko")
 
         BaseMod.addCharacter(
                 Yuyuko::class.java,
@@ -174,7 +164,6 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
     }
 
     override fun receiveEditCards() {
-        // BaseMod.addCard(Strike_Reimu())
 
         BaseMod.addCard(FantasyButterflies())
         BaseMod.addCard(DreamySakura())
@@ -322,6 +311,5 @@ class DemoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSub
 
 
     }
-
 
 }
