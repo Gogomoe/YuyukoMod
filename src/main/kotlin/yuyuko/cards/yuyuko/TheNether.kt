@@ -32,6 +32,7 @@ class TheNether : CustomCard(
 
     init {
         this.isEthereal = true
+        this.isMultiDamage = true
     }
 
 

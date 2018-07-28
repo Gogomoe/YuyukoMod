@@ -31,6 +31,9 @@ class DancingButterflies : CustomCard(
         val UPDEAGE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION!!
     }
 
+    init {
+        this.isMultiDamage = true
+    }
 
     override fun makeCopy(): AbstractCard = DancingButterflies()
 

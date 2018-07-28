@@ -32,6 +32,7 @@ class UnpavedWay : CustomCard(
 
     init {
         this.baseDamage = ATTACK_DMG
+        this.isMultiDamage = true
     }
 
     override fun makeCopy(): AbstractCard = UnpavedWay()

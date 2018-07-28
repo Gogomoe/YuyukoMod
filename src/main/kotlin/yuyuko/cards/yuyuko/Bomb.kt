@@ -43,6 +43,7 @@ class Bomb : CustomCard(
     init {
         this.baseDamage = ATTACK_DMG
         this.exhaust = true
+        this.isMultiDamage = true
     }
 
     override fun makeCopy(): AbstractCard = Bomb()

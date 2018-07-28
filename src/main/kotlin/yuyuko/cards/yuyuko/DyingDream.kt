@@ -35,6 +35,7 @@ class DyingDream : CustomCard(
 
     init {
         this.exhaust = true
+        this.isMultiDamage = true
     }
 
     override fun makeCopy(): AbstractCard = DyingDream()

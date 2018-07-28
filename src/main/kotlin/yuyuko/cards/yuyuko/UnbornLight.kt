@@ -35,6 +35,7 @@ class UnbornLight : CustomCard(
         this.baseDamage = ATTACK_DMG
         this.baseMagicNumber = ATTACK_DMG
         this.magicNumber = ATTACK_DMG
+        this.isMultiDamage = true
     }
 
     override fun makeCopy(): AbstractCard = UnbornLight()
