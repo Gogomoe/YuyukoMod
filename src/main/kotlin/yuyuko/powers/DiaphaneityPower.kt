@@ -46,7 +46,7 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
     override fun atDamageReceive(damage: Float, damageType: DamageType?): Float {
         return when {
             damageType != DamageType.NORMAL -> damage
-            this.owner == AbstractDungeon.player -> max(damage * (1 - 0.05f * amount), 0f)
+            this.owner == AbstractDungeon.player -> damage * max((1 - 0.05f * amount), 0f)
             else -> damage * min((1 + 0.05f * amount), 2f)
         }
     }

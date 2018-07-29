@@ -100,8 +100,23 @@ import yuyuko.cards.yuyuko.WanderingSoul
 import yuyuko.characters.Yuyuko
 import yuyuko.patches.CardColorEnum
 import yuyuko.patches.PlayerClassEnum
+import yuyuko.powers.BecomeGhostPower
 import yuyuko.powers.DiaphaneityPower
+import yuyuko.powers.DizzinessPower
+import yuyuko.powers.FanPower
+import yuyuko.powers.FloatOnMoonPower
+import yuyuko.powers.FullInkySakuraPower
+import yuyuko.powers.GhastlyDreamPower
 import yuyuko.powers.GhostPower
+import yuyuko.powers.LivingToDiePower
+import yuyuko.powers.NihilityPower
+import yuyuko.powers.PostponeBloomPower
+import yuyuko.powers.RemainHerePower
+import yuyuko.powers.ReviveTheButterfliesPower
+import yuyuko.powers.ShowyWitheringPower
+import yuyuko.powers.SupernaturalNetherPower
+import yuyuko.powers.TheForgottenWinterPower
+import yuyuko.powers.TripleSnowPower
 import yuyuko.relics.Yuyukosfan
 import java.nio.charset.StandardCharsets
 
@@ -257,6 +272,27 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         BaseMod.addCard(DyingDream())
         BaseMod.addCard(GatherThePhantom())
 
+        addPowers()
+    }
+
+    private fun addPowers() {
+        BaseMod.addPower(BecomeGhostPower::class.java, BecomeGhostPower.POWER_ID)
+        BaseMod.addPower(DiaphaneityPower::class.java, DiaphaneityPower.POWER_ID)
+        BaseMod.addPower(DizzinessPower::class.java, DizzinessPower.POWER_ID)
+        BaseMod.addPower(FanPower::class.java, FanPower.POWER_ID)
+        BaseMod.addPower(FloatOnMoonPower::class.java, FloatOnMoonPower.POWER_ID)
+        BaseMod.addPower(FullInkySakuraPower::class.java, FullInkySakuraPower.POWER_ID)
+        BaseMod.addPower(GhastlyDreamPower::class.java, GhastlyDreamPower.POWER_ID)
+        BaseMod.addPower(GhostPower::class.java, GhostPower.POWER_ID)
+        BaseMod.addPower(LivingToDiePower::class.java, LivingToDiePower.POWER_ID)
+        BaseMod.addPower(NihilityPower::class.java, NihilityPower.POWER_ID)
+        BaseMod.addPower(PostponeBloomPower::class.java, PostponeBloomPower.POWER_ID)
+        BaseMod.addPower(RemainHerePower::class.java, RemainHerePower.POWER_ID)
+        BaseMod.addPower(ReviveTheButterfliesPower::class.java, ReviveTheButterfliesPower.POWER_ID)
+        BaseMod.addPower(ShowyWitheringPower::class.java, ShowyWitheringPower.POWER_ID)
+        BaseMod.addPower(SupernaturalNetherPower::class.java, SupernaturalNetherPower.POWER_ID)
+        BaseMod.addPower(TheForgottenWinterPower::class.java, TheForgottenWinterPower.POWER_ID)
+        BaseMod.addPower(TripleSnowPower::class.java, TripleSnowPower.POWER_ID)
     }
 
     override fun receiveEditRelics() {
