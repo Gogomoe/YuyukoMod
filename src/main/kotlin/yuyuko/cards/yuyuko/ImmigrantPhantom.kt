@@ -37,16 +37,15 @@ class ImmigrantPhantom : CustomCard(
     override fun makeCopy(): AbstractCard = ImmigrantPhantom()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        var amount = (self!!.getPower(GhostPower.POWER_ID)?.amount ?: 0) / 2
+        val amount = (self!!.getPower(GhostPower.POWER_ID)?.amount ?: 0) / 2
         if (amount <= 0) {
             return
         }
-        amount *= this.magicNumber
 
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(
                         target, self,
-                        ConstrictedPower(target, self, amount),
+                        ConstrictedPower(target, self, amount * this.magicNumber),
                         amount
                 )
         )
