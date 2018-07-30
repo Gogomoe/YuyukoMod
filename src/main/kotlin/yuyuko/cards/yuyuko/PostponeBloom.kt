@@ -12,7 +12,7 @@ import yuyuko.patches.CardColorEnum
 class PostponeBloom : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
         CardType.POWER, CardColorEnum.YUYUKO_COLOR,
-        CardRarity.RARE, CardTarget.SELF
+        CardRarity.UNCOMMON, CardTarget.SELF
 ) {
     companion object {
         @JvmStatic

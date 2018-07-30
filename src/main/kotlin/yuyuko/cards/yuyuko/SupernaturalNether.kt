@@ -30,6 +30,7 @@ class SupernaturalNether : CustomCard(
     init {
         this.baseMagicNumber = AMOUNT
         this.magicNumber = AMOUNT
+        this.exhaust = true
     }
 
     override fun makeCopy(): AbstractCard = SupernaturalNether()

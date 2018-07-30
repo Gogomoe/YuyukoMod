@@ -43,7 +43,7 @@ class UnpavedWay : CustomCard(
         }
         val count = AbstractDungeon.player.hand.group.count { it.isSpecial() }
 
-        if (count >= 3) {
+        if (count >= 2) {
             return true
         }
 
