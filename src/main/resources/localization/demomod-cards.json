@@ -62,7 +62,7 @@
   "Explore": {
     "NAME": "探索",
     "DESCRIPTION": " 发现 3张牌。 NL 消耗",
-    "UPGRADE_DESCRIPTION": " 发现 1张牌， NL 获得2层 虚化 。 消耗"
+    "UPGRADE_DESCRIPTION": " 发现 1张牌， NL 获得1层 虚化 。 消耗"
   },
   "Photo": {
     "NAME": "照片",
