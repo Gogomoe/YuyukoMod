@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.core.EnergyManager
 import com.megacrit.cardcrawl.screens.CharSelectInfo
 import yuyuko.patches.PlayerClassEnum
+import yuyuko.relics.Coronal
 import yuyuko.relics.Yuyukosfan
 
 
@@ -50,7 +51,7 @@ class Yuyuko(name: String, setClass: PlayerClass) : CustomPlayer(
 
         @JvmStatic
         fun getStartingRelics(): ArrayList<String> {
-            return arrayListOf(Yuyukosfan.ID)
+            return arrayListOf(Yuyukosfan.ID, Coronal.ID)
         }
 
         @JvmStatic

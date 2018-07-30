@@ -22,7 +22,7 @@ class Yuyukosfan : CustomRelic(
     companion object {
         @JvmStatic
         val ID = "Yuyuko's fan"
-        val IMAGE_PATH = "images/relics/relic.png"
+        val IMAGE_PATH = "images/relics/fan.png"
     }
 
     val fanAmount: Int
