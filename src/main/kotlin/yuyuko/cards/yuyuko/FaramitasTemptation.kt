@@ -7,10 +7,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import com.megacrit.cardcrawl.powers.FadingPower
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel
 import yuyuko.patches.CardColorEnum
+import yuyuko.powers.FadePower
 import kotlin.math.max
 
 class FaramitasTemptation : CustomCard(
@@ -45,7 +45,7 @@ class FaramitasTemptation : CustomCard(
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(
                         target, self,
-                        FadingPower(target, turns),
+                        FadePower(target, turns),
                         turns
                 )
         )

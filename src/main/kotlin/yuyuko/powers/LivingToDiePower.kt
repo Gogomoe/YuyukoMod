@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.powers.AbstractPower
-import com.megacrit.cardcrawl.powers.FadingPower
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower
 import yuyuko.event.EndOfRoundDiaphaneityReduceEvent
 import yuyuko.event.EventDispenser
@@ -61,7 +60,7 @@ class LivingToDiePower : AbstractPower() {
             AbstractDungeon.actionManager.addToBottom(
                     ApplyPowerAction(
                             target, source,
-                            FadingPower(target, 1),
+                            FadePower(target, 1),
                             1
                     )
             )
