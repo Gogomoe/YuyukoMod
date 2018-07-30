@@ -75,9 +75,9 @@ class Yuyukosfan : CustomRelic(
 
     fun updateDescription() {
         this.description = updatedDescription
-        initializeTips()
-        this.tips.removeAt(0)
+        this.tips.clear()
         this.tips.add(PowerTip(this.name, this.description))
+        initializeTips()
     }
 
     override fun getUpdatedDescription(): String {

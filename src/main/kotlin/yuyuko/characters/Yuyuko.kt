@@ -51,7 +51,7 @@ class Yuyuko(name: String, setClass: PlayerClass) : CustomPlayer(
 
         @JvmStatic
         fun getStartingRelics(): ArrayList<String> {
-            return arrayListOf(Yuyukosfan.ID, Coronal.ID)
+            return arrayListOf(Coronal.ID, Yuyukosfan.ID)
         }
 
         @JvmStatic

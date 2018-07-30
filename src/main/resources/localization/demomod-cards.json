@@ -1,265 +1,265 @@
 {
   "Strike_Reimu": {
     "NAME": "打击",
-    "DESCRIPTION": "造成 !D! 点伤害."
+    "DESCRIPTION": "造成 !D! 点伤害"
   },
   "Fantasy Butterflies": {
     "NAME": "幻之蝶",
-    "DESCRIPTION": "对敌方全体造成 !D! 点伤害, NL 升级所有 蝶"
+    "DESCRIPTION": "对敌方全体造成 !D! 点伤害， NL 升级所有 蝶"
   },
   "Dreamy Sakura": {
     "NAME": "梦之樱",
-    "DESCRIPTION": "获得 !M! 层 虚化, NL 升级所有 樱"
+    "DESCRIPTION": "获得 !M! 层 虚化 ， NL 升级所有 樱"
   },
   "Deathly Ground": {
     "NAME": "死还的大地",
-    "DESCRIPTION": "造成 !D! 点伤害, NL 获得 !M! 层 幽灵 ."
+    "DESCRIPTION": "造成 !D! 点伤害， NL 获得 !M! 层 幽灵"
   },
   "Faramita's Temptation": {
     "NAME": "对岸的引诱",
-    "DESCRIPTION": "敌人每有 X+ !M! 生命值, NL 就给予1层 无实体 与 消逝 ."
+    "DESCRIPTION": "敌人每有 X+ !M! 生命值， NL 就给予1层 无实体 与 消逝"
   },
   "Sakura": {
     "NAME": "樱",
-    "DESCRIPTION": "回复 !M! 点生命,抽1张牌, NL 可多次升级, 重置 ."
+    "DESCRIPTION": "回复 !M! 点生命，抽1张牌， NL 可多次升级。 重置"
   },
   "Sakura (Seal)": {
     "NAME": "樱 (封印)",
-    "DESCRIPTION": "回复 !M! 点生命,抽1张牌, NL 获得4点 格挡 , NL 可多次升级, 重置 ."
+    "DESCRIPTION": "回复 !M! 点生命，抽1张牌， NL 获得4点 格挡 ， NL 可多次升级。 重置"
   },
   "Sakura (Suicide)": {
     "NAME": "樱 (亡我)",
-    "DESCRIPTION": "回复 !M! 点生命,抽1张牌, NL 获得1层 幽灵 , NL 可多次升级, 重置 ."
+    "DESCRIPTION": "回复 !M! 点生命，抽1张牌， NL 获得1层 幽灵 ， NL 可多次升级。 重置"
   },
   "Sakura (Dormancy)": {
     "NAME": "樱 (春眠)",
-    "DESCRIPTION": "回复 !M! 点生命,抽1张牌, NL 获得2层 虚化 , NL 可多次升级, 重置 ."
+    "DESCRIPTION": "回复 !M! 点生命，抽1张牌， NL 获得2层 虚化 ， NL 可多次升级。 重置"
   },
   "Sakura (Bloom)": {
     "NAME": "樱 (开花)",
-    "DESCRIPTION": "回复 !M! 点生命,抽1张牌, NL 升级所有 樱 , NL 可多次升级, 重置 ."
+    "DESCRIPTION": "回复 !M! 点生命，抽1张牌， NL 升级所有 樱 ， NL 可多次升级。 重置"
   },
   "Butterfly": {
     "NAME": "蝶",
-    "DESCRIPTION": "造成 !D! 点伤害,抽1张牌, NL 可多次升级, 重置 ."
+    "DESCRIPTION": "造成 !D! 点伤害，抽1张牌， NL 可多次升级。 重置"
   },
   "Butterfly (Ghost)": {
     "NAME": "蝶 (亡灵)",
-    "DESCRIPTION": "造成 !D! 点伤害,抽1张牌, NL 给予1层 缠绕 , NL 可多次升级, 重置 ."
+    "DESCRIPTION": "造成 !D! 点伤害，抽1张牌， NL 给予1层 缠绕 ， NL 可多次升级。 重置"
   },
   "Butterfly (Swallowtail)": {
     "NAME": "蝶 (扬羽)",
-    "DESCRIPTION": "造成 !D! 点伤害,抽1张牌, NL 升级所有 蝶 , NL 可多次升级, 重置 ."
+    "DESCRIPTION": "造成 !D! 点伤害，抽1张牌， NL 升级所有 蝶 ， NL 可多次升级。 重置"
   },
   "Butterfly (Deep Rooted)": {
     "NAME": "蝶 (执念)",
-    "DESCRIPTION": "造成 !D! 点体力流失,抽1张牌, NL 可多次升级, 重置 ."
+    "DESCRIPTION": "造成 !D! 点体力流失，抽1张牌， NL 可多次升级。 重置"
   },
   "Butterfly (Delusion)": {
     "NAME": "蝶 (妄想)",
-    "DESCRIPTION": "造成 !D! 点伤害,抽1张牌, NL 给予2层 虚化 , NL 可多次升级, 重置 ."
+    "DESCRIPTION": "造成 !D! 点伤害，抽1张牌， NL 给予2层 虚化 ， NL 可多次升级。 重置"
   },
   "Explore": {
     "NAME": "探索",
-    "DESCRIPTION": " 发现 3张牌, NL 消耗 ",
-    "UPGRADE_DESCRIPTION": " 发现 1张牌, NL 获得2层 虚化 , 消耗 "
+    "DESCRIPTION": " 发现 3张牌。 NL 消耗",
+    "UPGRADE_DESCRIPTION": " 发现 1张牌， NL 获得2层 虚化 。 消耗"
   },
   "Photo": {
     "NAME": "照片",
-    "DESCRIPTION": "将生命值置为 !M! , NL 消耗"
+    "DESCRIPTION": "将生命值置为 !M! 。 NL 消耗"
   },
   "Ghostdom Sakura": {
     "NAME": "诱魂的落樱",
-    "DESCRIPTION": "将1张 樱(亡我) 洗入牌堆, NL 升级所有 樱"
+    "DESCRIPTION": "将1张 樱(亡我) 洗入牌堆， NL 升级所有 樱"
   },
   "Gauzy Sakura": {
     "NAME": "绢彻的樱雨",
-    "DESCRIPTION": "将1张 樱(春眠) 洗入牌堆, NL 升级所有 樱"
+    "DESCRIPTION": "将1张 樱(春眠) 洗入牌堆， NL 升级所有 樱"
   },
   "Bloom": {
     "NAME": "绽放",
-    "DESCRIPTION": "升级所有 樱 , NL 抽 !M! 张牌"
+    "DESCRIPTION": "升级所有 樱 ， NL 抽 !M! 张牌"
   },
   "Wandering Soul": {
     "NAME": "彷徨的灵魂",
-    "DESCRIPTION": "生命值高于一半时,获得 !M! 点 力量 , NL 否则获得 !M! 点 敏捷 "
+    "DESCRIPTION": "生命值高于一半时，获得 !M! 点 力量 ， NL 否则获得 !M! 点 敏捷"
   },
   "Open The Fan": {
     "NAME": "开扇",
-    "DESCRIPTION": "获得1层 扇 , NL 抽 !M! 张牌 "
+    "DESCRIPTION": "获得1层 扇 ， NL 抽 !M! 张牌"
   },
   "Suicide": {
     "NAME": "自尽",
-    "DESCRIPTION": "将自己的生命值降为1, NL 获得等同扣减值的格挡, NL 消耗 ",
-    "UPGRADE_DESCRIPTION": "将自己的生命值降为1, NL 获得等同扣减值的格挡, NL 固有 , 消耗 "
+    "DESCRIPTION": "将自己的生命值降为1， NL 获得等同扣减值的格挡。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "将自己的生命值降为1， NL 获得等同扣减值的格挡。 NL 固有 ， 消耗"
   },
   "Monster Cherry Tree": {
     "NAME": "妖怪樱",
-    "DESCRIPTION": "将所有 衍生樱 变形为有额外效果的随机 衍生樱 , NL 藏匿"
+    "DESCRIPTION": "将所有 衍生樱 变形为有额外效果的随机 衍生樱 。 NL 藏匿"
   },
   "Butterflies Love Flowers": {
     "NAME": "蝶恋花",
-    "DESCRIPTION": "同时是樱和蝶. NL 选择一项：洗入1张同等级的樱或蝶, NL 可多次升级, 消耗 "
+    "DESCRIPTION": "同时是樱和蝶。 NL 选择一项：洗入1张同等级的樱或蝶， NL 可多次升级。 消耗"
   },
   "Sakura Ward": {
     "NAME": "樱花结界",
-    "DESCRIPTION": "获得 !B! 点 格挡 , NL 将1张 樱(封印) 洗入牌堆",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 , NL 将1张 樱(封印) 洗入牌堆, 固有 "
+    "DESCRIPTION": "获得 !B! 点 格挡 ， NL 将1张 樱(封印) 洗入牌堆",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 ， NL 将1张 樱(封印) 洗入牌堆。 固有"
   },
   "Bomb": {
     "NAME": "灵击",
-    "DESCRIPTION": "对敌方全体造成 !D! 点伤害, NL 获得1层 无实体 , NL 弃置时,复制1张洗入牌堆, 消耗 "
+    "DESCRIPTION": "对敌方全体造成 !D! 点伤害， NL 获得1层 无实体 。 NL 弃置时，复制1张洗入牌堆。 消耗"
   },
   "Lunch": {
     "NAME": "午餐",
-    "DESCRIPTION": " 发现 !M! 张牌, NL 消耗 "
+    "DESCRIPTION": " 发现 !M! 张牌。 NL 消耗"
   },
   "Showy Withering": {
-    "NAME": "繁花艳丽,终或凋零",
-    "DESCRIPTION": "回合开始时,升级 樱 ,检索樱. NL 你每打出3张樱,下1张樱将被消耗",
-    "UPGRADE_DESCRIPTION": "回合开始时,升级 樱 ,检索樱. NL 你每打出3张樱,下1张樱将被消耗, NL 固有 "
+    "NAME": "繁花艳丽，终或凋零",
+    "DESCRIPTION": "回合开始时，升级 樱 ，检索樱。 NL 你每打出3张樱，下1张樱将被消耗",
+    "UPGRADE_DESCRIPTION": "回合开始时，升级 樱 ，检索樱。 NL 你每打出3张樱，下1张樱将被消耗。 NL 固有"
   },
   "Mirror of Mind": {
     "NAME": "心灵写真",
-    "DESCRIPTION": "将你当前的生命值记录为 !M! 张照片洗入牌堆, 消耗 "
+    "DESCRIPTION": "将你当前的生命值记录为 !M! 张照片洗入牌堆。 消耗"
   },
   "Explore Ghostdom": {
     "NAME": "探索冥界",
-    "DESCRIPTION": "除了 衍生 以外的牌全部变形为 探索 , NL 消耗 ",
-    "UPGRADE_DESCRIPTION": "除了 衍生 以外的牌全部变形为 探索+ , NL 消耗 "
+    "DESCRIPTION": "除了 衍生 以外的牌全部变形为 探索 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "除了 衍生 以外的牌全部变形为 探索+ 。 NL 消耗"
   },
   "Unfulfilling Attachment": {
     "NAME": "依恋未酌宴",
-    "DESCRIPTION": "将所有 没有额外效果的 衍生樱 变形为 樱(开花) "
+    "DESCRIPTION": "将所有 没有额外效果的 衍生樱 变形为 樱(开花)"
   },
   "Remain Here": {
     "NAME": "蝶之风暂留此世",
-    "DESCRIPTION": "获得100层扇,每回合结束时减少10层, NL 藏匿 ",
-    "UPGRADE_DESCRIPTION": "获得100层扇,每回合结束时减少10层"
+    "DESCRIPTION": "获得100层 扇，每回合结束时减少10层。 NL 藏匿",
+    "UPGRADE_DESCRIPTION": "获得100层 扇，每回合结束时减少10层"
   },
   "Full Inky Sakura": {
     "NAME": "完全墨染的樱花",
-    "DESCRIPTION": "在你打出1张 樱 后, NL 下1张 蝶 会对敌方全体附加最大生命上限5%的体力流失, NL 藏匿",
-    "UPGRADE_DESCRIPTION": "在你打出1张 樱 后, NL 下1张 蝶 会对敌方全体附加最大生命上限5%的体力流失"
+    "DESCRIPTION": "在你打出1张 樱 后， NL 下1张 蝶 会对敌方全体附加最大生命上限5%的体力流失。 NL 藏匿",
+    "UPGRADE_DESCRIPTION": "在你打出1张 樱 后， NL 下1张 蝶 会对敌方全体附加最大生命上限5%的体力流失"
   },
   "Bury in The Template": {
     "NAME": "埋骨于弘川",
-    "DESCRIPTION": "这张卡打出 !M! 次后胜利,同名卡分别计数, NL 藏匿"
+    "DESCRIPTION": "这张卡打出 !M! 次后胜利，同名卡分别计数。 NL 藏匿"
   },
   "Scenery of Papilio": {
     "NAME": "花蝶风月",
-    "DESCRIPTION": "复制所有 衍生 并洗入弃牌堆, NL 消耗 ",
-    "UPGRADE_DESCRIPTION": "复制所有 衍生 并洗入弃牌堆, NL 消耗 , 藏匿 "
+    "DESCRIPTION": "复制所有 衍生 并洗入弃牌堆。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "复制所有 衍生 并洗入弃牌堆。 NL 消耗 ， 藏匿"
   },
   "Postpone Bloom": {
     "NAME": "紫色彼岸樱推迟绽放",
-    "DESCRIPTION": "升级樱时计数. NL 下次洗牌时,升级所有 樱 计数次,抽等量的牌",
-    "UPGRADE_DESCRIPTION": "升级樱时计数. NL 下次洗牌时,升级所有 樱 计数次,抽等量的牌, NL 固有 "
+    "DESCRIPTION": "升级樱时计数。 NL 下次洗牌时，升级所有 樱 计数次，抽等量的牌",
+    "UPGRADE_DESCRIPTION": "升级樱时计数。 NL 下次洗牌时，升级所有 樱 计数次，抽等量的牌。 NL 固有"
   },
   "Reverse The Screen": {
     "NAME": "逆转屏风",
-    "DESCRIPTION": "与一个敌人交换虚化层数，然后获得等同于层数之差的格挡",
-    "UPGRADE_DESCRIPTION": "与一个敌人交换虚化层数,然后获得等同于层数之差的 格挡 , 藏匿 "
+    "DESCRIPTION": "与一个敌人交换 虚化 层数，然后获得等同于层数之差的格挡",
+    "UPGRADE_DESCRIPTION": "与一个敌人交换 虚化 层数，然后获得等同于层数之差的 格挡 。 藏匿"
   },
   "Unborn Light": {
     "NAME": "未生之光",
-    "DESCRIPTION": " 给予敌方全体 !M! 层 虚化 , NL 造成 !D! 点伤害 "
+    "DESCRIPTION": " 给予敌方全体 !M! 层 虚化 ， NL 造成 !D! 点伤害"
   },
   "Elegance": {
     "NAME": "幽雅",
-    "DESCRIPTION": "获得扇层数的 虚化 , NL 升级所有 樱",
-    "UPGRADE_DESCRIPTION": "获得扇层数的 虚化 , NL 将1张樱洗入牌堆, 升级所有 樱"
+    "DESCRIPTION": "获得扇层数的 虚化 ， NL 升级所有 樱",
+    "UPGRADE_DESCRIPTION": "获得扇层数的 虚化 ， NL 将1张 樱 洗入牌堆， 升级所有 樱"
   },
   "End of Faramita": {
     "NAME": "彼岸的终点",
-    "DESCRIPTION": "如果敌人的 虚化 层数低于20,将其翻倍, NL 虚无 ",
+    "DESCRIPTION": "敌人的 虚化 层数低于20层时才能打出，将其翻倍。 NL 虚无",
     "EXTENDED_DESCRIPTION": [
       "它的虚化太多了"
     ]
   },
   "Gone": {
     "NAME": "逝往",
-    "DESCRIPTION": "给予敌方全体自身 虚化 层数层虚化"
+    "DESCRIPTION": "给予敌方全体自身 虚化 层数层 虚化"
   },
   "The Forgotten Winter": {
     "NAME": "被遗忘的冬日",
-    "DESCRIPTION": "下回合开始时,你的虚化不会减少, NL 虚无 "
+    "DESCRIPTION": "下回合开始时，你的 虚化 不会减少。 NL 虚无"
   },
   "The Nether": {
     "NAME": "幽明之境",
-    "DESCRIPTION": "对全体敌方造成伤害,并回复自身生命, NL 数值等同于目标的 虚化 层数, 虚无 ",
-    "UPGRADE_DESCRIPTION": "对全体敌方造成伤害,并回复自身生命, NL 数值等同于目标的 虚化 层数"
+    "DESCRIPTION": "对每个敌人造成等于其 虚化 层数的伤害。 NL 回复自身 虚化 层数的生命， NL 虚无",
+    "UPGRADE_DESCRIPTION": "对每个敌人造成等于其 虚化 层数的伤害。 NL 回复自身 虚化 层数的生命"
   },
   "Unreal": {
     "NAME": "虚幻",
-    "DESCRIPTION": "获得敌人 虚化 层数层虚化"
+    "DESCRIPTION": "获得敌人 虚化 层数层 虚化"
   },
   "Stifle": {
     "NAME": "送葬",
-    "DESCRIPTION": "只有敌人拥有20层及以上的 虚化 层数时才能打出, NL 减少20层虚化层数并使其生命值减半, NL 虚无 ",
-    "UPGRADE_DESCRIPTION": "只有敌人拥有20层及以上的 虚化 层数时才能打出, NL 减少20层虚化层数并使其生命值减半",
+    "DESCRIPTION": "只有敌人拥有20层及以上的 虚化 层数时才能打出， NL 减少20层 虚化 层数并使其生命值减半， NL 虚无",
+    "UPGRADE_DESCRIPTION": "只有敌人拥有20层及以上的 虚化 层数时才能打出， NL 减少20层 虚化 层数并使其生命值减半",
     "EXTENDED_DESCRIPTION": [
       "它的虚化不足"
     ]
   },
   "Snow": {
     "NAME": "雪",
-    "DESCRIPTION": "获得 !M! 层 虚化 "
+    "DESCRIPTION": "获得 !M! 层 虚化"
   },
   "Triple Snow": {
     "NAME": "三倍雪花",
-    "DESCRIPTION": "下个回合, 你从卡牌中获得的 虚化 层数将会有3倍, NL 消耗"
+    "DESCRIPTION": "下个回合， 你从卡牌中获得的 虚化 层数将会有3倍， NL 消耗"
   },
   "Nihility": {
     "NAME": "虚无之境",
-    "DESCRIPTION": "打出这张牌后,你在这个回合内每打出1张牌, NL 给予自己与全体敌人 !M! 层 虚化 ",
-    "UPGRADE_DESCRIPTION": "抽一张牌, NL 打出这张牌后,你在这个回合内每打出1张牌, NL 给予自己与全体敌人 !M! 层 虚化 "
+    "DESCRIPTION": "打出这张牌后，你在这个回合内每打出1张牌， NL 给予自己与全体敌人 !M! 层 虚化",
+    "UPGRADE_DESCRIPTION": "抽一张牌。 NL 打出这张牌后，你在这个回合内每打出1张牌， NL 给予自己与全体敌人 !M! 层 虚化"
   },
   "Death Dancing": {
     "NAME": "殒命之舞",
-    "DESCRIPTION": "给予 !M! 层 虚化 , NL 造成等同于其 虚化 层数的伤害"
+    "DESCRIPTION": "给予 !M! 层 虚化 ， NL 造成等同于其 虚化 层数的伤害"
   },
   "Phantom Butterflies": {
     "NAME": "幽蝴蝶",
-    "DESCRIPTION": "将所有 没有额外效果的 衍生蝶 变形为 蝶(妄想) "
+    "DESCRIPTION": "将所有 没有额外效果的 衍生蝶 变形为 蝶(妄想)"
   },
   "Snowing Sakura": {
     "NAME": "西行寺樱吹雪",
-    "DESCRIPTION": "减少1层扇. NL 你每有1张 樱 ,获得1层 虚化 ,NL 每有5层虚化,获得1点能量, NL 每有3点能量，洗入1张 樱(开花) ,NL 消耗",
-    "UPGRADE_DESCRIPTION": "减少1层扇. NL 你每有1张 樱 ,获得1层 虚化 ,NL 每有5层虚化,获得1点能量, NL 每有3点能量，洗入1张 樱(开花) ,NL 重置"
+    "DESCRIPTION": "减少1层扇。 NL 你每有1张 樱 ，获得1层 虚化 。 NL 每有5层 虚化 ，获得1点能量。 NL 每有3点能量，洗入1张 樱(开花) 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "减少1层扇。 NL 你每有1张 樱 ，获得1层 虚化 。 NL 每有5层 虚化 ，获得1点能量。 NL 每有3点能量，洗入1张 樱(开花) 。 NL 重置"
   },
   "Living to Die": {
     "NAME": "生者必灭之理",
-    "DESCRIPTION": "敌人的 虚化 不会在回合开始时减少, NL 到达100层时清零,给予1层 无实体 与 消逝 "
+    "DESCRIPTION": "敌人的 虚化 不会在回合开始时减少， NL 到达100层时清零，给予1层 无实体 与 消逝"
   },
   "Supernatural Nether": {
     "NAME": "冥界灵异点",
-    "DESCRIPTION": "在之后的的 !M! 个回合开始时,将所有目标的虚化层数增加至20层"
+    "DESCRIPTION": "在之后的的 !M! 个回合开始时，将所有目标的 虚化 层数增加至20层"
   },
   "Dancing Butterflies": {
     "NAME": "蝴蝶梦之舞",
-    "DESCRIPTION": "对敌方全体造成扇层数的伤害, NL 升级所有 蝶 ",
-    "UPGRADE_DESCRIPTION": "对敌方全体造成扇层数的伤害, NL 将1张蝶洗入牌堆 , 升级所有 蝶 "
+    "DESCRIPTION": "对敌方全体造成扇层数的伤害， NL 升级所有 蝶",
+    "UPGRADE_DESCRIPTION": "对敌方全体造成扇层数的伤害， NL 将1张蝶洗入牌堆 ， 升级所有 蝶"
   },
   "Spear of Papilio": {
     "NAME": "凤蝶纹之枪",
-    "DESCRIPTION": "造成 !D! 点体力流失, NL 将 !M! 张 蝶(执念) 洗入牌堆, NL 升级所有 蝶 "
+    "DESCRIPTION": "造成 !D! 点体力流失， NL 将 !M! 张 蝶(执念) 洗入牌堆， NL 升级所有 蝶"
   },
   "Song of Papilio": {
     "NAME": "凤尾蝶之歌",
-    "DESCRIPTION": "将1张 蝶(扬羽) 洗入牌堆, NL 升级所有 蝶 "
+    "DESCRIPTION": "将1张 蝶(扬羽) 洗入牌堆， NL 升级所有 蝶"
   },
   "Fondling of Papilio": {
     "NAME": "凤尾蝶之抚",
-    "DESCRIPTION": " 检索 !M! 张 蝶 , NL 升级所有 蝶 !M! 次"
+    "DESCRIPTION": " 检索 !M! 张 蝶 ， NL 升级所有 蝶 !M! 次"
   },
   "Redemption of Death": {
     "NAME": "死亡的救赎",
-    "DESCRIPTION": "对敌方全体造成 !D! 点伤害, NL 反魂 蝶 "
+    "DESCRIPTION": "对敌方全体造成 !D! 点伤害， NL 反魂 蝶"
   },
   "Gather the Spring": {
     "NAME": "收集春度",
-    "DESCRIPTION": "减少1层 扇 , NL 对敌方全体造成 !D! 点伤害, NL 将1张 樱(春眠) 洗入牌堆",
+    "DESCRIPTION": "减少1层 扇 ， NL 对敌方全体造成 !D! 点伤害， NL 将1张 樱(春眠) 洗入牌堆",
     "EXTENDED_DESCRIPTION": [
       "我没有扇了"
     ]
@@ -267,98 +267,98 @@
   "Final of Final": {
     "NAME": "最后的最后",
     "DESCRIPTION": "造成牌堆与弃牌堆牌数差值的伤害",
-    "UPGRADE_DESCRIPTION": "造成牌堆与弃牌堆牌数差值的伤害, NL 藏匿"
+    "UPGRADE_DESCRIPTION": "造成牌堆与弃牌堆牌数差值的伤害， NL 藏匿"
   },
   "Unpaved Way": {
     "NAME": "无道之路",
-    "DESCRIPTION": "在你的手牌中有至少3张 衍生 时才能打出, NL 对敌方全体造成 !D! 点伤害",
+    "DESCRIPTION": "在你的手牌中有至少2张 衍生 时才能打出， NL 对敌方全体造成 !D! 点伤害",
     "EXTENDED_DESCRIPTION": [
       "我没有足够的衍生"
     ]
   },
   "Serene Spring": {
     "NAME": "安详的春眠",
-    "DESCRIPTION": "杀死生命值低于 !D! %的敌人, NL 或者造成 !D! 点伤害, NL 将1张 樱(春眠) 洗入牌堆, NL 虚无 , 藏匿"
+    "DESCRIPTION": "杀死生命值低于 !D! %的敌人， NL 或者造成 !D! 点伤害。 NL 将1张 樱(春眠) 洗入牌堆。 NL 虚无 ， 藏匿"
   },
   "Infinite Sin": {
     "NAME": "宿罪",
-    "DESCRIPTION": "消耗牌库中所有 蝶 , NL 造成等同于10倍张数的伤害 ( !D! 点伤害)",
-    "UPGRADE_DESCRIPTION": "消耗牌库中所有 蝶 , NL 造成等同于10倍张数的伤害, ( !D! 点伤害), 藏匿 "
+    "DESCRIPTION": "消耗牌库中所有 蝶 ， NL 造成等同于10倍张数的伤害",
+    "UPGRADE_DESCRIPTION": "消耗牌库中所有 蝶 ， NL 造成等同于10倍张数的伤害。 藏匿"
   },
   "Butterflies Rainbow": {
     "NAME": "七色的蝴蝶",
-    "DESCRIPTION": "是 蝶 . NL 将1张同等级有额外效果的随机 衍生蝶 洗入牌堆, NL 可多次升级, 重置 "
+    "DESCRIPTION": "是 蝶 。 NL 将1张同等级有额外效果的随机 衍生蝶 洗入牌堆， NL 可多次升级。 重置"
   },
   "Ghastly Dream": {
     "NAME": "惊梦",
-    "DESCRIPTION": " 检索 蝶 直到填满手牌. NL 本回合你的 蝶 会额外打出 !M! 次 , NL 本回合你不能再抽牌"
+    "DESCRIPTION": " 检索 蝶 直到填满手牌。 NL 本回合你的 蝶 会额外打出 !M! 次 ， NL 本回合你不能再抽牌"
   },
   "Float on Moon": {
     "NAME": "死蝶浮月",
-    "DESCRIPTION": "回合开始时, 升级所有 蝶 3次, NL 你的 衍生蝶 会造成3倍伤害并 消耗 ",
-    "UPGRADE_DESCRIPTION": "回合开始时, 升级所有 蝶 3次, NL 你的 衍生蝶 会造成3倍伤害并 消耗 , 固有 "
+    "DESCRIPTION": "回合开始时， 升级所有 蝶 3次。 NL 你的 衍生蝶 会造成3倍伤害并 消耗",
+    "UPGRADE_DESCRIPTION": "回合开始时， 升级所有 蝶 3次。 NL 你的 衍生蝶 会造成3倍伤害并 消耗 。 固有"
   },
   "Revive The Butterflies": {
     "NAME": "反魂蝶",
-    "DESCRIPTION": "失去所有扇,将你的生命值置1, NL 获得4层无实体。打出非 衍生 后, 反魂 蝶"
+    "DESCRIPTION": "失去所有扇，将你的生命值置1， NL 获得4层 无实体 。打出非 衍生 后， 反魂 蝶"
   },
   "All Wander": {
     "NAME": "悉皆彷徨",
-    "DESCRIPTION": "获得 X 层 幽灵 , NL 若你此回合未使用过任何其他卡牌, 并立即结束回合, 并使敌方跳过下一回合",
-    "UPGRADE_DESCRIPTION": "获得 X+1 层 幽灵 , NL 若你此回合未使用过任何其他卡牌, 并立即结束回合, 并使敌方跳过下一回合"
+    "DESCRIPTION": "获得 X 层 幽灵 。 NL 若你此回合未使用过任何其他卡牌， 并立即结束回合， 并使敌方跳过下一回合",
+    "UPGRADE_DESCRIPTION": "获得 X+1 层 幽灵 。 NL 若你此回合未使用过任何其他卡牌， 并立即结束回合， 并使敌方跳过下一回合"
   },
   "Become Ghost": {
     "NAME": "好死之灵",
-    "DESCRIPTION": "减少1层 扇 ,获得1层 幽灵 , NL 每回合开始时,获得1层 幽灵 , NL 消耗",
-    "UPGRADE_DESCRIPTION": "减少1层 扇 ,获得1层 幽灵 , NL 每回合开始时,获得1层 幽灵 ",
+    "DESCRIPTION": "减少1层 扇 ，获得1层 幽灵 。 NL 每回合开始时，获得1层 幽灵 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "减少1层 扇 ，获得1层 幽灵 。 NL 每回合开始时，获得1层 幽灵",
     "EXTENDED_DESCRIPTION": [
       "我没有扇了"
     ]
   },
   "Sweet of Phantom": {
     "NAME": "诱灵的甘蜜",
-    "DESCRIPTION": "获得 !M! 层 幽灵 , NL 给予 !M! 层 缠绕 , NL 抽 !M! 张牌"
+    "DESCRIPTION": "获得 !M! 层 幽灵 ， NL 给予 !M! 层 缠绕 ， NL 抽 !M! 张牌"
   },
   "Steamed Phantom": {
     "NAME": "幽灵馒头",
-    "DESCRIPTION": "损失1层 幽灵 , NL 回复已损失生命值的50%",
-    "UPGRADE_DESCRIPTION": "损失1层 幽灵 , NL 回复已损失生命值的75%",
+    "DESCRIPTION": "损失1层 幽灵 ， NL 回复已损失生命值的50%",
+    "UPGRADE_DESCRIPTION": "损失1层 幽灵 ， NL 回复已损失生命值的75%",
     "EXTENDED_DESCRIPTION": [
       "我没有幽灵了"
     ]
   },
   "Unstable Ward": {
     "NAME": "不稳定的结界",
-    "DESCRIPTION": "损失1层 幽灵 ,抽1张牌, 发现 3张牌",
-    "UPGRADE_DESCRIPTION": "损失1层 幽灵 ,抽2张牌, 发现 5张牌",
+    "DESCRIPTION": "损失1层 幽灵 ，抽1张牌， 发现 3张牌",
+    "UPGRADE_DESCRIPTION": "损失1层 幽灵 ，抽2张牌， 发现 5张牌",
     "EXTENDED_DESCRIPTION": [
       "我没有幽灵了"
     ]
   },
   "Immigrant Phantom": {
     "NAME": "幽灵移民计划",
-    "DESCRIPTION": "损失一半 幽灵 , 给予等同于其 !M! 倍层的 缠绕 "
+    "DESCRIPTION": "损失一半 幽灵 ， 给予等同于其 !M! 倍层的 缠绕"
   },
   "Phantom Village": {
     "NAME": "迷途之家",
-    "DESCRIPTION": "清除所有敌人的 缠绕 ,获得等量的 幽灵 , NL 每获得 !M! 层幽灵,抽1张牌",
-    "UPGRADE_DESCRIPTION": "清除所有敌人的 缠绕 ,获得等量的 幽灵 , NL 每获得 !M! 层幽灵,抽1张牌, 藏匿"
+    "DESCRIPTION": "清除所有敌人的 缠绕 ，获得等量的 幽灵 。 NL 每获得 !M! 层 幽灵 ，抽1张牌",
+    "UPGRADE_DESCRIPTION": "清除所有敌人的 缠绕 ，获得等量的 幽灵 。 NL 每获得 !M! 层 幽灵 ，抽1张牌。 藏匿"
   },
   "Dying Butterflies": {
     "NAME": "死蝶灵",
-    "DESCRIPTION": "是蝶,获得 !M! 层 幽灵,最多5层, NL 可多次升级, 重置 "
+    "DESCRIPTION": "是 蝶 。获得 !M! 层 幽灵 ，最多5层， NL 可多次升级。 重置"
   },
   "Phantom Gift": {
     "NAME": "故人的遗物",
-    "DESCRIPTION": "获得1层 幽灵 , NL 每回合开始时,获得1层 幽灵 "
+    "DESCRIPTION": "获得1层 幽灵 。 NL 每回合开始时，获得1层 幽灵"
   },
   "Dying Dream": {
     "NAME": "无寿之梦",
-    "DESCRIPTION": "损失所有 幽灵 层数, NL 对敌方全体造成等同于其5倍的伤害与 缠绕 , 消耗 ",
-    "UPGRADE_DESCRIPTION": "损失所有 幽灵 层数, NL 对敌方全体造成等同于其5倍的伤害与 缠绕 , 消耗 , 藏匿 "
+    "DESCRIPTION": "损失所有 幽灵 层数， NL 对敌方全体造成等同于其5倍的伤害与 缠绕 。 消耗",
+    "UPGRADE_DESCRIPTION": "损失所有 幽灵 层数， NL 对敌方全体造成等同于其5倍的伤害与 缠绕 。 消耗 ， 藏匿"
   },
   "Gather The Phantom": {
     "NAME": "幽魂聚地",
-    "DESCRIPTION": "获得10层 幽灵 , NL 消耗"
+    "DESCRIPTION": "获得10层 幽灵 ， NL 消耗"
   }
 }
