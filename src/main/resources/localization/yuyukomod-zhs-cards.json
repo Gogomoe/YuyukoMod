@@ -1,8 +1,4 @@
 {
-  "Strike_Reimu": {
-    "NAME": "打击",
-    "DESCRIPTION": "造成 !D! 点伤害"
-  },
   "Fantasy Butterflies": {
     "NAME": "幻之蝶",
     "DESCRIPTION": "对敌方全体造成 !D! 点伤害， NL 升级所有 蝶"
@@ -61,8 +57,8 @@
   },
   "Explore": {
     "NAME": "探索",
-    "DESCRIPTION": " 发现 3张牌。 NL 消耗",
-    "UPGRADE_DESCRIPTION": " 发现 1张牌， NL 获得1层 虚化 。 消耗"
+    "DESCRIPTION": "发现 3张牌。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "发现 1张牌， NL 获得1层 虚化 。 消耗"
   },
   "Photo": {
     "NAME": "照片",
@@ -112,12 +108,12 @@
   },
   "Lunch": {
     "NAME": "午餐",
-    "DESCRIPTION": " 发现 !M! 张牌。 NL 消耗"
+    "DESCRIPTION": "发现 !M! 张牌。 NL 消耗"
   },
   "Showy Withering": {
     "NAME": "繁花艳丽，终或凋零",
-    "DESCRIPTION": "回合开始时，升级 樱 ，检索樱。 NL 你每打出3张樱，下1张樱将被消耗",
-    "UPGRADE_DESCRIPTION": "回合开始时，升级 樱 ，检索樱。 NL 你每打出3张樱，下1张樱将被消耗。 NL 固有"
+    "DESCRIPTION": "回合开始时， 升级所有  樱 ，检索 樱。 NL 你每打出3张 樱 ，下1张 樱 将被 消耗",
+    "UPGRADE_DESCRIPTION": "回合开始时， 升级所有 樱 ，检索 樱。 NL 你每打出3张 樱 ，下1张 樱 将被 消耗 。 NL 固有"
   },
   "Mirror of Mind": {
     "NAME": "心灵写真",
@@ -163,7 +159,7 @@
   },
   "Unborn Light": {
     "NAME": "未生之光",
-    "DESCRIPTION": " 给予敌方全体 !M! 层 虚化 ， NL 造成 !D! 点伤害"
+    "DESCRIPTION": "给予敌方全体 !M! 层 虚化 ， NL 造成 !D! 点伤害"
   },
   "Elegance": {
     "NAME": "幽雅",
@@ -251,7 +247,7 @@
   },
   "Fondling of Papilio": {
     "NAME": "凤尾蝶之抚",
-    "DESCRIPTION": " 检索 !M! 张 蝶 ， NL 升级所有 蝶 !M! 次"
+    "DESCRIPTION": "检索 !M! 张 蝶 ， NL 升级所有 蝶 !M! 次"
   },
   "Redemption of Death": {
     "NAME": "死亡的救赎",
@@ -291,7 +287,7 @@
   },
   "Ghastly Dream": {
     "NAME": "惊梦",
-    "DESCRIPTION": " 检索 蝶 直到填满手牌。 NL 本回合你的 蝶 会额外打出 !M! 次 ， NL 本回合你不能再抽牌"
+    "DESCRIPTION": "检索 蝶 直到填满手牌。 NL 本回合你的 蝶 会额外打出 !M! 次 ， NL 本回合你不能再抽牌"
   },
   "Float on Moon": {
     "NAME": "死蝶浮月",

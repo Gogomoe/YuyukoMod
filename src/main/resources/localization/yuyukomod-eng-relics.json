@@ -1,0 +1,20 @@
+{
+  "Yuyuko's fan": {
+    "NAME": "Yuyuko's fan",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Block will not disappear at your turn start, NL At start of battle, gain #b",
+      "  #yFan , Place #b",
+      "  #ySakura and #yButterfly into draw pile, NL At sleep in campfire,Gather 1 #yFan"
+    ]
+  },
+  "Coronal": {
+    "NAME": "Coronal",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Right click to use.Gain #b1 #yIntangible and #Artifact . Win #b5 battle to increase usage times. NL Now has #b",
+      " times,win #b",
+      " battle to increase."
+    ]
+  }
+}

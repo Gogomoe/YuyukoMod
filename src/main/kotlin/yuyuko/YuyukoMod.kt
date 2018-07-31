@@ -12,6 +12,9 @@ import basemod.interfaces.PostInitializeSubscriber
 import com.badlogic.gdx.Gdx
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
 import com.megacrit.cardcrawl.core.CardCrawlGame
+import com.megacrit.cardcrawl.core.Settings
+import com.megacrit.cardcrawl.core.Settings.GameLanguage.ZHS
+import com.megacrit.cardcrawl.core.Settings.GameLanguage.ZHT
 import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.localization.CardStrings
 import com.megacrit.cardcrawl.localization.CharacterStrings
@@ -135,11 +138,11 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
 
         @JvmStatic
         fun initialize() {
-            logger.info("========================= DEMOMOD INIT =========================")
+            logger.info("========================= YUYUKOMOD INIT =========================")
 
             YuyukoMod()
 
-            logger.info("======================= DEMOMOD INIT DONE ======================")
+            logger.info("======================= YUYUKOMOD INIT DONE ======================")
         }
     }
 
@@ -331,23 +334,30 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
     }
 
     override fun receiveEditStrings() {
-        val cardStrings = Gdx.files.internal("localization/demomod-cards.json")
+
+        val lang = when (Settings.language) {
+            ZHS -> "zhs"
+            ZHT -> "zhs"
+            else -> "eng"
+        }
+
+        val cardStrings = Gdx.files.internal("localization/yuyukomod-$lang-cards.json")
                 .readString(StandardCharsets.UTF_8.toString())
         BaseMod.loadCustomStrings(CardStrings::class.java, cardStrings)
 
-        val characterStrings = Gdx.files.internal("localization/demomod-characters.json")
+        val characterStrings = Gdx.files.internal("localization/yuyukomod-$lang-characters.json")
                 .readString(StandardCharsets.UTF_8.toString())
         BaseMod.loadCustomStrings(CharacterStrings::class.java, characterStrings)
 
-        val powerStrings = Gdx.files.internal("localization/demomod-powers.json")
+        val powerStrings = Gdx.files.internal("localization/yuyukomod-$lang-powers.json")
                 .readString(StandardCharsets.UTF_8.toString())
         BaseMod.loadCustomStrings(PowerStrings::class.java, powerStrings)
 
-        val keywordStrings = Gdx.files.internal("localization/demomod-keywords.json")
+        val keywordStrings = Gdx.files.internal("localization/yuyukomod-$lang-keywords.json")
                 .readString(StandardCharsets.UTF_8.toString())
         BaseMod.loadCustomStrings(KeywordStrings::class.java, keywordStrings)
 
-        val relicsStrings = Gdx.files.internal("localization/demomod-relics.json")
+        val relicsStrings = Gdx.files.internal("localization/yuyukomod-$lang-relics.json")
                 .readString(StandardCharsets.UTF_8.toString())
         BaseMod.loadCustomStrings(RelicStrings::class.java, relicsStrings)
 

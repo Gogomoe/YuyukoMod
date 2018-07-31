@@ -1,0 +1,360 @@
+{
+  "Fantasy Butterflies": {
+    "NAME": "Fantasy Butterflies",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies, NL UpgradeAll Butterfly"
+  },
+  "Dreamy Sakura": {
+    "NAME": "Dreamy Sakura",
+    "DESCRIPTION": "Gain !M! Diaphaneity , NL UpgradeAll Sakura"
+  },
+  "Deathly Ground": {
+    "NAME": "Deathly Ground",
+    "DESCRIPTION": "Deal !D! damage, NL Gain !M! Ghost"
+  },
+  "Faramita's Temptation": {
+    "NAME": "Faramita's Temptation",
+    "DESCRIPTION": "Enemy has each X+ !M! HP, NL Give 1 Intangible and Fading"
+  },
+  "Sakura": {
+    "NAME": "Sakura",
+    "DESCRIPTION": "Heal !M! HP,Draw 1 card, NL Can be upgraded any number of times. Reset"
+  },
+  "Sakura (Seal)": {
+    "NAME": "Sakura (Seal)",
+    "DESCRIPTION": "Heal !M! HP,Draw 1 card, NL Gain 4 Block , NL Can be upgraded any number of times. Reset"
+  },
+  "Sakura (Suicide)": {
+    "NAME": "Sakura (Suicide)",
+    "DESCRIPTION": "Heal !M! HP,Draw 1 card, NL Gain 1 Ghost , NL Can be upgraded any number of times. Reset"
+  },
+  "Sakura (Dormancy)": {
+    "NAME": "Sakura (Dormancy)",
+    "DESCRIPTION": "Heal !M! HP,Draw 1 card, NL Gain 2 Diaphaneity , NL Can be upgraded any number of times. Reset"
+  },
+  "Sakura (Bloom)": {
+    "NAME": "Sakura (Bloom)",
+    "DESCRIPTION": "Heal !M! HP,Draw 1 card, NL UpgradeAll Sakura , NL Can be upgraded any number of times. Reset"
+  },
+  "Butterfly": {
+    "NAME": "Butterfly",
+    "DESCRIPTION": "Deal !D! damage,Draw 1 card, NL Can be upgraded any number of times. Reset"
+  },
+  "Butterfly (Ghost)": {
+    "NAME": "Butterfly (Ghost)",
+    "DESCRIPTION": "Deal !D! damage,Draw 1 card, NL Give 1 Constricted , NL Can be upgraded any number of times. Reset"
+  },
+  "Butterfly (Swallowtail)": {
+    "NAME": "Butterfly (Swallowtail)",
+    "DESCRIPTION": "Deal !D! damage,Draw 1 card, NL UpgradeAll Butterfly , NL Can be upgraded any number of times. Reset"
+  },
+  "Butterfly (Deep Rooted)": {
+    "NAME": "Butterfly (Deep Rooted)",
+    "DESCRIPTION": "Deal !D! HP loss,Draw 1 card, NL Can be upgraded any number of times. Reset"
+  },
+  "Butterfly (Delusion)": {
+    "NAME": "Butterfly (Delusion)",
+    "DESCRIPTION": "Deal !D! damage,Draw 1 card, NL Give 2 Diaphaneity , NL Can be upgraded any number of times. Reset"
+  },
+  "Explore": {
+    "NAME": "Explore",
+    "DESCRIPTION": "Discover 3 cards. NL Exhaust",
+    "UPGRADE_DESCRIPTION": " Discover 3 cards, NL Gain 1 Diaphaneity . NL Exhaust"
+  },
+  "Photo": {
+    "NAME": "Photo",
+    "DESCRIPTION": "Set HP to !M! . NL Exhaust"
+  },
+  "Ghostdom Sakura": {
+    "NAME": "Ghostdom Sakura",
+    "DESCRIPTION": "Place a Sakura(Suicide) into draw pile, NL UpgradeAll Sakura"
+  },
+  "Gauzy Sakura": {
+    "NAME": "Gauzy Sakura",
+    "DESCRIPTION": "Place a Sakura(Dormancy) into draw pile, NL UpgradeAll Sakura"
+  },
+  "Bloom": {
+    "NAME": "Bloom",
+    "DESCRIPTION": "UpgradeAll Sakura , NL Draw !M! cards"
+  },
+  "Wandering Soul": {
+    "NAME": "Wandering Soul",
+    "DESCRIPTION": "Gain !M! Strength if you HP greater than half , NL Otherwise gain !M! Dexterity"
+  },
+  "Open The Fan": {
+    "NAME": "Open The Fan",
+    "DESCRIPTION": "Gain 1 Fan , NL Draw !M! cards"
+  },
+  "Suicide": {
+    "NAME": "Suicide",
+    "DESCRIPTION": "Set own HP to 1, NL Gain equal amount of Block. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Set own HP to , NL Gain equal amount of Block. NL Innate , Exhaust"
+  },
+  "Monster Cherry Tree": {
+    "NAME": "Monster Cherry Tree",
+    "DESCRIPTION": "Transform all Derivate Sakura to Derivate Sakura with random effect. NL Hide"
+  },
+  "Butterflies Love Flowers": {
+    "NAME": "Butterflies Love Flowers",
+    "DESCRIPTION": "Is Sakura and Butterfly meanwhile. NL Select: Place a Sakura or Butterfly into draw pile, NL Can be upgraded any number of times. Exhaust"
+  },
+  "Sakura Ward": {
+    "NAME": "Sakura Ward",
+    "DESCRIPTION": "Gain !B! Block , NL Place a Sakura(Seal) into draw pile",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block , NL Place a Sakura(Seal) into draw pile. Innate"
+  },
+  "Bomb": {
+    "NAME": "Bomb",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies, NL Gain 1 Intangible . NL When discard,make a copy of this and place it into draw pile. Exhaust"
+  },
+  "Lunch": {
+    "NAME": "Lunch",
+    "DESCRIPTION": " Discover !M! cards. NL Exhaust"
+  },
+  "Showy Withering": {
+    "NAME": "Showy Withering",
+    "DESCRIPTION": "At the start of turn, UpgradeAll Sakura , Retrieval Sakura. NL Each 3 Sakura you played,Next Sakura will be Exhausted",
+    "UPGRADE_DESCRIPTION": "At the start of turn, UpgradeAll Sakura , Retrieval Sakura. NL Each 3 Sakura you played,Next Sakura will be Exhausted. NL Innate"
+  },
+  "Mirror of Mind": {
+    "NAME": "Mirror of Mind",
+    "DESCRIPTION": "Record you HP in !M! Photos and place them into draw pile. Exhaust"
+  },
+  "Explore Ghostdom": {
+    "NAME": "Explore Ghostdom",
+    "DESCRIPTION": "Transform all cards except Derivate to Explore. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Transform all cards except Derivate to Explore+. NL Exhaust"
+  },
+  "Unfulfilling Attachment": {
+    "NAME": "Unfulfilling Attachment",
+    "DESCRIPTION": "Transform all Derivate Sakura with no extra effect to Sakura(Bloom)"
+  },
+  "Remain Here": {
+    "NAME": "Remain Here",
+    "DESCRIPTION": "Gain 100 Fan,Reduce 10 stacks at end of each turn. NL Hide",
+    "UPGRADE_DESCRIPTION": "Gain 100 Fan,Reduce 10 stacks at end of each turn"
+  },
+  "Full Inky Sakura": {
+    "NAME": "Full Inky Sakura",
+    "DESCRIPTION": "After play a Sakura, NL Next Butterfly will add extra 5% of MaxHP HP loss to all enemies. NL Hide",
+    "UPGRADE_DESCRIPTION": "After play a Sakura, NL Next Butterfly will add extra 5% of MaxHP HP loss to all enemies"
+  },
+  "Bury in The Template": {
+    "NAME": "Bury in The Template",
+    "DESCRIPTION": "Play the card for !M! times will bring the win of battle,The cards with the same name are counted separately. NL hide"
+  },
+  "Scenery of Papilio": {
+    "NAME": "Scenery of Papilio",
+    "DESCRIPTION": "Copy all Derivate and place them into discard pile. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Copy all Derivate and place them into discard pile. NL Exhaust , Hide"
+  },
+  "Postpone Bloom": {
+    "NAME": "Postpone Bloom",
+    "DESCRIPTION": "Count when upgrade Sakura. NL At next shuffle, UpgradeAll Sakura for count times and draw count cards",
+    "UPGRADE_DESCRIPTION": "Count when upgrade Sakura. NL At next shuffle, UpgradeAll Sakura for count times and draw count cards. NL Innate"
+  },
+  "Reverse The Screen": {
+    "NAME": "Reverse The Screen",
+    "DESCRIPTION": "Exchange stacks of Diaphaneity with an enemy,Gain Block of the difference between the stacks",
+    "UPGRADE_DESCRIPTION": "Exchange stacks of Diaphaneity with an enemy,Gain Block of the difference between the stacks. Hide"
+  },
+  "Unborn Light": {
+    "NAME": "Unborn Light",
+    "DESCRIPTION": "Give !M! Diaphaneity to ALL enemies , NL Deal !D! damage"
+  },
+  "Elegance": {
+    "NAME": "Elegance",
+    "DESCRIPTION": "Gain Diaphaneity of Fan stacks, NL UpgradeAll Sakura",
+    "UPGRADE_DESCRIPTION": "Gain Diaphaneity of Fan stacks, NL Place a Sakura into draw pile, UpgradeAll Sakura"
+  },
+  "End of Faramita": {
+    "NAME": "End of Faramita",
+    "DESCRIPTION": "Only can be played when the stacks of Diaphaneity of the enemy less than 20,Doubling the stacks. NL Ethereal",
+    "EXTENDED_DESCRIPTION": [
+      "it has too much Diaphaneity"
+    ]
+  },
+  "Gone": {
+    "NAME": "Gone",
+    "DESCRIPTION": "Give Diaphaneity of your stacks to ALL enemies"
+  },
+  "The Forgotten Winter": {
+    "NAME": "The Forgotten Winter",
+    "DESCRIPTION": "At start of next turn,Your Diaphaneity will not reduce. NL Ethereal"
+  },
+  "The Nether": {
+    "NAME": "The Nether",
+    "DESCRIPTION": "Deal each enemies its own Diaphaneity stacks damage. NL Heal Diaphaneity stacks HP, NL Ethereal",
+    "UPGRADE_DESCRIPTION": "Deal each enemies its own Diaphaneity stacks damage. NL Heal Diaphaneity stacks HP"
+  },
+  "Unreal": {
+    "NAME": "Unreal",
+    "DESCRIPTION": "Gain Diaphaneity of its Diaphaneity stacks"
+  },
+  "Stifle": {
+    "NAME": "Stifle",
+    "DESCRIPTION": "Only can be played when the stacks of Diaphaneity of the enemy greater than 20, NL Reduce 20 Diaphaneity and damage its half HP, Ethereal",
+    "UPGRADE_DESCRIPTION": "Only can be played when the stacks of Diaphaneity of the enemy greater than 20, NL Reduce 20 Diaphaneity and damage its half HP",
+    "EXTENDED_DESCRIPTION": [
+      "it don't has enough Diaphaneity"
+    ]
+  },
+  "Snow": {
+    "NAME": "Snow",
+    "DESCRIPTION": "Gain !M! Diaphaneity"
+  },
+  "Triple Snow": {
+    "NAME": "Triple Snow",
+    "DESCRIPTION": "Next turn, You will gain 3 times Diaphaneity from cards, NL Exhaust"
+  },
+  "Nihility": {
+    "NAME": "Nihility",
+    "DESCRIPTION": "After played the card,each card you play in this turn will give !M! Diaphaneity to you and all Enemies",
+    "UPGRADE_DESCRIPTION": "Draw 1 card. NL After played the card,each card you play in this turn will give !M! Diaphaneity to you and all Enemies"
+  },
+  "Death Dancing": {
+    "NAME": "Death Dancing",
+    "DESCRIPTION": "Give !M! Diaphaneity , NL Deal damage of stacks of Diaphaneity"
+  },
+  "Phantom Butterflies": {
+    "NAME": "Phantom Butterflies",
+    "DESCRIPTION": "Transform all Derivate Butterfly with no extra effect to Butterfly(Delusion)"
+  },
+  "Snowing Sakura": {
+    "NAME": "Snowing Sakura",
+    "DESCRIPTION": "Reduce 1 fan. NL Have each Sakura,Gain 1 Diaphaneity . NL Each 5 Diaphaneity ,gain 1 Energy. NL Each 3 energy,Place Sakura(Bloom) into card pile. Exhaust",
+    "UPGRADE_DESCRIPTION": "Reduce 1 fan. NL Have each Sakura,Gain 1 Diaphaneity . NL Each 5 Diaphaneity ,gain 1 Energy. NL Each 3 energy,Place Sakura(Bloom) into card pile. Reset"
+  },
+  "Living to Die": {
+    "NAME": "Living to Die",
+    "DESCRIPTION": "Diaphaneity of enemies will not reduce at turn start, NL When reach 100 stacks,give 1 Intangible and Fading"
+  },
+  "Supernatural Nether": {
+    "NAME": "Supernatural Nether",
+    "DESCRIPTION": "At next !M! turn start,Increase Diaphaneity of everyone to 20"
+  },
+  "Dancing Butterflies": {
+    "NAME": "Dancing Butterflies",
+    "DESCRIPTION": "Deal damage of Fan stacks to all enemies, NL UpgradeAll Butterfly",
+    "UPGRADE_DESCRIPTION": "Deal damage of Fan stacks to all enemies, NL Place 1 Butterfly into draw pile, UpgradeAll Butterfly"
+  },
+  "Spear of Papilio": {
+    "NAME": "Spear of Papilio",
+    "DESCRIPTION": "Deal !D! HP loss, NL Place !M! Butterfly(Deep-Rooted) into draw pile, NL UpgradeAll Butterfly"
+  },
+  "Song of Papilio": {
+    "NAME": "Song of Papilio",
+    "DESCRIPTION": "Place Butterfly(Swallowtail) into draw pile, NL UpgradeAll Butterfly"
+  },
+  "Fondling of Papilio": {
+    "NAME": "Fondling of Papilio",
+    "DESCRIPTION": "Retrieval !M! Butterfly , NL UpgradeAll Butterfly for !M! times"
+  },
+  "Redemption of Death": {
+    "NAME": "Redemption of Death",
+    "DESCRIPTION": "Deal !D! damage to all enemies, NL Revive Butterfly"
+  },
+  "Gather the Spring": {
+    "NAME": "Gather the Spring",
+    "DESCRIPTION": "Reduce 1 Fan , NL Deal !D! damage to all enemies, NL Place Sakura(Dormancy) into draw pile",
+    "EXTENDED_DESCRIPTION": [
+      "I don't have enough Fan"
+    ]
+  },
+  "Final of Final": {
+    "NAME": "Final of Final",
+    "DESCRIPTION": "Deal damage of the difference between draw pile and discard pile",
+    "UPGRADE_DESCRIPTION": "Deal damage of the difference between draw pile and discard pile, NL Hide"
+  },
+  "Unpaved Way": {
+    "NAME": "Unpaved Way",
+    "DESCRIPTION": "Only can be played when hand has at least 2 Derivate ,Deal !D! damage to all enemies",
+    "EXTENDED_DESCRIPTION": [
+      "I don't have enough Derivate"
+    ]
+  },
+  "Serene Spring": {
+    "NAME": "Serene Spring",
+    "DESCRIPTION": "Kill enemy whose HP less than !D! %, NL otherwise deal !D! damage. Place Sakura(Dormancy) into draw pile. Ethereal , Hide"
+  },
+  "Infinite Sin": {
+    "NAME": "Infinite Sin",
+    "DESCRIPTION": "Exhaust all Butterfly , NL Deal decuple damage",
+    "UPGRADE_DESCRIPTION": "Exhaust all Butterfly , NL Deal decuple damage. Hide"
+  },
+  "Butterflies Rainbow": {
+    "NAME": "Butterflies Rainbow",
+    "DESCRIPTION": "Is Butterfly . NL Place Derivate Butterfly with random extra effect into draw pile, NL Can be upgraded any number of times. Reset"
+  },
+  "Ghastly Dream": {
+    "NAME": "Ghastly Dream",
+    "DESCRIPTION": "Retrieval Butterfly up to fill your hand. NL This turn your Butterfly will be played for extra !M! times , NL You can't draw cards during the turn"
+  },
+  "Float on Moon": {
+    "NAME": "Float on Moon",
+    "DESCRIPTION": "At the start of turn, UpgradeAll Butterfly for 3 times. NL Your Derivate Butterfly will Deal 3 times damage and exhaust",
+    "UPGRADE_DESCRIPTION": "At the start of turn, UpgradeAll Butterfly for 3 times. NL Your Derivate Butterfly will Deal 3 times damage and exhaust . Innate"
+  },
+  "Revive The Butterflies": {
+    "NAME": "Revive The Butterflies",
+    "DESCRIPTION": "Lose all Fan ,Set your HP to 1, NL Gain 4 Intangible.After you play dis-derivate, Revive Butterfly"
+  },
+  "All Wander": {
+    "NAME": "All Wander",
+    "DESCRIPTION": "Gain X Ghost . NL If you haven't play any other card, Finish the turn immediately, And skip next turn of enemies",
+    "UPGRADE_DESCRIPTION": "Gain X+1 Ghost . NL If you haven't play any other card, Finish the turn immediately, And skip next turn of enemies"
+  },
+  "Become Ghost": {
+    "NAME": "Become Ghost",
+    "DESCRIPTION": "Reduce 1 Fan ,Gain 1 Ghost . NL Gain 1 Ghost at the start of turn. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Reduce 1 Fan ,Gain 1 Ghost . NL Gain 1 Ghost at the start of turn",
+    "EXTENDED_DESCRIPTION": [
+      "I don't have Fan"
+    ]
+  },
+  "Sweet of Phantom": {
+    "NAME": "Sweet of Phantom",
+    "DESCRIPTION": "Gain !M! Ghost , NL Give !M! Constricted , NL Draw !M! cards"
+  },
+  "Steamed Phantom": {
+    "NAME": "Steamed Phantom",
+    "DESCRIPTION": "Reduce 1 Ghost , NL Heal 50% of lost HP",
+    "UPGRADE_DESCRIPTION": "Reduce 1 Ghost , NL Heal 75% of lost HP",
+    "EXTENDED_DESCRIPTION": [
+      "I don't have Ghost"
+    ]
+  },
+  "Unstable Ward": {
+    "NAME": "Unstable Ward",
+    "DESCRIPTION": "Reduce 1 Ghost ,Draw 1 cards, Discover 3 cards",
+    "UPGRADE_DESCRIPTION": "Reduce 1 Ghost ,Draw 2 cards, Discover 5 cards",
+    "EXTENDED_DESCRIPTION": [
+      "I don't have Ghost"
+    ]
+  },
+  "Immigrant Phantom": {
+    "NAME": "Immigrant Phantom",
+    "DESCRIPTION": "Reduce half Ghost , Give Constricted of !M! times of the amount "
+  },
+  "Phantom Village": {
+    "NAME": "Phantom Village",
+    "DESCRIPTION": "Clear Constricted of all enemies ,gain equal amount of Ghost. NL Each !M! Ghost you gain ,Draw 1 card",
+    "UPGRADE_DESCRIPTION": "Clear Constricted of all enemies ,gain equal amount of Ghost. NL Each !M! Ghost you gain ,Draw 1 card. Hide"
+  },
+  "Dying Butterflies": {
+    "NAME": "Dying Butterflies",
+    "DESCRIPTION": "Is Butterfly .Gain !M! Ghost ,up to 5 stacks, NL Can be upgraded any number of times. Reset"
+  },
+  "Phantom Gift": {
+    "NAME": "Phantom Gift",
+    "DESCRIPTION": "Gain 1 Ghost . NL At the start of turn ,gain 1 Ghost"
+  },
+  "Dying Dream": {
+    "NAME": "Dying Dream",
+    "DESCRIPTION": "Reduce all ghost, NL give Constricted of 5 times of the amount to all enemies. Exhaust",
+    "UPGRADE_DESCRIPTION": "Reduce all ghost, NL give Constricted of 5 times of the amount to all enemies. Exhaust , Hide"
+  },
+  "Gather The Phantom": {
+    "NAME": "Gather The Phantom",
+    "DESCRIPTION": "Gain 10 Ghost , NL Exhaust"
+  }
+}

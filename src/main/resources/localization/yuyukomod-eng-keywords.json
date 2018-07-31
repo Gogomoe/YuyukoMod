@@ -1,0 +1,142 @@
+{
+  "Derivate": {
+    "TEXT": [
+      "Derivate",
+      "derivate",
+      "Derivate cards include NL Derivate Sakura,Derivate Butterfly,Explore,Photo NL these cards"
+    ]
+  },
+  "Derivate Sakura": {
+    "TEXT": [
+      "Derivate Sakura",
+      "derivate sakura",
+      "Derivate Sakura includes Sakura,Sakura(seal),Sakura(suicide),Sakura(dormancy),Sakura(bloom) these cards"
+    ]
+  },
+  "Derivate Butterfly": {
+    "TEXT": [
+      "Derivate Butterfly",
+      "derivate butterfly",
+      "Derivate Butterfly includes Butterfly,Butterfly(ghost),Butterfly(swallowtail),Butterfly(deep-rooted),Butterfly(delusion) these cards"
+    ]
+  },
+  "Diaphaneity": {
+    "TEXT": [
+      "Diaphaneity",
+      "diaphaneity",
+      "Each stack of you,reduce damage taken 5%； NL Each stack of enemy,increase its damage taken 5%,up to 100%. NL Reduce half stacks at turn start"
+    ]
+  },
+  "Ghost": {
+    "TEXT": [
+      "Ghost",
+      "ghost",
+      "At the end of turn,cause HP loss to a random enemy of ' #bcount #bof #bremaining #bhand ' for #bstacks times . NL At the start of turn,give 1 #yConstricted to a random enemy,reduce 1 stack"
+    ]
+  },
+  "Constricted": {
+    "TEXT": [
+      "Constricted",
+      "constricted",
+      "At the end of turn,each stack of Constricted cause 1 damage"
+    ]
+  },
+  "UpgradeAll": {
+    "TEXT": [
+      "UpgradeAll",
+      "upgradeall",
+      "Upgrade all these cards during the battle"
+    ]
+  },
+  "Reset": {
+    "TEXT": [
+      "Reset",
+      "reset",
+      "degrade the card to initial grade"
+    ]
+  },
+  "Discover": {
+    "TEXT": [
+      "Discover",
+      "discover",
+      "Select a card and place it into hand from X cards"
+    ]
+  },
+  "Hide": {
+    "TEXT": [
+      "Hide",
+      "hide",
+      "While draw pile has dis-hide cards , the card can't be drew"
+    ]
+  },
+  "Retrieval": {
+    "TEXT": [
+      "Retrieval",
+      "retrieval",
+      "Find a card and place it into hand from draw pile or discard pile"
+    ]
+  },
+  "Revive": {
+    "TEXT": [
+      "Revive",
+      "revive",
+      "find a card and place it into hand from exhaust pile"
+    ]
+  },
+  "Sakura(Seal)": {
+    "TEXT": [
+      "Sakura(Seal)",
+      "sakura(seal)",
+      "A Sakura which can gain 4 Block"
+    ]
+  },
+  "Sakura(Suicide)": {
+    "TEXT": [
+      "Sakura(Suicide)",
+      "sakura(suicide)",
+      "A Sakura which can gain 1 Ghost"
+    ]
+  },
+  "Sakura(Dormancy)": {
+    "TEXT": [
+      "Sakura(Dormancy)",
+      "sakura(dormancy)",
+      "A Sakura which can gain 2 Diaphaneity"
+    ]
+  },
+  "Sakura(Bloom)": {
+    "TEXT": [
+      "Sakura(Bloom)",
+      "sakura(bloom)",
+      "A Sakura which can UpgradeAll Sakura"
+    ]
+  },
+  "Butterfly(Ghost)": {
+    "TEXT": [
+      "Butterfly(Ghost)",
+      "butterfly(ghost)",
+      "A Butterfly which can give 1 Constricted"
+    ]
+  },
+  "Butterfly(Swallowtail)": {
+    "TEXT": [
+      "Butterfly(Swallowtail)",
+      "butterfly(swallowtail)",
+      "A Butterfly which can UpgradeAll Butterfly"
+    ]
+  },
+  "Butterfly(Deep Rooted)": {
+    "TEXT": [
+      "Butterfly(Deep-Rooted)",
+      "butterfly(deep-rooted)",
+      "A Butterfly which could cause HP loss"
+    ]
+  },
+  "Butterfly(Delusion)": {
+    "TEXT": [
+      "Butterfly(Delusion)",
+      "butterfly(delusion)",
+      "A Butterfly which can give 2 Diaphaneity"
+    ]
+  }
+}

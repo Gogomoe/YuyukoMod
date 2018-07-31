@@ -1,0 +1,126 @@
+{
+  "Fan": {
+    "NAME": "Fan",
+    "DESCRIPTIONS": [
+      "When you play Sakura or Butterfly , If amount of same type greater than #b",
+      " , Exhaust it. The card be Exhaust can avoid Reset"
+    ]
+  },
+  "Diaphaneity": {
+    "NAME": "Diaphaneity",
+    "DESCRIPTIONS": [
+      "Reduce damage taken #b",
+      "Increase damage taken #b",
+      "% ,Reduce half stacks at turn start"
+    ]
+  },
+  "Ghost": {
+    "NAME": "Ghost",
+    "DESCRIPTIONS": [
+      "At the end of turn,cause HP loss to a random enemy of ' #bcount #bof #bremaining #bhand ' for #b",
+      " times. NL At the start of turn,give 1 #yConstricted to a random enemy,reduce 1 stack"
+    ]
+  },
+  "Nihility": {
+    "NAME": "Nihility",
+    "DESCRIPTIONS": [
+      "Each card you play in this turn will give #b",
+      " Diaphaneity to you and all Enemies"
+    ]
+  },
+  "Ghastly Dream": {
+    "NAME": "Ghastly Dream",
+    "DESCRIPTIONS": [
+      "This turn your Butterfly will be played for extra  #b",
+      " times"
+    ]
+  },
+  "Dizziness": {
+    "NAME": "Dizziness",
+    "DESCRIPTIONS": [
+      "Skip next turn of enemies"
+    ]
+  },
+  "Become Ghost": {
+    "NAME": "Become Ghost",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " Ghost at the start of turn"
+    ]
+  },
+  "Float on Moon": {
+    "NAME": "Float on Moon",
+    "DESCRIPTIONS": [
+      "At the start of turn, UpgradeAll Butterfly for #b",
+      " times, NL Your Derivate Butterfly will Deal #b",
+      " times damage and exhaust"
+    ]
+  },
+  "Supernatural Nether": {
+    "NAME": "Supernatural Nether",
+    "DESCRIPTIONS": [
+      "At next #b",
+      " turn start,Increase Diaphaneity of everyone to 20"
+    ]
+  },
+  "Living to Die": {
+    "NAME": "Living to Die",
+    "DESCRIPTIONS": [
+      "Diaphaneity of enemies will not reduce at turn start, NL When reach 100 stacks,give 1 Intangible and Fading"
+    ]
+  },
+  "Showy Withering": {
+    "NAME": "Showy Withering",
+    "DESCRIPTIONS": [
+      "At the start of turn, UpgradeAll #b",
+      " times, Retrieval Sakura #b",
+      " times. NL Each 3 Sakura you played,Next Sakura will be Exhausted"
+    ]
+  },
+  "Remain Here": {
+    "NAME": "Remain Here",
+    "DESCRIPTIONS": [
+      "Reduce #b10 Fan at end of each turn"
+    ]
+  },
+  "Full Inky Sakura": {
+    "NAME": "Full Inky Sakura",
+    "DESCRIPTIONS": [
+      "After play a Sakura, NL Next Butterfly will add extra 5% of MaxHP HP loss to all enemies"
+    ]
+  },
+  "The Forgotten Winter": {
+    "NAME": "The Forgotten Winter",
+    "DESCRIPTIONS": [
+      "At start of next #b",
+      " turn,Your Diaphaneity will not reduce"
+    ]
+  },
+  "Revive The Butterflies": {
+    "NAME": "Revive The Butterflies",
+    "DESCRIPTIONS": [
+      "After you play dis-derivate, Revive Butterfly"
+    ]
+  },
+  "Postpone Bloom": {
+    "NAME": "Postpone Bloom",
+    "DESCRIPTIONS": [
+      "Count when upgrade Sakura. NL At next shuffle, UpgradeAll Sakura for #b",
+      " times,draw #b",
+      " cards"
+    ]
+  },
+  "Prepare Triple Snow": {
+    "NAME": "Prepare-Triple Snow",
+    "DESCRIPTIONS": [
+      "At the end of the turn, gain 'Triple Snow'"
+    ]
+  },
+  "Triple Snow": {
+    "NAME": "Triple Snow",
+    "DESCRIPTIONS": [
+      "You will gain #b",
+      " times Diaphaneity from cards"
+    ]
+  }
+}
