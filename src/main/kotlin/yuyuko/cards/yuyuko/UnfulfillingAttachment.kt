@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.actions.ChangeAllAction
+import yuyuko.actions.DiscoverAction
 import yuyuko.patches.CardColorEnum
 
 class UnfulfillingAttachment : CustomCard(
@@ -32,6 +33,11 @@ class UnfulfillingAttachment : CustomCard(
         val condition: (AbstractCard) -> Boolean = { it.cardID == Sakura.ID }
         val toChange = listOf(::SakuraBloom)
 
+        repeat(10) {
+            AbstractDungeon.actionManager.addToBottom(
+                    DiscoverAction(1)
+            )
+        }
         AbstractDungeon.actionManager.addToBottom(
                 ChangeAllAction(condition, toChange)
         )

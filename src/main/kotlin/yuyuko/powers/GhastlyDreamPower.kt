@@ -11,14 +11,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import com.megacrit.cardcrawl.powers.AbstractPower
 import yuyuko.cards.isButterfly
-import yuyuko.cards.yuyuko.ButterfliesLoveFlowers
-import yuyuko.cards.yuyuko.ButterfliesRainbow
 import yuyuko.cards.yuyuko.Butterfly
-import yuyuko.cards.yuyuko.ButterflyDeepRooted
-import yuyuko.cards.yuyuko.ButterflyDelusion
-import yuyuko.cards.yuyuko.ButterflyGhost
-import yuyuko.cards.yuyuko.ButterflySwallowtail
-import yuyuko.cards.yuyuko.DyingButterflies
 import yuyuko.event.DegradeEvent
 import yuyuko.event.EventDispenser
 import yuyuko.event.Observer
@@ -46,8 +39,6 @@ class GhastlyDreamPower(amount: Int) : AbstractPower() {
         this.img = ImageMaster.loadImage("images/powers/ghastlyDream.png")
     }
 
-    private val usedButterfly = mutableListOf<AbstractCard>()
-
     private var observer: Observer<DegradeEvent>? = null
 
     override fun onInitialApplication() {
@@ -68,12 +59,12 @@ class GhastlyDreamPower(amount: Int) : AbstractPower() {
              * 保留额外打出蝶的等级
              * @see Butterfly.use 等
              */
-            usedButterfly.add(card)
+            action!!.exhaustCard = true
 
             repeat(amount) {
                 this.flash()
                 var m: AbstractMonster? = null
-                if (action!!.target != null) {
+                if (action.target != null) {
                     m = action.target as AbstractMonster
                 }
 
@@ -106,20 +97,6 @@ class GhastlyDreamPower(amount: Int) : AbstractPower() {
             AbstractDungeon.actionManager.addToBottom(
                     RemoveSpecificPowerAction(owner, owner, this)
             )
-            usedButterfly.forEach {
-                when (it) {
-                    is Butterfly -> it.degradeToInitiation()
-                    is ButterflyDeepRooted -> it.degradeToInitiation()
-                    is ButterflyDelusion -> it.degradeToInitiation()
-                    is ButterflyGhost -> it.degradeToInitiation()
-                    is ButterflySwallowtail -> it.degradeToInitiation()
-                    is ButterfliesRainbow -> it.degradeToInitiation()
-                    is ButterfliesLoveFlowers -> {
-                    }
-                    is DyingButterflies -> it.degradeToInitiation()
-                    else -> throw RuntimeException("我是不是漏了什么")
-                }
-            }
         }
     }
 

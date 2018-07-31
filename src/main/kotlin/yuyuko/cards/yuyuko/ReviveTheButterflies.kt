@@ -49,8 +49,8 @@ class ReviveTheButterflies : CustomCard(
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(
                         self, self,
-                        IntangiblePlayerPower(self, 4),
-                        4
+                        IntangiblePlayerPower(self, 3),
+                        3
                 )
         )
         AbstractDungeon.actionManager.addToBottom(

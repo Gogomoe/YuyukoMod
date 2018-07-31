@@ -104,7 +104,7 @@
   },
   "Bomb": {
     "NAME": "Bomb",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies, NL Gain 1 Intangible . NL When discard,make a copy of this and place it into draw pile. Exhaust"
+    "DESCRIPTION": "Deal !D! damage to ALL enemies, NL Gain 1 Intangible . NL When discard,make a copy of this and place it into discard pile. Exhaust"
   },
   "Lunch": {
     "NAME": "Lunch",
@@ -112,8 +112,8 @@
   },
   "Showy Withering": {
     "NAME": "Showy Withering",
-    "DESCRIPTION": "At the start of turn, UpgradeAll Sakura , Retrieval Sakura. NL Each 3 Sakura you played,Next Sakura will be Exhausted",
-    "UPGRADE_DESCRIPTION": "At the start of turn, UpgradeAll Sakura , Retrieval Sakura. NL Each 3 Sakura you played,Next Sakura will be Exhausted. NL Innate"
+    "DESCRIPTION": "At the start of turn, UpgradeAll Sakura , Retrieval Sakura. NL Each 2 Sakura you played,Next Sakura will be Exhausted",
+    "UPGRADE_DESCRIPTION": "At the start of turn, UpgradeAll Sakura , Retrieval Sakura. NL Each 2 Sakura you played,Next Sakura will be Exhausted. NL Innate"
   },
   "Mirror of Mind": {
     "NAME": "Mirror of Mind",
@@ -126,7 +126,7 @@
   },
   "Unfulfilling Attachment": {
     "NAME": "Unfulfilling Attachment",
-    "DESCRIPTION": "Transform all Derivate Sakura with no extra effect to Sakura(Bloom)"
+    "DESCRIPTION": "Discover 1 for 10times.Transform all Derivate Sakura with no extra effect to Sakura(Bloom)"
   },
   "Remain Here": {
     "NAME": "Remain Here",
@@ -230,7 +230,7 @@
   },
   "Supernatural Nether": {
     "NAME": "Supernatural Nether",
-    "DESCRIPTION": "At next !M! turn start,Increase Diaphaneity of everyone to 20"
+    "DESCRIPTION": "At next !M! turn start,Increase Diaphaneity of everyone to 20, NL Exhaust"
   },
   "Dancing Butterflies": {
     "NAME": "Dancing Butterflies",
@@ -287,7 +287,7 @@
   },
   "Ghastly Dream": {
     "NAME": "Ghastly Dream",
-    "DESCRIPTION": "Retrieval Butterfly up to fill your hand. NL This turn your Butterfly will be played for extra !M! times , NL You can't draw cards during the turn"
+    "DESCRIPTION": "Retrieval Butterfly up to fill your hand. NL This turn your Butterfly will be played for extra !M! times and Exhaust, NL You can't draw cards during the turn"
   },
   "Float on Moon": {
     "NAME": "Float on Moon",
@@ -296,7 +296,7 @@
   },
   "Revive The Butterflies": {
     "NAME": "Revive The Butterflies",
-    "DESCRIPTION": "Lose all Fan ,Set your HP to 1, NL Gain 4 Intangible.After you play dis-derivate, Revive Butterfly"
+    "DESCRIPTION": "Lose all Fan ,Set your HP to 1, NL Gain 3 Intangible.After you play dis-derivate, Revive Butterfly"
   },
   "All Wander": {
     "NAME": "All Wander",
@@ -305,7 +305,7 @@
   },
   "Become Ghost": {
     "NAME": "Become Ghost",
-    "DESCRIPTION": "Reduce 1 Fan ,Gain 1 Ghost . NL Gain 1 Ghost at the start of turn. NL Exhaust",
+    "DESCRIPTION": "Reduce 1 Fan . NL Gain 1 Ghost at the start of turn. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Reduce 1 Fan ,Gain 1 Ghost . NL Gain 1 Ghost at the start of turn",
     "EXTENDED_DESCRIPTION": [
       "I don't have Fan"
@@ -346,7 +346,7 @@
   },
   "Phantom Gift": {
     "NAME": "Phantom Gift",
-    "DESCRIPTION": "Gain 1 Ghost . NL At the start of turn ,gain 1 Ghost"
+    "DESCRIPTION": "At the start of turn ,gain 1 Ghost"
   },
   "Dying Dream": {
     "NAME": "Dying Dream",

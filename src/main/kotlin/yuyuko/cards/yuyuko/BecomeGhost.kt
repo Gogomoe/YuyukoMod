@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.patches.CardColorEnum
 import yuyuko.powers.BecomeGhostPower
 import yuyuko.powers.FanPower
-import yuyuko.powers.GhostPower
 
 class BecomeGhost : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
@@ -56,13 +55,6 @@ class BecomeGhost : CustomCard(
                 ApplyPowerAction(
                         self, self,
                         BecomeGhostPower(),
-                        1
-                )
-        )
-        AbstractDungeon.actionManager.addToBottom(
-                ApplyPowerAction(
-                        self, self,
-                        GhostPower(self!!, 1),
                         1
                 )
         )

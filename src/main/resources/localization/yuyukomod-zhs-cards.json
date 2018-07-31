@@ -104,7 +104,7 @@
   },
   "Bomb": {
     "NAME": "灵击",
-    "DESCRIPTION": "对敌方全体造成 !D! 点伤害， NL 获得1层 无实体 。 NL 弃置时，复制1张洗入牌堆。 消耗"
+    "DESCRIPTION": "对敌方全体造成 !D! 点伤害， NL 获得1层 无实体 。 NL 弃置时，复制1张洗入弃牌堆。 消耗"
   },
   "Lunch": {
     "NAME": "午餐",
@@ -112,8 +112,8 @@
   },
   "Showy Withering": {
     "NAME": "繁花艳丽，终或凋零",
-    "DESCRIPTION": "回合开始时， 升级所有  樱 ，检索 樱。 NL 你每打出3张 樱 ，下1张 樱 将被 消耗",
-    "UPGRADE_DESCRIPTION": "回合开始时， 升级所有 樱 ，检索 樱。 NL 你每打出3张 樱 ，下1张 樱 将被 消耗 。 NL 固有"
+    "DESCRIPTION": "回合开始时， 升级所有  樱 ，检索 樱。 NL 你每打出2张 樱 ，下1张 樱 将被 消耗",
+    "UPGRADE_DESCRIPTION": "回合开始时， 升级所有 樱 ，检索 樱。 NL 你每打出2张 樱 ，下1张 樱 将被 消耗 。 NL 固有"
   },
   "Mirror of Mind": {
     "NAME": "心灵写真",
@@ -126,7 +126,7 @@
   },
   "Unfulfilling Attachment": {
     "NAME": "依恋未酌宴",
-    "DESCRIPTION": "将所有 没有额外效果的 衍生樱 变形为 樱(开花)"
+    "DESCRIPTION": "发现 1 张牌 10次。将所有 没有额外效果的 衍生樱 变形为 樱(开花)"
   },
   "Remain Here": {
     "NAME": "蝶之风暂留此世",
@@ -230,7 +230,7 @@
   },
   "Supernatural Nether": {
     "NAME": "冥界灵异点",
-    "DESCRIPTION": "在之后的的 !M! 个回合开始时，将所有目标的 虚化 层数增加至20层"
+    "DESCRIPTION": "在之后的的 !M! 个回合开始时，将所有目标的 虚化 层数增加至20层, NL 消耗"
   },
   "Dancing Butterflies": {
     "NAME": "蝴蝶梦之舞",
@@ -287,7 +287,7 @@
   },
   "Ghastly Dream": {
     "NAME": "惊梦",
-    "DESCRIPTION": "检索 蝶 直到填满手牌。 NL 本回合你的 蝶 会额外打出 !M! 次 ， NL 本回合你不能再抽牌"
+    "DESCRIPTION": "检索 蝶 直到填满手牌。 NL 本回合你的 蝶 会额外打出 !M! 次并消耗 ， NL 本回合你不能再抽牌"
   },
   "Float on Moon": {
     "NAME": "死蝶浮月",
@@ -296,7 +296,7 @@
   },
   "Revive The Butterflies": {
     "NAME": "反魂蝶",
-    "DESCRIPTION": "失去所有扇，将你的生命值置1， NL 获得4层 无实体 。打出非 衍生 后， 反魂 蝶"
+    "DESCRIPTION": "失去所有扇，将你的生命值置1， NL 获得3层 无实体 。打出非 衍生 后， 反魂 蝶"
   },
   "All Wander": {
     "NAME": "悉皆彷徨",
@@ -305,7 +305,7 @@
   },
   "Become Ghost": {
     "NAME": "好死之灵",
-    "DESCRIPTION": "减少1层 扇 ，获得1层 幽灵 。 NL 每回合开始时，获得1层 幽灵 。 NL 消耗",
+    "DESCRIPTION": "减少1层 扇  。 NL 每回合开始时，获得1层 幽灵 。 NL 消耗",
     "UPGRADE_DESCRIPTION": "减少1层 扇 ，获得1层 幽灵 。 NL 每回合开始时，获得1层 幽灵",
     "EXTENDED_DESCRIPTION": [
       "我没有扇了"
@@ -346,7 +346,7 @@
   },
   "Phantom Gift": {
     "NAME": "故人的遗物",
-    "DESCRIPTION": "获得1层 幽灵 。 NL 每回合开始时，获得1层 幽灵"
+    "DESCRIPTION": "每回合开始时，获得1层 幽灵"
   },
   "Dying Dream": {
     "NAME": "无寿之梦",

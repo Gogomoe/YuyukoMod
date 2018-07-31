@@ -151,9 +151,6 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         logger.info("subscribing to subscriber")
         BaseMod.subscribe(this)
 
-        //logger.info("creating the color ReimuColor")
-        //CharacterColor(CardColorEnum.REIMU_COLOR!!, "reimu", 238f, 48f, 48f).register()
-
         logger.info("creating the color YuyukoColor")
         CharacterColor(CardColorEnum.YUYUKO_COLOR!!, "yuyuko", 227f, 48f, 255f).register()
 
@@ -360,7 +357,6 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         val relicsStrings = Gdx.files.internal("localization/yuyukomod-$lang-relics.json")
                 .readString(StandardCharsets.UTF_8.toString())
         BaseMod.loadCustomStrings(RelicStrings::class.java, relicsStrings)
-
 
     }
 
