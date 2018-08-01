@@ -50,6 +50,7 @@ import yuyuko.cards.yuyuko.FinalOfFinal
 import yuyuko.cards.yuyuko.FloatOnMoon
 import yuyuko.cards.yuyuko.FondlingOfPapilio
 import yuyuko.cards.yuyuko.FullInkySakura
+import yuyuko.cards.yuyuko.FullMoon
 import yuyuko.cards.yuyuko.GatherThePhantom
 import yuyuko.cards.yuyuko.GatherTheSpring
 import yuyuko.cards.yuyuko.GauzySakura
@@ -71,6 +72,7 @@ import yuyuko.cards.yuyuko.Photo
 import yuyuko.cards.yuyuko.PostponeBloom
 import yuyuko.cards.yuyuko.RedemptionOfDeath
 import yuyuko.cards.yuyuko.RemainHere
+import yuyuko.cards.yuyuko.ReunionAfterDeath
 import yuyuko.cards.yuyuko.ReverseTheScreen
 import yuyuko.cards.yuyuko.ReviveTheButterflies
 import yuyuko.cards.yuyuko.Sakura
@@ -216,6 +218,8 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         BaseMod.addCard(Bomb())
         BaseMod.addCard(Lunch())
         BaseMod.addCard(ShowyWithering())
+        BaseMod.addCard(PostponeBloom())
+        BaseMod.addCard(FullMoon())
         BaseMod.addCard(MirrorOfMind())
         BaseMod.addCard(ExploreGhostdom())
         BaseMod.addCard(UnfulfillingAttachment())
@@ -223,7 +227,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         BaseMod.addCard(FullInkySakura())
         BaseMod.addCard(BuryInTheTemplate())
         BaseMod.addCard(SceneryOfPapilio())
-        BaseMod.addCard(PostponeBloom())
+        BaseMod.addCard(ReunionAfterDeath())
 
 
         BaseMod.addCard(ReverseTheScreen())
@@ -312,7 +316,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         "Reset".loadKeywordsString()
         "Discover".loadKeywordsString()
         "Hide".loadKeywordsString()
-        "Retrieval".loadKeywordsString()
+        "Retrieve".loadKeywordsString()
         "Revive".loadKeywordsString()
 
         "Sakura(Seal)".loadKeywordsString()

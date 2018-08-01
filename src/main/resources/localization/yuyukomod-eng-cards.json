@@ -112,8 +112,17 @@
   },
   "Showy Withering": {
     "NAME": "Showy Withering",
-    "DESCRIPTION": "At the start of turn, UpgradeAll Sakura , Retrieval Sakura. NL Each 2 Sakura you played,Next Sakura will be Exhausted",
-    "UPGRADE_DESCRIPTION": "At the start of turn, UpgradeAll Sakura , Retrieval Sakura. NL Each 2 Sakura you played,Next Sakura will be Exhausted. NL Innate"
+    "DESCRIPTION": "At the start of turn, UpgradeAll Sakura , Retrieve Sakura. NL Each 2 Sakura you played,Next Sakura will be Exhausted",
+    "UPGRADE_DESCRIPTION": "At the start of turn, UpgradeAll Sakura , Retrieve Sakura. NL Each 2 Sakura you played,Next Sakura will be Exhausted. NL Innate"
+  },
+  "Postpone Bloom": {
+    "NAME": "Postpone Bloom",
+    "DESCRIPTION": "Count when upgrade Sakura. NL At next shuffle, UpgradeAll Sakura for count times and draw count cards",
+    "UPGRADE_DESCRIPTION": "Count when upgrade Sakura. NL At next shuffle, UpgradeAll Sakura for count times and draw count cards. NL Innate"
+  },
+  "Full Moon": {
+    "NAME": "Full Moon",
+    "DESCRIPTION": "Exhaust all Sakura, gain equal amount of Regen. Exhaust"
   },
   "Mirror of Mind": {
     "NAME": "Mirror of Mind",
@@ -147,10 +156,12 @@
     "DESCRIPTION": "Copy all Derivate and place them into discard pile. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Copy all Derivate and place them into discard pile. NL Exhaust , Hide"
   },
-  "Postpone Bloom": {
-    "NAME": "Postpone Bloom",
-    "DESCRIPTION": "Count when upgrade Sakura. NL At next shuffle, UpgradeAll Sakura for count times and draw count cards",
-    "UPGRADE_DESCRIPTION": "Count when upgrade Sakura. NL At next shuffle, UpgradeAll Sakura for count times and draw count cards. NL Innate"
+  "Reunion after Death": {
+    "NAME": "Reunion after Death",
+    "DESCRIPTION": "Only can be played when you don't have cards with same name except Basic and Derivate. Exhaust all Basic and Derivate . Gain energy at the start of turn",
+    "EXTENDED_DESCRIPTION": [
+      "You can't play the card"
+    ]
   },
   "Reverse The Screen": {
     "NAME": "Reverse The Screen",
@@ -221,8 +232,8 @@
   },
   "Snowing Sakura": {
     "NAME": "Snowing Sakura",
-    "DESCRIPTION": "Reduce 1 fan. NL Have each Sakura,Gain 1 Diaphaneity . NL Each 5 Diaphaneity ,gain 1 Energy. NL Each 3 energy,Place Sakura(Bloom) into card pile. Exhaust",
-    "UPGRADE_DESCRIPTION": "Reduce 1 fan. NL Have each Sakura,Gain 1 Diaphaneity . NL Each 5 Diaphaneity ,gain 1 Energy. NL Each 3 energy,Place Sakura(Bloom) into card pile. Reset"
+    "DESCRIPTION": "Reduce 1 Fan.Reward in turn:1 Sakura for Diaphaneity,5 Diaphaneity for Energy,3 Energy for Sakura(Bloom) (to card pile). Exhaust",
+    "UPGRADE_DESCRIPTION": "Reduce 1 Fan.Reward in turn:1 Sakura for Diaphaneity,5 Diaphaneity for Energy,3 Energy for Sakura(Bloom) (to card pile). Reset"
   },
   "Living to Die": {
     "NAME": "Living to Die",
@@ -247,7 +258,7 @@
   },
   "Fondling of Papilio": {
     "NAME": "Fondling of Papilio",
-    "DESCRIPTION": "Retrieval !M! Butterfly , NL UpgradeAll Butterfly for !M! times"
+    "DESCRIPTION": "Retrieve !M! Butterfly , NL UpgradeAll Butterfly for !M! times"
   },
   "Redemption of Death": {
     "NAME": "Redemption of Death",
@@ -287,11 +298,11 @@
   },
   "Ghastly Dream": {
     "NAME": "Ghastly Dream",
-    "DESCRIPTION": "Retrieval Butterfly up to fill your hand. NL This turn your Butterfly will be played for extra !M! times and Exhaust, NL You can't draw cards during the turn"
+    "DESCRIPTION": "Retrieve Butterfly up to fill your hand. NL This turn your Butterfly will be played for extra !M! times and Exhaust, NL You can't draw cards during the turn"
   },
   "Float on Moon": {
     "NAME": "Float on Moon",
-    "DESCRIPTION": "At the start of turn, UpgradeAll Butterfly for 3 times. NL Your Derivate Butterfly will Deal 3 times damage and exhaust",
+    "DESCRIPTION": "At the start of turn, UpgradeAll Butterfly for 3 times, Reduce 1 draw. NL Your Derivate Butterfly will Deal 3 times damage and exhaust",
     "UPGRADE_DESCRIPTION": "At the start of turn, UpgradeAll Butterfly for 3 times. NL Your Derivate Butterfly will Deal 3 times damage and exhaust . Innate"
   },
   "Revive The Butterflies": {

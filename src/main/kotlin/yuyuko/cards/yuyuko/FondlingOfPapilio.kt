@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import yuyuko.actions.RetrievalAction
+import yuyuko.actions.RetrieveAction
 import yuyuko.event.EventDispenser
 import yuyuko.event.UpgradeAllEvent
 import yuyuko.patches.CardColorEnum
@@ -38,7 +38,7 @@ class FondlingOfPapilio : CustomCard(
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         repeat(this.magicNumber) {
             AbstractDungeon.actionManager.addToBottom(
-                    RetrievalAction(Butterfly.ID)
+                    RetrieveAction(Butterfly.ID)
             )
         }
         EventDispenser.emit(UpgradeAllEvent(Butterfly.ID, this.magicNumber))

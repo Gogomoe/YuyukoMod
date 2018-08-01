@@ -52,7 +52,7 @@
     "NAME": "Float on Moon",
     "DESCRIPTIONS": [
       "At the start of turn, UpgradeAll Butterfly for #b",
-      " times, NL Your Derivate Butterfly will Deal #b",
+      " times,Reduce 1 draw, NL Your Derivate Butterfly will Deal #b",
       " times damage and exhaust"
     ]
   },
@@ -73,7 +73,7 @@
     "NAME": "Showy Withering",
     "DESCRIPTIONS": [
       "At the start of turn, UpgradeAll #b",
-      " times, Retrieval Sakura #b",
+      " times, Retrieve Sakura #b",
       " times. NL Each 3 Sakura you played,Next Sakura will be Exhausted"
     ]
   },
@@ -121,6 +121,13 @@
     "DESCRIPTIONS": [
       "You will gain #b",
       " times Diaphaneity from cards"
+    ]
+  },
+  "Reunion after Death": {
+    "NAME": "Reunion after Death",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " energy at the start of turn"
     ]
   }
 }

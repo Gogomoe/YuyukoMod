@@ -115,6 +115,15 @@
     "DESCRIPTION": "回合开始时， 升级所有  樱 ，检索 樱。 NL 你每打出2张 樱 ，下1张 樱 将被 消耗",
     "UPGRADE_DESCRIPTION": "回合开始时， 升级所有 樱 ，检索 樱。 NL 你每打出2张 樱 ，下1张 樱 将被 消耗 。 NL 固有"
   },
+  "Postpone Bloom": {
+    "NAME": "紫色彼岸樱推迟绽放",
+    "DESCRIPTION": "升级樱时计数。 NL 下次洗牌时，升级所有 樱 计数次，抽等量的牌",
+    "UPGRADE_DESCRIPTION": "升级樱时计数。 NL 下次洗牌时，升级所有 樱 计数次，抽等量的牌。 NL 固有"
+  },
+  "Full Moon": {
+    "NAME": "二月月圆之时",
+    "DESCRIPTION": "消耗所有 樱 ，获得同等层 再生 。 消耗"
+  },
   "Mirror of Mind": {
     "NAME": "心灵写真",
     "DESCRIPTION": "将你当前的生命值记录为 !M! 张照片洗入牌堆。 消耗"
@@ -147,10 +156,12 @@
     "DESCRIPTION": "复制所有 衍生 并洗入弃牌堆。 NL 消耗",
     "UPGRADE_DESCRIPTION": "复制所有 衍生 并洗入弃牌堆。 NL 消耗 ， 藏匿"
   },
-  "Postpone Bloom": {
-    "NAME": "紫色彼岸樱推迟绽放",
-    "DESCRIPTION": "升级樱时计数。 NL 下次洗牌时，升级所有 樱 计数次，抽等量的牌",
-    "UPGRADE_DESCRIPTION": "升级樱时计数。 NL 下次洗牌时，升级所有 樱 计数次，抽等量的牌。 NL 固有"
+  "Reunion after Death": {
+    "NAME": "死后一切大团圆",
+    "DESCRIPTION": "只有在你的牌组中除了 衍生 和 初始 以外没有相同牌时才能打出。 NL 消耗所有 衍生 和 初始 ，回合开始时，获得1能量",
+    "EXTENDED_DESCRIPTION": [
+      "你无法打出这张牌"
+    ]
   },
   "Reverse The Screen": {
     "NAME": "逆转屏风",
@@ -291,7 +302,7 @@
   },
   "Float on Moon": {
     "NAME": "死蝶浮月",
-    "DESCRIPTION": "回合开始时， 升级所有 蝶 3次。 NL 你的 衍生蝶 会造成3倍伤害并 消耗",
+    "DESCRIPTION": "回合开始时， 升级所有 蝶 3次，少抽1张牌。 NL 你的 衍生蝶 会造成3倍伤害并 消耗",
     "UPGRADE_DESCRIPTION": "回合开始时， 升级所有 蝶 3次。 NL 你的 衍生蝶 会造成3倍伤害并 消耗 。 固有"
   },
   "Revive The Butterflies": {

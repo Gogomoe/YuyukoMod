@@ -69,10 +69,10 @@
       "While draw pile has dis-hide cards , the card can't be drew"
     ]
   },
-  "Retrieval": {
+  "Retrieve": {
     "TEXT": [
-      "Retrieval",
-      "retrieval",
+      "Retrieve",
+      "retrieve",
       "Find a card and place it into hand from draw pile or discard pile"
     ]
   },

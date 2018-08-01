@@ -10,7 +10,7 @@ import yuyuko.cards.isSakura
 import yuyuko.cards.yuyuko.Butterfly
 import yuyuko.cards.yuyuko.Sakura
 
-class RetrievalAction(val cardID: String, val count: Int = 1) : AbstractGameAction() {
+class RetrieveAction(val cardID: String, val count: Int = 1) : AbstractGameAction() {
 
     init {
         this.duration = Settings.ACTION_DUR_MED

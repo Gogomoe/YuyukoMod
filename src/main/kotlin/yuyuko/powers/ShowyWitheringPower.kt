@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.powers.AbstractPower
-import yuyuko.actions.RetrievalAction
+import yuyuko.actions.RetrieveAction
 import yuyuko.cards.isSakura
 import yuyuko.cards.yuyuko.Sakura
 import yuyuko.event.DegradeEvent
@@ -56,7 +56,7 @@ class ShowyWitheringPower(amount: Int = 1) : AbstractPower() {
         this.flash()
         EventDispenser.emit(UpgradeAllEvent(Sakura.ID, amount))
         AbstractDungeon.actionManager.addToBottom(
-                RetrievalAction(Sakura.ID, this.amount)
+                RetrieveAction(Sakura.ID, this.amount)
         )
     }
 
