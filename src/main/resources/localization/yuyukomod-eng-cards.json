@@ -108,7 +108,11 @@
   },
   "Lunch": {
     "NAME": "Lunch",
-    "DESCRIPTION": " Discover !M! cards. NL Exhaust"
+    "DESCRIPTION": "Discover !M! cards.Make it costs 0 during the combat. NL Exhaust"
+  },
+  "Chase The Sukhavati": {
+    "NAME": "Chase The Sukhavati",
+    "DESCRIPTION": "Discover 10 cards.Gain 10 energy.End the turn after you played 10 cards"
   },
   "Showy Withering": {
     "NAME": "Showy Withering",

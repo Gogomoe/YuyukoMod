@@ -11,8 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import yuyuko.randomBoolean
 import yuyuko.randomInt
 
-
-class DiscoverAction(val numCards: Int) : AbstractGameAction() {
+open class DiscoverAction(val numCards: Int) : AbstractGameAction() {
 
     init {
         this.actionType = ActionType.CARD_MANIPULATION
@@ -68,54 +67,58 @@ class DiscoverAction(val numCards: Int) : AbstractGameAction() {
 
     }
 
-    companion object {
 
-        private fun discoverCards(numCards: Int): List<AbstractCard> {
-            val retVal = mutableListOf<AbstractCard>()
+    open fun discoverCards(numCards: Int): List<AbstractCard> {
+        val retVal = mutableListOf<AbstractCard>()
 
-            repeat(numCards) {
-                val rarity = rollRarity()
-                var c = AbstractDungeon.getCard(rarity)
-                avoidRepeatedCard@ for (i in 1..10) {
-                    if (c != null && !retVal.contains(c)) {
-                        break@avoidRepeatedCard
-                    }
-                    c = AbstractDungeon.getCard(rarity) ?: c
+        repeat(numCards) {
+
+            var c = discoverCard()
+
+            avoidRepeatedCard@ for (i in 1..10) {
+                if (!retVal.contains(c)) {
+                    break@avoidRepeatedCard
                 }
-
-                c!!
-                if (shouldUpgrade(c)) {
-                    c.upgrade()
-                }
-
-                retVal.add(c)
+                c = discoverCard()
             }
 
-            return retVal
-
+            retVal.add(c)
         }
 
-        private fun rollRarity(): CardRarity {
-            val rnd = randomInt(100)
-            return when {
-                rnd < 10 -> CardRarity.RARE
-                rnd < 40 -> CardRarity.UNCOMMON
-                else -> CardRarity.COMMON
-            }
-        }
+        return retVal
 
-        private fun shouldUpgrade(c: AbstractCard): Boolean =
-                when (c.rarity) {
-                    CardRarity.RARE -> false
-                    CardRarity.UNCOMMON -> {
-                        randomBoolean(0.125f)
-                    }
-                    CardRarity.COMMON -> {
-                        randomBoolean(0.25f)
-                    }
-                    else -> false
-                }
     }
+
+    open fun discoverCard(): AbstractCard {
+        val rarity = rollRarity()
+        val c = AbstractDungeon.getCard(rarity)
+
+        if (shouldUpgrade(c)) {
+            c.upgrade()
+        }
+        return c
+    }
+
+    open fun rollRarity(): CardRarity {
+        val rnd = randomInt(100)
+        return when {
+            rnd < 10 -> CardRarity.RARE
+            rnd < 40 -> CardRarity.UNCOMMON
+            else -> CardRarity.COMMON
+        }
+    }
+
+    open fun shouldUpgrade(c: AbstractCard): Boolean =
+            when (c.rarity) {
+                CardRarity.RARE -> false
+                CardRarity.UNCOMMON -> {
+                    randomBoolean(0.125f)
+                }
+                CardRarity.COMMON -> {
+                    randomBoolean(0.25f)
+                }
+                else -> false
+            }
 
 
 }

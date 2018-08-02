@@ -129,5 +129,11 @@
       "Gain #b",
       " energy at the start of turn"
     ]
+  },
+  "Chase The Sukhavati": {
+    "NAME": "Chase The Sukhavati",
+    "DESCRIPTIONS": [
+      "End the turn after you played 10 cards"
+    ]
   }
 }

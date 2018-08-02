@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel
-import yuyuko.actions.AllWanderAction
+import yuyuko.actions.EndTurnAction
 import yuyuko.patches.CardColorEnum
 import yuyuko.powers.DizzinessPower
 import yuyuko.powers.GhostPower
@@ -59,7 +59,7 @@ class AllWander : CustomCard(
                     )
             )
             AbstractDungeon.actionManager.addToBottom(
-                    AllWanderAction()
+                    EndTurnAction()
             )
 
             val monsters = AbstractDungeon.getCurrRoom().monsters.monsters

@@ -34,6 +34,7 @@ import yuyuko.cards.yuyuko.ButterflyDeepRooted
 import yuyuko.cards.yuyuko.ButterflyDelusion
 import yuyuko.cards.yuyuko.ButterflyGhost
 import yuyuko.cards.yuyuko.ButterflySwallowtail
+import yuyuko.cards.yuyuko.ChaseTheSukhavati
 import yuyuko.cards.yuyuko.DancingButterflies
 import yuyuko.cards.yuyuko.DeathDancing
 import yuyuko.cards.yuyuko.DeathlyGround
@@ -217,6 +218,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         BaseMod.addCard(SakuraWard())
         BaseMod.addCard(Bomb())
         BaseMod.addCard(Lunch())
+        BaseMod.addCard(ChaseTheSukhavati())
         BaseMod.addCard(ShowyWithering())
         BaseMod.addCard(PostponeBloom())
         BaseMod.addCard(FullMoon())

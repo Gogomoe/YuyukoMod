@@ -129,5 +129,11 @@
       "回合开始时，获得 #b",
       " 点能量"
     ]
+  },
+  "Chase The Sukhavati": {
+    "NAME": "欣求净土",
+    "DESCRIPTIONS": [
+      "打出10张牌后结束本回合"
+    ]
   }
 }
