@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower
 import yuyuko.cards.isSpecialButterfly
 import yuyuko.cards.yuyuko.Butterfly
 import yuyuko.event.EventDispenser
+import yuyuko.event.Observer
+import yuyuko.event.SpecialButterflyCalculateCardDamageEvent
 import yuyuko.event.UpgradeAllEvent
 import kotlin.math.max
 import kotlin.math.min
@@ -33,6 +35,19 @@ class FloatOnMoonPower(amount: Int) : AbstractPower() {
         this.isTurnBased = false
         this.img = ImageMaster.loadImage("images/powers/floatOnMoon.png")
     }
+
+    private var observer: Observer<SpecialButterflyCalculateCardDamageEvent>? = null
+
+    override fun onInitialApplication() {
+        observer = EventDispenser.subscribe(SpecialButterflyCalculateCardDamageEvent.ID) {
+            it.baseDamage = (it.card.timesUpgraded + 1) * amount * 3
+        }
+    }
+
+    override fun onRemove() {
+        EventDispenser.unsubscribe(SpecialButterflyCalculateCardDamageEvent.ID, observer!!)
+    }
+
 
     override fun atStartOfTurn() {
         EventDispenser.emit(UpgradeAllEvent(Butterfly.ID, amount))

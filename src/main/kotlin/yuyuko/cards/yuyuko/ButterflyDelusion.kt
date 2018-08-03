@@ -15,8 +15,8 @@ import yuyuko.event.ApplyDiaphaneityPowerEvent.ApplyDiaphaneityPower.CARD
 import yuyuko.event.DegradeEvent
 import yuyuko.event.DegradeEvent.DegradeReason.USE
 import yuyuko.event.EventDispenser
+import yuyuko.event.SpecialButterflyCalculateCardDamageEvent
 import yuyuko.patches.CardColorEnum
-import yuyuko.powers.FloatOnMoonPower
 
 class ButterflyDelusion : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
@@ -42,8 +42,7 @@ class ButterflyDelusion : CustomCard(
     override fun makeCopy(): AbstractCard = ButterflyDelusion()
 
     override fun calculateCardDamage(mo: AbstractMonster?) {
-        val times = AbstractDungeon.player.getPower(FloatOnMoonPower.POWER_ID)?.amount ?: 1
-        this.baseDamage = (this.timesUpgraded + 1) * times * 3
+        EventDispenser.emit(SpecialButterflyCalculateCardDamageEvent(this))
         super.calculateCardDamage(mo)
     }
 
