@@ -46,7 +46,7 @@ class FloatOnMoonPower(amount: Int) : AbstractPower() {
     }
 
     override fun updateDescription() {
-        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2]
+        this.description = DESCRIPTIONS[0] + amount * 3 + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2] + amount * 3 + DESCRIPTIONS[3]
     }
 
 }

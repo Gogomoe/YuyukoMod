@@ -4,7 +4,6 @@ import basemod.abstracts.CustomRelic
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.helpers.ImageMaster
-import com.megacrit.cardcrawl.helpers.PowerTip
 import com.megacrit.cardcrawl.helpers.input.InputHelper
 import com.megacrit.cardcrawl.powers.ArtifactPower
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower
@@ -26,27 +25,23 @@ class Coronal : CustomRelic(
     }
 
     init {
-        this.counter = 0
-        updateDescription()
+        this.counter = 5
     }
 
-    private var victoryCount = 0
-
     override fun onVictory() {
-        victoryCount++
-        if (victoryCount == 5) {
-            victoryCount = 0
+        if (counter < 5) {
             this.counter++
-            this.flash()
+            if (counter == 5) {
+                this.flash()
+            }
         }
-        updateDescription()
     }
 
     fun onRightClick() {
-        if (this.counter <= 0) {
+        if (this.counter <= 5) {
             return
         }
-        this.counter--
+        this.counter = 0
         val player = AbstractDungeon.player
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(
@@ -63,18 +58,10 @@ class Coronal : CustomRelic(
                 )
         )
         this.flash()
-        this.updateDescription()
-    }
-
-    fun updateDescription() {
-        this.description = updatedDescription
-        this.tips.clear()
-        this.tips.add(PowerTip(this.name, this.description))
-        initializeTips()
     }
 
     override fun getUpdatedDescription(): String {
-        return DESCRIPTIONS[0] + counter + DESCRIPTIONS[1] + (5 - victoryCount) + DESCRIPTIONS[2]
+        return DESCRIPTIONS[0]
     }
 
     private var RclickStart = false

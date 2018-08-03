@@ -1,13 +1,13 @@
 package yuyuko.cards.yuyuko
 
 import basemod.abstracts.CustomCard
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import yuyuko.event.ApplyDiaphaneityPowerEvent
-import yuyuko.event.ApplyDiaphaneityPowerEvent.ApplyDiaphaneityPower.CARD
-import yuyuko.event.EventDispenser
+import com.megacrit.cardcrawl.powers.IntangiblePlayerPower
 import yuyuko.patches.CardColorEnum
 import yuyuko.powers.DiaphaneityPower
 
@@ -30,9 +30,16 @@ class Unreal : CustomCard(
     override fun makeCopy(): AbstractCard = Unreal()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        val amount = target!!.getPower(DiaphaneityPower.POWER_ID)?.amount ?: return
-        EventDispenser.emit(ApplyDiaphaneityPowerEvent(self!!, self, amount, CARD))
+        val amount = target!!.getPower(DiaphaneityPower.POWER_ID)?.amount ?: 0
+        val power = if (amount > 20) IntangiblePlayerPower(self, 1) else DiaphaneityPower(self!!, amount)
 
+        AbstractDungeon.actionManager.addToBottom(
+                ApplyPowerAction(
+                        self, self,
+                        power,
+                        power.amount
+                )
+        )
     }
 
     override fun upgrade() {

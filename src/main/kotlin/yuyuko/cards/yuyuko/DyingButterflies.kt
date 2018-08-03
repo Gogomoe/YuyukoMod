@@ -22,7 +22,7 @@ class DyingButterflies : CustomCard(
         @JvmStatic
         val ID = "Dying Butterflies"
         val IMAGE_PATH = "images/yuyuko/cards/skill5.png"
-        val COST = 1
+        val COST = 0
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
@@ -51,7 +51,6 @@ class DyingButterflies : CustomCard(
     override fun upgrade() {
         if (this.timesUpgraded < 4) {
             this.upgradeName()
-            this.upgradeBaseCost(0)
             this.upgradeMagicNumber(1)
         }
     }

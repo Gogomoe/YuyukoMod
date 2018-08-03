@@ -42,7 +42,7 @@ class ButterflySwallowtail : CustomCard(
 
     override fun calculateCardDamage(mo: AbstractMonster?) {
         val times = AbstractDungeon.player.getPower(FloatOnMoonPower.POWER_ID)?.amount ?: 1
-        this.baseDamage = (this.timesUpgraded + 1) * times
+        this.baseDamage = (this.timesUpgraded + 1) * times * 3
         super.calculateCardDamage(mo)
     }
 

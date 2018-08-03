@@ -33,8 +33,8 @@ class FloatOnMoon : CustomCard(
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(
                         self, self,
-                        FloatOnMoonPower(3),
-                        3
+                        FloatOnMoonPower(1),
+                        1
                 )
         )
     }

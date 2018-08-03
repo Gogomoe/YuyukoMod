@@ -57,8 +57,8 @@
   },
   "Explore": {
     "NAME": "探索",
-    "DESCRIPTION": "发现 3张牌。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "发现 1张牌， NL 获得1层 虚化 。 消耗"
+    "DESCRIPTION": "发现 3。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "发现 1， NL 获得1层 虚化 。 消耗"
   },
   "Photo": {
     "NAME": "照片",
@@ -108,11 +108,11 @@
   },
   "Lunch": {
     "NAME": "午餐",
-    "DESCRIPTION": "发现 !M! 张牌。将其在本场战斗中耗能变为0。 NL 消耗"
+    "DESCRIPTION": "发现 !M! 。将其在本场战斗中耗能变为0。 NL 消耗"
   },
   "Chase The Sukhavati": {
     "NAME": "欣求净土",
-    "DESCRIPTION": "发现 10 张卡，获得 10点能量。打出10张牌后结束本回合"
+    "DESCRIPTION": "发现 10 ，获得 10点能量。打出10张牌后结束本回合"
   },
   "Showy Withering": {
     "NAME": "繁花艳丽，终或凋零",
@@ -157,8 +157,8 @@
   },
   "Scenery of Papilio": {
     "NAME": "花蝶风月",
-    "DESCRIPTION": "复制所有 衍生 并洗入弃牌堆。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "复制所有 衍生 并洗入弃牌堆。 NL 消耗 ， 藏匿"
+    "DESCRIPTION": "复制所有 衍生 并洗入牌堆。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "复制所有 衍生 并洗入牌堆。 NL 消耗 ， 藏匿"
   },
   "Reunion after Death": {
     "NAME": "死后一切大团圆",
@@ -203,7 +203,7 @@
   },
   "Unreal": {
     "NAME": "虚幻",
-    "DESCRIPTION": "获得敌人 虚化 层数层 虚化"
+    "DESCRIPTION": "指定一个敌人，如果其 虚化 层数大于20层，获得1层 无实体 ， NL 否则获得同等层虚化"
   },
   "Stifle": {
     "NAME": "送葬",
@@ -307,7 +307,7 @@
   "Float on Moon": {
     "NAME": "死蝶浮月",
     "DESCRIPTION": "回合开始时， 升级所有 蝶 3次，少抽1张牌。 NL 你的 衍生蝶 会造成3倍伤害并 消耗",
-    "UPGRADE_DESCRIPTION": "回合开始时， 升级所有 蝶 3次。 NL 你的 衍生蝶 会造成3倍伤害并 消耗 。 固有"
+    "UPGRADE_DESCRIPTION": "回合开始时， 升级所有 蝶 3次，少抽1张牌。 NL 你的 衍生蝶 会造成3倍伤害并 消耗 。 固有"
   },
   "Revive The Butterflies": {
     "NAME": "反魂蝶",
@@ -340,8 +340,8 @@
   },
   "Unstable Ward": {
     "NAME": "不稳定的结界",
-    "DESCRIPTION": "损失1层 幽灵 ，抽1张牌， 发现 3张牌",
-    "UPGRADE_DESCRIPTION": "损失1层 幽灵 ，抽2张牌， 发现 5张牌",
+    "DESCRIPTION": "损失1层 幽灵 ，抽1张牌， 发现 3",
+    "UPGRADE_DESCRIPTION": "损失1层 幽灵 ，抽2张牌， 发现 5",
     "EXTENDED_DESCRIPTION": [
       "我没有幽灵了"
     ]

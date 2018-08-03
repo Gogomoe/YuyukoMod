@@ -57,8 +57,8 @@
   },
   "Explore": {
     "NAME": "Explore",
-    "DESCRIPTION": "Discover 3 cards. NL Exhaust",
-    "UPGRADE_DESCRIPTION": " Discover 3 cards, NL Gain 1 Diaphaneity . NL Exhaust"
+    "DESCRIPTION": "Discover 3. NL Exhaust",
+    "UPGRADE_DESCRIPTION": " Discover 3, NL Gain 1 Diaphaneity . NL Exhaust"
   },
   "Photo": {
     "NAME": "Photo",
@@ -108,11 +108,11 @@
   },
   "Lunch": {
     "NAME": "Lunch",
-    "DESCRIPTION": "Discover !M! cards.Make it costs 0 during the combat. NL Exhaust"
+    "DESCRIPTION": "Discover !M! .Make it costs 0 during the combat. NL Exhaust"
   },
   "Chase The Sukhavati": {
     "NAME": "Chase The Sukhavati",
-    "DESCRIPTION": "Discover 10 cards.Gain 10 energy.End the turn after you played 10 cards"
+    "DESCRIPTION": "Discover 10.Gain 10 energy.End the turn after you played 10 cards"
   },
   "Showy Withering": {
     "NAME": "Showy Withering",
@@ -158,7 +158,7 @@
   "Scenery of Papilio": {
     "NAME": "Scenery of Papilio",
     "DESCRIPTION": "Copy all Derivate and place them into discard pile. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Copy all Derivate and place them into discard pile. NL Exhaust , Hide"
+    "UPGRADE_DESCRIPTION": "Copy all Derivate and place them into draw pile. NL Exhaust , Hide"
   },
   "Reunion after Death": {
     "NAME": "Reunion after Death",
@@ -203,7 +203,7 @@
   },
   "Unreal": {
     "NAME": "Unreal",
-    "DESCRIPTION": "Gain Diaphaneity of its Diaphaneity stacks"
+    "DESCRIPTION": "Select an enemy,if Diaphaneity stacks of it greater than 20, gain 1 Intangible , Otherwise gain Diaphaneity of its Diaphaneity stacks"
   },
   "Stifle": {
     "NAME": "Stifle",
@@ -307,7 +307,7 @@
   "Float on Moon": {
     "NAME": "Float on Moon",
     "DESCRIPTION": "At the start of turn, UpgradeAll Butterfly for 3 times, Reduce 1 draw. NL Your Derivate Butterfly will Deal 3 times damage and exhaust",
-    "UPGRADE_DESCRIPTION": "At the start of turn, UpgradeAll Butterfly for 3 times. NL Your Derivate Butterfly will Deal 3 times damage and exhaust . Innate"
+    "UPGRADE_DESCRIPTION": "At the start of turn, UpgradeAll Butterfly for 3 times, Reduce 1 draw. NL Your Derivate Butterfly will Deal 3 times damage and exhaust . Innate"
   },
   "Revive The Butterflies": {
     "NAME": "Revive The Butterflies",
@@ -340,8 +340,8 @@
   },
   "Unstable Ward": {
     "NAME": "Unstable Ward",
-    "DESCRIPTION": "Reduce 1 Phantom ,Draw 1 cards, Discover 3 cards",
-    "UPGRADE_DESCRIPTION": "Reduce 1 Phantom ,Draw 2 cards, Discover 5 cards",
+    "DESCRIPTION": "Reduce 1 Phantom ,Draw 1 cards, Discover 3",
+    "UPGRADE_DESCRIPTION": "Reduce 1 Phantom ,Draw 2 cards, Discover 5",
     "EXTENDED_DESCRIPTION": [
       "I don't have Phantom"
     ]

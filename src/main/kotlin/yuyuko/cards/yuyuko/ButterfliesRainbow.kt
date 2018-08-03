@@ -22,7 +22,7 @@ class ButterfliesRainbow : CustomCard(
         @JvmStatic
         val ID = "Butterflies Rainbow"
         val IMAGE_PATH = "images/yuyuko/cards/skill4.png"
-        val COST = 1
+        val COST = 0
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
@@ -53,7 +53,6 @@ class ButterfliesRainbow : CustomCard(
 
     override fun upgrade() {
         upgradeName()
-        upgradeBaseCost(0)
     }
 
     override fun upgradeName() {
