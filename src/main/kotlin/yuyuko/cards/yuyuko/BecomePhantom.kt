@@ -9,17 +9,17 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.patches.CardColorEnum
-import yuyuko.powers.BecomeGhostPower
+import yuyuko.powers.BecomePhantomPower
 import yuyuko.powers.FanPower
 
-class BecomeGhost : CustomCard(
+class BecomePhantom : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
         CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
         CardRarity.COMMON, CardTarget.SELF
 ) {
     companion object {
         @JvmStatic
-        val ID = "Become Ghost"
+        val ID = "Become Phantom"
         val IMAGE_PATH = "images/yuyuko/cards/skill5.png"
         val COST = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
@@ -33,7 +33,7 @@ class BecomeGhost : CustomCard(
         this.exhaust = true
     }
 
-    override fun makeCopy(): AbstractCard = BecomeGhost()
+    override fun makeCopy(): AbstractCard = BecomePhantom()
 
     override fun canUse(self: AbstractPlayer?, target: AbstractMonster?): Boolean {
         if (!super.canUse(self, target)) {
@@ -54,7 +54,7 @@ class BecomeGhost : CustomCard(
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(
                         self, self,
-                        BecomeGhostPower(),
+                        BecomePhantomPower(),
                         1
                 )
         )

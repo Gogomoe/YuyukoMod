@@ -23,7 +23,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings
 import com.megacrit.cardcrawl.localization.RelicStrings
 import org.apache.logging.log4j.LogManager
 import yuyuko.cards.yuyuko.AllWander
-import yuyuko.cards.yuyuko.BecomeGhost
+import yuyuko.cards.yuyuko.BecomePhantom
 import yuyuko.cards.yuyuko.Bloom
 import yuyuko.cards.yuyuko.Bomb
 import yuyuko.cards.yuyuko.BuryInTheTemplate
@@ -106,7 +106,7 @@ import yuyuko.cards.yuyuko.WanderingSoul
 import yuyuko.characters.Yuyuko
 import yuyuko.patches.CardColorEnum
 import yuyuko.patches.PlayerClassEnum
-import yuyuko.powers.BecomeGhostPower
+import yuyuko.powers.BecomePhantomPower
 import yuyuko.powers.DiaphaneityPower
 import yuyuko.powers.DizzinessPower
 import yuyuko.powers.FanPower
@@ -268,7 +268,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
 
 
         BaseMod.addCard(AllWander())
-        BaseMod.addCard(BecomeGhost())
+        BaseMod.addCard(BecomePhantom())
         BaseMod.addCard(SweetOfPhantom())
         BaseMod.addCard(SteamedPhantom())
         BaseMod.addCard(UnstableWard())
@@ -283,7 +283,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
     }
 
     private fun addPowers() {
-        BaseMod.addPower(BecomeGhostPower::class.java, BecomeGhostPower.POWER_ID)
+        BaseMod.addPower(BecomePhantomPower::class.java, BecomePhantomPower.POWER_ID)
         BaseMod.addPower(DiaphaneityPower::class.java, DiaphaneityPower.POWER_ID)
         BaseMod.addPower(DizzinessPower::class.java, DizzinessPower.POWER_ID)
         BaseMod.addPower(FanPower::class.java, FanPower.POWER_ID)

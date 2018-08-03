@@ -15,7 +15,7 @@
     ]
   },
   "Ghost": {
-    "NAME": "Ghost",
+    "NAME": "Phantom",
     "DESCRIPTIONS": [
       "At the end of turn,cause HP loss to a random enemy of ' #bcount #bof #bremaining #bhand ' for #b",
       " times. NL At the start of turn,give 1 #yConstricted to a random enemy,reduce 1 stack"
@@ -41,11 +41,11 @@
       "Skip next turn of enemies"
     ]
   },
-  "Become Ghost": {
-    "NAME": "Become Ghost",
+  "Become Phantom": {
+    "NAME": "Become Phantom",
     "DESCRIPTIONS": [
       "Gain #b",
-      " Ghost at the start of turn"
+      " Phantom at the start of turn"
     ]
   },
   "Float on Moon": {
@@ -74,7 +74,7 @@
     "DESCRIPTIONS": [
       "At the start of turn, UpgradeAll #b",
       " times, Retrieve Sakura #b",
-      " times. NL Each 3 Sakura you played,Next Sakura will be Exhausted"
+      " times. NL Each 2 Sakura you played,Next Sakura will be Exhausted"
     ]
   },
   "Remain Here": {

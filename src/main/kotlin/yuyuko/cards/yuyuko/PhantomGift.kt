@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.patches.CardColorEnum
-import yuyuko.powers.BecomeGhostPower
+import yuyuko.powers.BecomePhantomPower
 
 class PhantomGift : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
@@ -31,7 +31,7 @@ class PhantomGift : CustomCard(
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(
                         self, self,
-                        BecomeGhostPower(1),
+                        BecomePhantomPower(1),
                         1
                 )
         )

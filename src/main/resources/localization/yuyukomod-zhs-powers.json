@@ -41,7 +41,7 @@
       "使敌人跳过下一回合"
     ]
   },
-  "Become Ghost": {
+  "Become Phantom": {
     "NAME": "好死之灵",
     "DESCRIPTIONS": [
       "每回合开始时，获得 #b",
@@ -74,7 +74,7 @@
     "DESCRIPTIONS": [
       "回合开始时,升级樱 #b",
       " 次,检索樱 #b",
-      " 次. NL 你每打出3张樱,下1张樱将被消耗"
+      " 次. NL 你每打出2张樱,下1张樱将被消耗"
     ]
   },
   "Remain Here": {

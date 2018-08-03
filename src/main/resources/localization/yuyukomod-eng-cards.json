@@ -9,7 +9,7 @@
   },
   "Deathly Ground": {
     "NAME": "Deathly Ground",
-    "DESCRIPTION": "Deal !D! damage, NL Gain !M! Ghost"
+    "DESCRIPTION": "Deal !D! damage, NL Gain !M! Phantom"
   },
   "Faramita's Temptation": {
     "NAME": "Faramita's Temptation",
@@ -25,7 +25,7 @@
   },
   "Sakura (Suicide)": {
     "NAME": "Sakura (Suicide)",
-    "DESCRIPTION": "Heal !M! HP,Draw 1 card, NL Gain 1 Ghost , NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Heal !M! HP,Draw 1 card, NL Gain 1 Phantom , NL Can be upgraded any number of times. Reset"
   },
   "Sakura (Dormancy)": {
     "NAME": "Sakura (Dormancy)",
@@ -315,53 +315,53 @@
   },
   "All Wander": {
     "NAME": "All Wander",
-    "DESCRIPTION": "Gain X Ghost . NL If you haven't play any other card, Finish the turn immediately, And skip next turn of enemies",
-    "UPGRADE_DESCRIPTION": "Gain X+1 Ghost . NL If you haven't play any other card, Finish the turn immediately, And skip next turn of enemies"
+    "DESCRIPTION": "Gain X Phantom . NL If you haven't play any other card, Finish the turn immediately, And skip next turn of enemies",
+    "UPGRADE_DESCRIPTION": "Gain X+1 Phantom . NL If you haven't play any other card, Finish the turn immediately, And skip next turn of enemies"
   },
-  "Become Ghost": {
-    "NAME": "Become Ghost",
-    "DESCRIPTION": "Reduce 1 Fan . NL Gain 1 Ghost at the start of turn. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Reduce 1 Fan ,Gain 1 Ghost . NL Gain 1 Ghost at the start of turn",
+  "Become Phantom": {
+    "NAME": "Become Phantom",
+    "DESCRIPTION": "Reduce 1 Fan . NL Gain 1 Phantom at the start of turn. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Reduce 1 Fan ,Gain 1 Phantom . NL Gain 1 Phantom at the start of turn",
     "EXTENDED_DESCRIPTION": [
       "I don't have Fan"
     ]
   },
   "Sweet of Phantom": {
     "NAME": "Sweet of Phantom",
-    "DESCRIPTION": "Gain !M! Ghost , NL Give !M! Constricted , NL Draw !M! cards"
+    "DESCRIPTION": "Gain !M! Phantom , NL Give !M! Constricted , NL Draw !M! cards"
   },
   "Steamed Phantom": {
     "NAME": "Steamed Phantom",
-    "DESCRIPTION": "Reduce 1 Ghost , NL Heal 50% of lost HP",
-    "UPGRADE_DESCRIPTION": "Reduce 1 Ghost , NL Heal 75% of lost HP",
+    "DESCRIPTION": "Reduce 1 Phantom , NL Heal 50% of lost HP",
+    "UPGRADE_DESCRIPTION": "Reduce 1 Phantom , NL Heal 75% of lost HP",
     "EXTENDED_DESCRIPTION": [
-      "I don't have Ghost"
+      "I don't have Phantom"
     ]
   },
   "Unstable Ward": {
     "NAME": "Unstable Ward",
-    "DESCRIPTION": "Reduce 1 Ghost ,Draw 1 cards, Discover 3 cards",
-    "UPGRADE_DESCRIPTION": "Reduce 1 Ghost ,Draw 2 cards, Discover 5 cards",
+    "DESCRIPTION": "Reduce 1 Phantom ,Draw 1 cards, Discover 3 cards",
+    "UPGRADE_DESCRIPTION": "Reduce 1 Phantom ,Draw 2 cards, Discover 5 cards",
     "EXTENDED_DESCRIPTION": [
-      "I don't have Ghost"
+      "I don't have Phantom"
     ]
   },
   "Immigrant Phantom": {
     "NAME": "Immigrant Phantom",
-    "DESCRIPTION": "Reduce half Ghost , Give Constricted of !M! times of the amount "
+    "DESCRIPTION": "Reduce half Phantom , Give Constricted of !M! times of the amount "
   },
   "Phantom Village": {
     "NAME": "Phantom Village",
-    "DESCRIPTION": "Clear Constricted of all enemies ,gain equal amount of Ghost. NL Each !M! Ghost you gain ,Draw 1 card",
-    "UPGRADE_DESCRIPTION": "Clear Constricted of all enemies ,gain equal amount of Ghost. NL Each !M! Ghost you gain ,Draw 1 card. Hide"
+    "DESCRIPTION": "Clear Constricted of all enemies ,gain equal amount of Phantom. NL Each !M! Phantom you gain ,Draw 1 card",
+    "UPGRADE_DESCRIPTION": "Clear Constricted of all enemies ,gain equal amount of Phantom. NL Each !M! Phantom you gain ,Draw 1 card. Hide"
   },
   "Dying Butterflies": {
     "NAME": "Dying Butterflies",
-    "DESCRIPTION": "Is Butterfly .Gain !M! Ghost ,up to 5 stacks, NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Is Butterfly .Gain !M! Phantom ,up to 5 stacks, NL Can be upgraded any number of times. Reset"
   },
   "Phantom Gift": {
     "NAME": "Phantom Gift",
-    "DESCRIPTION": "At the start of turn ,gain 1 Ghost"
+    "DESCRIPTION": "At the start of turn ,gain 1 Phantom"
   },
   "Dying Dream": {
     "NAME": "Dying Dream",
@@ -370,6 +370,6 @@
   },
   "Gather The Phantom": {
     "NAME": "Gather The Phantom",
-    "DESCRIPTION": "Gain 10 Ghost , NL Exhaust"
+    "DESCRIPTION": "Gain 10 Phantom , NL Exhaust"
   }
 }

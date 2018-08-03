@@ -31,6 +31,8 @@
     "TEXT": [
       "Ghost",
       "ghost",
+      "Phantom",
+      "phantom",
       "At the end of turn,cause HP loss to a random enemy of ' #bcount #bof #bremaining #bhand ' for #bstacks times . NL At the start of turn,give 1 #yConstricted to a random enemy,reduce 1 stack"
     ]
   },
@@ -94,7 +96,7 @@
     "TEXT": [
       "Sakura(Suicide)",
       "sakura(suicide)",
-      "A Sakura which can gain 1 Ghost"
+      "A Sakura which can gain 1 Phantom"
     ]
   },
   "Sakura(Dormancy)": {
