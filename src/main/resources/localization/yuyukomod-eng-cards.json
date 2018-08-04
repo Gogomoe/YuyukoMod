@@ -97,6 +97,10 @@
     "NAME": "Butterflies Love Flowers",
     "DESCRIPTION": "Is Sakura and Butterfly meanwhile. NL Select: Place a Sakura or Butterfly into draw pile, NL Can be upgraded any number of times. Exhaust"
   },
+  "Unknown Petal": {
+    "NAME": "Unknown Petal",
+    "DESCRIPTION": "Is Sakura . NL Heal !M! , Revive Sakura . NL Can be upgraded any number of times. Reset"
+  },
   "Sakura Ward": {
     "NAME": "Sakura Ward",
     "DESCRIPTION": "Gain !B! Block , NL Place a Sakura(Seal) into draw pile",
@@ -118,6 +122,10 @@
     "NAME": "Showy Withering",
     "DESCRIPTION": "At the start of turn, UpgradeAll Sakura , Retrieve Sakura. NL Each 2 Sakura you played,Next Sakura will be Exhausted",
     "UPGRADE_DESCRIPTION": "At the start of turn, UpgradeAll Sakura , Retrieve Sakura. NL Each 2 Sakura you played,Next Sakura will be Exhausted. NL Innate"
+  },
+  "Mini Ghostdom": {
+    "NAME": "Mini Ghostdom",
+    "DESCRIPTION": "Gain 1 energy ,1 Phantom,1 Diaphaneity , Place a random special Sakura and Butterfly into draw pile, UpgradeAll Sakura and Butterfly ,Draw 1"
   },
   "Postpone Bloom": {
     "NAME": "Postpone Bloom",
@@ -159,6 +167,10 @@
     "NAME": "Scenery of Papilio",
     "DESCRIPTION": "Copy all Derivate and place them into discard pile. NL Exhaust",
     "UPGRADE_DESCRIPTION": "Copy all Derivate and place them into draw pile. NL Exhaust , Hide"
+  },
+  "The Inky Sakura": {
+    "NAME": "The Inky Sakura",
+    "DESCRIPTION": "Is Sakura .If has 30 upgrade times,Deal 100% HP Lose to all enemies.Otherwise Deal 5% HP Lose. NL Can be upgraded any number of times. Reset"
   },
   "Reunion after Death": {
     "NAME": "Reunion after Death",
@@ -233,6 +245,10 @@
   "Phantom Butterflies": {
     "NAME": "Phantom Butterflies",
     "DESCRIPTION": "Transform all Derivate Butterfly with no extra effect to Butterfly(Delusion)"
+  },
+  "Past Graveyard": {
+    "NAME": "Past Graveyard",
+    "DESCRIPTION": "At the end of turn,randomly give all targets 1~ !M! Diaphaneity"
   },
   "Snowing Sakura": {
     "NAME": "Snowing Sakura",

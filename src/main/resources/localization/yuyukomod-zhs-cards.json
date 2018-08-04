@@ -97,6 +97,10 @@
     "NAME": "蝶恋花",
     "DESCRIPTION": "同时是樱和蝶。 NL 选择一项：洗入1张同等级的樱或蝶， NL 可多次升级。 消耗"
   },
+  "Unknown Petal": {
+    "NAME": "迷之花瓣",
+    "DESCRIPTION": "是樱。回复 !M! 点生命， 返魂 樱 ，可多次升级， 重置"
+  },
   "Sakura Ward": {
     "NAME": "樱花结界",
     "DESCRIPTION": "获得 !B! 点 格挡 ， NL 将1张 樱(封印) 洗入牌堆",
@@ -118,6 +122,10 @@
     "NAME": "繁花艳丽，终或凋零",
     "DESCRIPTION": "回合开始时， 升级所有  樱 ，检索 樱。 NL 你每打出2张 樱 ，下1张 樱 将被 消耗",
     "UPGRADE_DESCRIPTION": "回合开始时， 升级所有 樱 ，检索 樱。 NL 你每打出2张 樱 ，下1张 樱 将被 消耗 。 NL 固有"
+  },
+  "Mini Ghostdom": {
+    "NAME": "盆景灵界",
+    "DESCRIPTION": "获得1点 能量 ，1层 幽灵 ，1层 虚化 ，NL 将随机1张 衍生樱 和1张 衍生蝶 洗入牌堆 ， NL升级所有 樱 和 蝶 ，抽1张牌"
   },
   "Postpone Bloom": {
     "NAME": "紫色彼岸樱推迟绽放",
@@ -159,6 +167,10 @@
     "NAME": "花蝶风月",
     "DESCRIPTION": "复制所有 衍生 并洗入牌堆。 NL 消耗",
     "UPGRADE_DESCRIPTION": "复制所有 衍生 并洗入牌堆。 NL 消耗 ， 藏匿"
+  },
+  "The Inky Sakura": {
+    "NAME": "墨染之樱",
+    "DESCRIPTION": "是樱。对敌方全体造成最大生命上限5%的体力流失， NL 获得总计30次升级后改为100%， NL 可多次升级，重置"
   },
   "Reunion after Death": {
     "NAME": "死后一切大团圆",
@@ -233,6 +245,10 @@
   "Phantom Butterflies": {
     "NAME": "幽蝴蝶",
     "DESCRIPTION": "将所有 没有额外效果的 衍生蝶 变形为 蝶(妄想)"
+  },
+  "Past Graveyard": {
+    "NAME": "遥远过去的死地",
+    "DESCRIPTION": "回合结束时，随机给予所有目标 1~ !M! 层 虚化"
   },
   "Snowing Sakura": {
     "NAME": "西行寺樱吹雪",

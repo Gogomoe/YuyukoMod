@@ -62,10 +62,12 @@ import yuyuko.cards.yuyuko.ImmigrantPhantom
 import yuyuko.cards.yuyuko.InfiniteSin
 import yuyuko.cards.yuyuko.LivingToDie
 import yuyuko.cards.yuyuko.Lunch
+import yuyuko.cards.yuyuko.MiniGhostdom
 import yuyuko.cards.yuyuko.MirrorOfMind
 import yuyuko.cards.yuyuko.MonsterCherryTree
 import yuyuko.cards.yuyuko.Nihility
 import yuyuko.cards.yuyuko.OpenTheFan
+import yuyuko.cards.yuyuko.PastGraveyard
 import yuyuko.cards.yuyuko.PhantomButterflies
 import yuyuko.cards.yuyuko.PhantomGift
 import yuyuko.cards.yuyuko.PhantomVillage
@@ -95,10 +97,12 @@ import yuyuko.cards.yuyuko.Suicide
 import yuyuko.cards.yuyuko.SupernaturalNether
 import yuyuko.cards.yuyuko.SweetOfPhantom
 import yuyuko.cards.yuyuko.TheForgottenWinter
+import yuyuko.cards.yuyuko.TheInkySakura
 import yuyuko.cards.yuyuko.TheNether
 import yuyuko.cards.yuyuko.TripleSnow
 import yuyuko.cards.yuyuko.UnbornLight
 import yuyuko.cards.yuyuko.UnfulfillingAttachment
+import yuyuko.cards.yuyuko.UnknownPetal
 import yuyuko.cards.yuyuko.UnpavedWay
 import yuyuko.cards.yuyuko.Unreal
 import yuyuko.cards.yuyuko.UnstableWard
@@ -215,11 +219,13 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         BaseMod.addCard(Suicide())
         BaseMod.addCard(MonsterCherryTree())
         BaseMod.addCard(ButterfliesLoveFlowers())
+        BaseMod.addCard(UnknownPetal())
         BaseMod.addCard(SakuraWard())
         BaseMod.addCard(Bomb())
         BaseMod.addCard(Lunch())
         BaseMod.addCard(ChaseTheSukhavati())
         BaseMod.addCard(ShowyWithering())
+        BaseMod.addCard(MiniGhostdom())
         BaseMod.addCard(PostponeBloom())
         BaseMod.addCard(FullMoon())
         BaseMod.addCard(MirrorOfMind())
@@ -229,6 +235,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         BaseMod.addCard(FullInkySakura())
         BaseMod.addCard(BuryInTheTemplate())
         BaseMod.addCard(SceneryOfPapilio())
+        BaseMod.addCard(TheInkySakura())
         BaseMod.addCard(ReunionAfterDeath())
 
 
@@ -247,6 +254,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         BaseMod.addCard(DeathDancing())
         BaseMod.addCard(PhantomButterflies())
         BaseMod.addCard(SupernaturalNether())
+        BaseMod.addCard(PastGraveyard())
         BaseMod.addCard(SnowingSakura())
         BaseMod.addCard(LivingToDie())
 

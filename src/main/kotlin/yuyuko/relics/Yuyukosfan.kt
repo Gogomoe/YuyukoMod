@@ -3,6 +3,8 @@ package yuyuko.relics
 import basemod.abstracts.CustomRelic
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction
+import com.megacrit.cardcrawl.cards.DamageInfo
+import com.megacrit.cardcrawl.cards.DamageInfo.DamageType.HP_LOSS
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.helpers.PowerTip
@@ -33,9 +35,12 @@ class Yuyukosfan : CustomRelic(
         updateDescription()
     }
 
+    private var turns = 0
+
     private var lostBlock = 0
 
     override fun atTurnStart() {
+        turns++
         lostBlock = AbstractDungeon.player.currentBlock
     }
 
@@ -44,6 +49,8 @@ class Yuyukosfan : CustomRelic(
     }
 
     override fun atBattleStartPreDraw() {
+        turns = 0
+
         EventDispenser.clear()
         this.updateDescription()
 
@@ -71,6 +78,11 @@ class Yuyukosfan : CustomRelic(
         counter += 1
         updateDescription()
         flash()
+    }
+
+    override fun onVictory() {
+        this.flash()
+        AbstractDungeon.player.damage(DamageInfo(null, turns, HP_LOSS))
     }
 
     fun updateDescription() {

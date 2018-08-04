@@ -136,5 +136,12 @@
     "DESCRIPTIONS": [
       "打出10张牌后结束本回合"
     ]
+  },
+  "Past Graveyard": {
+    "NAME": "遥远过去的死地",
+    "DESCRIPTIONS": [
+      "回合结束时，随机给予所有目标 1~ #b",
+      " 层虚化"
+    ]
   }
 }

@@ -5,7 +5,7 @@
     "DESCRIPTIONS": [
       "Block will not disappear at your turn start, NL At start of battle, gain #b",
       "  #yFan , Place #b",
-      "  #ySakura and #yButterfly into draw pile, NL At sleep in campfire,Gather 1 #yFan"
+      "  #ySakura and #yButterfly into draw pile. NL At sleep in campfire,Gather 1 #yFan . On battle victory,lose HP of the number of current turns"
     ]
   },
   "Coronal": {

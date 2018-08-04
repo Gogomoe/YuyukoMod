@@ -16,6 +16,8 @@ import yuyuko.cards.yuyuko.SakuraBloom
 import yuyuko.cards.yuyuko.SakuraDormancy
 import yuyuko.cards.yuyuko.SakuraSeal
 import yuyuko.cards.yuyuko.SakuraSuicide
+import yuyuko.cards.yuyuko.TheInkySakura
+import yuyuko.cards.yuyuko.UnknownPetal
 
 private val ButterflyIDS = setOf(
         Butterfly.ID, ButterflySwallowtail.ID, ButterflyGhost.ID,
@@ -27,7 +29,7 @@ private val SakuraIDS = setOf(
         Sakura.ID, SakuraBloom.ID, SakuraDormancy.ID,
         SakuraSeal.ID, SakuraSuicide.ID,
 
-        ButterfliesLoveFlowers.ID
+        ButterfliesLoveFlowers.ID, UnknownPetal.ID, TheInkySakura.ID
 )
 private val SpecialButterflyIDS = setOf(
         Butterfly.ID, ButterflySwallowtail.ID, ButterflyGhost.ID,
