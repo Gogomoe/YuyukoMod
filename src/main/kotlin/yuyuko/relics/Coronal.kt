@@ -38,7 +38,7 @@ class Coronal : CustomRelic(
     }
 
     fun onRightClick() {
-        if (this.counter <= 5) {
+        if (this.counter < 5) {
             return
         }
         this.counter = 0
