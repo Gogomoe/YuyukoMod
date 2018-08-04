@@ -118,6 +118,10 @@
     "NAME": "Chase The Sukhavati",
     "DESCRIPTION": "Discover 10.Gain 10 energy.End the turn after you played 10 cards"
   },
+  "Childlike": {
+    "NAME": "Childlike",
+    "DESCRIPTION": "Exhaust all Derivate in hand.UpgradeAll Sakura and Butterfly .Revive a card."
+  },
   "Showy Withering": {
     "NAME": "Showy Withering",
     "DESCRIPTION": "At the start of turn, UpgradeAll Sakura , Retrieve Sakura. NL Each 2 Sakura you played,Next Sakura will be Exhausted",

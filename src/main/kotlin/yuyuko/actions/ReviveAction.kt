@@ -18,7 +18,6 @@ class ReviveAction(val cardID: String) : AbstractGameAction() {
     }
 
     override fun update() {
-        val player = AbstractDungeon.player
 
         val group = AbstractDungeon.player.exhaustPile
         val list = group.group
