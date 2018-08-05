@@ -90,7 +90,7 @@
   },
   "Cerasus Subhirtella": {
     "NAME": "白玉楼的垂枝樱",
-    "DESCRIPTION": "是樱。回复 !M! 点生命，抽1张牌。抽到樱时，将其升级。 NL 可多次升级。 消耗"
+    "DESCRIPTION": "是樱。回复 !M! 点生命，抽1张牌。抽到樱时，将其升级。 NL 可多次升级。 消耗 ， 保留"
   },
   "Suicide": {
     "NAME": "自尽",
