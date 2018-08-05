@@ -143,5 +143,12 @@
       "At the end of turn,randomly give all targets 1~ #b",
       " Diaphaneity"
     ]
+  },
+  "Cerasus Subhirtella": {
+    "NAME": "Cerasus Subhirtella",
+    "DESCRIPTIONS": [
+      "When draw Sakura , Upgrade it for #b",
+      " times"
+    ]
   }
 }

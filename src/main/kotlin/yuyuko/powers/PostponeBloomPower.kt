@@ -57,10 +57,10 @@ class PostponeBloomPower(amount: Int = 1) : AbstractPower() {
 
     override fun onInitialApplication() {
         observer = EventDispenser.subscribe(UpgradeAllEvent.ID) {
-            if (it.cardID == Sakura.ID) {
-                count += this.amount
-                this.flash()
-                this.updateDescription()
+            if (cardID == Sakura.ID) {
+                count += amount
+                flash()
+                updateDescription()
             }
         }
     }

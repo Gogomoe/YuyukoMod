@@ -7,8 +7,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.actions.ChangeAllAction
-import yuyuko.actions.HideAction
-import yuyuko.cards.HideCards
 import yuyuko.cards.isSpecialSakura
 import yuyuko.patches.CardColorEnum
 
@@ -38,14 +36,6 @@ class MonsterCherryTree : CustomCard(
         AbstractDungeon.actionManager.addToBottom(
                 ChangeAllAction(AbstractCard::isSpecialSakura, specialSakuras)
         )
-    }
-
-    override fun triggerWhenDrawn() {
-        if (HideCards.shouldHide()) {
-            AbstractDungeon.actionManager.addToTop(
-                    HideAction(this)
-            )
-        }
     }
 
     override fun upgrade() {

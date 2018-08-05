@@ -88,6 +88,10 @@
     "NAME": "蝶恋花",
     "DESCRIPTION": "同时是樱和蝶。 NL 选择一项：洗入1张同等级的樱或蝶， NL 可多次升级。 消耗"
   },
+  "Cerasus Subhirtella": {
+    "NAME": "白玉楼的垂枝樱",
+    "DESCRIPTION": "是樱。回复 !M! 点生命，抽1张牌。抽到樱时，将其升级。 NL 可多次升级。 消耗"
+  },
   "Suicide": {
     "NAME": "自尽",
     "DESCRIPTION": "将自己的生命值降为1， NL 获得等同扣减值的格挡。 NL 消耗",

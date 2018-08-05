@@ -40,7 +40,7 @@ class FloatOnMoonPower(amount: Int) : AbstractPower() {
 
     override fun onInitialApplication() {
         observer = EventDispenser.subscribe(SpecialButterflyCalculateCardDamageEvent.ID) {
-            it.baseDamage = (it.card.timesUpgraded + 1) * amount * 3
+            baseDamage = (card.timesUpgraded + 1) * amount * 3
         }
     }
 

@@ -6,8 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import yuyuko.actions.HideAction
-import yuyuko.cards.HideCards
 import yuyuko.patches.CardColorEnum
 
 class BuryInTheTemplate : CustomCard(
@@ -38,14 +36,6 @@ class BuryInTheTemplate : CustomCard(
         this.initializeDescription()
         if (this.baseMagicNumber == 0) {
             AbstractDungeon.getCurrRoom().isBattleOver = true
-        }
-    }
-
-    override fun triggerWhenDrawn() {
-        if (HideCards.shouldHide()) {
-            AbstractDungeon.actionManager.addToTop(
-                    HideAction(this)
-            )
         }
     }
 

@@ -37,10 +37,10 @@ class TripleSnowPower(amount: Int = 1) : AbstractPower() {
 
     override fun onInitialApplication() {
         observer = EventDispenser.subscribe(ApplyDiaphaneityPowerEvent.ID) {
-            if (it.reason != CARD || it.target != AbstractDungeon.player) {
+            if (reason != CARD || target != AbstractDungeon.player) {
                 return@subscribe
             }
-            it.amount *= (amount * 3)
+            amount *= (amount * 3)
         }
     }
 

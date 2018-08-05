@@ -42,8 +42,8 @@ class ShowyWitheringPower(amount: Int = 1) : AbstractPower() {
 
     override fun onInitialApplication() {
         observer = EventDispenser.subscribe(DegradeEvent.ID) {
-            if (it.reason == USE && it.card.isSakura() && count == 2) {
-                it.cancel()
+            if (reason == USE && card.isSakura() && count == 2) {
+                cancel()
             }
         }
     }

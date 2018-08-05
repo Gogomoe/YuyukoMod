@@ -88,6 +88,10 @@
     "NAME": "Butterflies Love Flowers",
     "DESCRIPTION": "Is Sakura and Butterfly meanwhile. NL Select: Place a Sakura or Butterfly into draw pile, NL Can be upgraded any number of times. Exhaust"
   },
+  "Cerasus Subhirtella": {
+    "NAME": "Cerasus Subhirtella",
+    "DESCRIPTION": "Is Sakura . Heal !M! HP,Draw 1 card. When draw Sakura ,Upgrade it. NL Can be upgraded any number of times. Exhaust"
+  },
   "Suicide": {
     "NAME": "Suicide",
     "DESCRIPTION": "Set own HP to 1, NL Gain equal amount of Block. NL Exhaust",

@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.helpers.PowerTip
 import com.megacrit.cardcrawl.relics.AbstractRelic
 import yuyuko.cards.yuyuko.Butterfly
 import yuyuko.cards.yuyuko.Sakura
-import yuyuko.event.EventDispenser
 import yuyuko.powers.FanPower
 
 
@@ -51,7 +50,6 @@ class Yuyukosfan : CustomRelic(
     override fun atBattleStartPreDraw() {
         turns = 0
 
-        EventDispenser.clear()
         this.updateDescription()
 
         val player = AbstractDungeon.player

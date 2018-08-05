@@ -7,8 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import yuyuko.actions.HideAction
-import yuyuko.cards.HideCards
 import yuyuko.cards.isSpecial
 import yuyuko.patches.CardColorEnum
 import yuyuko.reduce
@@ -52,17 +50,6 @@ class SceneryOfPapilio : CustomCard(
                             MakeTempCardInDrawPileAction(it, 1, true, true)
                     )
                 }
-    }
-
-    override fun triggerWhenDrawn() {
-        if (!upgraded) {
-            return
-        }
-        if (HideCards.shouldHide()) {
-            AbstractDungeon.actionManager.addToTop(
-                    HideAction(this)
-            )
-        }
     }
 
     override fun upgrade() {

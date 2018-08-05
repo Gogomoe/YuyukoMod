@@ -8,6 +8,7 @@ import basemod.interfaces.EditCharactersSubscriber
 import basemod.interfaces.EditKeywordsSubscriber
 import basemod.interfaces.EditRelicsSubscriber
 import basemod.interfaces.EditStringsSubscriber
+import basemod.interfaces.OnStartBattleSubscriber
 import basemod.interfaces.PostInitializeSubscriber
 import com.badlogic.gdx.Gdx
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
@@ -15,13 +16,18 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.core.Settings
 import com.megacrit.cardcrawl.core.Settings.GameLanguage.ZHS
 import com.megacrit.cardcrawl.core.Settings.GameLanguage.ZHT
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.localization.CardStrings
 import com.megacrit.cardcrawl.localization.CharacterStrings
 import com.megacrit.cardcrawl.localization.KeywordStrings
 import com.megacrit.cardcrawl.localization.PowerStrings
 import com.megacrit.cardcrawl.localization.RelicStrings
+import com.megacrit.cardcrawl.rooms.MonsterRoom
 import org.apache.logging.log4j.LogManager
+import yuyuko.actions.HideAction
+import yuyuko.cards.HideCards
+import yuyuko.cards.isHide
 import yuyuko.cards.yuyuko.AllWander
 import yuyuko.cards.yuyuko.BecomePhantom
 import yuyuko.cards.yuyuko.Bloom
@@ -34,6 +40,7 @@ import yuyuko.cards.yuyuko.ButterflyDeepRooted
 import yuyuko.cards.yuyuko.ButterflyDelusion
 import yuyuko.cards.yuyuko.ButterflyGhost
 import yuyuko.cards.yuyuko.ButterflySwallowtail
+import yuyuko.cards.yuyuko.CerasusSubhirtella
 import yuyuko.cards.yuyuko.ChaseTheSukhavati
 import yuyuko.cards.yuyuko.Childlike
 import yuyuko.cards.yuyuko.DancingButterflies
@@ -109,6 +116,8 @@ import yuyuko.cards.yuyuko.Unreal
 import yuyuko.cards.yuyuko.UnstableWard
 import yuyuko.cards.yuyuko.WanderingSoul
 import yuyuko.characters.Yuyuko
+import yuyuko.event.EventDispenser
+import yuyuko.event.OnDrawEvent
 import yuyuko.patches.CardColorEnum
 import yuyuko.patches.PlayerClassEnum
 import yuyuko.powers.BecomePhantomPower
@@ -135,7 +144,7 @@ import java.nio.charset.StandardCharsets
 
 @SpireInitializer
 class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersSubscriber,
-        EditStringsSubscriber, EditKeywordsSubscriber, EditRelicsSubscriber {
+        EditStringsSubscriber, EditKeywordsSubscriber, EditRelicsSubscriber, OnStartBattleSubscriber {
 
     companion object {
         const val MODNAME = "YuyukoMod"
@@ -218,6 +227,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         BaseMod.addCard(WanderingSoul())
         BaseMod.addCard(OpenTheFan())
         BaseMod.addCard(ButterfliesLoveFlowers())
+        BaseMod.addCard(CerasusSubhirtella())
         BaseMod.addCard(Suicide())
         BaseMod.addCard(MonsterCherryTree())
         BaseMod.addCard(UnknownPetal())
@@ -374,6 +384,17 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
                 .readString(StandardCharsets.UTF_8.toString())
         BaseMod.loadCustomStrings(RelicStrings::class.java, relicsStrings)
 
+    }
+
+    override fun receiveOnBattleStart(p0: MonsterRoom?) {
+        EventDispenser.clear()
+        EventDispenser.subscribe<OnDrawEvent>(OnDrawEvent.ID) {
+            if (card.isHide() && HideCards.shouldHide()) {
+                AbstractDungeon.actionManager.addToTop(
+                        HideAction(card)
+                )
+            }
+        }
     }
 
 }

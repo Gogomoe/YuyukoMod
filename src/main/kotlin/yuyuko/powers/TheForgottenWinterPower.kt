@@ -37,8 +37,8 @@ class TheForgottenWinterPower(amount: Int = 1) : AbstractPower() {
 
     override fun onInitialApplication() {
         observer = EventDispenser.subscribe(EndOfRoundDiaphaneityReduceEvent.ID) {
-            if (it.power.owner == this.owner) {
-                it.cancel()
+            if (power.owner == owner) {
+                cancel()
             }
         }
     }

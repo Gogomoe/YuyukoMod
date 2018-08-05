@@ -9,8 +9,6 @@ import com.megacrit.cardcrawl.core.AbstractCreature
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import yuyuko.actions.HideAction
-import yuyuko.cards.HideCards
 import yuyuko.event.ApplyDiaphaneityPowerEvent
 import yuyuko.event.ApplyDiaphaneityPowerEvent.ApplyDiaphaneityPower.EFFECT
 import yuyuko.event.EventDispenser
@@ -65,17 +63,6 @@ class ReverseTheScreen : CustomCard(
                         toReduce, source, DiaphaneityPower.POWER_ID, diff
                 )
         )
-    }
-
-    override fun triggerWhenDrawn() {
-        if (!upgraded) {
-            return
-        }
-        if (HideCards.shouldHide()) {
-            AbstractDungeon.actionManager.addToTop(
-                    HideAction(this)
-            )
-        }
     }
 
     override fun upgrade() {

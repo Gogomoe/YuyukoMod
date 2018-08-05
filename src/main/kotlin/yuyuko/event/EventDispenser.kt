@@ -4,7 +4,7 @@ object EventDispenser {
 
     private val subscribers: MutableMap<String, Subscriber<*>> = mutableMapOf()
 
-    fun <T : Event> subscribe(ID: String, observer: (T) -> Unit): Observer<T> = subscribe(ID, Observer(observer))
+    fun <T : Event> subscribe(ID: String, observer: T.() -> Unit): Observer<T> = subscribe(ID, Observer(observer))
 
     fun <T : Event> subscribe(ID: String, observer: Observer<T>): Observer<T> {
         val subscriber = (subscribers[ID] as Subscriber<T>?) ?: Subscriber<T>().also { subscribers[ID] = it }

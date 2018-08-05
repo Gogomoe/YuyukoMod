@@ -7,8 +7,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import yuyuko.actions.HideAction
-import yuyuko.cards.HideCards
 import yuyuko.patches.CardColorEnum
 import yuyuko.powers.FullInkySakuraPower
 
@@ -38,17 +36,6 @@ class FullInkySakura : CustomCard(
                         1
                 )
         )
-    }
-
-    override fun triggerWhenDrawn() {
-        if (upgraded) {
-            return
-        }
-        if (HideCards.shouldHide()) {
-            AbstractDungeon.actionManager.addToTop(
-                    HideAction(this)
-            )
-        }
     }
 
     override fun upgrade() {

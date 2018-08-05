@@ -12,8 +12,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import com.megacrit.cardcrawl.powers.ConstrictedPower
-import yuyuko.actions.HideAction
-import yuyuko.cards.HideCards
 import yuyuko.patches.CardColorEnum
 import yuyuko.powers.GhostPower
 
@@ -70,17 +68,6 @@ class DyingDream : CustomCard(
         )
 
         AbstractDungeon.player.getPower(GhostPower.POWER_ID)?.flash()
-    }
-
-    override fun triggerWhenDrawn() {
-        if (!upgraded) {
-            return
-        }
-        if (HideCards.shouldHide()) {
-            AbstractDungeon.actionManager.addToTop(
-                    HideAction(this)
-            )
-        }
     }
 
     override fun upgrade() {

@@ -11,8 +11,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import yuyuko.actions.HideAction
-import yuyuko.cards.HideCards
 import yuyuko.patches.CardColorEnum
 
 class SereneSpring : CustomCard(
@@ -59,15 +57,6 @@ class SereneSpring : CustomCard(
                 )
         )
     }
-
-    override fun triggerWhenDrawn() {
-        if (HideCards.shouldHide()) {
-            AbstractDungeon.actionManager.addToTop(
-                    HideAction(this)
-            )
-        }
-    }
-
 
     override fun upgrade() {
         if (!this.upgraded) {

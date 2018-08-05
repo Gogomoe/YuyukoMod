@@ -43,11 +43,11 @@ class FanPower(amount: Int) : AbstractPower() {
 
     override fun onInitialApplication() {
         observer = EventDispenser.subscribe(DegradeEvent.ID) {
-            if (it.card.isSpecialSakura() && count(AbstractCard::isSpecialSakura) > amount) {
-                it.cancel()
+            if (card.isSpecialSakura() && count(AbstractCard::isSpecialSakura) > amount) {
+                cancel()
             }
-            if (it.card.isSpecialButterfly() && count(AbstractCard::isSpecialButterfly) > amount) {
-                it.cancel()
+            if (card.isSpecialButterfly() && count(AbstractCard::isSpecialButterfly) > amount) {
+                cancel()
             }
         }
     }

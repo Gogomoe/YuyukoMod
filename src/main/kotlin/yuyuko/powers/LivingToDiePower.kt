@@ -37,8 +37,8 @@ class LivingToDiePower : AbstractPower() {
 
     override fun onInitialApplication() {
         observer = EventDispenser.subscribe(EndOfRoundDiaphaneityReduceEvent.ID) {
-            if (it.power.owner != AbstractDungeon.player) {
-                it.cancel()
+            if (power.owner != AbstractDungeon.player) {
+                cancel()
             }
         }
     }
