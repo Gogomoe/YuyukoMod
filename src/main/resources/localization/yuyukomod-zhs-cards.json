@@ -84,6 +84,10 @@
     "NAME": "开扇",
     "DESCRIPTION": "获得1层 扇 ， NL 抽 !M! 张牌"
   },
+  "Butterflies Love Flowers": {
+    "NAME": "蝶恋花",
+    "DESCRIPTION": "同时是樱和蝶。 NL 选择一项：洗入1张同等级的樱或蝶， NL 可多次升级。 消耗"
+  },
   "Suicide": {
     "NAME": "自尽",
     "DESCRIPTION": "将自己的生命值降为1， NL 获得等同扣减值的格挡。 NL 消耗",
@@ -92,10 +96,6 @@
   "Monster Cherry Tree": {
     "NAME": "妖怪樱",
     "DESCRIPTION": "将所有 衍生樱 变形为有额外效果的随机 衍生樱 。 NL 藏匿"
-  },
-  "Butterflies Love Flowers": {
-    "NAME": "蝶恋花",
-    "DESCRIPTION": "同时是樱和蝶。 NL 选择一项：洗入1张同等级的樱或蝶， NL 可多次升级。 消耗"
   },
   "Unknown Petal": {
     "NAME": "迷之花瓣",
@@ -123,7 +123,7 @@
     "DESCRIPTION": "消耗 手牌中所有 衍生 ，升级所有 樱 和 蝶 ， 返魂 任意1张牌"
   },
   "Showy Withering": {
-    "NAME": "繁花艳丽，终或凋零",
+    "NAME": "繁花艳丽，终或飘零",
     "DESCRIPTION": "回合开始时， 升级所有  樱 ，检索 樱。 NL 你每打出2张 樱 ，下1张 樱 将被 消耗",
     "UPGRADE_DESCRIPTION": "回合开始时， 升级所有 樱 ，检索 樱。 NL 你每打出2张 樱 ，下1张 樱 将被 消耗 。 NL 固有"
   },

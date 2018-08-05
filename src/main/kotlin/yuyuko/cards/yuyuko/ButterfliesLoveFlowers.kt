@@ -12,7 +12,7 @@ import yuyuko.patches.CardColorEnum
 class ButterfliesLoveFlowers : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
         CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
-        CardRarity.UNCOMMON, CardTarget.SELF
+        CardRarity.COMMON, CardTarget.SELF
 ) {
     companion object {
         @JvmStatic

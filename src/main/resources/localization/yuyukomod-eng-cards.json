@@ -84,6 +84,10 @@
     "NAME": "Open The Fan",
     "DESCRIPTION": "Gain 1 Fan , NL Draw !M! cards"
   },
+  "Butterflies Love Flowers": {
+    "NAME": "Butterflies Love Flowers",
+    "DESCRIPTION": "Is Sakura and Butterfly meanwhile. NL Select: Place a Sakura or Butterfly into draw pile, NL Can be upgraded any number of times. Exhaust"
+  },
   "Suicide": {
     "NAME": "Suicide",
     "DESCRIPTION": "Set own HP to 1, NL Gain equal amount of Block. NL Exhaust",
@@ -92,10 +96,6 @@
   "Monster Cherry Tree": {
     "NAME": "Monster Cherry Tree",
     "DESCRIPTION": "Transform all Derivate Sakura to Derivate Sakura with random effect. NL Hide"
-  },
-  "Butterflies Love Flowers": {
-    "NAME": "Butterflies Love Flowers",
-    "DESCRIPTION": "Is Sakura and Butterfly meanwhile. NL Select: Place a Sakura or Butterfly into draw pile, NL Can be upgraded any number of times. Exhaust"
   },
   "Unknown Petal": {
     "NAME": "Unknown Petal",
