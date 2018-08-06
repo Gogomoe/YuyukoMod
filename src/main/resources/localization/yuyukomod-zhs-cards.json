@@ -324,6 +324,10 @@
     "NAME": "七色的蝴蝶",
     "DESCRIPTION": "是 蝶 。 NL 将1张同等级有额外效果的随机 衍生蝶 洗入牌堆， NL 可多次升级。 重置"
   },
+  "Butterflies in Dream": {
+    "NAME": "幽梦的蝴蝶",
+    "DESCRIPTION": "是 蝶 。 NL 用 !M! 张蝶替换所有手牌，最多 10 张， NL 可多次升级。 重置"
+  },
   "Ghastly Dream": {
     "NAME": "惊梦",
     "DESCRIPTION": "检索 蝶 直到填满手牌。 NL 本回合你的 蝶 会额外打出 !M! 次并消耗 ， NL 本回合你不能再抽牌"
@@ -386,6 +390,14 @@
   "Phantom Gift": {
     "NAME": "故人的遗物",
     "DESCRIPTION": "每回合开始时，获得1层 幽灵"
+  },
+  "Trap Lamp": {
+    "NAME": "通向黄泉的诱蛾灯",
+    "DESCRIPTION": "损失 !M! 层 幽灵 ，将 !M! 张 蝶(亡灵) 洗入牌堆。下一回合，将1张数值+1的这张卡加入手牌。 NL 消耗，虚无",
+    "UPGRADE_DESCRIPTION": "损失 !M! 层 幽灵 ，将 !M! 张 蝶(亡灵) 洗入牌堆。下一回合，将1张数值+1的这张卡加入手牌。 NL 消耗",
+    "EXTENDED_DESCRIPTION": [
+      "我没有足够的幽灵"
+    ]
   },
   "Dying Dream": {
     "NAME": "无寿之梦",

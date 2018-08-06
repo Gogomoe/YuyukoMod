@@ -324,6 +324,10 @@
     "NAME": "Butterflies Rainbow",
     "DESCRIPTION": "Is Butterfly . NL Place Derivate Butterfly with random extra effect into draw pile, NL Can be upgraded any number of times. Reset"
   },
+  "Butterflies in Dream": {
+    "NAME": "Butterflies in Dream",
+    "DESCRIPTION": "Is Butterfly . Replace all your hand to !M! Butterfly , up to 10. NL Can be upgraded any number of times. Exhaust"
+  },
   "Ghastly Dream": {
     "NAME": "Ghastly Dream",
     "DESCRIPTION": "Retrieve Butterfly up to fill your hand. NL This turn your Butterfly will be played for extra !M! times and Exhaust, NL You can't draw cards during the turn"
@@ -386,6 +390,14 @@
   "Phantom Gift": {
     "NAME": "Phantom Gift",
     "DESCRIPTION": "At the start of turn ,gain 1 Phantom"
+  },
+  "Trap Lamp": {
+    "NAME": "Trap Lamp",
+    "DESCRIPTION": "Reduce !M! ghost, Place !M! Butterfly(Ghost) into draw pile. NL Next turn place a copy and +1 of this into hand. Exhaust , Ethereal",
+    "UPGRADE_DESCRIPTION": "Reduce !M! ghost, Place !M! Butterfly(Ghost) into draw pile. NL Next turn place a copy and +1 of this into hand. Exhaust",
+    "EXTENDED_DESCRIPTION": [
+      "I don't have enough Phantom"
+    ]
   },
   "Dying Dream": {
     "NAME": "Dying Dream",

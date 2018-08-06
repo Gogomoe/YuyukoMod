@@ -150,5 +150,11 @@
       "When draw Sakura , Upgrade it for #b",
       " times"
     ]
+  },
+  "Trap Lamp": {
+    "NAME": "Trap Lamp",
+    "DESCRIPTIONS": [
+      "Next turn , place a Trap Lamp into hand"
+    ]
   }
 }

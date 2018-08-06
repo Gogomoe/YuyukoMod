@@ -33,6 +33,7 @@ import yuyuko.cards.yuyuko.BecomePhantom
 import yuyuko.cards.yuyuko.Bloom
 import yuyuko.cards.yuyuko.Bomb
 import yuyuko.cards.yuyuko.BuryInTheTemplate
+import yuyuko.cards.yuyuko.ButterfliesInDream
 import yuyuko.cards.yuyuko.ButterfliesLoveFlowers
 import yuyuko.cards.yuyuko.ButterfliesRainbow
 import yuyuko.cards.yuyuko.Butterfly
@@ -107,6 +108,7 @@ import yuyuko.cards.yuyuko.SweetOfPhantom
 import yuyuko.cards.yuyuko.TheForgottenWinter
 import yuyuko.cards.yuyuko.TheInkySakura
 import yuyuko.cards.yuyuko.TheNether
+import yuyuko.cards.yuyuko.TrapLamp
 import yuyuko.cards.yuyuko.TripleSnow
 import yuyuko.cards.yuyuko.UnbornLight
 import yuyuko.cards.yuyuko.UnfulfillingAttachment
@@ -282,6 +284,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         BaseMod.addCard(SereneSpring())
         BaseMod.addCard(InfiniteSin())
         BaseMod.addCard(ButterfliesRainbow())
+        BaseMod.addCard(ButterfliesInDream())
         BaseMod.addCard(GhastlyDream())
         BaseMod.addCard(FloatOnMoon())
         BaseMod.addCard(ReviveTheButterflies())
@@ -296,6 +299,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         BaseMod.addCard(PhantomVillage())
         BaseMod.addCard(DyingButterflies())
         BaseMod.addCard(PhantomGift())
+        BaseMod.addCard(TrapLamp())
         BaseMod.addCard(DyingDream())
         BaseMod.addCard(GatherThePhantom())
 

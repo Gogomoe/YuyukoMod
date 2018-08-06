@@ -1,6 +1,7 @@
 package yuyuko.cards
 
 import com.megacrit.cardcrawl.cards.AbstractCard
+import yuyuko.cards.yuyuko.ButterfliesInDream
 import yuyuko.cards.yuyuko.ButterfliesLoveFlowers
 import yuyuko.cards.yuyuko.ButterfliesRainbow
 import yuyuko.cards.yuyuko.Butterfly
@@ -24,7 +25,8 @@ private val ButterflyIDS = setOf(
         Butterfly.ID, ButterflySwallowtail.ID, ButterflyGhost.ID,
         ButterflyDeepRooted.ID, ButterflyDelusion.ID,
 
-        ButterfliesRainbow.ID, ButterfliesLoveFlowers.ID, DyingButterflies.ID
+        ButterfliesRainbow.ID, ButterfliesLoveFlowers.ID, DyingButterflies.ID,
+        ButterfliesInDream.ID
 )
 private val SakuraIDS = setOf(
         Sakura.ID, SakuraBloom.ID, SakuraDormancy.ID,
