@@ -40,7 +40,7 @@ class UnknownPetal : CustomCard(
                 HealAction(self, self, this.magicNumber)
         )
         AbstractDungeon.actionManager.addToBottom(
-            ReviveAction(Sakura.ID)
+                ReviveAction(Sakura.ID)
         )
         EventDispenser.emit(DegradeEvent(this, USE, this::degradeToInitiation))
     }
@@ -55,7 +55,7 @@ class UnknownPetal : CustomCard(
     override fun upgradeName() {
         ++this.timesUpgraded
         this.upgraded = true
-        this.name = "${Sakura.NAME}+$timesUpgraded"
+        this.name = "$NAME+$timesUpgraded"
         this.initializeTitle()
     }
 

@@ -19,14 +19,14 @@
     "NAME": "Ghost Lamp",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "At turn start,gain 1 Ghost"
+      "At turn start,gain 1 #yGhost"
     ]
   },
   "Trap Lamp": {
     "NAME": "Trap Lamp",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Every 3 turns,place a Butterfly into draw pile"
+      "Every #b3 turns,place a #yButterfly into draw pile"
     ]
   }
 }

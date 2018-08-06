@@ -58,7 +58,7 @@ class TheInkySakura : CustomCard(
     override fun upgradeName() {
         ++this.timesUpgraded
         this.upgraded = true
-        this.name = "${Sakura.NAME}+$timesUpgraded"
+        this.name = "$NAME+$timesUpgraded"
         this.initializeTitle()
     }
 
