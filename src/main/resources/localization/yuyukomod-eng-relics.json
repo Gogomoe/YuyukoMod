@@ -14,5 +14,19 @@
     "DESCRIPTIONS": [
       "Right click to use.Gain #b1 #yIntangible and #Artifact . Win #b5 battle to increase usage times."
     ]
+  },
+  "Ghost Lamp": {
+    "NAME": "Ghost Lamp",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "At turn start,gain 1 Ghost"
+    ]
+  },
+  "Trap Lamp": {
+    "NAME": "Trap Lamp",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Every 3 turns,place a Butterfly into draw pile"
+    ]
   }
 }

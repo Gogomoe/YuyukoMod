@@ -140,6 +140,7 @@ import yuyuko.powers.SupernaturalNetherPower
 import yuyuko.powers.TheForgottenWinterPower
 import yuyuko.powers.TripleSnowPower
 import yuyuko.relics.Coronal
+import yuyuko.relics.GhostLamp
 import yuyuko.relics.Yuyukosfan
 import java.nio.charset.StandardCharsets
 
@@ -329,6 +330,8 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
     override fun receiveEditRelics() {
         BaseMod.addRelicToCustomPool(Yuyukosfan(), CardColorEnum.YUYUKO_COLOR.toString())
         BaseMod.addRelicToCustomPool(Coronal(), CardColorEnum.YUYUKO_COLOR.toString())
+        BaseMod.addRelicToCustomPool(GhostLamp(), CardColorEnum.YUYUKO_COLOR.toString())
+        BaseMod.addRelicToCustomPool(yuyuko.relics.TrapLamp(), CardColorEnum.YUYUKO_COLOR.toString())
     }
 
     override fun receiveEditKeywords() {

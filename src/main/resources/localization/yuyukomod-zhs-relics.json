@@ -14,5 +14,19 @@
     "DESCRIPTIONS": [
       "右键使用获得 #b1 层 #y无实体 与 #y人工制品 . 战斗胜利 #b5 次来进行充能."
     ]
+  },
+  "Ghost Lamp": {
+    "NAME": "人魂灯",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "回合开始时，获得一层幽灵"
+    ]
+  },
+  "Trap Lamp": {
+    "NAME": "诱蛾灯",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "每3回合，将一张蝶洗入牌堆"
+    ]
   }
 }
