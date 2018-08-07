@@ -1,0 +1,69 @@
+
+animate.png
+size: 892,1020
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+stand001
+  rotate: false
+  xy: 190, 340
+  size: 177, 337
+  orig: 204, 409
+  offset: 18, 28
+  index: -1
+stand006
+  rotate: false
+  xy: 1, 1
+  size: 191, 337
+  orig: 204, 409
+  offset: 8, 28
+  index: -1
+stand004
+  rotate: false
+  xy: 546, 340
+  size: 171, 338
+  orig: 204, 409
+  offset: 24, 34
+  index: -1
+stand007
+  rotate: false
+  xy: 1, 340
+  size: 187, 338
+  orig: 204, 409
+  offset: 12, 24
+  index: -1
+stand000
+  rotate: false
+  xy: 187, 680
+  size: 180, 338
+  orig: 204, 409
+  offset: 15, 24
+  index: -1
+stand005
+  rotate: false
+  xy: 369, 680
+  size: 177, 338
+  orig: 204, 409
+  offset: 18, 31
+  index: -1
+stand002
+  rotate: false
+  xy: 369, 340
+  size: 175, 338
+  orig: 204, 409
+  offset: 21, 31
+  index: -1
+stand008
+  rotate: false
+  xy: 1, 680
+  size: 184, 338
+  orig: 204, 409
+  offset: 12, 21
+  index: -1
+stand003
+  rotate: false
+  xy: 719, 340
+  size: 171, 338
+  orig: 204, 409
+  offset: 24, 34
+  index: -1

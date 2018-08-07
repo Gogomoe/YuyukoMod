@@ -1,6 +1,7 @@
 package yuyuko.characters
 
 import basemod.abstracts.CustomPlayer
+import com.badlogic.gdx.math.MathUtils
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.core.EnergyManager
 import com.megacrit.cardcrawl.screens.CharSelectInfo
@@ -75,7 +76,7 @@ class Yuyuko(name: String, setClass: PlayerClass) : CustomPlayer(
 
     init {
         this.initializeClass(
-                "images/yuyuko/main.png",
+                null,
                 "images/yuyuko/shoulder2.png",
                 "images/yuyuko/shoulder.png",
                 "images/yuyuko/corpse.png",
@@ -83,6 +84,10 @@ class Yuyuko(name: String, setClass: PlayerClass) : CustomPlayer(
                 20.0f, -10.0f, 220.0f, 290.0f,
                 EnergyManager(ENERGY)
         )
+        this.loadAnimation("images/yuyuko/animate/animate.atlas", "images/yuyuko/animate/animate.json", 0.9f)
+        val e = this.state.setAnimation(0, "Sprite", true)
+        e.time = e.endTime * MathUtils.random()
+        e.timeScale = .25f
     }
 
 
