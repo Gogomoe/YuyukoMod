@@ -50,7 +50,7 @@ class FloatOnMoonPower(amount: Int) : AbstractPower() {
 
 
     override fun atStartOfTurn() {
-        EventDispenser.emit(UpgradeAllEvent(AbstractCard::isButterfly, amount))
+        EventDispenser.emit(UpgradeAllEvent(AbstractCard::isButterfly, amount * 3))
     }
 
     override fun onUseCard(card: AbstractCard?, action: UseCardAction?) {
