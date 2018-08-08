@@ -84,7 +84,7 @@
     "NAME": "开扇",
     "DESCRIPTION": "获得1层 扇 ， NL 抽 !M! 张牌"
   },
-  "Butterflies Love Flowers": {
+  "Linger over Flower": {
     "NAME": "蝶恋花",
     "DESCRIPTION": "同时是樱和蝶。 NL 选择一项：洗入1张同等级的樱或蝶， NL 可多次升级。 消耗"
   },
@@ -404,7 +404,7 @@
     "DESCRIPTION": "损失所有 幽灵 层数， NL 对敌方全体造成等同于其5倍的伤害与 缠绕 。 消耗",
     "UPGRADE_DESCRIPTION": "损失所有 幽灵 层数， NL 对敌方全体造成等同于其5倍的伤害与 缠绕 。 消耗 ， 藏匿"
   },
-  "Gather The Phantom": {
+  "Ghost Spot": {
     "NAME": "幽魂聚地",
     "DESCRIPTION": "获得10层 幽灵 ， NL 消耗"
   }

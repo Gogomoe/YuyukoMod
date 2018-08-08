@@ -36,7 +36,6 @@ import yuyuko.cards.yuyuko.Bloom
 import yuyuko.cards.yuyuko.Bomb
 import yuyuko.cards.yuyuko.BuryInTheTemplate
 import yuyuko.cards.yuyuko.ButterfliesInDream
-import yuyuko.cards.yuyuko.ButterfliesLoveFlowers
 import yuyuko.cards.yuyuko.ButterfliesRainbow
 import yuyuko.cards.yuyuko.Butterfly
 import yuyuko.cards.yuyuko.ButterflyDeepRooted
@@ -63,14 +62,15 @@ import yuyuko.cards.yuyuko.FloatOnMoon
 import yuyuko.cards.yuyuko.FondlingOfPapilio
 import yuyuko.cards.yuyuko.FullInkySakura
 import yuyuko.cards.yuyuko.FullMoon
-import yuyuko.cards.yuyuko.GatherThePhantom
 import yuyuko.cards.yuyuko.GatherTheSpring
 import yuyuko.cards.yuyuko.GauzySakura
 import yuyuko.cards.yuyuko.GhastlyDream
+import yuyuko.cards.yuyuko.GhostSpot
 import yuyuko.cards.yuyuko.GhostdomSakura
 import yuyuko.cards.yuyuko.Gone
 import yuyuko.cards.yuyuko.ImmigrantPhantom
 import yuyuko.cards.yuyuko.InfiniteSin
+import yuyuko.cards.yuyuko.LingerOverFlower
 import yuyuko.cards.yuyuko.LivingToDie
 import yuyuko.cards.yuyuko.Lunch
 import yuyuko.cards.yuyuko.MiniGhostdom
@@ -231,7 +231,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         addCard(Bloom())
         addCard(WanderingSoul())
         addCard(OpenTheFan())
-        addCard(ButterfliesLoveFlowers())
+        addCard(LingerOverFlower())
         addCard(CerasusSubhirtella())
         addCard(Suicide())
         addCard(MonsterCherryTree())
@@ -304,7 +304,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         addCard(PhantomGift())
         addCard(TrapLamp())
         addCard(DyingDream())
-        addCard(GatherThePhantom())
+        addCard(GhostSpot())
 
         addPowers()
     }

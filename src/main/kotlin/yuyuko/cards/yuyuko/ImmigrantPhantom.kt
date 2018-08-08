@@ -21,7 +21,7 @@ class ImmigrantPhantom : CustomCard(
         @JvmStatic
         val ID = "Immigrant Phantom"
         val IMAGE_PATH = "images/yuyuko/cards/skill5.png"
-        val COST = 1
+        val COST = 0
         val TIMES = 2
         val UPGRADE_PLUS_TIMES = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)

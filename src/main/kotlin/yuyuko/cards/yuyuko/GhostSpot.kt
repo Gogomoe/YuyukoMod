@@ -1,23 +1,24 @@
 package yuyuko.cards.yuyuko
 
 import basemod.abstracts.CustomCard
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
-import yuyuko.actions.ButterfliesLoveFlowersAction
 import yuyuko.patches.CardColorEnum
+import yuyuko.powers.GhostPower
 
-class ButterfliesLoveFlowers : CustomCard(
+class GhostSpot : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
         CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
-        CardRarity.COMMON, CardTarget.SELF
+        CardRarity.RARE, CardTarget.SELF
 ) {
     companion object {
         @JvmStatic
-        val ID = "Butterflies Love Flowers"
-        val IMAGE_PATH = "images/yuyuko/cards/skill2.png"
+        val ID = "Ghost Spot"
+        val IMAGE_PATH = "images/yuyuko/cards/skill5.png"
         val COST = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
@@ -28,25 +29,24 @@ class ButterfliesLoveFlowers : CustomCard(
         this.exhaust = true
     }
 
-    override fun makeCopy(): AbstractCard = ButterfliesLoveFlowers()
+    override fun makeCopy(): AbstractCard = GhostSpot()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         AbstractDungeon.actionManager.addToBottom(
-                ButterfliesLoveFlowersAction(this.timesUpgraded)
+                ApplyPowerAction(
+                        self, self,
+                        GhostPower(self!!, 10),
+                        10
+                )
         )
     }
 
-    override fun canUpgrade(): Boolean = true
-
     override fun upgrade() {
-        this.upgradeName()
+        if (!this.upgraded) {
+            this.upgradeName()
+            this.upgradeBaseCost(0)
+        }
     }
 
-    override fun upgradeName() {
-        ++this.timesUpgraded
-        this.upgraded = true
-        this.name = "$NAME+$timesUpgraded"
-        this.initializeTitle()
-    }
 
 }

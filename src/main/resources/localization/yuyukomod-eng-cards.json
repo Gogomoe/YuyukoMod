@@ -84,8 +84,8 @@
     "NAME": "Open The Fan",
     "DESCRIPTION": "Gain 1 Fan , NL Draw !M! cards"
   },
-  "Butterflies Love Flowers": {
-    "NAME": "Butterflies Love Flowers",
+  "Linger over Flower": {
+    "NAME": "Linger over Flower",
     "DESCRIPTION": "Is Sakura and Butterfly meanwhile. NL Select: Place a Sakura or Butterfly into draw pile, NL Can be upgraded any number of times. Exhaust"
   },
   "Cerasus Subhirtella": {
@@ -404,8 +404,8 @@
     "DESCRIPTION": "Reduce all ghost, NL give Constricted of 5 times of the amount to all enemies. Exhaust",
     "UPGRADE_DESCRIPTION": "Reduce all ghost, NL give Constricted of 5 times of the amount to all enemies. Exhaust , Hide"
   },
-  "Gather The Phantom": {
-    "NAME": "Gather The Phantom",
+  "Ghost Spot": {
+    "NAME": "Ghost Spot",
     "DESCRIPTION": "Gain 10 Phantom , NL Exhaust"
   }
 }
