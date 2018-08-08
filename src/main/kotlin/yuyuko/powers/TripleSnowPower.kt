@@ -40,7 +40,7 @@ class TripleSnowPower(amount: Int = 1) : AbstractPower() {
             if (reason != CARD || target != AbstractDungeon.player) {
                 return@subscribe
             }
-            amount *= (amount * 3)
+            amount *= (this@TripleSnowPower.amount * 3)
         }
     }
 
