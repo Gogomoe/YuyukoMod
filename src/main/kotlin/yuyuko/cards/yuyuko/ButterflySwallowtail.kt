@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import yuyuko.cards.isButterfly
 import yuyuko.event.DegradeEvent
 import yuyuko.event.DegradeEvent.DegradeReason.USE
 import yuyuko.event.EventDispenser
@@ -59,7 +60,7 @@ class ButterflySwallowtail : CustomCard(
         AbstractDungeon.actionManager.addToBottom(
                 DrawCardAction(self, 1, false)
         )
-        EventDispenser.emit(UpgradeAllEvent(Butterfly.ID))
+        EventDispenser.emit(UpgradeAllEvent(AbstractCard::isButterfly))
 
         EventDispenser.emit(DegradeEvent(this, USE, this::degradeToInitiation))
 

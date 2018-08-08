@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import yuyuko.cards.isSakura
 import yuyuko.event.EventDispenser
 import yuyuko.event.UpgradeAllEvent
 import yuyuko.patches.CardColorEnum
@@ -35,7 +36,7 @@ class GhostdomSakura : CustomCard(
                         SakuraSuicide(), 1, true, true
                 )
         )
-        EventDispenser.emit(UpgradeAllEvent(Sakura.ID))
+        EventDispenser.emit(UpgradeAllEvent(AbstractCard::isSakura))
 
     }
 

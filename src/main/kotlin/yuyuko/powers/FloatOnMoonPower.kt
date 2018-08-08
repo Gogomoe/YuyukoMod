@@ -6,8 +6,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.powers.AbstractPower
+import yuyuko.cards.isButterfly
 import yuyuko.cards.isSpecialButterfly
-import yuyuko.cards.yuyuko.Butterfly
 import yuyuko.event.EventDispenser
 import yuyuko.event.Observer
 import yuyuko.event.SpecialButterflyCalculateCardDamageEvent
@@ -50,7 +50,7 @@ class FloatOnMoonPower(amount: Int) : AbstractPower() {
 
 
     override fun atStartOfTurn() {
-        EventDispenser.emit(UpgradeAllEvent(Butterfly.ID, amount))
+        EventDispenser.emit(UpgradeAllEvent(AbstractCard::isButterfly, amount))
     }
 
     override fun onUseCard(card: AbstractCard?, action: UseCardAction?) {

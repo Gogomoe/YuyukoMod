@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.cards.isSpecial
+import yuyuko.collect
 import yuyuko.patches.CardColorEnum
 import yuyuko.powers.ReunionAfterDeathPower
 import yuyuko.reduce
@@ -39,9 +40,7 @@ class ReunionAfterDeath : CustomCard(
         }
         val list = listOf(self!!.hand, self.drawPile, self.discardPile)
                 .map { it.group.filter { it.rarity != BASIC && !it.isSpecial() } }
-                .reduce(mutableListOf<AbstractCard>()) { acc, list ->
-                    acc.apply { addAll(list) }
-                }
+                .collect()
                 .map { it.cardID }
         if (list.size == list.toSet().size) {
             return true
@@ -52,7 +51,13 @@ class ReunionAfterDeath : CustomCard(
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         listOf(self!!.hand, self.drawPile, self.discardPile)
+                /**
+                 * Type: List<Group to List<Card>>
+                 */
                 .map { it to it.group.filter { it.rarity == BASIC || it.isSpecial() } }
+                /**
+                 * Type: List<Group to Card>
+                 */
                 .reduce(mutableListOf<Pair<CardGroup, AbstractCard>>()) { acc, (group, list) ->
                     val cards = list.map { group to it }
                     acc.apply { addAll(cards) }

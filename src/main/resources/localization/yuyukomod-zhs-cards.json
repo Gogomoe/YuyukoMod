@@ -261,7 +261,10 @@
   "Snowing Sakura": {
     "NAME": "西行寺樱吹雪",
     "DESCRIPTION": "减少1层扇。 NL 你每有1张 樱 ，获得1层 虚化 。 NL 每有5层 虚化 ，获得1点能量。 NL 每有3点能量，洗入1张 樱(开花) 。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "减少1层扇。 NL 你每有1张 樱 ，获得1层 虚化 。 NL 每有5层 虚化 ，获得1点能量。 NL 每有3点能量，洗入1张 樱(开花) 。 NL 重置"
+    "UPGRADE_DESCRIPTION": "减少1层扇。 NL 你每有1张 樱 ，获得1层 虚化 。 NL 每有5层 虚化 ，获得1点能量。 NL 每有3点能量，洗入1张 樱(开花) 。 NL 重置",
+    "EXTENDED_DESCRIPTION": [
+      "我没有扇了"
+    ]
   },
   "Living to Die": {
     "NAME": "生者必灭之理",

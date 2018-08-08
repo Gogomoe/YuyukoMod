@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.cards.isSpecial
+import yuyuko.collect
 import yuyuko.patches.CardColorEnum
-import yuyuko.reduce
 
 class SceneryOfPapilio : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
@@ -39,12 +39,8 @@ class SceneryOfPapilio : CustomCard(
         val groups = listOf(player.hand, player.drawPile, player.discardPile)
 
         groups
-                .map {
-                    it.group.filter(AbstractCard::isSpecial)
-                }
-                .reduce(mutableListOf<AbstractCard>()) { s, t ->
-                    s.also { it.addAll(t) }
-                }
+                .map { it.group.filter(AbstractCard::isSpecial) }
+                .collect()
                 .forEach {
                     AbstractDungeon.actionManager.addToBottom(
                             MakeTempCardInDrawPileAction(it, 1, true, true)

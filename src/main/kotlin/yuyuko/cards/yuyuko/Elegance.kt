@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import yuyuko.cards.isSakura
 import yuyuko.event.ApplyDiaphaneityPowerEvent
 import yuyuko.event.ApplyDiaphaneityPowerEvent.ApplyDiaphaneityPower.CARD
 import yuyuko.event.EventDispenser
@@ -40,7 +41,7 @@ class Elegance : CustomCard(
                     )
             )
         }
-        EventDispenser.emit(UpgradeAllEvent(Sakura.ID))
+        EventDispenser.emit(UpgradeAllEvent(AbstractCard::isSakura))
 
         val amount = self!!.getPower(FanPower.POWER_ID)?.amount ?: 0
         EventDispenser.emit(ApplyDiaphaneityPowerEvent(self, self, amount, CARD))

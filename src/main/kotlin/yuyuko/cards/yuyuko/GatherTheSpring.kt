@@ -11,8 +11,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import yuyuko.hasEnoughPower
 import yuyuko.patches.CardColorEnum
 import yuyuko.powers.FanPower
+import yuyuko.setCantUseMessage
 
 class GatherTheSpring : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
@@ -39,17 +41,10 @@ class GatherTheSpring : CustomCard(
 
     override fun makeCopy(): AbstractCard = GatherTheSpring()
 
-    override fun canUse(self: AbstractPlayer?, target: AbstractMonster?): Boolean {
-        if (!super.canUse(self, target)) {
-            return false
-        }
-        val amount = self!!.getPower(FanPower.POWER_ID)?.amount ?: 0
-        if (amount < 1) {
-            this.cantUseMessage = EXTENDED_DESCRIPTION[0]
-            return false
-        }
-        return true
-    }
+    override fun canUse(self: AbstractPlayer?, target: AbstractMonster?): Boolean =
+            super.canUse(self, target) && self!!.hasEnoughPower(FanPower.POWER_ID).also {
+                setCantUseMessage(it, EXTENDED_DESCRIPTION[0])
+            }
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         AbstractDungeon.actionManager.addToBottom(

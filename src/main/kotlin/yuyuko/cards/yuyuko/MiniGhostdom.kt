@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import yuyuko.cards.isButterfly
+import yuyuko.cards.isSakura
 import yuyuko.event.EventDispenser
 import yuyuko.event.UpgradeAllEvent
 import yuyuko.getRandom
@@ -63,8 +65,8 @@ class MiniGhostdom : CustomCard(
         AbstractDungeon.actionManager.addToBottom(
                 MakeTempCardInDrawPileAction(butterfly!!(), 1, true, true)
         )
-        EventDispenser.emit(UpgradeAllEvent(Sakura.ID))
-        EventDispenser.emit(UpgradeAllEvent(Butterfly.ID))
+        EventDispenser.emit(UpgradeAllEvent(AbstractCard::isSakura))
+        EventDispenser.emit(UpgradeAllEvent(AbstractCard::isButterfly))
         AbstractDungeon.actionManager.addToBottom(
                 DrawCardAction(self, 1)
         )

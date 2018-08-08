@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.actions.ReviveAction
+import yuyuko.cards.isButterfly
 import yuyuko.patches.CardColorEnum
 
 class RedemptionOfDeath : CustomCard(
@@ -46,7 +47,7 @@ class RedemptionOfDeath : CustomCard(
                 )
         )
         AbstractDungeon.actionManager.addToBottom(
-                ReviveAction(Butterfly.ID)
+                ReviveAction(AbstractCard::isButterfly)
         )
     }
 

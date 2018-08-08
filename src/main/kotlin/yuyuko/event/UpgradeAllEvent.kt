@@ -1,9 +1,10 @@
 package yuyuko.event
 
+import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import yuyuko.actions.UpgradeAllAction
 
-class UpgradeAllEvent(val cardID: String, var times: Int = 1) : Event(ID) {
+class UpgradeAllEvent(val condition: (AbstractCard) -> Boolean, var times: Int = 1) : Event(ID) {
 
     companion object {
         val ID = "UpgradeAll"
@@ -14,7 +15,7 @@ class UpgradeAllEvent(val cardID: String, var times: Int = 1) : Event(ID) {
             return
         }
         AbstractDungeon.actionManager.addToBottom(
-                UpgradeAllAction(cardID, times)
+                UpgradeAllAction(condition, times)
         )
         done()
     }

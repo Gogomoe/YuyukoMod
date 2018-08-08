@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.powers.AbstractPower
 import yuyuko.actions.RetrieveAction
 import yuyuko.cards.isSakura
-import yuyuko.cards.yuyuko.Sakura
 import yuyuko.event.DegradeEvent
 import yuyuko.event.DegradeEvent.DegradeReason.USE
 import yuyuko.event.EventDispenser
@@ -54,9 +53,9 @@ class ShowyWitheringPower(amount: Int = 1) : AbstractPower() {
 
     override fun atStartOfTurn() {
         this.flash()
-        EventDispenser.emit(UpgradeAllEvent(Sakura.ID, amount))
+        EventDispenser.emit(UpgradeAllEvent(AbstractCard::isSakura, amount))
         AbstractDungeon.actionManager.addToBottom(
-                RetrieveAction(Sakura.ID, this.amount)
+                RetrieveAction(AbstractCard::isSakura, this.amount)
         )
     }
 

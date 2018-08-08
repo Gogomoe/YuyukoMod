@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import com.megacrit.cardcrawl.powers.NoDrawPower
 import yuyuko.actions.RetrieveAction
+import yuyuko.cards.isButterfly
 import yuyuko.patches.CardColorEnum
 import yuyuko.powers.GhastlyDreamPower
 
@@ -39,7 +40,7 @@ class GhastlyDream : CustomCard(
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         val count = 10 - self!!.hand.group.size
         AbstractDungeon.actionManager.addToBottom(
-                RetrieveAction(Butterfly.ID, count)
+                RetrieveAction(AbstractCard::isButterfly, count)
         )
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(

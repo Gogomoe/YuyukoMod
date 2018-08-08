@@ -6,8 +6,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.powers.AbstractPower
 import yuyuko.actions.ReviveAction
+import yuyuko.cards.isButterfly
 import yuyuko.cards.isSpecial
-import yuyuko.cards.yuyuko.Butterfly
 
 class ReviveTheButterfliesPower : AbstractPower() {
 
@@ -32,7 +32,7 @@ class ReviveTheButterfliesPower : AbstractPower() {
     override fun onAfterCardPlayed(usedCard: AbstractCard?) {
         if (!usedCard!!.isSpecial()) {
             AbstractDungeon.actionManager.addToBottom(
-                    ReviveAction(Butterfly.ID)
+                    ReviveAction(AbstractCard::isButterfly)
             )
         }
     }

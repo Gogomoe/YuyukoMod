@@ -2,12 +2,13 @@ package yuyuko.powers
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction
+import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.powers.AbstractPower
 import yuyuko.Property
-import yuyuko.cards.yuyuko.Sakura
+import yuyuko.cards.isSakura
 import yuyuko.event.EventDispenser
 import yuyuko.event.Observer
 import yuyuko.event.UpgradeAllEvent
@@ -28,7 +29,7 @@ class PostponeBloomPower(amount: Int = 1) : AbstractPower() {
                 this as PostponeBloomPower
                 EventDispenser.unsubscribe(UpgradeAllEvent.ID, observer!!)
 
-                EventDispenser.emit(UpgradeAllEvent(Sakura.ID, count))
+                EventDispenser.emit(UpgradeAllEvent(AbstractCard::isSakura, count))
                 AbstractDungeon.actionManager.addToBottom(
                         DrawCardAction(owner, count)
                 )
@@ -57,7 +58,7 @@ class PostponeBloomPower(amount: Int = 1) : AbstractPower() {
 
     override fun onInitialApplication() {
         observer = EventDispenser.subscribe(UpgradeAllEvent.ID) {
-            if (cardID == Sakura.ID) {
+            if (condition == AbstractCard::isSakura) {
                 count += amount
                 flash()
                 updateDescription()

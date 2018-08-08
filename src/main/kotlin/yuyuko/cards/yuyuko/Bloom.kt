@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import yuyuko.cards.isSakura
 import yuyuko.event.EventDispenser
 import yuyuko.event.UpgradeAllEvent
 import yuyuko.patches.CardColorEnum
@@ -36,7 +37,7 @@ class Bloom : CustomCard(
     override fun makeCopy(): AbstractCard = Bloom()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        EventDispenser.emit(UpgradeAllEvent(Sakura.ID))
+        EventDispenser.emit(UpgradeAllEvent(AbstractCard::isSakura))
         AbstractDungeon.actionManager.addToBottom(
                 DrawCardAction(self, this.magicNumber)
         )

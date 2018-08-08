@@ -15,9 +15,11 @@ import yuyuko.cards.isSakura
 import yuyuko.event.ApplyDiaphaneityPowerEvent
 import yuyuko.event.ApplyDiaphaneityPowerEvent.ApplyDiaphaneityPower.CARD
 import yuyuko.event.EventDispenser
+import yuyuko.hasEnoughPower
 import yuyuko.patches.CardColorEnum
 import yuyuko.powers.DiaphaneityPower
 import yuyuko.powers.FanPower
+import yuyuko.setCantUseMessage
 
 class SnowingSakura : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
@@ -33,11 +35,18 @@ class SnowingSakura : CustomCard(
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
         val UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION!!
+        val EXTENDED_DESCRIPTION = CARD_STRINGS.EXTENDED_DESCRIPTION!!
     }
 
     init {
         this.exhaust = true
     }
+
+    override fun canUse(self: AbstractPlayer?, target: AbstractMonster?): Boolean =
+            super.canUse(self, target) && self!!.hasEnoughPower(FanPower.POWER_ID).also {
+                setCantUseMessage(it, EXTENDED_DESCRIPTION[0])
+            }
+
 
     override fun makeCopy(): AbstractCard = SnowingSakura()
 

@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import yuyuko.cards.isSakura
 import yuyuko.event.ApplyDiaphaneityPowerEvent
 import yuyuko.event.ApplyDiaphaneityPowerEvent.ApplyDiaphaneityPower.CARD
 import yuyuko.event.EventDispenser
@@ -38,7 +39,7 @@ class DreamySakura : CustomCard(
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
         EventDispenser.emit(ApplyDiaphaneityPowerEvent(self!!, self, this.magicNumber, CARD))
 
-        EventDispenser.emit(UpgradeAllEvent(Sakura.ID))
+        EventDispenser.emit(UpgradeAllEvent(AbstractCard::isSakura))
     }
 
     override fun upgrade() {

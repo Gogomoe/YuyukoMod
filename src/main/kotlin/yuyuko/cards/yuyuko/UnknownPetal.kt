@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.actions.ReviveAction
+import yuyuko.cards.isSakura
 import yuyuko.event.DegradeEvent
 import yuyuko.event.DegradeEvent.DegradeReason.USE
 import yuyuko.event.EventDispenser
@@ -40,7 +41,7 @@ class UnknownPetal : CustomCard(
                 HealAction(self, self, this.magicNumber)
         )
         AbstractDungeon.actionManager.addToBottom(
-                ReviveAction(Sakura.ID)
+                ReviveAction(AbstractCard::isSakura)
         )
         EventDispenser.emit(DegradeEvent(this, USE, this::degradeToInitiation))
     }

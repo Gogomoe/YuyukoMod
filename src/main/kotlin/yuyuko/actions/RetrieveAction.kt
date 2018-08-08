@@ -5,12 +5,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType.DRAW_PILE
 import com.megacrit.cardcrawl.core.Settings
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
-import yuyuko.cards.isButterfly
-import yuyuko.cards.isSakura
-import yuyuko.cards.yuyuko.Butterfly
-import yuyuko.cards.yuyuko.Sakura
 
-class RetrieveAction(val cardID: String, val count: Int = 1) : AbstractGameAction() {
+class RetrieveAction(val condition: (AbstractCard) -> Boolean, val count: Int = 1) : AbstractGameAction() {
 
     init {
         this.duration = Settings.ACTION_DUR_MED
@@ -28,12 +24,6 @@ class RetrieveAction(val cardID: String, val count: Int = 1) : AbstractGameActio
                     group.group.reversed()
                 } else {
                     group.group
-                }
-
-                val condition = when (cardID) {
-                    Butterfly.ID -> AbstractCard::isButterfly
-                    Sakura.ID -> AbstractCard::isSakura
-                    else -> ({ card: AbstractCard -> card.cardID == cardID } as (AbstractCard) -> Boolean)
                 }
 
                 val card = list.find(condition)

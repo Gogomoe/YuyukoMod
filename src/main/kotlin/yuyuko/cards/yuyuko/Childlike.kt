@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import yuyuko.actions.ReviveAction
+import yuyuko.cards.isButterfly
+import yuyuko.cards.isSakura
 import yuyuko.cards.isSpecial
 import yuyuko.event.EventDispenser
 import yuyuko.event.UpgradeAllEvent
@@ -38,11 +40,11 @@ class Childlike : CustomCard(
                             ExhaustSpecificCardAction(it, self.hand)
                     )
                 }
-        EventDispenser.emit(UpgradeAllEvent(Sakura.ID))
-        EventDispenser.emit(UpgradeAllEvent(Butterfly.ID))
+        EventDispenser.emit(UpgradeAllEvent(AbstractCard::isSakura))
+        EventDispenser.emit(UpgradeAllEvent(AbstractCard::isButterfly))
         if (!self.exhaustPile.isEmpty) {
             AbstractDungeon.actionManager.addToBottom(
-                    ReviveAction(self.exhaustPile.bottomCard.cardID)
+                    ReviveAction { true }
             )
         }
 

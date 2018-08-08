@@ -261,7 +261,10 @@
   "Snowing Sakura": {
     "NAME": "Snowing Sakura",
     "DESCRIPTION": "Reduce 1 Fan.Reward in turn:1 Sakura for Diaphaneity,5 Diaphaneity for Energy,3 Energy for Sakura(Bloom) (to card pile). Exhaust",
-    "UPGRADE_DESCRIPTION": "Reduce 1 Fan.Reward in turn:1 Sakura for Diaphaneity,5 Diaphaneity for Energy,3 Energy for Sakura(Bloom) (to card pile). Reset"
+    "UPGRADE_DESCRIPTION": "Reduce 1 Fan.Reward in turn:1 Sakura for Diaphaneity,5 Diaphaneity for Energy,3 Energy for Sakura(Bloom) (to card pile). Reset",
+    "EXTENDED_DESCRIPTION": [
+      "I don't have enough Fan"
+    ]
   },
   "Living to Die": {
     "NAME": "Living to Die",

@@ -5,12 +5,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType.CARD_MANIPUL
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.core.Settings
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
-import yuyuko.cards.isButterfly
-import yuyuko.cards.isSakura
-import yuyuko.cards.yuyuko.Butterfly
-import yuyuko.cards.yuyuko.Sakura
 
-class ReviveAction(val cardID: String) : AbstractGameAction() {
+class ReviveAction(val condition: (AbstractCard) -> Boolean) : AbstractGameAction() {
 
     init {
         this.duration = Settings.ACTION_DUR_MED
@@ -21,12 +17,6 @@ class ReviveAction(val cardID: String) : AbstractGameAction() {
 
         val group = AbstractDungeon.player.exhaustPile
         val list = group.group
-
-        val condition = when (cardID) {
-            Butterfly.ID -> AbstractCard::isButterfly
-            Sakura.ID -> AbstractCard::isSakura
-            else -> ({ card: AbstractCard -> card.cardID == cardID } as (AbstractCard) -> Boolean)
-        }
 
         val card = list.find(condition)
 
