@@ -156,5 +156,11 @@
     "DESCRIPTIONS": [
       "Next turn , place a Trap Lamp into hand"
     ]
+  },
+  "Infinite Reviving": {
+    "NAME": "Infinite Reviving",
+    "DESCRIPTIONS": [
+      "When receive damage,Place Infinite Reviving into hand"
+    ]
   }
 }

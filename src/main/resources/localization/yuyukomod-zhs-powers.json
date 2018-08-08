@@ -156,5 +156,11 @@
     "DESCRIPTIONS": [
       "下一回合，将一张 通向黄泉的诱蛾灯 放入手牌"
     ]
+  },
+  "Infinite Reviving": {
+    "NAME": "西行寺无余涅槃",
+    "DESCRIPTIONS": [
+      "当你受到伤害时，将 西行寺无余涅槃 放入手牌"
+    ]
   }
 }

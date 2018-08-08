@@ -335,6 +335,14 @@
     "NAME": "Ghastly Dream",
     "DESCRIPTION": "Retrieve Butterfly up to fill your hand. NL This turn your Butterfly will be played for extra !M! times and Exhaust, NL You can't draw cards during the turn"
   },
+  "Infinite Reviving": {
+    "NAME": "Infinite Reviving",
+    "DESCRIPTION": "Reduce 1 Fan, Revive Sakura , Revive Butterfly .When damaged, place into hand. Exhaust",
+    "UPGRADE_DESCRIPTION": "Reduce 1 Fan, Revive Sakura , Revive Butterfly , Revive Derivate .When damaged, place into hand. Exhaust",
+    "EXTENDED_DESCRIPTION": [
+      "I don't have Fan"
+    ]
+  },
   "Float on Moon": {
     "NAME": "Float on Moon",
     "DESCRIPTION": "At the start of turn, UpgradeAll Butterfly for 3 times, Reduce 1 draw. NL Your Derivate Butterfly will Deal 3 times damage and exhaust",

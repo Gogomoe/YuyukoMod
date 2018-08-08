@@ -69,6 +69,7 @@ import yuyuko.cards.yuyuko.GhostSpot
 import yuyuko.cards.yuyuko.GhostdomSakura
 import yuyuko.cards.yuyuko.Gone
 import yuyuko.cards.yuyuko.ImmigrantPhantom
+import yuyuko.cards.yuyuko.InfiniteReviving
 import yuyuko.cards.yuyuko.InfiniteSin
 import yuyuko.cards.yuyuko.LingerOverFlower
 import yuyuko.cards.yuyuko.LivingToDie
@@ -289,6 +290,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         addCard(ButterfliesRainbow())
         addCard(ButterfliesInDream())
         addCard(GhastlyDream())
+        addCard(InfiniteReviving())
         addCard(FloatOnMoon())
         addCard(ReviveTheButterflies())
 

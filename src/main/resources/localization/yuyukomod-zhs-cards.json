@@ -335,6 +335,14 @@
     "NAME": "惊梦",
     "DESCRIPTION": "检索 蝶 直到填满手牌。 NL 本回合你的 蝶 会额外打出 !M! 次并消耗 ， NL 本回合你不能再抽牌"
   },
+  "Infinite Reviving": {
+    "NAME": "西行寺无余涅槃",
+    "DESCRIPTION": "损失1层 扇 ， 反魂 樱 ， 反魂 蝶 。下次受到伤害时再次加入手牌， 消耗",
+    "UPGRADE_DESCRIPTION": "损失1层 扇 ， 反魂 樱 ， 反魂 蝶 ， 返魂 衍生 。下次受到伤害时再次加入手牌， 消耗",
+    "EXTENDED_DESCRIPTION": [
+      "我没有扇了"
+    ]
+  },
   "Float on Moon": {
     "NAME": "死蝶浮月",
     "DESCRIPTION": "回合开始时， 升级所有 蝶 3次，少抽1张牌。 NL 你的 衍生蝶 会造成3倍伤害并 消耗",
