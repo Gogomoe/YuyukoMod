@@ -162,5 +162,12 @@
     "DESCRIPTIONS": [
       "When receive damage,Place Infinite Reviving into hand"
     ]
+  },
+  "Ticket to Heaven": {
+    "NAME": "Ticket to Heaven",
+    "DESCRIPTIONS": [
+      "Receive extra #b",
+      " times damage from Constricted"
+    ]
   }
 }

@@ -162,5 +162,12 @@
     "DESCRIPTIONS": [
       "当你受到伤害时，将 西行寺无余涅槃 放入手牌"
     ]
+  },
+  "Ticket to Heaven": {
+    "NAME": "通往无寿国的期票",
+    "DESCRIPTIONS": [
+      "受到额外 #b",
+      " 倍缠绕伤害"
+    ]
   }
 }

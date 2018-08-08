@@ -111,6 +111,7 @@ import yuyuko.cards.yuyuko.SweetOfPhantom
 import yuyuko.cards.yuyuko.TheForgottenWinter
 import yuyuko.cards.yuyuko.TheInkySakura
 import yuyuko.cards.yuyuko.TheNether
+import yuyuko.cards.yuyuko.TicketToHeaven
 import yuyuko.cards.yuyuko.TrapLamp
 import yuyuko.cards.yuyuko.TripleSnow
 import yuyuko.cards.yuyuko.UnbornLight
@@ -307,6 +308,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         addCard(TrapLamp())
         addCard(DyingDream())
         addCard(GhostSpot())
+        addCard(TicketToHeaven())
 
         addPowers()
     }

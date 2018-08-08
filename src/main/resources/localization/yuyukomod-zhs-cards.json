@@ -418,5 +418,10 @@
   "Ghost Spot": {
     "NAME": "幽魂聚地",
     "DESCRIPTION": "获得10层 幽灵 ， NL 消耗"
+  },
+  "Ticket to Heaven": {
+    "NAME": "通往无寿国的期票",
+    "DESCRIPTION": "给予 10 消逝 ，目标格外受到一倍的 缠绕 伤害。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "给予 10 消逝 ，目标格外受到一倍的 缠绕 伤害。 NL 固有 ， 消耗"
   }
 }

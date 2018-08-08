@@ -418,5 +418,10 @@
   "Ghost Spot": {
     "NAME": "Ghost Spot",
     "DESCRIPTION": "Gain 10 Phantom , NL Exhaust"
+  },
+  "Ticket to Heaven": {
+    "NAME": "Ticket to Heaven",
+    "DESCRIPTION": "Give 10 Fading , target will receive extra 1 times damage from Constricted . Exhaust",
+    "UPGRADE_DESCRIPTION": "Give 10 Fading , target will receive extra 1 times damage from Constricted . Innate , Exhaust"
   }
 }

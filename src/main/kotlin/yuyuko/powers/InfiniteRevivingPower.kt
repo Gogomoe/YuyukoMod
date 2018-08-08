@@ -29,7 +29,7 @@ class InfiniteRevivingPower(val card: AbstractCard) : AbstractPower() {
         this.updateDescription()
         this.type = PowerType.BUFF
         this.isTurnBased = false
-        this.img = ImageMaster.loadImage("images/powers/chaseTheSukhavati.png")//TODO
+        this.img = ImageMaster.loadImage("images/powers/infiniteReviving.png")
 
         cards.add(card)
     }
