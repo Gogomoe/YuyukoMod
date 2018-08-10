@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.powers.AbstractPower
 import yuyuko.event.EndOfRoundDiaphaneityReduceEvent
 import yuyuko.event.EventDispenser
+import yuyuko.relics.BlueKimonoFullMoon
 import kotlin.math.max
 import kotlin.math.min
 
@@ -33,6 +34,10 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
         this.img = ImageMaster.loadImage("images/powers/diaphaneity.png")
     }
 
+    private val rateInt: Int
+        get() = if (AbstractDungeon.player.hasRelic(BlueKimonoFullMoon.ID)) 6 else 5
+    private val rate: Float
+        get() = if (AbstractDungeon.player.hasRelic(BlueKimonoFullMoon.ID)) 0.06f else 0.05f
 
     override fun reducePower(reduceAmount: Int) {
         super.reducePower(reduceAmount)
@@ -46,8 +51,8 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
     override fun atDamageReceive(damage: Float, damageType: DamageType?): Float {
         return when {
             damageType != DamageType.NORMAL -> damage
-            this.owner == AbstractDungeon.player -> damage * max((1 - 0.05f * amount), 0f)
-            else -> damage * min((1 + 0.05f * amount), 2f)
+            this.owner == AbstractDungeon.player -> damage * max((1 - rate * amount), 0f)
+            else -> damage * min((1 + rate * amount), 2f)
         }
     }
 
@@ -58,9 +63,9 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
 
     override fun updateDescription() {
         this.description = if (this.owner == AbstractDungeon.player) {
-            DESCRIPTIONS[0] + min(this.amount * 5, 100) + DESCRIPTIONS[2]
+            DESCRIPTIONS[0] + min(this.amount * rateInt, 100) + DESCRIPTIONS[2]
         } else {
-            DESCRIPTIONS[1] + min(this.amount * 5, 100) + DESCRIPTIONS[2]
+            DESCRIPTIONS[1] + min(this.amount * rateInt, 100) + DESCRIPTIONS[2]
         }
     }
 

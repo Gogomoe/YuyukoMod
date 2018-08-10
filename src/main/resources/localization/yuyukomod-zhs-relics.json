@@ -28,5 +28,41 @@
     "DESCRIPTIONS": [
       "每 #b3 回合，将一张 #y蝶 洗入牌堆"
     ]
+  },
+  "Blue Kimono": {
+    "NAME": "蓝色和服",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "拾起时，从 #y樱花、 #y蝴蝶、 #y幽灵、 #y满月 中选择一种样式。",
+      "选择一种样式"
+    ]
+  },
+  "Blue Kimono (Sakura)": {
+    "NAME": "蓝色和服 (樱花)",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "抽到没有额外效果的 #y衍生樱 后，使其获得随机额外效果。 NL 你的 #y樱 会对敌方全体附加 #b3% 最大生命上限的体力流失"
+    ]
+  },
+  "Blue Kimono (Butterfly)": {
+    "NAME": "蓝色和服 (蝴蝶)",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "抽到没有额外效果的 #y衍生蝶 后，使其获得随机额外效果。 NL 你的 #y蝶 会回复自身 #b3% 生命上限的生命"
+    ]
+  },
+  "Blue Kimono (Phantom)": {
+    "NAME": "蓝色和服 (幽灵)",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "每3次回合结束，额外触发 #b1 次 #y幽灵 效果。 NL 回合开始时，将 #b1 张 #y灵 加入手牌"
+    ]
+  },
+  "Blue Kimono (FullMoon)": {
+    "NAME": "蓝色和服 (满月)",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "将 #y虚化 的效果提升 #b1% 。 NL 回合结束时，你每有5层 #y虚化 将获得 #b1 点 #y格挡 ，敌人每有5层 #y虚化 将失去 #b1 点体力"
+    ]
   }
 }

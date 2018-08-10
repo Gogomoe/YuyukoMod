@@ -145,6 +145,11 @@ import yuyuko.powers.ShowyWitheringPower
 import yuyuko.powers.SupernaturalNetherPower
 import yuyuko.powers.TheForgottenWinterPower
 import yuyuko.powers.TripleSnowPower
+import yuyuko.relics.BlueKimono
+import yuyuko.relics.BlueKimonoButterfly
+import yuyuko.relics.BlueKimonoFullMoon
+import yuyuko.relics.BlueKimonoPhantom
+import yuyuko.relics.BlueKimonoSakura
 import yuyuko.relics.Coronal
 import yuyuko.relics.GhostLamp
 import yuyuko.relics.Yuyukosfan
@@ -348,6 +353,12 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         BaseMod.addRelicToCustomPool(Coronal(), CardColorEnum.YUYUKO_COLOR.toString())
         BaseMod.addRelicToCustomPool(GhostLamp(), CardColorEnum.YUYUKO_COLOR.toString())
         BaseMod.addRelicToCustomPool(yuyuko.relics.TrapLamp(), CardColorEnum.YUYUKO_COLOR.toString())
+
+        BaseMod.addRelicToCustomPool(BlueKimono(), CardColorEnum.YUYUKO_COLOR.toString())
+        BaseMod.addRelicToCustomPool(BlueKimonoSakura(), CardColorEnum.YUYUKO_COLOR.toString())
+        BaseMod.addRelicToCustomPool(BlueKimonoButterfly(), CardColorEnum.YUYUKO_COLOR.toString())
+        BaseMod.addRelicToCustomPool(BlueKimonoPhantom(), CardColorEnum.YUYUKO_COLOR.toString())
+        BaseMod.addRelicToCustomPool(BlueKimonoFullMoon(), CardColorEnum.YUYUKO_COLOR.toString())
     }
 
     override fun receiveEditKeywords() {
