@@ -55,6 +55,10 @@
     "NAME": "蝶 (妄想)",
     "DESCRIPTION": "造成 !D! 点伤害，抽1张牌， NL 给予2层 虚化 ， NL 可多次升级。 重置"
   },
+  "Soul": {
+    "NAME": "灵",
+    "DESCRIPTION": "不能打出， 虚无"
+  },
   "Explore": {
     "NAME": "探索",
     "DESCRIPTION": "发现 3。 NL 消耗",
@@ -331,14 +335,19 @@
     "NAME": "幽梦的蝴蝶",
     "DESCRIPTION": "是 蝶 。 NL 用 !M! 张蝶替换所有手牌，最多 10 张， NL 可多次升级。 重置"
   },
+  "Dancing Soul": {
+    "NAME": "死蝶之舞",
+    "DESCRIPTION": "造成等同于手牌中 蝶 张数点伤害。 NL 下次抽到蝶时再次加入手牌。 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "造成等同于手牌中 蝶 张数点伤害。 NL 下次抽到蝶时再次加入手牌。 NL 消耗 ， 固有"
+  },
   "Ghastly Dream": {
     "NAME": "惊梦",
     "DESCRIPTION": "检索 蝶 直到填满手牌。 NL 本回合你的 蝶 会额外打出 !M! 次并消耗 ， NL 本回合你不能再抽牌"
   },
   "Infinite Reviving": {
     "NAME": "西行寺无余涅槃",
-    "DESCRIPTION": "损失1层 扇 ， 反魂 樱 ， 反魂 蝶 。下次受到伤害时再次加入手牌， 消耗",
-    "UPGRADE_DESCRIPTION": "损失1层 扇 ， 反魂 樱 ， 反魂 蝶 ， 返魂 衍生 。下次受到伤害时再次加入手牌， 消耗",
+    "DESCRIPTION": "损失1层 扇 ， 反魂 樱 ， 反魂 蝶 。 NL 下次受到伤害时再次加入手牌。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "损失1层 扇 ， 反魂 樱 ， 反魂 蝶 ， 返魂 衍生 。 NL 下次受到伤害时再次加入手牌。 NL 消耗",
     "EXTENDED_DESCRIPTION": [
       "我没有扇了"
     ]

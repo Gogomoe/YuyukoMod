@@ -18,6 +18,7 @@ import yuyuko.cards.yuyuko.SakuraBloom
 import yuyuko.cards.yuyuko.SakuraDormancy
 import yuyuko.cards.yuyuko.SakuraSeal
 import yuyuko.cards.yuyuko.SakuraSuicide
+import yuyuko.cards.yuyuko.Soul
 import yuyuko.cards.yuyuko.TheInkySakura
 import yuyuko.cards.yuyuko.UnknownPetal
 
@@ -48,7 +49,7 @@ private val SpecialCardIDS = setOf(
         SakuraSeal.ID, SakuraSuicide.ID,
         Butterfly.ID, ButterflySwallowtail.ID, ButterflyGhost.ID,
         ButterflyDeepRooted.ID, ButterflyDelusion.ID,
-        Explore.ID, Photo.ID
+        Soul.ID, Explore.ID, Photo.ID
 )
 
 fun AbstractCard.isButterfly(): Boolean = this.cardID in ButterflyIDS

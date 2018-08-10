@@ -60,6 +60,10 @@
     "DESCRIPTION": "Discover 3. NL Exhaust",
     "UPGRADE_DESCRIPTION": " Discover 3, NL Gain 1 Diaphaneity . NL Exhaust"
   },
+  "Soul": {
+    "NAME": "Soul",
+    "DESCRIPTION": "can't play. Ethereal"
+  },
   "Photo": {
     "NAME": "Photo",
     "DESCRIPTION": "Set HP to !M! . NL Exhaust"
@@ -330,6 +334,11 @@
   "Butterflies in Dream": {
     "NAME": "Butterflies in Dream",
     "DESCRIPTION": "Is Butterfly . Replace all your hand to !M! Butterfly , up to 10. NL Can be upgraded any number of times. Exhaust"
+  },
+  "Dancing Soul": {
+    "NAME": "Dancing Soul",
+    "DESCRIPTION": "Deal count of butterflies in hand damage. When draw Butterfly,place into hand. Exhaust",
+    "UPGRADE_DESCRIPTION": "Deal count of butterflies in hand damage. When draw Butterfly,place into hand. Exhaust , Innate"
   },
   "Ghastly Dream": {
     "NAME": "Ghastly Dream",

@@ -160,7 +160,13 @@
   "Infinite Reviving": {
     "NAME": "Infinite Reviving",
     "DESCRIPTIONS": [
-      "When receive damage,Place Infinite Reviving into hand"
+      "When receive damage,Place Infinite into hand"
+    ]
+  },
+  "Dancing Soul": {
+    "NAME": "Dancing Soul",
+    "DESCRIPTIONS": [
+      "When draw Butterfly ,Place Dancing Soul into hand"
     ]
   },
   "Ticket to Heaven": {

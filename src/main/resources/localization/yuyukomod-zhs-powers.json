@@ -163,6 +163,12 @@
       "当你受到伤害时，将 西行寺无余涅槃 放入手牌"
     ]
   },
+  "Dancing Soul": {
+    "NAME": "死蝶之舞",
+    "DESCRIPTIONS": [
+      "当你抽到 蝶 时，将 死蝶之舞 放入手牌"
+    ]
+  },
   "Ticket to Heaven": {
     "NAME": "通往无寿国的期票",
     "DESCRIPTIONS": [

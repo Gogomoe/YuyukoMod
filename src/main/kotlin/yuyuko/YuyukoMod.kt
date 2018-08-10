@@ -46,6 +46,7 @@ import yuyuko.cards.yuyuko.CerasusSubhirtella
 import yuyuko.cards.yuyuko.ChaseTheSukhavati
 import yuyuko.cards.yuyuko.Childlike
 import yuyuko.cards.yuyuko.DancingButterflies
+import yuyuko.cards.yuyuko.DancingSoul
 import yuyuko.cards.yuyuko.DeathDancing
 import yuyuko.cards.yuyuko.DeathlyGround
 import yuyuko.cards.yuyuko.DreamySakura
@@ -102,6 +103,7 @@ import yuyuko.cards.yuyuko.ShowyWithering
 import yuyuko.cards.yuyuko.Snow
 import yuyuko.cards.yuyuko.SnowingSakura
 import yuyuko.cards.yuyuko.SongOfPapilio
+import yuyuko.cards.yuyuko.Soul
 import yuyuko.cards.yuyuko.SpearOfPapilio
 import yuyuko.cards.yuyuko.SteamedPhantom
 import yuyuko.cards.yuyuko.Stifle
@@ -224,6 +226,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         addCard(ButterflyDeepRooted())
         addCard(ButterflyDelusion())
 
+        addCard(Soul())
         addCard(Explore())
         addCard(Photo())
 
@@ -290,6 +293,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         addCard(InfiniteSin())
         addCard(ButterfliesRainbow())
         addCard(ButterfliesInDream())
+        addCard(DancingSoul())
         addCard(GhastlyDream())
         addCard(InfiniteReviving())
         addCard(FloatOnMoon())

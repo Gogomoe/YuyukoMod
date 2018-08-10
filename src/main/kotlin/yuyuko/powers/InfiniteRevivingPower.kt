@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.powers.AbstractPower
 import yuyuko.actions.ReviveAction
 
-class InfiniteRevivingPower(val card: AbstractCard) : AbstractPower() {
+class InfiniteRevivingPower(card: AbstractCard) : AbstractPower() {
 
     companion object {
         @JvmStatic

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic
 import yuyuko.cards.yuyuko.Butterfly
 import yuyuko.cards.yuyuko.Sakura
 import yuyuko.powers.FanPower
+import kotlin.math.min
 
 
 class Yuyukosfan : CustomRelic(
@@ -80,7 +81,8 @@ class Yuyukosfan : CustomRelic(
 
     override fun onVictory() {
         this.flash()
-        AbstractDungeon.player.damage(DamageInfo(null, turns, HP_LOSS))
+        val damage = min(turns, AbstractDungeon.player.currentHealth - 1)
+        AbstractDungeon.player.damage(DamageInfo(null, damage, HP_LOSS))
     }
 
     fun updateDescription() {
