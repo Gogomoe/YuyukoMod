@@ -19,7 +19,7 @@ import yuyuko.patches.CardColorEnum
 class BlueKimono : CustomRelic(
         ID,
         ImageMaster.loadImage(IMAGE_PATH),
-        RelicTier.SPECIAL,
+        RelicTier.BOSS,
         LandingSound.MAGICAL
 ) {
     override fun makeCopy(): AbstractRelic = BlueKimono()
