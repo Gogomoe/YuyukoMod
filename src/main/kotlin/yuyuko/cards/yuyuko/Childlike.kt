@@ -42,11 +42,9 @@ class Childlike : CustomCard(
                 }
         EventDispenser.emit(UpgradeAllEvent(AbstractCard::isSakura))
         EventDispenser.emit(UpgradeAllEvent(AbstractCard::isButterfly))
-        if (!self.exhaustPile.isEmpty) {
-            AbstractDungeon.actionManager.addToBottom(
-                    ReviveAction { true }
-            )
-        }
+        AbstractDungeon.actionManager.addToBottom(
+                ReviveAction { true }
+        )
 
     }
 
