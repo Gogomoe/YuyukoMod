@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
 import com.megacrit.cardcrawl.actions.common.DamageAction
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction
 import com.megacrit.cardcrawl.cards.DamageInfo
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType
 import com.megacrit.cardcrawl.core.AbstractCreature
@@ -38,17 +37,6 @@ class GhostPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
         this.isTurnBased = true
         this.img = ImageMaster.loadImage("images/powers/ghost.png")
     }
-
-
-    override fun reducePower(reduceAmount: Int) {
-        super.reducePower(reduceAmount)
-        if (this.amount == 0) {
-            AbstractDungeon.actionManager.addToTop(
-                    RemoveSpecificPowerAction(this.owner, this.owner, this)
-            )
-        }
-    }
-
 
     override fun atEndOfTurn(isPlayer: Boolean) {
         if (!isPlayer) {

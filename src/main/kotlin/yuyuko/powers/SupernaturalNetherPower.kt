@@ -1,7 +1,6 @@
 package yuyuko.powers
 
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.helpers.ImageMaster
@@ -29,15 +28,6 @@ class SupernaturalNetherPower(amount: Int = 1) : AbstractPower() {
         this.type = PowerType.BUFF
         this.isTurnBased = true
         this.img = ImageMaster.loadImage("images/powers/supernaturalNether.png")
-    }
-
-    override fun reducePower(reduceAmount: Int) {
-        super.reducePower(reduceAmount)
-        if (this.amount == 0) {
-            AbstractDungeon.actionManager.addToTop(
-                    RemoveSpecificPowerAction(this.owner, this.owner, this)
-            )
-        }
     }
 
 

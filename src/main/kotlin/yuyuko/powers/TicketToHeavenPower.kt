@@ -1,9 +1,7 @@
 package yuyuko.powers
 
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction
 import com.megacrit.cardcrawl.core.AbstractCreature
 import com.megacrit.cardcrawl.core.CardCrawlGame
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.powers.AbstractPower
 import com.megacrit.cardcrawl.powers.AbstractPower.PowerType.DEBUFF
@@ -29,15 +27,6 @@ class TicketToHeavenPower(owner: AbstractCreature, amount: Int = 1) : AbstractPo
         this.type = DEBUFF
         this.isTurnBased = false
         this.img = ImageMaster.loadImage("images/powers/ticketToHeaven.png")
-    }
-
-    override fun reducePower(reduceAmount: Int) {
-        super.reducePower(reduceAmount)
-        if (this.amount == 0) {
-            AbstractDungeon.actionManager.addToTop(
-                    RemoveSpecificPowerAction(this.owner, this.owner, this)
-            )
-        }
     }
 
     override fun updateDescription() {

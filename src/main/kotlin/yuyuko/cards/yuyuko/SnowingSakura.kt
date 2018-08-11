@@ -4,7 +4,6 @@ import basemod.abstracts.CustomCard
 import com.megacrit.cardcrawl.actions.AbstractGameAction
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
@@ -51,15 +50,10 @@ class SnowingSakura : CustomCard(
     override fun makeCopy(): AbstractCard = SnowingSakura()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        AbstractDungeon.actionManager.addToBottom(
-                ReducePowerAction(
-                        self, self,
-                        FanPower.POWER_ID,
-                        1
-                )
-        )
+        self!!.getPower(FanPower.POWER_ID)?.reducePower(1)
+
         var count = countSakura()
-        EventDispenser.emit(ApplyDiaphaneityPowerEvent(self!!, self, count, CARD))
+        EventDispenser.emit(ApplyDiaphaneityPowerEvent(self, self, count, CARD))
 
         count += self.getPower(DiaphaneityPower.POWER_ID)?.amount ?: 0
         AbstractDungeon.actionManager.addToBottom(

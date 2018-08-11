@@ -2,7 +2,6 @@ package yuyuko.cards.yuyuko
 
 import basemod.abstracts.CustomCard
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
@@ -47,9 +46,8 @@ class InfiniteReviving : CustomCard(
     override fun makeCopy(): AbstractCard = InfiniteReviving()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        AbstractDungeon.actionManager.addToBottom(
-                ReducePowerAction(self, self, FanPower.POWER_ID, 1)
-        )
+        self!!.getPower(FanPower.POWER_ID)?.reducePower(1)
+
         AbstractDungeon.actionManager.addToBottom(
                 ReviveAction(AbstractCard::isSakura)
         )

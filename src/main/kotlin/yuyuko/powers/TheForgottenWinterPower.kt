@@ -1,7 +1,6 @@
 package yuyuko.powers
 
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.helpers.ImageMaster
@@ -45,15 +44,6 @@ class TheForgottenWinterPower(amount: Int = 1) : AbstractPower() {
 
     override fun onRemove() {
         EventDispenser.unsubscribe(EndOfRoundDiaphaneityReduceEvent.ID, observer!!)
-    }
-
-    override fun reducePower(reduceAmount: Int) {
-        super.reducePower(reduceAmount)
-        if (this.amount == 0) {
-            AbstractDungeon.actionManager.addToTop(
-                    RemoveSpecificPowerAction(this.owner, this.owner, this)
-            )
-        }
     }
 
     override fun atEndOfRound() {

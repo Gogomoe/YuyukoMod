@@ -55,6 +55,7 @@ class FanPower(amount: Int) : AbstractPower() {
     override fun reducePower(reduceAmount: Int) {
         super.reducePower(reduceAmount)
         this.amount = min(max(amount, 0), 999)
+        updateDescription()
     }
 
     override fun onUseCard(card: AbstractCard?, action: UseCardAction?) {

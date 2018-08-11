@@ -1,6 +1,5 @@
 package yuyuko.powers
 
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.helpers.ImageMaster
@@ -31,9 +30,8 @@ class RemainHerePower : AbstractPower() {
         if (!isPlayer) {
             return
         }
-        AbstractDungeon.actionManager.addToBottom(
-                ReducePowerAction(owner, owner, FanPower.POWER_ID, 10)
-        )
+        AbstractDungeon.player.getPower(FanPower.POWER_ID)?.reducePower(10)
+
         this.flash()
     }
 

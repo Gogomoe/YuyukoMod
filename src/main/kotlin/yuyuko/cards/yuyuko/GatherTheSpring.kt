@@ -4,7 +4,6 @@ import basemod.abstracts.CustomCard
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType
 import com.megacrit.cardcrawl.characters.AbstractPlayer
@@ -47,9 +46,8 @@ class GatherTheSpring : CustomCard(
             }
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        AbstractDungeon.actionManager.addToBottom(
-                ReducePowerAction(self, self, FanPower.POWER_ID, 1)
-        )
+        self!!.getPower(FanPower.POWER_ID)?.reducePower(1)
+
         AbstractDungeon.actionManager.addToBottom(
                 DamageAllEnemiesAction(
                         self,

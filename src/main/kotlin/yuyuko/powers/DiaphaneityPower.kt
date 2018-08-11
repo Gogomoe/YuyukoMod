@@ -1,6 +1,5 @@
 package yuyuko.powers
 
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType
 import com.megacrit.cardcrawl.core.AbstractCreature
 import com.megacrit.cardcrawl.core.CardCrawlGame
@@ -39,14 +38,6 @@ class DiaphaneityPower(owner: AbstractCreature, amount: Int) : AbstractPower() {
     private val rate: Float
         get() = if (AbstractDungeon.player.hasRelic(BlueKimonoFullMoon.ID)) 0.06f else 0.05f
 
-    override fun reducePower(reduceAmount: Int) {
-        super.reducePower(reduceAmount)
-        if (this.amount == 0) {
-            AbstractDungeon.actionManager.addToTop(
-                    RemoveSpecificPowerAction(this.owner, this.owner, this)
-            )
-        }
-    }
 
     override fun atDamageReceive(damage: Float, damageType: DamageType?): Float {
         return when {
