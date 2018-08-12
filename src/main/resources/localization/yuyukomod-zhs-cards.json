@@ -386,6 +386,10 @@
       "我没有幽灵了"
     ]
   },
+  "Dark Wind": {
+    "NAME": "黑色的风",
+    "DESCRIPTION": "获得 !M! 层 幽灵 ，将1张 灵 ，1张 灼伤 加入手牌"
+  },
   "Unstable Ward": {
     "NAME": "不稳定的结界",
     "DESCRIPTION": "损失1层 幽灵 ，抽1张牌， 发现 3",
@@ -393,6 +397,10 @@
     "EXTENDED_DESCRIPTION": [
       "我没有幽灵了"
     ]
+  },
+  "City of Death": {
+    "NAME": "死与樱的都市",
+    "DESCRIPTION": "获得 !M! 层 幽灵 ，将1张 樱(亡我) 洗入牌堆"
   },
   "Immigrant Phantom": {
     "NAME": "幽灵移民计划",
@@ -418,6 +426,10 @@
     "EXTENDED_DESCRIPTION": [
       "我没有足够的幽灵"
     ]
+  },
+  "Dying Sakura": {
+    "NAME": "死灵的夜樱",
+    "DESCRIPTION": "是 樱 。每3次升级，将1张 灵 加入手牌。 NL 可多次升级 ， 重置"
   },
   "Dying Dream": {
     "NAME": "无寿之梦",

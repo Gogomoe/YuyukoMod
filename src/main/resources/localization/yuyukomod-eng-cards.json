@@ -386,6 +386,10 @@
       "I don't have Phantom"
     ]
   },
+  "Dark Wind": {
+    "NAME": "Dark Wind",
+    "DESCRIPTION": "Gain !M! Phantom , NL Place 1 Soul and 1 Burn into hand."
+  },
   "Unstable Ward": {
     "NAME": "Unstable Ward",
     "DESCRIPTION": "Reduce 1 Phantom ,Draw 1 cards, Discover 3",
@@ -393,6 +397,10 @@
     "EXTENDED_DESCRIPTION": [
       "I don't have Phantom"
     ]
+  },
+  "City of Death": {
+    "NAME": "City of Death",
+    "DESCRIPTION": "Gain !M! Phantom , NL Place 1 Sakura(Suicide) into draw pile."
   },
   "Immigrant Phantom": {
     "NAME": "Immigrant Phantom",
@@ -418,6 +426,10 @@
     "EXTENDED_DESCRIPTION": [
       "I don't have enough Phantom"
     ]
+  },
+  "Dying Sakura": {
+    "NAME": "Dying Sakura",
+    "DESCRIPTION": "Is Sakura .Every 3 times upgrade, place 1 Soul into hand. NL Can be upgraded any number of times. Reset"
   },
   "Dying Dream": {
     "NAME": "Dying Dream",

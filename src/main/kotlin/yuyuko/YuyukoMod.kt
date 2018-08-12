@@ -45,13 +45,16 @@ import yuyuko.cards.yuyuko.ButterflySwallowtail
 import yuyuko.cards.yuyuko.CerasusSubhirtella
 import yuyuko.cards.yuyuko.ChaseTheSukhavati
 import yuyuko.cards.yuyuko.Childlike
+import yuyuko.cards.yuyuko.CityOfDeath
 import yuyuko.cards.yuyuko.DancingButterflies
 import yuyuko.cards.yuyuko.DancingSoul
+import yuyuko.cards.yuyuko.DarkWind
 import yuyuko.cards.yuyuko.DeathDancing
 import yuyuko.cards.yuyuko.DeathlyGround
 import yuyuko.cards.yuyuko.DreamySakura
 import yuyuko.cards.yuyuko.DyingButterflies
 import yuyuko.cards.yuyuko.DyingDream
+import yuyuko.cards.yuyuko.DyingSakura
 import yuyuko.cards.yuyuko.Elegance
 import yuyuko.cards.yuyuko.EndOfFaramita
 import yuyuko.cards.yuyuko.Explore
@@ -309,12 +312,15 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         addCard(BecomePhantom())
         addCard(SweetOfPhantom())
         addCard(SteamedPhantom())
+        addCard(DarkWind())
         addCard(UnstableWard())
+        addCard(CityOfDeath())
         addCard(ImmigrantPhantom())
         addCard(PhantomVillage())
         addCard(DyingButterflies())
         addCard(PhantomGift())
         addCard(TrapLamp())
+        addCard(DyingSakura())
         addCard(DyingDream())
         addCard(GhostSpot())
         addCard(TicketToHeaven())

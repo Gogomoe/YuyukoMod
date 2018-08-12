@@ -30,6 +30,7 @@ YuyukoMod 是 [杀戮尖塔（SlayTheSpire）](https://store.steampowered.com/ap
 
 - [咲夜Mod](https://github.com/lionpkqq/StS-BlackRuseMod)
 - [觉Mod](https://github.com/HOYKJ/TouhouMod)
+- [魔理沙Mod](https://github.com/lf201014/STS_ThMod_MRS)
 
 ### Profile
 
