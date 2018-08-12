@@ -19,7 +19,7 @@
     "NAME": "Ghost Lamp",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "At turn start,gain 1 #yGhost"
+      "At turn start,gain 1 #yPhantom"
     ]
   },
   "Trap Lamp": {
@@ -41,28 +41,42 @@
     "NAME": "Blue Kimono (Sakura)",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "When draw Sakura without extra effect,transform it to a Sakura with random effect. NL Sakra will deal #b3% HP loss of MaxHP to all enemies."
+      "When draw #ySakura without extra effect,transform it to a #ySakura with random effect. NL #ySakra will deal #b3% HP loss of MaxHP to all enemies."
     ]
   },
   "Blue Kimono (Butterfly)": {
     "NAME": "Blue Kimono (Butterfly)",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "When draw Butterfly without extra effect,transform it to a Butterfly with random effect. NL Butterfly will heal #b3% HP for you."
+      "When draw #yButterfly without extra effect,transform it to a #yButterfly with random effect. NL #yButterfly will heal #b3% HP for you."
     ]
   },
   "Blue Kimono (Phantom)": {
     "NAME": "Blue Kimono (Phantom)",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Every #b3 turns, trigger Phantom extra. NL At the start of turn,place a Soul into hand."
+      "Every #b3 turns, trigger #yPhantom extra. NL At the start of turn,place a #ySoul into hand."
     ]
   },
   "Blue Kimono (FullMoon)": {
     "NAME": "Blue Kimono (FullMoon)",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Each stack of Diaphaneity will enhance #b1% effect. NL At the end of turn, every #b5 Diaphaneity of you will give 1 BLock,every #b5 Diaphaneity of enemy will deal 1 HP loss"
+      "Each stack of #yDiaphaneity will enhance #b1% effect. NL At the end of turn, every #b5 #yDiaphaneity of you will give 1 #yBLock ,every #b5 #yDiaphaneity of enemy will deal 1 HP loss"
+    ]
+  },
+  "Obi": {
+    "NAME": "Obi",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Record you lost HP from YuyukoFan,Gain equal amount of #yDiaphaneity at the start of next battle."
+    ]
+  },
+  "Trip to Hell": {
+    "NAME": "Trip to Hell",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "YuyukoFan will give double fan at the start of battle"
     ]
   }
 }

@@ -175,5 +175,17 @@
       "受到额外 #b",
       " 倍缠绕伤害"
     ]
+  },
+  "Prepare The Way to Death": {
+    "NAME": "准备-黄泉平坂行路",
+    "DESCRIPTIONS": [
+      "回合结束时获得黄泉平坂行路"
+    ]
+  },
+  "The Way to Death": {
+    "NAME": "黄泉平坂行路",
+    "DESCRIPTIONS": [
+      "统计你每回合打出的不同费用的数量，在下回合开始时获得等量幽灵"
+    ]
   }
 }

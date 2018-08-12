@@ -175,5 +175,17 @@
       "Receive extra #b",
       " times damage from Constricted"
     ]
+  },
+  "Prepare The Way to Death": {
+    "NAME": "Prepare-The Way to Death",
+    "DESCRIPTIONS": [
+      "At the end of the turn, gain 'The Way to Death'"
+    ]
+  },
+  "The Way to Death": {
+    "NAME": "The Way to Death",
+    "DESCRIPTIONS": [
+      "Count the different cost you play each turn,gain Phantom of the equal amount at the start of next turn"
+    ]
   }
 }

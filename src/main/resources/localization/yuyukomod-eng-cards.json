@@ -444,5 +444,9 @@
     "NAME": "Ticket to Heaven",
     "DESCRIPTION": "Give 10 Fading , target will receive extra 1 times damage from Constricted . Exhaust",
     "UPGRADE_DESCRIPTION": "Give 10 Fading , target will receive extra 1 times damage from Constricted . Innate , Exhaust"
+  },
+  "The Way to Death": {
+    "NAME": "The Way to Death",
+    "DESCRIPTION": "Count the different cost you play each turn,gain Phantom of the equal amount at the start of next turn"
   }
 }

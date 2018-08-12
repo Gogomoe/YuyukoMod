@@ -444,5 +444,9 @@
     "NAME": "通往无寿国的期票",
     "DESCRIPTION": "给予 10 消逝 ，目标格外受到一倍的 缠绕 伤害。 NL 消耗",
     "UPGRADE_DESCRIPTION": "给予 10 消逝 ，目标格外受到一倍的 缠绕 伤害。 NL 固有 ， 消耗"
+  },
+  "The Way to Death": {
+    "NAME": "黄泉平坂行路",
+    "DESCRIPTION": "统计你每回合打出的不同费用的数量，在下回合开始时获得等量幽灵"
   }
 }

@@ -36,6 +36,8 @@ class Yuyukosfan : CustomRelic(
     }
 
     private var turns = 0
+    var turnsOfLastBattle = 0
+        private set
 
     private var lostBlock = 0
 
@@ -54,11 +56,17 @@ class Yuyukosfan : CustomRelic(
         this.updateDescription()
 
         val player = AbstractDungeon.player
+
+        val amount = if (player.hasRelic(TripToHell.ID)) {
+            fanAmount * 2
+        } else {
+            fanAmount
+        }
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(
                         player, player,
-                        FanPower(fanAmount),
-                        fanAmount
+                        FanPower(amount),
+                        amount
                 )
         )
         AbstractDungeon.actionManager.addToBottom(
@@ -83,6 +91,7 @@ class Yuyukosfan : CustomRelic(
         this.flash()
         val damage = min(turns, AbstractDungeon.player.currentHealth - 1)
         AbstractDungeon.player.damage(DamageInfo(null, damage, HP_LOSS))
+        turnsOfLastBattle = damage
     }
 
     fun updateDescription() {

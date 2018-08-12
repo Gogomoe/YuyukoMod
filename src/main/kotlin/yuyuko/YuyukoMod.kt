@@ -116,6 +116,7 @@ import yuyuko.cards.yuyuko.SweetOfPhantom
 import yuyuko.cards.yuyuko.TheForgottenWinter
 import yuyuko.cards.yuyuko.TheInkySakura
 import yuyuko.cards.yuyuko.TheNether
+import yuyuko.cards.yuyuko.TheWayToDeath
 import yuyuko.cards.yuyuko.TicketToHeaven
 import yuyuko.cards.yuyuko.TrapLamp
 import yuyuko.cards.yuyuko.TripleSnow
@@ -147,6 +148,7 @@ import yuyuko.powers.ReviveTheButterfliesPower
 import yuyuko.powers.ShowyWitheringPower
 import yuyuko.powers.SupernaturalNetherPower
 import yuyuko.powers.TheForgottenWinterPower
+import yuyuko.powers.TheWayToDeathPower
 import yuyuko.powers.TripleSnowPower
 import yuyuko.relics.BlueKimono
 import yuyuko.relics.BlueKimonoButterfly
@@ -155,6 +157,8 @@ import yuyuko.relics.BlueKimonoPhantom
 import yuyuko.relics.BlueKimonoSakura
 import yuyuko.relics.Coronal
 import yuyuko.relics.GhostLamp
+import yuyuko.relics.Obi
+import yuyuko.relics.TripToHell
 import yuyuko.relics.Yuyukosfan
 import java.nio.charset.StandardCharsets
 
@@ -324,6 +328,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         addCard(DyingDream())
         addCard(GhostSpot())
         addCard(TicketToHeaven())
+        addCard(TheWayToDeath())
 
         addPowers()
     }
@@ -352,6 +357,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         BaseMod.addPower(SupernaturalNetherPower::class.java, SupernaturalNetherPower.POWER_ID)
         BaseMod.addPower(TheForgottenWinterPower::class.java, TheForgottenWinterPower.POWER_ID)
         BaseMod.addPower(TripleSnowPower::class.java, TripleSnowPower.POWER_ID)
+        BaseMod.addPower(TheWayToDeathPower::class.java, TheWayToDeathPower.POWER_ID)
     }
 
     override fun receiveEditRelics() {
@@ -359,6 +365,8 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         BaseMod.addRelicToCustomPool(Coronal(), CardColorEnum.YUYUKO_COLOR.toString())
         BaseMod.addRelicToCustomPool(GhostLamp(), CardColorEnum.YUYUKO_COLOR.toString())
         BaseMod.addRelicToCustomPool(yuyuko.relics.TrapLamp(), CardColorEnum.YUYUKO_COLOR.toString())
+        BaseMod.addRelicToCustomPool(Obi(), CardColorEnum.YUYUKO_COLOR.toString())
+        BaseMod.addRelicToCustomPool(TripToHell(), CardColorEnum.YUYUKO_COLOR.toString())
 
         BaseMod.addRelicToCustomPool(BlueKimono(), CardColorEnum.YUYUKO_COLOR.toString())
         BaseMod.addRelicToCustomPool(BlueKimonoSakura(), CardColorEnum.YUYUKO_COLOR.toString())

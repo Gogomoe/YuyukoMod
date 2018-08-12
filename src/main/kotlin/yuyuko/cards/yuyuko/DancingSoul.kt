@@ -55,7 +55,6 @@ class DancingSoul : CustomCard(
             power.cards.add(this)
             power.flash()
         } else {
-            println("aaaaaaaaaaaaaaaaa") //TODO delete it
             AbstractDungeon.actionManager.addToBottom(
                     ApplyPowerAction(
                             self, self,
