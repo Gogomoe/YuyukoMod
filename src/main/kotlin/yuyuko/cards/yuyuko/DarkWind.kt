@@ -19,7 +19,7 @@ class DarkWind : CustomCard(
 ) {
     companion object {
         @JvmStatic
-        val ID = "City of Death"
+        val ID = "Dark Wind"
         val IMAGE_PATH = "images/yuyuko/cards/skill5.png"
         val COST = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
