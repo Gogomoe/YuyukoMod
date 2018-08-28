@@ -9,7 +9,12 @@ import kotlin.math.max
 
 @SpirePatch(
         cls = "com.megacrit.cardcrawl.actions.common.DrawCardAction",
-        method = SpirePatch.CONSTRUCTOR
+        method = SpirePatch.CONSTRUCTOR,
+        paramtypez = [
+            AbstractCreature::class,
+            Int::class,
+            Boolean::class
+        ]
 )
 class DrawCardPatch {
 

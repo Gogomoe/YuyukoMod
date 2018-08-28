@@ -3,13 +3,7 @@ package yuyuko
 import basemod.BaseMod
 import basemod.ModLabel
 import basemod.ModPanel
-import basemod.interfaces.EditCardsSubscriber
-import basemod.interfaces.EditCharactersSubscriber
-import basemod.interfaces.EditKeywordsSubscriber
-import basemod.interfaces.EditRelicsSubscriber
-import basemod.interfaces.EditStringsSubscriber
-import basemod.interfaces.OnStartBattleSubscriber
-import basemod.interfaces.PostInitializeSubscriber
+import basemod.interfaces.*
 import com.badlogic.gdx.Gdx
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
 import com.megacrit.cardcrawl.cards.AbstractCard
@@ -19,147 +13,22 @@ import com.megacrit.cardcrawl.core.Settings.GameLanguage.ZHS
 import com.megacrit.cardcrawl.core.Settings.GameLanguage.ZHT
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.helpers.ImageMaster
-import com.megacrit.cardcrawl.localization.CardStrings
-import com.megacrit.cardcrawl.localization.CharacterStrings
-import com.megacrit.cardcrawl.localization.KeywordStrings
-import com.megacrit.cardcrawl.localization.PowerStrings
-import com.megacrit.cardcrawl.localization.RelicStrings
-import com.megacrit.cardcrawl.rooms.MonsterRoom
+import com.megacrit.cardcrawl.localization.*
+import com.megacrit.cardcrawl.rooms.AbstractRoom
 import com.megacrit.cardcrawl.unlock.UnlockTracker
 import org.apache.logging.log4j.LogManager
 import yuyuko.actions.HideAction
 import yuyuko.cards.HideCards
 import yuyuko.cards.isHide
-import yuyuko.cards.yuyuko.AllWander
-import yuyuko.cards.yuyuko.BecomePhantom
-import yuyuko.cards.yuyuko.Bloom
-import yuyuko.cards.yuyuko.Bomb
-import yuyuko.cards.yuyuko.BuryInTheTemplate
-import yuyuko.cards.yuyuko.ButterfliesInDream
-import yuyuko.cards.yuyuko.ButterfliesRainbow
-import yuyuko.cards.yuyuko.Butterfly
-import yuyuko.cards.yuyuko.ButterflyDeepRooted
-import yuyuko.cards.yuyuko.ButterflyDelusion
-import yuyuko.cards.yuyuko.ButterflyGhost
-import yuyuko.cards.yuyuko.ButterflySwallowtail
-import yuyuko.cards.yuyuko.CerasusSubhirtella
-import yuyuko.cards.yuyuko.ChaseTheSukhavati
-import yuyuko.cards.yuyuko.Childlike
-import yuyuko.cards.yuyuko.CityOfDeath
-import yuyuko.cards.yuyuko.DancingButterflies
-import yuyuko.cards.yuyuko.DancingSoul
-import yuyuko.cards.yuyuko.DarkWind
-import yuyuko.cards.yuyuko.DeathDancing
-import yuyuko.cards.yuyuko.DeathlyGround
-import yuyuko.cards.yuyuko.DreamySakura
-import yuyuko.cards.yuyuko.DyingButterflies
-import yuyuko.cards.yuyuko.DyingDream
-import yuyuko.cards.yuyuko.DyingSakura
-import yuyuko.cards.yuyuko.Elegance
-import yuyuko.cards.yuyuko.EndOfFaramita
-import yuyuko.cards.yuyuko.Explore
-import yuyuko.cards.yuyuko.ExploreGhostdom
-import yuyuko.cards.yuyuko.FantasyButterflies
-import yuyuko.cards.yuyuko.FaramitasTemptation
-import yuyuko.cards.yuyuko.FinalOfFinal
-import yuyuko.cards.yuyuko.FloatOnMoon
-import yuyuko.cards.yuyuko.FondlingOfPapilio
-import yuyuko.cards.yuyuko.FullInkySakura
-import yuyuko.cards.yuyuko.FullMoon
-import yuyuko.cards.yuyuko.GatherTheSpring
-import yuyuko.cards.yuyuko.GauzySakura
-import yuyuko.cards.yuyuko.GhastlyDream
-import yuyuko.cards.yuyuko.GhostSpot
-import yuyuko.cards.yuyuko.GhostdomSakura
-import yuyuko.cards.yuyuko.Gone
-import yuyuko.cards.yuyuko.ImmigrantPhantom
-import yuyuko.cards.yuyuko.InfiniteReviving
-import yuyuko.cards.yuyuko.InfiniteSin
-import yuyuko.cards.yuyuko.LingerOverFlower
-import yuyuko.cards.yuyuko.LivingToDie
-import yuyuko.cards.yuyuko.Lunch
-import yuyuko.cards.yuyuko.MiniGhostdom
-import yuyuko.cards.yuyuko.MirrorOfMind
-import yuyuko.cards.yuyuko.MonsterCherryTree
-import yuyuko.cards.yuyuko.Nihility
-import yuyuko.cards.yuyuko.OpenTheFan
-import yuyuko.cards.yuyuko.PastGraveyard
-import yuyuko.cards.yuyuko.PhantomButterflies
-import yuyuko.cards.yuyuko.PhantomGift
-import yuyuko.cards.yuyuko.PhantomVillage
-import yuyuko.cards.yuyuko.Photo
-import yuyuko.cards.yuyuko.PostponeBloom
-import yuyuko.cards.yuyuko.RedemptionOfDeath
-import yuyuko.cards.yuyuko.RemainHere
-import yuyuko.cards.yuyuko.ReunionAfterDeath
-import yuyuko.cards.yuyuko.ReverseTheScreen
-import yuyuko.cards.yuyuko.ReviveTheButterflies
-import yuyuko.cards.yuyuko.Sakura
-import yuyuko.cards.yuyuko.SakuraBloom
-import yuyuko.cards.yuyuko.SakuraDormancy
-import yuyuko.cards.yuyuko.SakuraSeal
-import yuyuko.cards.yuyuko.SakuraSuicide
-import yuyuko.cards.yuyuko.SakuraWard
-import yuyuko.cards.yuyuko.SceneryOfPapilio
-import yuyuko.cards.yuyuko.SereneSpring
-import yuyuko.cards.yuyuko.ShowyWithering
-import yuyuko.cards.yuyuko.Snow
-import yuyuko.cards.yuyuko.SnowingSakura
-import yuyuko.cards.yuyuko.SongOfPapilio
-import yuyuko.cards.yuyuko.Soul
-import yuyuko.cards.yuyuko.SpearOfPapilio
-import yuyuko.cards.yuyuko.SteamedPhantom
-import yuyuko.cards.yuyuko.Stifle
-import yuyuko.cards.yuyuko.Suicide
-import yuyuko.cards.yuyuko.SupernaturalNether
-import yuyuko.cards.yuyuko.SweetOfPhantom
-import yuyuko.cards.yuyuko.TheForgottenWinter
-import yuyuko.cards.yuyuko.TheInkySakura
-import yuyuko.cards.yuyuko.TheNether
-import yuyuko.cards.yuyuko.TheWayToDeath
-import yuyuko.cards.yuyuko.TicketToHeaven
+import yuyuko.cards.yuyuko.*
 import yuyuko.cards.yuyuko.TrapLamp
-import yuyuko.cards.yuyuko.TripleSnow
-import yuyuko.cards.yuyuko.UnbornLight
-import yuyuko.cards.yuyuko.UnfulfillingAttachment
-import yuyuko.cards.yuyuko.UnknownPetal
-import yuyuko.cards.yuyuko.UnpavedWay
-import yuyuko.cards.yuyuko.Unreal
-import yuyuko.cards.yuyuko.UnstableWard
-import yuyuko.cards.yuyuko.WanderingSoul
 import yuyuko.characters.Yuyuko
 import yuyuko.event.EventDispenser
 import yuyuko.event.OnDrawEvent
 import yuyuko.patches.CardColorEnum
 import yuyuko.patches.PlayerClassEnum
-import yuyuko.powers.BecomePhantomPower
-import yuyuko.powers.DiaphaneityPower
-import yuyuko.powers.DizzinessPower
-import yuyuko.powers.FanPower
-import yuyuko.powers.FloatOnMoonPower
-import yuyuko.powers.FullInkySakuraPower
-import yuyuko.powers.GhastlyDreamPower
-import yuyuko.powers.GhostPower
-import yuyuko.powers.LivingToDiePower
-import yuyuko.powers.NihilityPower
-import yuyuko.powers.PostponeBloomPower
-import yuyuko.powers.RemainHerePower
-import yuyuko.powers.ReviveTheButterfliesPower
-import yuyuko.powers.ShowyWitheringPower
-import yuyuko.powers.SupernaturalNetherPower
-import yuyuko.powers.TheForgottenWinterPower
-import yuyuko.powers.TheWayToDeathPower
-import yuyuko.powers.TripleSnowPower
-import yuyuko.relics.BlueKimono
-import yuyuko.relics.BlueKimonoButterfly
-import yuyuko.relics.BlueKimonoFullMoon
-import yuyuko.relics.BlueKimonoPhantom
-import yuyuko.relics.BlueKimonoSakura
-import yuyuko.relics.Coronal
-import yuyuko.relics.GhostLamp
-import yuyuko.relics.Obi
-import yuyuko.relics.TripToHell
-import yuyuko.relics.Yuyukosfan
+import yuyuko.powers.*
+import yuyuko.relics.*
 import java.nio.charset.StandardCharsets
 
 
@@ -211,11 +80,11 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
                 Yuyuko::class.java,
                 Yuyuko.NAME,
                 "Yuyuko class string",
-                CardColorEnum.YUYUKO_COLOR.toString(),
+                CardColorEnum.YUYUKO_COLOR,
                 Yuyuko.NAME,
                 "images/charSelect/yuyukoButton.png",
                 "images/charSelect/yuyukoPortrait.png",
-                PlayerClassEnum.YUYOKO.toString()
+                PlayerClassEnum.YUYOKO
         )
     }
 
@@ -361,18 +230,18 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
     }
 
     override fun receiveEditRelics() {
-        BaseMod.addRelicToCustomPool(Yuyukosfan(), CardColorEnum.YUYUKO_COLOR.toString())
-        BaseMod.addRelicToCustomPool(Coronal(), CardColorEnum.YUYUKO_COLOR.toString())
-        BaseMod.addRelicToCustomPool(GhostLamp(), CardColorEnum.YUYUKO_COLOR.toString())
-        BaseMod.addRelicToCustomPool(yuyuko.relics.TrapLamp(), CardColorEnum.YUYUKO_COLOR.toString())
-        BaseMod.addRelicToCustomPool(Obi(), CardColorEnum.YUYUKO_COLOR.toString())
-        BaseMod.addRelicToCustomPool(TripToHell(), CardColorEnum.YUYUKO_COLOR.toString())
+        BaseMod.addRelicToCustomPool(Yuyukosfan(), CardColorEnum.YUYUKO_COLOR)
+        BaseMod.addRelicToCustomPool(Coronal(), CardColorEnum.YUYUKO_COLOR)
+        BaseMod.addRelicToCustomPool(GhostLamp(), CardColorEnum.YUYUKO_COLOR)
+        BaseMod.addRelicToCustomPool(yuyuko.relics.TrapLamp(), CardColorEnum.YUYUKO_COLOR)
+        BaseMod.addRelicToCustomPool(Obi(), CardColorEnum.YUYUKO_COLOR)
+        BaseMod.addRelicToCustomPool(TripToHell(), CardColorEnum.YUYUKO_COLOR)
 
-        BaseMod.addRelicToCustomPool(BlueKimono(), CardColorEnum.YUYUKO_COLOR.toString())
-        BaseMod.addRelicToCustomPool(BlueKimonoSakura(), CardColorEnum.YUYUKO_COLOR.toString())
-        BaseMod.addRelicToCustomPool(BlueKimonoButterfly(), CardColorEnum.YUYUKO_COLOR.toString())
-        BaseMod.addRelicToCustomPool(BlueKimonoPhantom(), CardColorEnum.YUYUKO_COLOR.toString())
-        BaseMod.addRelicToCustomPool(BlueKimonoFullMoon(), CardColorEnum.YUYUKO_COLOR.toString())
+        BaseMod.addRelicToCustomPool(BlueKimono(), CardColorEnum.YUYUKO_COLOR)
+        BaseMod.addRelicToCustomPool(BlueKimonoSakura(), CardColorEnum.YUYUKO_COLOR)
+        BaseMod.addRelicToCustomPool(BlueKimonoButterfly(), CardColorEnum.YUYUKO_COLOR)
+        BaseMod.addRelicToCustomPool(BlueKimonoPhantom(), CardColorEnum.YUYUKO_COLOR)
+        BaseMod.addRelicToCustomPool(BlueKimonoFullMoon(), CardColorEnum.YUYUKO_COLOR)
     }
 
     override fun receiveEditKeywords() {
@@ -434,7 +303,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
 
     }
 
-    override fun receiveOnBattleStart(p0: MonsterRoom?) {
+    override fun receiveOnBattleStart(p0: AbstractRoom?) {
         EventDispenser.clear()
         EventDispenser.subscribe<OnDrawEvent>(OnDrawEvent.ID) {
             if (card.isHide() && HideCards.shouldHide()) {

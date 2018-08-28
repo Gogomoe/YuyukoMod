@@ -14,7 +14,7 @@ class CharacterColor internal constructor(
     val color = CardHelper.getColor(r, g, b)!!
 
     fun register() {
-        BaseMod.addColor(cardColor.toString(),
+        BaseMod.addColor(cardColor,
                 color, color, color, color, color, color, color,
                 "images/cardui/512/bg_attack_$name.png",
                 "images/cardui/512/bg_skill_$name.png",
