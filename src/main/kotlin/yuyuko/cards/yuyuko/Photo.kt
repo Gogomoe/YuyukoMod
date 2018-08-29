@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import yuyuko.actions.SetHPAction
 import yuyuko.patches.CardColorEnum
 
 class Photo(val hp: Int = 0) : CustomCard(
@@ -35,8 +36,9 @@ class Photo(val hp: Int = 0) : CustomCard(
             this.cardPlayable(m) && this.hasEnoughEnergy()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        AbstractDungeon.player.currentHealth = hp
-        AbstractDungeon.player.healthBarUpdatedEvent()
+        AbstractDungeon.actionManager.addToBottom(
+                SetHPAction(AbstractDungeon.player, AbstractDungeon.player, hp)
+        )
     }
 
     override fun canUpgrade(): Boolean = false

@@ -1,16 +1,13 @@
 package yuyuko.cards.yuyuko
 
 import basemod.abstracts.CustomCard
-import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.FIRE
-import com.megacrit.cardcrawl.actions.common.DamageAction
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction
 import com.megacrit.cardcrawl.cards.AbstractCard
-import com.megacrit.cardcrawl.cards.DamageInfo
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType.HP_LOSS
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import yuyuko.actions.SetHPAction
 import yuyuko.patches.CardColorEnum
 import yuyuko.powers.DiaphaneityPower
 
@@ -50,16 +47,11 @@ class Stifle : CustomCard(
     }
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        val damage = target!!.currentHealth / 2
         AbstractDungeon.actionManager.addToBottom(
                 ReducePowerAction(target, self, DiaphaneityPower.POWER_ID, 20)
         )
         AbstractDungeon.actionManager.addToBottom(
-                DamageAction(
-                        target,
-                        DamageInfo(self, damage, HP_LOSS),
-                        FIRE
-                )
+                SetHPAction(target!!, self!!, target.currentHealth / 2)
         )
     }
 

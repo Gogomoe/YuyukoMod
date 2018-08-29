@@ -2,13 +2,13 @@ package yuyuko.cards.yuyuko
 
 import basemod.abstracts.CustomCard
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction
-import com.megacrit.cardcrawl.actions.common.LoseHPAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower
+import yuyuko.actions.SetHPAction
 import yuyuko.patches.CardColorEnum
 import yuyuko.powers.FanPower
 import yuyuko.powers.ReviveTheButterfliesPower
@@ -40,9 +40,8 @@ class ReviveTheButterflies : CustomCard(
                         FanPower(0)
                 )
         )
-        val hp = self.currentHealth - 1
         AbstractDungeon.actionManager.addToBottom(
-                LoseHPAction(self, self, hp)
+                SetHPAction(self, self, 1)
         )
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(

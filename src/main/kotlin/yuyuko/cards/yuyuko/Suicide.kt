@@ -2,12 +2,12 @@ package yuyuko.cards.yuyuko
 
 import basemod.abstracts.CustomCard
 import com.megacrit.cardcrawl.actions.common.GainBlockAction
-import com.megacrit.cardcrawl.actions.common.LoseHPAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.monsters.AbstractMonster
+import yuyuko.actions.SetHPAction
 import yuyuko.patches.CardColorEnum
 
 class Suicide : CustomCard(
@@ -33,12 +33,12 @@ class Suicide : CustomCard(
     override fun makeCopy(): AbstractCard = Suicide()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        val amount = self!!.currentHealth - 1
+        val block = self!!.currentHealth - 1
         AbstractDungeon.actionManager.addToBottom(
-                LoseHPAction(self, self, amount)
+                SetHPAction(self, self, 1)
         )
         AbstractDungeon.actionManager.addToBottom(
-                GainBlockAction(self, self, amount)
+                GainBlockAction(self, self, block)
         )
     }
 
