@@ -62,7 +62,7 @@ class ButterflyGhost : CustomCard(
         )
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(
-                        self, target,
+                        target, self,
                         ConstrictedPower(target, self, 1),
                         1
                 )
