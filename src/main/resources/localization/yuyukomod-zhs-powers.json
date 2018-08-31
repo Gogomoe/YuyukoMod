@@ -187,5 +187,17 @@
     "DESCRIPTIONS": [
       "统计你每回合打出的不同费用的数量，在下回合开始时获得等量幽灵"
     ]
+  },
+  "Prepare Dream of Spring": {
+    "NAME": "准备-春风之梦",
+    "DESCRIPTIONS": [
+      "回合结束时给予所有目标春风之梦"
+    ]
+  },
+  "Dream of Spring": {
+    "NAME": "春风之梦",
+    "DESCRIPTIONS": [
+      "受到的伤害减半，获得的治疗加倍"
+    ]
   }
 }

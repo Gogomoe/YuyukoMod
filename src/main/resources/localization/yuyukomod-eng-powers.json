@@ -187,5 +187,17 @@
     "DESCRIPTIONS": [
       "Count the different cost you play each turn,gain Phantom of the equal amount at the start of next turn"
     ]
+  },
+  "Prepare Dream of Spring": {
+    "NAME": "Prepare-Dream of Spring",
+    "DESCRIPTIONS": [
+      "At the end of turn,give all targets Dream of Spring"
+    ]
+  },
+  "Dream of Spring": {
+    "NAME": "Dream of Spring",
+    "DESCRIPTIONS": [
+      "receive half damage, gain double heal"
+    ]
   }
 }

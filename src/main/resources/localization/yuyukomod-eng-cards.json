@@ -184,6 +184,10 @@
     "NAME": "The Inky Sakura",
     "DESCRIPTION": "Is Sakura .If has 30 upgrade times,Deal 100% HP Lose to all enemies.Otherwise Deal 5% HP Lose. NL Can be upgraded any number of times. Reset"
   },
+  "Dream of Spring": {
+    "NAME": "Dream of Spring",
+    "DESCRIPTION": "Next !M! turns,All targets receive half damage and gain double heal. NL Hide"
+  },
   "Reunion after Death": {
     "NAME": "Reunion after Death",
     "DESCRIPTION": "Only can be played when you don't have cards with same name except Basic and Derivate. Exhaust all Basic and Derivate . Gain energy at the start of turn",
