@@ -35,7 +35,7 @@ class BuryInTheTemplate : CustomCard(
         this.magicNumber -= 1
         this.initializeDescription()
         if (this.baseMagicNumber == 0) {
-            AbstractDungeon.getCurrRoom().isBattleOver = true
+            AbstractDungeon.getCurrRoom().endBattle()
         }
     }
 

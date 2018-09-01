@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.helpers.input.InputHelper
 import com.megacrit.cardcrawl.powers.ArtifactPower
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower
 import com.megacrit.cardcrawl.relics.AbstractRelic
+import com.megacrit.cardcrawl.rooms.AbstractRoom
 
 
 class Coronal : CustomRelic(
@@ -38,6 +39,11 @@ class Coronal : CustomRelic(
     }
 
     fun onRightClick() {
+        val outsideCombat = AbstractDungeon.getCurrRoom().phase != AbstractRoom.RoomPhase.COMBAT
+        if (outsideCombat) {
+            println("You cannot use the relic outside the combat")
+            return
+        }
         if (this.counter < 5) {
             return
         }
