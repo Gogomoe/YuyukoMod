@@ -140,6 +140,8 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         addCard(SceneryOfPapilio())
         addCard(TheInkySakura())
         addCard(DreamOfSpring())
+        addCard(SakuraSakura())
+        addCard(GhostLead())
         addCard(ReunionAfterDeath())
 
 

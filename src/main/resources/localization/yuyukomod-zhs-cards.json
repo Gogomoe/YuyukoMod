@@ -188,6 +188,15 @@
     "NAME": "春风之梦",
     "DESCRIPTION": "接下来的 !M! 个回合所有目标收到伤害减半，治疗加倍。 NL 藏匿"
   },
+  "Sakura Sakura": {
+    "NAME": "樱花樱花",
+    "DESCRIPTION": "是樱。接下来的 !M! 个回合开始时，将一张 樱 加入手牌。 NL 可多次升级，重置"
+  },
+  "Ghost Lead": {
+    "NAME": "从不困惑的亡灵",
+    "DESCRIPTION": "将你所有非衍生牌替换为随机的更高品质的牌",
+    "UPGRADE_DESCRIPTION": "将你所有非衍生牌替换为随机的更高品质的牌。 NL 固有"
+  },
   "Reunion after Death": {
     "NAME": "死后一切大团圆",
     "DESCRIPTION": "只有在你的牌组中除了 衍生 和 初始 以外没有相同牌时才能打出。 NL 消耗所有 衍生 和 初始 ，回合开始时，获得1能量",

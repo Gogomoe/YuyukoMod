@@ -1,27 +1,7 @@
 package yuyuko.cards
 
 import com.megacrit.cardcrawl.cards.AbstractCard
-import yuyuko.cards.yuyuko.ButterfliesInDream
-import yuyuko.cards.yuyuko.ButterfliesRainbow
-import yuyuko.cards.yuyuko.Butterfly
-import yuyuko.cards.yuyuko.ButterflyDeepRooted
-import yuyuko.cards.yuyuko.ButterflyDelusion
-import yuyuko.cards.yuyuko.ButterflyGhost
-import yuyuko.cards.yuyuko.ButterflySwallowtail
-import yuyuko.cards.yuyuko.CerasusSubhirtella
-import yuyuko.cards.yuyuko.DyingButterflies
-import yuyuko.cards.yuyuko.DyingSakura
-import yuyuko.cards.yuyuko.Explore
-import yuyuko.cards.yuyuko.LingerOverFlower
-import yuyuko.cards.yuyuko.Photo
-import yuyuko.cards.yuyuko.Sakura
-import yuyuko.cards.yuyuko.SakuraBloom
-import yuyuko.cards.yuyuko.SakuraDormancy
-import yuyuko.cards.yuyuko.SakuraSeal
-import yuyuko.cards.yuyuko.SakuraSuicide
-import yuyuko.cards.yuyuko.Soul
-import yuyuko.cards.yuyuko.TheInkySakura
-import yuyuko.cards.yuyuko.UnknownPetal
+import yuyuko.cards.yuyuko.*
 
 private val ButterflyIDS = setOf(
         Butterfly.ID, ButterflySwallowtail.ID, ButterflyGhost.ID,
@@ -35,7 +15,7 @@ private val SakuraIDS = setOf(
         SakuraSeal.ID, SakuraSuicide.ID,
 
         LingerOverFlower.ID, UnknownPetal.ID, TheInkySakura.ID,
-        CerasusSubhirtella.ID, DyingSakura.ID
+        SakuraSakura.ID, CerasusSubhirtella.ID, DyingSakura.ID
 )
 private val SpecialButterflyIDS = setOf(
         Butterfly.ID, ButterflySwallowtail.ID, ButterflyGhost.ID,

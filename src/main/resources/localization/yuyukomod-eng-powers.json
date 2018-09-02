@@ -197,7 +197,14 @@
   "Dream of Spring": {
     "NAME": "Dream of Spring",
     "DESCRIPTIONS": [
-      "receive half damage, gain double heal"
+      "Receive half damage, gain double heal"
+    ]
+  },
+  "Sakura Sakura": {
+    "NAME": "Sakura Sakura",
+    "DESCRIPTIONS": [
+      "Place #ySakura into hand at the start of next #b",
+      " turns"
     ]
   }
 }

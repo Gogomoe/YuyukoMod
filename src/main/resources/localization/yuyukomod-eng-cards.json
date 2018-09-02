@@ -188,6 +188,15 @@
     "NAME": "Dream of Spring",
     "DESCRIPTION": "Next !M! turns,All targets receive half damage and gain double heal. NL Hide"
   },
+  "Sakura Sakura": {
+    "NAME": "Sakura Sakura",
+    "DESCRIPTION": "Is Sakura .Place Sakura into hand at the start of next !M! turns NL Can be upgraded any number of times. Reset"
+  },
+  "Ghost Lead": {
+    "NAME": "Ghost Lead",
+    "DESCRIPTION": "Replace all your cards to more rare cards except Derivate",
+    "UPGRADE_DESCRIPTION": "Replace all your cards to more rare cards except Derivate. NL Innate"
+  },
   "Reunion after Death": {
     "NAME": "Reunion after Death",
     "DESCRIPTION": "Only can be played when you don't have cards with same name except Basic and Derivate. Exhaust all Basic and Derivate . Gain energy at the start of turn",
