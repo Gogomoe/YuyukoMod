@@ -1,0 +1,37 @@
+{
+  "Firefly": {
+    "NAME": "萤火虫",
+    "DESCRIPTIONS": [
+      "治疗 #b",
+      " % 你已损失的生命值"
+    ]
+  },
+  "Keine": {
+    "NAME": "半白泽",
+    "DESCRIPTIONS": [
+      "消耗或将所有弃牌堆的牌洗入牌堆，抽 #b"
+    ]
+  },
+  "Gelsemium Tea": {
+    "NAME": "断肠草之茶",
+    "DESCRIPTIONS": [
+      "杀死一个敌人，失去一格药水栏位"
+    ]
+  },
+  "Pckles": {
+    "NAME": "酱菜",
+    "DESCRIPTIONS": [
+      "获得 #b ",
+      " 点护甲，回复 #b ",
+      " 点生命。使用后，将其复制加入奖励品"
+    ]
+  },
+  "Turbid Wine": {
+    "NAME": "浊酒",
+    "DESCRIPTIONS": [
+      "对敌方全体造成 #b",
+      " 点伤害，给予 #b",
+      " #y虚弱。使用后，将其复制加入奖励品"
+    ]
+  }
+}

@@ -5,6 +5,7 @@ import basemod.ModLabel
 import basemod.ModPanel
 import basemod.interfaces.*
 import com.badlogic.gdx.Gdx
+import com.badlogic.gdx.graphics.Color
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.core.CardCrawlGame
@@ -14,9 +15,9 @@ import com.megacrit.cardcrawl.core.Settings.GameLanguage.ZHT
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.localization.*
+import com.megacrit.cardcrawl.potions.AbstractPotion
 import com.megacrit.cardcrawl.rooms.AbstractRoom
 import com.megacrit.cardcrawl.unlock.UnlockTracker
-import org.apache.logging.log4j.LogManager
 import yuyuko.actions.HideAction
 import yuyuko.cards.HideCards
 import yuyuko.cards.isHide
@@ -27,6 +28,7 @@ import yuyuko.event.EventDispenser
 import yuyuko.event.OnDrawEvent
 import yuyuko.patches.CardColorEnum
 import yuyuko.patches.PlayerClassEnum
+import yuyuko.potions.*
 import yuyuko.powers.*
 import yuyuko.relics.*
 import java.nio.charset.StandardCharsets
@@ -38,29 +40,18 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
 
     companion object {
         const val MODNAME = "YuyukoMod"
-        const val AUTHOR = "Gogo"
-        const val DESCRIPTION = "YuyukoMod 0.0.1"
-
-        val logger = LogManager.getLogger("YuyukoMod")
+        const val AUTHOR = "Gogo, RuoRan"
+        const val DESCRIPTION = "YuyukoMod v0.2.1"
 
         @JvmStatic
         fun initialize() {
-            logger.info("========================= YUYUKOMOD INIT =========================")
-
             YuyukoMod()
-
-            logger.info("======================= YUYUKOMOD INIT DONE ======================")
         }
     }
 
     init {
-
-        logger.info("subscribing to subscriber")
         BaseMod.subscribe(this)
-
-        logger.info("creating the color YuyukoColor")
         CharacterColor(CardColorEnum.YUYUKO_COLOR!!, "yuyuko", 227f, 48f, 255f).register()
-
     }
 
     override fun receivePostInitialize() {
@@ -74,8 +65,6 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
     }
 
     override fun receiveEditCharacters() {
-        logger.info("add Yuyuko")
-
         BaseMod.addCharacter(
                 Yuyuko::class.java,
                 Yuyuko.NAME,
@@ -203,12 +192,12 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         addCard(TheWayToDeath())
 
         addPowers()
+        addPotions()
     }
 
     private fun addCard(card: AbstractCard) {
         BaseMod.addCard(card)
         UnlockTracker.unlockCard(card.cardID)
-
     }
 
     private fun addPowers() {
@@ -230,6 +219,22 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         BaseMod.addPower(TheForgottenWinterPower::class.java, TheForgottenWinterPower.POWER_ID)
         BaseMod.addPower(TripleSnowPower::class.java, TripleSnowPower.POWER_ID)
         BaseMod.addPower(TheWayToDeathPower::class.java, TheWayToDeathPower.POWER_ID)
+    }
+
+    private fun addPotions() {
+        addPotion(FireflyPotion::class.java, FireflyPotion.ID)
+        addPotion(KeinePotion::class.java, KeinePotion.ID)
+        addPotion(GelsemiumTeaPotion::class.java, GelsemiumTeaPotion.ID)
+        addPotion(PcklesPotion::class.java, PcklesPotion.ID)
+        addPotion(TurbidWinePotion::class.java, TurbidWinePotion.ID)
+    }
+
+    private fun addPotion(potion: Class<out AbstractPotion>, ID: String) {
+        BaseMod.addPotion(potion,
+                Color(0.3f, 0.3f, 0.3f, 1.0f),
+                Color(0.1f, 0.1f, 0.1f, 1.0f),
+                Color(0.5f, 0.5f, 0.5f, 1.0f),
+                ID, PlayerClassEnum.YUYOKO)
     }
 
     override fun receiveEditRelics() {
@@ -303,6 +308,10 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         val relicsStrings = Gdx.files.internal("localization/yuyukomod-$lang-relics.json")
                 .readString(StandardCharsets.UTF_8.toString())
         BaseMod.loadCustomStrings(RelicStrings::class.java, relicsStrings)
+
+        val potionsStrings = Gdx.files.internal("localization/yuyukomod-$lang-potions.json")
+                .readString(StandardCharsets.UTF_8.toString())
+        BaseMod.loadCustomStrings(PotionStrings::class.java, potionsStrings)
 
     }
 
