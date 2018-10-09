@@ -13,52 +13,52 @@
   },
   "Faramita's Temptation": {
     "NAME": "Faramita's Temptation",
-    "DESCRIPTION": "Enemy has each X+ !M! HP, NL Give 1 Intangible and Fading"
+    "DESCRIPTION": "Apply 1 Intangible and Fading for each X+!M! HP that enemy has."
   },
   "Sakura": {
     "NAME": "Sakura",
-    "DESCRIPTION": "Heal !M! HP,Draw 1 card, NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Heal !M! HP. Draw 1 card. NL Can be upgraded any number of times. Reset"
   },
   "Sakura (Seal)": {
     "NAME": "Sakura (Seal)",
-    "DESCRIPTION": "Heal !M! HP,Draw 1 card, NL Gain 4 Block , NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Heal !M! HP. Draw 1 card. NL Gain 4 Block. NL Can be upgraded any number of times. Reset"
   },
   "Sakura (Suicide)": {
     "NAME": "Sakura (Suicide)",
-    "DESCRIPTION": "Heal !M! HP,Draw 1 card, NL Gain 1 Phantom , NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Heal !M! HP. Draw 1 card. NL Gain 1 Phantom. NL Can be upgraded any number of times. Reset"
   },
   "Sakura (Dormancy)": {
     "NAME": "Sakura (Dormancy)",
-    "DESCRIPTION": "Heal !M! HP,Draw 1 card, NL Gain 2 Diaphaneity , NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Heal !M! HP. Draw 1 card. NL Gain 2 Diaphaneity. NL Can be upgraded any number of times. Reset"
   },
   "Sakura (Bloom)": {
     "NAME": "Sakura (Bloom)",
-    "DESCRIPTION": "Heal !M! HP,Draw 1 card, NL UpgradeAll Sakura , NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Heal !M! HP. Draw 1 card. NL UpgradeAll Sakura. NL Can be upgraded any number of times. Reset"
   },
   "Butterfly": {
     "NAME": "Butterfly",
-    "DESCRIPTION": "Deal !D! damage,Draw 1 card, NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Deal !D! damage. Draw 1 card. NL Can be upgraded any number of times. Reset"
   },
   "Butterfly (Ghost)": {
     "NAME": "Butterfly (Ghost)",
-    "DESCRIPTION": "Deal !D! damage,Draw 1 card, NL Give 1 Constricted , NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Deal !D! damage. Draw 1 card. NL Apply 1 Constricted. NL Can be upgraded any number of times. Reset"
   },
   "Butterfly (Swallowtail)": {
     "NAME": "Butterfly (Swallowtail)",
-    "DESCRIPTION": "Deal !D! damage,Draw 1 card, NL UpgradeAll Butterfly , NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Deal !D! damage. Draw 1 card., NL UpgradeAll Butterfly. NL Can be upgraded any number of times. Reset"
   },
   "Butterfly (Deep Rooted)": {
     "NAME": "Butterfly (Deep Rooted)",
-    "DESCRIPTION": "Deal !D! HP loss,Draw 1 card, NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Deal !D! HP loss. Draw 1 card. NL Can be upgraded any number of times. Reset"
   },
   "Butterfly (Delusion)": {
     "NAME": "Butterfly (Delusion)",
-    "DESCRIPTION": "Deal !D! damage,Draw 1 card, NL Give 2 Diaphaneity , NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Deal !D! damage. Draw 1 card. NL Apply 2 Diaphaneity. NL Can be upgraded any number of times. Reset"
   },
   "Explore": {
     "NAME": "Explore",
     "DESCRIPTION": "Discover 3. NL Exhaust",
-    "UPGRADE_DESCRIPTION": " Discover 3, NL Gain 1 Diaphaneity . NL Exhaust"
+    "UPGRADE_DESCRIPTION": " Discover 3. NL Gain 1 Diaphaneity. NL Exhaust"
   },
   "Soul": {
     "NAME": "Soul",
@@ -66,19 +66,19 @@
   },
   "Photo": {
     "NAME": "Photo",
-    "DESCRIPTION": "Set HP to !M! . NL Exhaust"
+    "DESCRIPTION": "Set HP to !M!. NL Exhaust"
   },
   "Ghostdom Sakura": {
     "NAME": "Ghostdom Sakura",
-    "DESCRIPTION": "Place a Sakura(Suicide) into draw pile, NL UpgradeAll Sakura"
+    "DESCRIPTION": "Shuffle 1 Sakura(Suicide) into your draw pile. NL UpgradeAll Sakura."
   },
   "Gauzy Sakura": {
     "NAME": "Gauzy Sakura",
-    "DESCRIPTION": "Place a Sakura(Dormancy) into draw pile, NL UpgradeAll Sakura"
+    "DESCRIPTION": "Shuffle 1 Sakura(Dormancy) into your draw pile. NL UpgradeAll Sakura."
   },
   "Bloom": {
     "NAME": "Bloom",
-    "DESCRIPTION": "UpgradeAll Sakura , NL Draw !M! cards"
+    "DESCRIPTION": "UpgradeAll Sakura. NL Draw !M! cards."
   },
   "Wandering Soul": {
     "NAME": "Wandering Soul",
