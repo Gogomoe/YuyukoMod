@@ -13,7 +13,7 @@
   },
   "Faramita's Temptation": {
     "NAME": "Faramita's Temptation",
-    "DESCRIPTION": "Enemy has each X+ !M! HP, NL Give 1 Intangible and Fading"
+    "DESCRIPTION": "Apply 1 Intangible and Fading for each X+!M! HP that enemy has."
   },
   "Sakura": {
     "NAME": "Sakura",
