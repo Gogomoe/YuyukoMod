@@ -68,7 +68,7 @@
     "TEXT": [
       "Hide",
       "hide",
-      "While draw pile has dis-hide cards , the card can't be drew"
+      "Cannot be drawn unless the only other cards in your draw pile are Hide cards."
     ]
   },
   "Retrieve": {
@@ -82,7 +82,7 @@
     "TEXT": [
       "Revive",
       "revive",
-      "find a card and place it into hand from exhaust pile"
+      "Add a card from your exhaust pile to your hand."
     ]
   },
   "Sakura(Seal)": {
