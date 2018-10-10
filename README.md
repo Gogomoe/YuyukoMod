@@ -34,15 +34,15 @@ YuyukoMod 是 [杀戮尖塔（SlayTheSpire）](https://store.steampowered.com/ap
 
 ### Profile
 
-YuyukoMod is a mod of [SlayTheSpire](https://store.steampowered.com/app/646570/Slay_the_Spire/) .
+YuyukoMod is a mod for [SlayTheSpire](https://store.steampowered.com/app/646570/Slay_the_Spire/).
 
-YuyukoMod add Yuyuko , a character of Touhou Project , to SlayTheSpire
+Adds Yuyuko from Touhou Project to Slay the Spire as a playable character.
 
-### Useage 
+### Usage 
 
-1. Follow [ModTheSpire](https://github.com/kiooeht/ModTheSpire#usage) to install `ModTheSpire`
-2. Download [BaseMod](https://github.com/daviscook477/BaseMod/releases) and [YuyukoMod](https://github.com/gogo81745/YuyukoMod/releases) and put `.jar` into `mods` directory
-3. Launch `MTS.cmd` or `MTS.sh` , check `BaseMod` and `YuyukoMod`
+1. Follow [ModTheSpire](https://github.com/kiooeht/ModTheSpire#usage) to install `ModTheSpire`.
+2. Download [BaseMod](https://github.com/daviscook477/BaseMod/releases) and [YuyukoMod](https://github.com/gogo81745/YuyukoMod/releases) and put the `.jar` files into the `mods` directory.
+3. Launch `MTS.cmd` or `MTS.sh` , check `BaseMod` and `YuyukoMod`.
 
 ### Designer
 
