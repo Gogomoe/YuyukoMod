@@ -132,7 +132,7 @@
   },
   "Showy Withering": {
     "NAME": "Showy Withering",
-    "DESCRIPTION": "At the start of your turn, UpgradeAll Sakura, then Retrieve 1 Sakura. NL Exhaust every 3rd Sakura you play."
+    "DESCRIPTION": "At the start of your turn, UpgradeAll Sakura, then Retrieve 1 Sakura. NL Exhaust every 3rd Sakura you play.",
     "UPGRADE_DESCRIPTION": "At the start of your turn, UpgradeAll Sakura, then Retrieve 1 Sakura. NL Exhaust every 3rd Sakura you play. NL Innate"
   },
   "Mini Ghostdom": {
