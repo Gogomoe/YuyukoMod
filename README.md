@@ -20,6 +20,7 @@ YuyukoMod 是 [杀戮尖塔（SlayTheSpire）](https://store.steampowered.com/ap
 
 ### 感谢
 
+- Kristall Wang https://github.com/Kristall-WangShiwei 帮助改进英文翻译
 - 一下午(OPM) Tencent QQ: 1315659893 隔壁骚灵Mod的策划、程序
 - 墨千(BlackRuse) https://github.com/lionpkqq 隔壁咲夜Mod的策划、程序
 - HOYKJ https://github.com/HOYKJ 隔壁觉Mod的策划、程序
@@ -50,6 +51,7 @@ RuoRan(若然) https://github.com/fengruoshuiran Designer of YuyukoMod
 
 ### Thanks
 
+- Kristall Wang https://github.com/Kristall-WangShiwei help to improve English translation
 - OPM(一下午) Tencent QQ: 1315659893 Designer and Programmer of Poltergeist Mod
 - BlackRuse(墨千) https://github.com/lionpkqq Designer and Programmer of Sakuya Mod
 - HOYKJ https://github.com/HOYKJ Designer and Programmer of Komeiji Mod
