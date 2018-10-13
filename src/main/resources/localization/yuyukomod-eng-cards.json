@@ -1,11 +1,11 @@
 {
   "Fantasy Butterflies": {
     "NAME": "Fantasy Butterflies",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL UpgradeAll Butterfly."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL UpgradeAll Butterfly cards."
   },
   "Dreamy Sakura": {
     "NAME": "Dreamy Sakura",
-    "DESCRIPTION": "Gain !M! Diaphaneity. NL UpgradeAll Sakura."
+    "DESCRIPTION": "Gain !M! Diaphaneity. NL UpgradeAll Sakura cards."
   },
   "Deathly Ground": {
     "NAME": "Deathly Ground",
@@ -33,7 +33,7 @@
   },
   "Sakura (Bloom)": {
     "NAME": "Sakura (Bloom)",
-    "DESCRIPTION": "Heal !M! HP. Draw 1 card. NL UpgradeAll Sakura. NL Can be upgraded any number of times. Reset."
+    "DESCRIPTION": "Heal !M! HP. Draw 1 card. NL UpgradeAll Sakura cards. NL Can be upgraded any number of times. Reset."
   },
   "Butterfly": {
     "NAME": "Butterfly",
@@ -45,7 +45,7 @@
   },
   "Butterfly (Swallowtail)": {
     "NAME": "Butterfly (Swallowtail)",
-    "DESCRIPTION": "Deal !D! damage. Draw 1 card., NL UpgradeAll Butterfly. NL Can be upgraded any number of times. Reset."
+    "DESCRIPTION": "Deal !D! damage. Draw 1 card., NL UpgradeAll Butterfly cards. NL Can be upgraded any number of times. Reset."
   },
   "Butterfly (Deep Rooted)": {
     "NAME": "Butterfly (Deep Rooted)",
@@ -62,27 +62,27 @@
   },
   "Soul": {
     "NAME": "Soul",
-    "DESCRIPTION": "can't play. Ethereal"
+    "DESCRIPTION": "Unplayable. Ethereal"
   },
   "Photo": {
     "NAME": "Photo",
-    "DESCRIPTION": "Set HP to !M!. NL Exhaust."
+    "DESCRIPTION": "Set your HP to !M!. NL Exhaust."
   },
   "Ghostdom Sakura": {
     "NAME": "Ghostdom Sakura",
-    "DESCRIPTION": "Shuffle 1 Sakura(Suicide) into your draw pile. NL UpgradeAll Sakura."
+    "DESCRIPTION": "Shuffle 1 Sakura(Suicide) into your draw pile. NL UpgradeAll Sakura cards."
   },
   "Gauzy Sakura": {
     "NAME": "Gauzy Sakura",
-    "DESCRIPTION": "Shuffle 1 Sakura(Dormancy) into your draw pile. NL UpgradeAll Sakura."
+    "DESCRIPTION": "Shuffle 1 Sakura(Dormancy) into your draw pile. NL UpgradeAll Sakura cards."
   },
   "Bloom": {
     "NAME": "Bloom",
-    "DESCRIPTION": "UpgradeAll Sakura. NL Draw !M! cards."
+    "DESCRIPTION": "UpgradeAll Sakura cards. NL Draw !M! cards."
   },
   "Wandering Soul": {
     "NAME": "Wandering Soul",
-    "DESCRIPTION": "Gain !M! Strength if you HP greater than half , NL Otherwise gain !M! Dexterity"
+    "DESCRIPTION": "Gain !M! Strength if your HP greater than half. NL Otherwise, gain !M! Dexterity."
   },
   "Open The Fan": {
     "NAME": "Open The Fan",
@@ -90,16 +90,16 @@
   },
   "Linger over Flower": {
     "NAME": "Linger over Flower",
-    "DESCRIPTION": "Is Sakura and Butterfly meanwhile. NL Select: Place a Sakura or Butterfly into draw pile, NL Can be upgraded any number of times. Exhaust"
+    "DESCRIPTION": "Counts as a Sakura and a Butterfly card. NL Shuffle 1 Sakura or a Butterfly into your draw pile. NL Can be upgraded any number of times. Exhaust."
   },
   "Cerasus Subhirtella": {
     "NAME": "Cerasus Subhirtella",
-    "DESCRIPTION": "Is Sakura . Heal !M! HP,Draw 1 card. When draw Sakura ,Upgrade it. NL Can be upgraded any number of times. Exhaust , RETAIN"
+    "DESCRIPTION": "Counts as a Sakura card. Heal !M! HP. Draw 1 card. When draw Sakura, Upgrade it. NL Can be upgraded any number of times. Exhaust , RETAIN"
   },
   "Suicide": {
     "NAME": "Suicide",
-    "DESCRIPTION": "Set own HP to 1 NL Gain equal amount of Block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Set own HP to , NL Gain equal amount of Block. NL Innate , Exhaust."
+    "DESCRIPTION": "Set own HP to 1. NL Gain Block equal to the HP you lost. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Set own HP to 1. NL Gain Block equal to the HP you lost. NL Innate. Exhaust."
   },
   "Monster Cherry Tree": {
     "NAME": "Monster Cherry Tree",
@@ -107,16 +107,16 @@
   },
   "Unknown Petal": {
     "NAME": "Unknown Petal",
-    "DESCRIPTION": "Is Sakura . NL Heal !M! , Revive Sakura . NL Can be upgraded any number of times. Reset."
+    "DESCRIPTION": "Counts as a Sakura card. NL Heal !M!. Revive 1 random Sakura card. NL Can be upgraded any number of times. Reset."
   },
   "Sakura Ward": {
     "NAME": "Sakura Ward",
-    "DESCRIPTION": "Gain !B! Block. NL Place a Sakura(Seal) into your draw pile.",
+    "DESCRIPTION": "Gain !B! Block. NL Shuffle 1 Sakura(Seal) into your draw pile.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Shuffle 1 Sakura(Seal) into your draw pile. Innate."
   },
   "Bomb": {
     "NAME": "Bomb",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies, NL Gain 1 Intangible . NL When discard,make a copy of this and place it into discard pile. Exhaust"
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain 1 Intangible. NL When discard, make a copy of this and place it into discard pile. Exhaust"
   },
   "Lunch": {
     "NAME": "Lunch",
@@ -128,7 +128,7 @@
   },
   "Childlike": {
     "NAME": "Childlike",
-    "DESCRIPTION": "Exhaust all Derivate in hand. UpgradeAll Sakura and Butterfly. Revive a card."
+    "DESCRIPTION": "Exhaust all Derivate in hand. UpgradeAll Sakura and Butterfly cards. Revive a random card."
   },
   "Showy Withering": {
     "NAME": "Showy Withering",
@@ -146,11 +146,11 @@
   },
   "Full Moon": {
     "NAME": "Full Moon",
-    "DESCRIPTION": "Exhaust all Sakura, gain equal amount of Regen. Exhaust"
+    "DESCRIPTION": "Exhaust all Sakura cards. Gain Regen equal to the number of cards exhausted. Exhaust."
   },
   "Mirror of Mind": {
     "NAME": "Mirror of Mind",
-    "DESCRIPTION": "Record you HP in !M! Photos and place them into draw pile. Exhaust"
+    "DESCRIPTION": "Record your HP in !M! Photos and shuffle them into your draw pile. Exhaust."
   },
   "Explore Ghostdom": {
     "NAME": "Explore Ghostdom",
@@ -159,7 +159,7 @@
   },
   "Unfulfilling Attachment": {
     "NAME": "Unfulfilling Attachment",
-    "DESCRIPTION": "Discover 1 for 10times.Transform all Derivate Sakura with no extra effect to Sakura(Bloom)"
+    "DESCRIPTION": "Discover 1 10 times. Transform all Derivate Sakura with no extra effect to Sakura(Bloom)"
   },
   "Remain Here": {
     "NAME": "Remain Here",
@@ -182,7 +182,7 @@
   },
   "The Inky Sakura": {
     "NAME": "The Inky Sakura",
-    "DESCRIPTION": "Is Sakura .If has 30 upgrade times,Deal 100% HP Lose to all enemies.Otherwise Deal 5% HP Lose. NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Counts as a Sakura card. If has 30 upgrade times, Deal 100% HP Lose to all enemies.Otherwise Deal 5% HP Lose. NL Can be upgraded any number of times. Reset"
   },
   "Dream of Spring": {
     "NAME": "Dream of Spring",
@@ -190,7 +190,7 @@
   },
   "Sakura Sakura": {
     "NAME": "Sakura Sakura",
-    "DESCRIPTION": "Is Sakura .Place Sakura into hand at the start of next !M! turns NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Counts as a Sakura card. Add 1 Sakura to your hand at the start of your next !M! turn(s). NL Can be upgraded any number of times. Reset"
   },
   "Ghost Lead": {
     "NAME": "Ghost Lead",
@@ -211,7 +211,7 @@
   },
   "Unborn Light": {
     "NAME": "Unborn Light",
-    "DESCRIPTION": "Give !M! Diaphaneity to ALL enemies , NL Deal !D! damage"
+    "DESCRIPTION": "Give !M! Diaphaneity to ALL enemies. NL Deal !D! damage"
   },
   "Elegance": {
     "NAME": "Elegance",
@@ -252,7 +252,7 @@
   },
   "Snow": {
     "NAME": "Snow",
-    "DESCRIPTION": "Gain !M! Diaphaneity"
+    "DESCRIPTION": "Gain !M! Diaphaneity."
   },
   "Triple Snow": {
     "NAME": "Triple Snow",
@@ -294,19 +294,19 @@
   "Dancing Butterflies": {
     "NAME": "Dancing Butterflies",
     "DESCRIPTION": "Deal damage of Fan stacks to all enemies, NL UpgradeAll Butterfly",
-    "UPGRADE_DESCRIPTION": "Deal damage of Fan stacks to all enemies, NL Place 1 Butterfly into draw pile, UpgradeAll Butterfly"
+    "UPGRADE_DESCRIPTION": "Deal damage to ALL enemies equal to your Fan stacks. NL Shuffle 1 Butterfly into your draw pile. UpgradeAll Butterfly cards."
   },
   "Spear of Papilio": {
     "NAME": "Spear of Papilio",
-    "DESCRIPTION": "Deal !D! HP loss, NL Place !M! Butterfly(Deep-Rooted) into draw pile, NL UpgradeAll Butterfly"
+    "DESCRIPTION": "Apply !D! HP loss. NL Shuffle !M! Butterfly(Deep-Rooted) into your draw pile. NL UpgradeAll Butterfly cards."
   },
   "Song of Papilio": {
     "NAME": "Song of Papilio",
-    "DESCRIPTION": "Shuffle 1 Butterfly(Swallowtail) into your draw pile. NL UpgradeAll Butterfly."
+    "DESCRIPTION": "Shuffle 1 Butterfly(Swallowtail) into your draw pile. NL UpgradeAll Butterfly cards."
   },
   "Fondling of Papilio": {
     "NAME": "Fondling of Papilio",
-    "DESCRIPTION": "Retrieve !M! Butterfly , NL UpgradeAll Butterfly for !M! times"
+    "DESCRIPTION": "Retrieve !M! random Butterfly. NL UpgradeAll Butterfly cards !M! times."
   },
   "Redemption of Death": {
     "NAME": "Redemption of Death",
@@ -321,8 +321,8 @@
   },
   "Final of Final": {
     "NAME": "Final of Final",
-    "DESCRIPTION": "Deal damage of the difference between draw pile and discard pile",
-    "UPGRADE_DESCRIPTION": "Deal damage of the difference between draw pile and discard pile, NL Hide"
+    "DESCRIPTION": "Deal damage equal to the difference between the number of cards in your draw pile and in your discard pile.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to the difference between the number of cards in your draw pile and in your discard pile. NL Hide."
   },
   "Unpaved Way": {
     "NAME": "Unpaved Way",
@@ -337,16 +337,16 @@
   },
   "Infinite Sin": {
     "NAME": "Infinite Sin",
-    "DESCRIPTION": "Exhaust all Butterfly , NL Deal decuple damage",
+    "DESCRIPTION": "Exhaust all Butterfly cards. NL Deal decuple damage",
     "UPGRADE_DESCRIPTION": "Exhaust all Butterfly , NL Deal decuple damage. Hide"
   },
   "Butterflies Rainbow": {
     "NAME": "Butterflies Rainbow",
-    "DESCRIPTION": "Is Butterfly . NL Place Derivate Butterfly with random extra effect into draw pile, NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Counts as a Butterfly card. NL Place Derivate Butterfly with random extra effect into draw pile, NL Can be upgraded any number of times. Reset."
   },
   "Butterflies in Dream": {
     "NAME": "Butterflies in Dream",
-    "DESCRIPTION": "Is Butterfly . Replace all your hand to !M! Butterfly , up to 10. NL Can be upgraded any number of times. Exhaust"
+    "DESCRIPTION": "Counts as a Butterfly card. Replace all your hand to !M! Butterfly , up to 10. NL Can be upgraded any number of times. Exhaust"
   },
   "Dancing Soul": {
     "NAME": "Dancing Soul",
@@ -367,24 +367,24 @@
   },
   "Float on Moon": {
     "NAME": "Float on Moon",
-    "DESCRIPTION": "At the start of turn, UpgradeAll Butterfly for 3 times, Reduce 1 draw. NL Your Derivate Butterfly will Deal 3 times damage and exhaust",
-    "UPGRADE_DESCRIPTION": "At the start of turn, UpgradeAll Butterfly for 3 times, Reduce 1 draw. NL Your Derivate Butterfly will Deal 3 times damage and exhaust . Innate"
+    "DESCRIPTION": "At the start of your turn, UpgradeAll Butterfly cards 3 times. Draw 1 less card at the start of your turn. NL Your Derivate Butterfly will Deal 3 times damage and exhaust",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, UpgradeAll Butterfly cards 3 times. Draw 1 less card at the start of your turn. NL Your Derivate Butterfly will Deal 3 times damage and exhaust . Innate"
   },
   "Revive The Butterflies": {
     "NAME": "Revive The Butterflies",
-    "DESCRIPTION": "Lose all Fan ,Set your HP to 1, NL Gain 3 Intangible.After you play dis-derivate, Revive Butterfly"
+    "DESCRIPTION": "Lose all Fan ,Set your HP to 1, NL Gain 3 Intangible. After you play dis-derivate, Revive Butterfly"
   },
   "All Wander": {
     "NAME": "All Wander",
-    "DESCRIPTION": "Gain X Phantom . NL If you haven't play any other card, Finish the turn immediately, And skip next turn of enemies",
-    "UPGRADE_DESCRIPTION": "Gain X+1 Phantom . NL If you haven't play any other card, Finish the turn immediately, And skip next turn of enemies"
+    "DESCRIPTION": "Gain X Phantom. NL If you haven't played any other card this turn, end the turm, then skip your enemies' next turn.",
+    "UPGRADE_DESCRIPTION": "Gain X+1 Phantom. NL If you haven't played any other card this turn, end the turm, then skip your enemies' next turn."
   },
   "Become Phantom": {
     "NAME": "Become Phantom",
-    "DESCRIPTION": "Reduce 1 Fan . NL Gain 1 Phantom at the start of turn. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Reduce 1 Fan ,Gain 1 Phantom . NL Gain 1 Phantom at the start of turn",
+    "DESCRIPTION": "Lose 1 Fan. NL At the start of each turn, gain 1 Phantom.",
+    "UPGRADE_DESCRIPTION": "Lose 1 Fan. NL At the start of each turn, gain 1 Phantom.",
     "EXTENDED_DESCRIPTION": [
-      "I don't have Fan"
+      "I don't have any Fan."
     ]
   },
   "Sweet of Phantom": {
@@ -393,22 +393,22 @@
   },
   "Steamed Phantom": {
     "NAME": "Steamed Phantom",
-    "DESCRIPTION": "Reduce 1 Phantom , NL Heal 50% of lost HP",
-    "UPGRADE_DESCRIPTION": "Reduce 1 Phantom , NL Heal 75% of lost HP",
+    "DESCRIPTION": "Lose 1 Phantom. NL Heal 50% of your missing HP.",
+    "UPGRADE_DESCRIPTION": "Lose 1 Phantom. NL Heal 75% of your missing HP.",
     "EXTENDED_DESCRIPTION": [
-      "I don't have Phantom"
+      "I don't have any Phantom."
     ]
   },
   "Dark Wind": {
     "NAME": "Dark Wind",
-    "DESCRIPTION": "Gain !M! Phantom , NL Place 1 Soul and 1 Burn into hand."
+    "DESCRIPTION": "Gain !M! Phantom. NL Add 1 Soul and 1 Burn to your hand."
   },
   "Unstable Ward": {
     "NAME": "Unstable Ward",
-    "DESCRIPTION": "Reduce 1 Phantom ,Draw 1 cards, Discover 3",
-    "UPGRADE_DESCRIPTION": "Reduce 1 Phantom ,Draw 2 cards, Discover 5",
+    "DESCRIPTION": "Lose 1 Phantom. Draw 1 card. Discover 3.",
+    "UPGRADE_DESCRIPTION": "Lose 1 Phantom. Draw 2 cards. Discover 5.",
     "EXTENDED_DESCRIPTION": [
-      "I don't have Phantom"
+      "I don't have any Phantom."
     ]
   },
   "City of Death": {
@@ -417,7 +417,7 @@
   },
   "Immigrant Phantom": {
     "NAME": "Immigrant Phantom",
-    "DESCRIPTION": "Reduce half Phantom , Give Constricted of !M! times of the amount "
+    "DESCRIPTION": "Lose half your Phantom. Apply Constricted equal to !M! times the amount of Phantom you lose."
   },
   "Phantom Village": {
     "NAME": "Phantom Village",
@@ -426,11 +426,11 @@
   },
   "Dying Butterflies": {
     "NAME": "Dying Butterflies",
-    "DESCRIPTION": "Is Butterfly .Gain !M! Phantom ,up to 5 stacks, NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Counts as a Butterfly card. Gain !M! Phantom ,up to 5 stacks, NL Can be upgraded any number of times. Reset"
   },
   "Phantom Gift": {
     "NAME": "Phantom Gift",
-    "DESCRIPTION": "At the start of your turn, gain 1 Phantom"
+    "DESCRIPTION": "At the start of each turn, gain 1 Phantom."
   },
   "Trap Lamp": {
     "NAME": "Trap Lamp",
@@ -442,7 +442,7 @@
   },
   "Dying Sakura": {
     "NAME": "Dying Sakura",
-    "DESCRIPTION": "Is Sakura .Every 3 times upgrade, place 1 Soul into hand. NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Counts as a Sakura card. Every 3 times upgrade, place 1 Soul into hand. NL Can be upgraded any number of times. Reset"
   },
   "Dying Dream": {
     "NAME": "Dying Dream",
