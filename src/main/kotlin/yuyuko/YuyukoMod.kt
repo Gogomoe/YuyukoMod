@@ -41,7 +41,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
     companion object {
         const val MODNAME = "YuyukoMod"
         const val AUTHOR = "Gogo, RuoRan"
-        const val DESCRIPTION = "YuyukoMod v0.2.3"
+        const val DESCRIPTION = "YuyukoMod v0.2.4"
 
         @JvmStatic
         fun initialize() {
@@ -66,11 +66,8 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
 
     override fun receiveEditCharacters() {
         BaseMod.addCharacter(
-                Yuyuko::class.java,
-                Yuyuko.NAME,
-                "Yuyuko class string",
+                Yuyuko(CardCrawlGame.playerName),
                 CardColorEnum.YUYUKO_COLOR,
-                Yuyuko.NAME,
                 "images/charSelect/yuyukoButton.png",
                 "images/charSelect/yuyukoPortrait.png",
                 PlayerClassEnum.YUYOKO
