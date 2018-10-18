@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.core.EnergyManager
+import com.megacrit.cardcrawl.helpers.FontHelper
 import com.megacrit.cardcrawl.screens.CharSelectInfo
 import yuyuko.CharacterColor
 import yuyuko.cards.yuyuko.Sakura
@@ -74,7 +75,7 @@ class Yuyuko(name: String) : CustomPlayer(
 
     override fun getAscensionMaxHPLoss(): Int = 3
 
-    override fun getEnergyNumFont(): BitmapFont = BitmapFont()
+    override fun getEnergyNumFont(): BitmapFont = FontHelper.energyNumFontGreen
 
     override fun doCharSelectScreenSelectEffect() {}
 
