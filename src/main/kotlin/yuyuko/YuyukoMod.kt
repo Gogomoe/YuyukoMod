@@ -41,7 +41,7 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
     companion object {
         const val MODNAME = "YuyukoMod"
         const val AUTHOR = "Gogo, RuoRan"
-        const val DESCRIPTION = "YuyukoMod v0.2.4"
+        const val DESCRIPTION = "YuyukoMod v0.2.5"
 
         @JvmStatic
         fun initialize() {
