@@ -4,6 +4,7 @@ import basemod.abstracts.CustomPlayer
 import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.g2d.BitmapFont
 import com.badlogic.gdx.math.MathUtils
+import com.megacrit.cardcrawl.actions.AbstractGameAction
 import com.megacrit.cardcrawl.cards.AbstractCard
 import com.megacrit.cardcrawl.characters.AbstractPlayer
 import com.megacrit.cardcrawl.core.CardCrawlGame
@@ -26,6 +27,7 @@ class Yuyuko(name: String) : CustomPlayer(
         null as String?,
         null as String?
 ) {
+
     companion object {
         val CHARACTER_STRINGS = CardCrawlGame.languagePack.getCharacterString("Yuyuko")
         val NAME = CHARACTER_STRINGS.NAMES[0]!!
@@ -67,7 +69,7 @@ class Yuyuko(name: String) : CustomPlayer(
 
     override fun getTitle(p0: PlayerClass?): String = NAME
 
-    override fun getCardColor(): Color = characterColor.color
+    override fun getCardColor(): AbstractCard.CardColor? = CardColorEnum.YUYUKO_COLOR
 
     override fun getStartCardForEvent(): AbstractCard = Sakura()
 
@@ -84,6 +86,26 @@ class Yuyuko(name: String) : CustomPlayer(
     override fun getLocalizedCharacterName(): String = NAME
 
     override fun newInstance(): AbstractPlayer = Yuyuko(this.name)
+
+    override fun getCardRenderColor(): Color = characterColor.color
+
+    override fun getSlashAttackColor(): Color = characterColor.color
+
+    override fun getSpireHeartText(): String = CardCrawlGame.languagePack
+            .getEventString("Spire Heart Yuyuko").DESCRIPTIONS[0]
+
+    override fun getVampireText(): String = CardCrawlGame.languagePack
+            .getEventString("Vampires").DESCRIPTIONS[1]
+
+    override fun getSpireHeartSlashEffect(): Array<AbstractGameAction.AttackEffect> =
+            arrayOf(
+                    AbstractGameAction.AttackEffect.SLASH_HEAVY,
+                    AbstractGameAction.AttackEffect.FIRE,
+                    AbstractGameAction.AttackEffect.BLUNT_HEAVY,
+                    AbstractGameAction.AttackEffect.SLASH_HEAVY,
+                    AbstractGameAction.AttackEffect.FIRE,
+                    AbstractGameAction.AttackEffect.BLUNT_HEAVY
+            )
 
     override fun getStartingDeck(): ArrayList<String> {
         val list = arrayListOf<String>()

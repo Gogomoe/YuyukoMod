@@ -67,7 +67,6 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
     override fun receiveEditCharacters() {
         BaseMod.addCharacter(
                 Yuyuko(CardCrawlGame.playerName),
-                CardColorEnum.YUYUKO_COLOR,
                 "images/charSelect/yuyukoButton.png",
                 "images/charSelect/yuyukoPortrait.png",
                 PlayerClassEnum.YUYOKO
@@ -309,6 +308,10 @@ class YuyukoMod : PostInitializeSubscriber, EditCardsSubscriber, EditCharactersS
         val potionsStrings = Gdx.files.internal("localization/yuyukomod-$lang-potions.json")
                 .readString(StandardCharsets.UTF_8.toString())
         BaseMod.loadCustomStrings(PotionStrings::class.java, potionsStrings)
+
+        val eventsStrings = Gdx.files.internal("localization/yuyukomod-$lang-events.json")
+                .readString(StandardCharsets.UTF_8.toString())
+        BaseMod.loadCustomStrings(EventStrings::class.java, eventsStrings)
 
     }
 
