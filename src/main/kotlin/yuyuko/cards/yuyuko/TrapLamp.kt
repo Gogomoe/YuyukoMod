@@ -74,6 +74,12 @@ class TrapLamp : CustomCard(
         )
     }
 
+    override fun makeStatEquivalentCopy(): AbstractCard = super.makeStatEquivalentCopy().also {
+        it.magicNumber = this.magicNumber
+        it.baseMagicNumber = this.baseMagicNumber
+        it.upgradedMagicNumber = this.upgradedMagicNumber
+    }
+
     override fun upgrade() {
         if (!upgraded) {
             this.isEthereal = false
