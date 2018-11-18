@@ -27,6 +27,10 @@ class ChaseTheSukhavati : CustomCard(
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
     }
 
+    init {
+        this.exhaust = true;
+    }
+
     override fun makeCopy(): AbstractCard = ChaseTheSukhavati()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {

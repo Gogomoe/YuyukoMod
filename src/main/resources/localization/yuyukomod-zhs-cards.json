@@ -124,7 +124,7 @@
   },
   "Chase The Sukhavati": {
     "NAME": "欣求净土",
-    "DESCRIPTION": "发现 10 ，获得 10点能量。打出10张牌后结束本回合"
+    "DESCRIPTION": "发现 10 ，获得 10点能量。打出10张牌后结束本回合。 NL 消耗 。"
   },
   "Childlike": {
     "NAME": "天衣无缝",
@@ -434,8 +434,8 @@
   },
   "Trap Lamp": {
     "NAME": "通向黄泉的诱蛾灯",
-    "DESCRIPTION": "损失 !M! 层 幽灵 ，将 !M! 张 蝶(亡灵) 洗入牌堆。下一回合，将1张数值+1的这张卡加入手牌。 NL 消耗，虚无",
-    "UPGRADE_DESCRIPTION": "损失 !M! 层 幽灵 ，将 !M! 张 蝶(亡灵) 洗入牌堆。下一回合，将1张数值+1的这张卡加入手牌。 NL 消耗",
+    "DESCRIPTION": "损失 !M! 层 幽灵 ，将 !M! 张 蝶(亡灵) 洗入牌堆。下一回合，将1张同名卡加入手牌。 NL 消耗，虚无",
+    "UPGRADE_DESCRIPTION": "损失 !M! 层 幽灵 ，将 !M! 张 蝶(亡灵) 洗入牌堆。下一回合，将1张同名卡加入手牌。 NL 消耗",
     "EXTENDED_DESCRIPTION": [
       "我没有足够的幽灵"
     ]

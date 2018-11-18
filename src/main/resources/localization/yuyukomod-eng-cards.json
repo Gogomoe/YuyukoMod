@@ -124,7 +124,7 @@
   },
   "Chase The Sukhavati": {
     "NAME": "Chase The Sukhavati",
-    "DESCRIPTION": "Discover 10. Gain 10 energy. End the turn after you played 10 cards."
+    "DESCRIPTION": "Discover 10. Gain 10 energy. End the turn after you played 10 cards. Exhaust ."
   },
   "Childlike": {
     "NAME": "Childlike",
@@ -434,8 +434,8 @@
   },
   "Trap Lamp": {
     "NAME": "Trap Lamp",
-    "DESCRIPTION": "Reduce !M! ghost, Place !M! Butterfly(Ghost) into draw pile. NL Next turn place a copy and +1 of this into hand. Exhaust , Ethereal",
-    "UPGRADE_DESCRIPTION": "Reduce !M! ghost, Place !M! Butterfly(Ghost) into draw pile. NL Next turn place a copy and +1 of this into hand. Exhaust",
+    "DESCRIPTION": "Reduce !M! ghost, Place !M! Butterfly(Ghost) into draw pile. NL Next turn place a copy of this into hand. Exhaust , Ethereal",
+    "UPGRADE_DESCRIPTION": "Reduce !M! ghost, Place !M! Butterfly(Ghost) into draw pile. NL Next turn place a copy of this into hand. Exhaust",
     "EXTENDED_DESCRIPTION": [
       "I don't have enough Phantom"
     ]
