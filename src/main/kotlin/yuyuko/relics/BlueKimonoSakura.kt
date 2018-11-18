@@ -12,11 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster
 import com.megacrit.cardcrawl.relics.AbstractRelic
 import yuyuko.actions.ChangeCardsInHandAction
 import yuyuko.cards.isSakura
-import yuyuko.cards.yuyuko.Sakura
-import yuyuko.cards.yuyuko.SakuraBloom
-import yuyuko.cards.yuyuko.SakuraDormancy
-import yuyuko.cards.yuyuko.SakuraSeal
-import yuyuko.cards.yuyuko.SakuraSuicide
+import yuyuko.cards.yuyuko.*
 import yuyuko.event.EventDispenser
 import yuyuko.event.OnDrawEvent
 import kotlin.math.ceil
@@ -54,10 +50,15 @@ class BlueKimonoSakura : CustomRelic(
         } else {
             super.obtain()
         }
+        applyTransformSakura()
 
     }
 
     override fun atBattleStart() {
+        applyTransformSakura()
+    }
+
+    private fun applyTransformSakura() {
         EventDispenser.subscribe<OnDrawEvent>(OnDrawEvent.ID) {
             if (card.cardID == Sakura.ID) {
                 val toChange = listOf(

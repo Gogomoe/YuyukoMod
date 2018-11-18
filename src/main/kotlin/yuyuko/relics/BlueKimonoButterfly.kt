@@ -52,10 +52,14 @@ class BlueKimonoButterfly : CustomRelic(
         } else {
             super.obtain()
         }
-
+        applyTransformButterfly()
     }
 
     override fun atBattleStart() {
+        applyTransformButterfly()
+    }
+
+    private fun applyTransformButterfly() {
         EventDispenser.subscribe<OnDrawEvent>(OnDrawEvent.ID) {
             if (card.cardID == Butterfly.ID) {
                 val toChange = listOf(
