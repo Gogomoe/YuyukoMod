@@ -53,12 +53,13 @@ class BlueKimonoFullMoon : CustomRelic(
                 .filter { !it.isDeadOrEscaped }
                 .forEach {
                     val amount = it.getPower(DiaphaneityPower.POWER_ID)?.amount ?: 0
-                    if (amount < 1) {
+                    val damage = amount / 5
+                    if (damage < 1) {
                         return@forEach
                     }
                     AbstractDungeon.actionManager.addToBottom(
                             DamageAction(
-                                    it, DamageInfo(AbstractDungeon.player, amount, HP_LOSS)
+                                    it, DamageInfo(AbstractDungeon.player, damage, HP_LOSS)
                             )
                     )
                 }
@@ -67,11 +68,12 @@ class BlueKimonoFullMoon : CustomRelic(
     override fun onPlayerEndTurn() {
         this.flash()
         val amount = AbstractDungeon.player.getPower(DiaphaneityPower.POWER_ID)?.amount ?: 0
-        if (amount < 1) {
+        val heal = amount / 5;
+        if (heal < 1) {
             return
         }
         AbstractDungeon.actionManager.addToBottom(
-                GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, amount)
+                GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, heal)
         )
     }
 
