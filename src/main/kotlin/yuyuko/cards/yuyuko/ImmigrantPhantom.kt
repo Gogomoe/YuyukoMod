@@ -46,7 +46,7 @@ class ImmigrantPhantom : CustomCard(
                 ApplyPowerAction(
                         target, self,
                         ConstrictedPower(target, self, amount * this.magicNumber),
-                        amount
+                        amount * this.magicNumber
                 )
         )
         AbstractDungeon.actionManager.addToBottom(
