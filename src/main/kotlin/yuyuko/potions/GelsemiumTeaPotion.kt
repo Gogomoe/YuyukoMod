@@ -42,14 +42,14 @@ class GelsemiumTeaPotion : CustomPotion(NAME, ID,
         }
         val damage = target!!.maxHealth + target.currentBlock
         AbstractDungeon.actionManager.addToBottom(
+                LosePotionSlotAction()
+        )
+        AbstractDungeon.actionManager.addToBottom(
                 DamageAction(
                         target,
                         DamageInfo(target, damage, DamageInfo.DamageType.HP_LOSS),
                         AbstractGameAction.AttackEffect.FIRE
                 )
-        )
-        AbstractDungeon.actionManager.addToBottom(
-                LosePotionSlotAction()
         )
     }
 
