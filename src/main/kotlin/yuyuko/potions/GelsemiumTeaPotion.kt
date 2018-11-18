@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature
 import com.megacrit.cardcrawl.core.CardCrawlGame
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.helpers.PowerTip
+import com.megacrit.cardcrawl.monsters.AbstractMonster
 import com.megacrit.cardcrawl.potions.AbstractPotion
 import com.megacrit.cardcrawl.rooms.AbstractRoom
 import yuyuko.actions.LosePotionSlotAction
@@ -37,10 +38,13 @@ class GelsemiumTeaPotion : CustomPotion(NAME, ID,
     }
 
     override fun use(target: AbstractCreature?) {
-        if (AbstractDungeon.getCurrRoom().phase != AbstractRoom.RoomPhase.COMBAT) {
+        if (target == null || AbstractDungeon.getCurrRoom().phase != AbstractRoom.RoomPhase.COMBAT) {
             return
         }
-        val damage = target!!.maxHealth + target.currentBlock
+        if (target !is AbstractMonster || target.type != AbstractMonster.EnemyType.NORMAL) {
+            return
+        }
+        val damage = target.maxHealth + target.currentBlock
         AbstractDungeon.actionManager.addToBottom(
                 LosePotionSlotAction()
         )
