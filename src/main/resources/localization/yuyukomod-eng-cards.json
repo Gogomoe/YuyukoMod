@@ -376,8 +376,8 @@
   },
   "All Wander": {
     "NAME": "All Wander",
-    "DESCRIPTION": "Gain X Phantom. NL If you haven't played any other card this turn, end the turm, then skip your enemies' next turn.",
-    "UPGRADE_DESCRIPTION": "Gain X+1 Phantom. NL If you haven't played any other card this turn, end the turm, then skip your enemies' next turn."
+    "DESCRIPTION": "If you haven't played any other card this turn, end the turm, then skip your enemies' next turn. Otherwise Gain X Phantom.",
+    "UPGRADE_DESCRIPTION": "If you haven't played any other card this turn, end the turm, then skip your enemies' next turn. Otherwise Gain X+1 Phantom."
   },
   "Become Phantom": {
     "NAME": "Become Phantom",

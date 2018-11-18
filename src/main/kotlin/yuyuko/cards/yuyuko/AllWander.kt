@@ -41,14 +41,6 @@ class AllWander : CustomCard(
         if (this.energyOnUse < EnergyPanel.totalCount) {
             this.energyOnUse = EnergyPanel.totalCount
         }
-        val amount = this.energyOnUse + this.magicNumber
-        AbstractDungeon.actionManager.addToBottom(
-                ApplyPowerAction(
-                        self, self,
-                        GhostPower(self!!, amount),
-                        amount
-                )
-        )
 
         if (AbstractDungeon.player.cardsPlayedThisTurn == 1) {
             AbstractDungeon.actionManager.addToBottom(
@@ -62,16 +54,26 @@ class AllWander : CustomCard(
                     EndTurnAction()
             )
 
-            val monsters = AbstractDungeon.getCurrRoom().monsters.monsters
+            AbstractDungeon.getCurrRoom().monsters.monsters
                     .filter { !it.isDeadOrEscaped }
+                    .forEach {
+                        AbstractDungeon.actionManager.addToBottom(
+                                RollMoveAction(it)
+                        )
+                    }
 
-            monsters.forEach {
-                AbstractDungeon.actionManager.addToBottom(
-                        RollMoveAction(it)
-                )
-            }
+        } else {
+            val amount = this.energyOnUse + this.magicNumber
+            AbstractDungeon.actionManager.addToBottom(
+                    ApplyPowerAction(
+                            self, self,
+                            GhostPower(self!!, amount),
+                            amount
+                    )
+            )
         }
-        self.energy.use(EnergyPanel.totalCount)
+
+        self!!.energy.use(EnergyPanel.totalCount)
     }
 
     override fun upgrade() {
