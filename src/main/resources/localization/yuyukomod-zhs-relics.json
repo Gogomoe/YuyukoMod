@@ -26,7 +26,7 @@
     "NAME": "诱蛾灯",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "每 #b3 回合，将一张 #y蝶 洗入牌堆"
+      "每 #b3 回合，将一张随机 #y衍生蝶 洗入牌堆"
     ]
   },
   "Blue Kimono": {

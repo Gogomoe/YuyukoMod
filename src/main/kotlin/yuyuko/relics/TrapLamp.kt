@@ -5,7 +5,8 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon
 import com.megacrit.cardcrawl.helpers.ImageMaster
 import com.megacrit.cardcrawl.relics.AbstractRelic
-import yuyuko.cards.yuyuko.Butterfly
+import yuyuko.cards.yuyuko.*
+import yuyuko.getRandom
 
 
 class TrapLamp : CustomRelic(
@@ -38,8 +39,15 @@ class TrapLamp : CustomRelic(
         }
         if (counter == 3) {
             this.flash()
+            val toGet = listOf(
+                    ::Butterfly,
+                    ::ButterflyGhost,
+                    ::ButterflyDeepRooted,
+                    ::ButterflySwallowtail,
+                    ::ButterflyDelusion
+            )
             AbstractDungeon.actionManager.addToBottom(
-                    MakeTempCardInDrawPileAction(Butterfly(), 1, true, true)
+                    MakeTempCardInDrawPileAction(toGet.getRandom()!!.invoke(), 1, true, true)
             )
         }
     }
