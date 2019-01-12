@@ -3,7 +3,7 @@
     "NAME": "Fan",
     "DESCRIPTIONS": [
       "When you play Sakura or Butterfly , If amount of same type greater than #b",
-      " , Exhaust it. The card be Exhaust can avoid Reset"
+      ", Exhaust it. These cards avoid Reset while being exhausted."
     ]
   },
   "Diaphaneity": {
@@ -11,28 +11,28 @@
     "DESCRIPTIONS": [
       "Reduce damage taken #b",
       "Increase damage taken #b",
-      "% ,Reduce half stacks at turn start"
+      "%, Reduce half stacks at turn start."
     ]
   },
   "Ghost": {
     "NAME": "Phantom",
     "DESCRIPTIONS": [
-      "At the end of turn,cause HP loss to a random enemy of ' #bcount #bof #bremaining #bhand ' for #b",
-      " times. NL At the start of turn,give 1 #yConstricted to a random enemy,reduce 1 stack"
+      "At the end of turn, cause HP loss to a random enemy of ' #bcount #bof #bremaining #bhand ' for #b",
+      " times. NL At the start of turn, give 1 #yConstricted to a random enemy and reduce 1 stack"
     ]
   },
   "Nihility": {
     "NAME": "Nihility",
     "DESCRIPTIONS": [
       "Each card you play in this turn will give #b",
-      " Diaphaneity to you and all Enemies"
+      " Diaphaneity to you and all Enemies."
     ]
   },
   "Ghastly Dream": {
     "NAME": "Ghastly Dream",
     "DESCRIPTIONS": [
-      "This turn your Butterfly will be played for extra  #b",
-      " times"
+      "This turn your Butterfly will be played an extra #b",
+      " times."
     ]
   },
   "Dizziness": {
@@ -61,13 +61,13 @@
     "NAME": "Supernatural Nether",
     "DESCRIPTIONS": [
       "At next #b",
-      " turn start,Increase Diaphaneity of everyone to 20"
+      " turn start, Increase Diaphaneity of everyone to 20"
     ]
   },
   "Living to Die": {
     "NAME": "Living to Die",
     "DESCRIPTIONS": [
-      "Diaphaneity of enemies will not reduce at turn start, NL When reach 100 stacks,give 1 Intangible and Fading"
+      "Diaphaneity of enemies will not reduce at turn start, NL When they reach 100 stacks of it, give 1 Intangible and Fading."
     ]
   },
   "Showy Withering": {
@@ -75,40 +75,40 @@
     "DESCRIPTIONS": [
       "At the start of turn, UpgradeAll #b",
       " times, Retrieve Sakura #b",
-      " times. NL Each 2 Sakura you played,Next Sakura will be Exhausted"
+      " times. NL Every third Sakura you play is exhausted."
     ]
   },
   "Remain Here": {
     "NAME": "Remain Here",
     "DESCRIPTIONS": [
-      "Reduce #b10 Fan at end of each turn"
+      "Reduce #b10 Fan at end of each turn."
     ]
   },
   "Full Inky Sakura": {
     "NAME": "Full Inky Sakura",
     "DESCRIPTIONS": [
-      "After play a Sakura, NL Next Butterfly will add extra 5% of MaxHP HP loss to all enemies"
+      "After play a Sakura, NL next Butterfly will add extra 5% of MaxHP HP loss to all enemies."
     ]
   },
   "The Forgotten Winter": {
     "NAME": "The Forgotten Winter",
     "DESCRIPTIONS": [
       "At start of next #b",
-      " turn,Your Diaphaneity will not reduce"
+      " turn, your Diaphaneity will not reduce."
     ]
   },
   "Revive The Butterflies": {
     "NAME": "Revive The Butterflies",
     "DESCRIPTIONS": [
-      "After you play dis-derivate, Revive Butterfly"
+      "After you play a non-derivate, Revive Butterfly."
     ]
   },
   "Postpone Bloom": {
     "NAME": "Postpone Bloom",
     "DESCRIPTIONS": [
       "Count when upgrade Sakura. NL At next shuffle, UpgradeAll Sakura for #b",
-      " times,draw #b",
-      " cards"
+      " times and draw #b",
+      " cards."
     ]
   },
   "Prepare Triple Snow": {
@@ -121,14 +121,14 @@
     "NAME": "Triple Snow",
     "DESCRIPTIONS": [
       "You will gain #b",
-      " times Diaphaneity from cards"
+      " times Diaphaneity from cards."
     ]
   },
   "Reunion after Death": {
     "NAME": "Reunion after Death",
     "DESCRIPTIONS": [
       "Gain #b",
-      " energy at the start of turn"
+      " energy at the start of turn."
     ]
   },
   "Chase The Sukhavati": {
@@ -141,70 +141,70 @@
     "NAME": "Reunion after Death",
     "DESCRIPTIONS": [
       "At the end of turn,randomly give all targets 1~ #b",
-      " Diaphaneity"
+      " Diaphaneity."
     ]
   },
   "Cerasus Subhirtella": {
     "NAME": "Cerasus Subhirtella",
     "DESCRIPTIONS": [
-      "When draw Sakura , Upgrade it for #b",
-      " times"
+      "When draw Sakura, Upgrade it for #b",
+      " times."
     ]
   },
   "Trap Lamp": {
     "NAME": "Trap Lamp",
     "DESCRIPTIONS": [
-      "Next turn , place a Trap Lamp into hand"
+      "Next turn, place a Trap Lamp into hand."
     ]
   },
   "Infinite Reviving": {
     "NAME": "Infinite Reviving",
     "DESCRIPTIONS": [
-      "When receive damage,Place Infinite into hand"
+      "When receiving damage, put Infinite into your hand."
     ]
   },
   "Dancing Soul": {
     "NAME": "Dancing Soul",
     "DESCRIPTIONS": [
-      "When draw Butterfly ,Place Dancing Soul into hand"
+      "When drawing Butterfly, put Dancing Soul into hand"
     ]
   },
   "Ticket to Heaven": {
     "NAME": "Ticket to Heaven",
     "DESCRIPTIONS": [
       "Receive extra #b",
-      " times damage from Constricted"
+      " times damage from Constricted."
     ]
   },
   "Prepare The Way to Death": {
     "NAME": "Prepare-The Way to Death",
     "DESCRIPTIONS": [
-      "At the end of the turn, gain 'The Way to Death'"
+      "At the end of the turn, gain 'The Way to Death'."
     ]
   },
   "The Way to Death": {
     "NAME": "The Way to Death",
     "DESCRIPTIONS": [
-      "Count the different cost you play each turn,gain Phantom of the equal amount at the start of next turn"
+      "Count the different costs you play each turn. Gain Phantom of their number at the start of next turn."
     ]
   },
   "Prepare Dream of Spring": {
     "NAME": "Prepare-Dream of Spring",
     "DESCRIPTIONS": [
-      "At the end of turn,give all targets Dream of Spring"
+      "At the end of turn, give all targets Dream of Spring."
     ]
   },
   "Dream of Spring": {
     "NAME": "Dream of Spring",
     "DESCRIPTIONS": [
-      "Receive half damage, gain double heal"
+      "Receive half damage, gain double heal."
     ]
   },
   "Sakura Sakura": {
     "NAME": "Sakura Sakura",
     "DESCRIPTIONS": [
       "Place #ySakura into hand at the start of next #b",
-      " turns"
+      " turns."
     ]
   }
 }
