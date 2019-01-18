@@ -182,7 +182,7 @@
   },
   "The Inky Sakura": {
     "NAME": "The Inky Sakura",
-    "DESCRIPTION": "Counts as a Sakura card. If upgraded 30 times, deal 100% HP Lose to all enemies. Otherwise Deal 5% HP Loss. NL Can be upgraded any number of times. Reset."
+    "DESCRIPTION": "Counts as a Sakura card. If upgraded 30 times, deal 100% HP loss to all enemies. Otherwise Deal 5% HP loss. NL Can be upgraded any number of times. Reset."
   },
   "Dream of Spring": {
     "NAME": "Dream of Spring",
