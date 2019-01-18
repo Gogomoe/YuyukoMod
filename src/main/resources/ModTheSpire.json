@@ -1,17 +1,16 @@
 {
   "modid": "Team TouhouSpire 04 - Yuyuko",
-  "name": "Team TouhouSpire 04 - Yuyuko",
+  "name": "Yuyuko",
   "author_list": [
     "Gogo",
     "若然"
   ],
-  "description": "Yuyuko Mod",
+  "description": "Adds Yuyuko（西行寺 幽々子） from Touhou Project as a new playable character.",
   "dependencies": [
     "basemod"
   ],
-  "version": "0.2.6",
-  "sts_version": "11-15-2018",
-  "mts_version": "3.6.0",
+  "version": "0.2.7",
+  "sts_version": "01-10-2019",
+  "mts_version": "3.6.3",
   "update_json": "https://api.github.com/repos/Gogomoe/YuyukoMod/releases/latest"
 }
-	
