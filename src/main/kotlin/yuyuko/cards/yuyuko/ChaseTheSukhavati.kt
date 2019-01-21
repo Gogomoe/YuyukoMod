@@ -28,7 +28,7 @@ class ChaseTheSukhavati : CustomCard(
     }
 
     init {
-        this.exhaust = true;
+        this.exhaust = true
     }
 
     override fun makeCopy(): AbstractCard = ChaseTheSukhavati()
@@ -54,6 +54,5 @@ class ChaseTheSukhavati : CustomCard(
             this.upgradeBaseCost(0)
         }
     }
-
 
 }

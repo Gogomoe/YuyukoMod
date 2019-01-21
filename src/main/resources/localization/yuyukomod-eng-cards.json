@@ -197,6 +197,10 @@
     "DESCRIPTION": "Replace all your cards with rarer cards except Derivate",
     "UPGRADE_DESCRIPTION": "Replace all your cards with rarer cards except Derivate. NL Innate"
   },
+  "Home of Suicide": {
+    "NAME": "Home of Suicide",
+    "DESCRIPTION": "Play all the Sakura and Butterfly that have been exhausted"
+  },
   "Reunion after Death": {
     "NAME": "Reunion after Death",
     "DESCRIPTION": "Can only be played when you don't have cards with same name except Basic and Derivate. Exhaust all Basic and Derivate. Gain energy at the start of turn.",

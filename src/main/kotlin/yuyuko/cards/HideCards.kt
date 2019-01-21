@@ -15,7 +15,8 @@ private val hideCards = mapOf(
         SceneryOfPapilio.ID to setOf(true),
         FinalOfFinal.ID to setOf(true),
         SereneSpring.ID to setOf(true, false),
-        DreamOfSpring.ID to setOf(true, false)
+        DreamOfSpring.ID to setOf(true, false),
+        HomeOfSuicide.ID to setOf(true, false)
 )
 
 fun AbstractCard.isHide(): Boolean = this.upgraded in hideCards[this.cardID] ?: emptySet()

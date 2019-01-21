@@ -197,6 +197,10 @@
     "DESCRIPTION": "将你所有非衍生牌替换为随机的更高品质的牌",
     "UPGRADE_DESCRIPTION": "将你所有非衍生牌替换为随机的更高品质的牌。 NL 固有"
   },
+  "Home of Suicide": {
+    "NAME": "亡我乡",
+    "DESCRIPTION": "打出所有已消耗的 樱 与 蝶 ， 消耗 ， 藏匿"
+  },
   "Reunion after Death": {
     "NAME": "死后一切大团圆",
     "DESCRIPTION": "只有在你的牌组中除了 衍生 和 初始 以外没有相同牌时才能打出。 NL 消耗所有 衍生 和 初始 ，回合开始时，获得1能量",
