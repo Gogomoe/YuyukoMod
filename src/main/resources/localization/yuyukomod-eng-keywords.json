@@ -3,28 +3,28 @@
     "TEXT": [
       "Derivate",
       "derivate",
-      "Derivate cards include NL Derivate Sakura,Derivate Butterfly,Explore,Photo,Soul NL these cards"
+      "Derivate cards include NL Derivate Sakura, Derivate Butterfly, Explore, Photo, Soul NL these cards"
     ]
   },
   "Derivate Sakura": {
     "TEXT": [
       "Derivate Sakura",
       "derivate sakura",
-      "Derivate Sakura includes Sakura,Sakura(seal),Sakura(suicide),Sakura(dormancy),Sakura(bloom) these cards"
+      "Derivate Sakura includes Sakura, Sakura(seal), Sakura(suicide), Sakura(dormancy), Sakura(bloom) these cards"
     ]
   },
   "Derivate Butterfly": {
     "TEXT": [
       "Derivate Butterfly",
       "derivate butterfly",
-      "Derivate Butterfly includes Butterfly,Butterfly(ghost),Butterfly(swallowtail),Butterfly(deep-rooted),Butterfly(delusion) these cards"
+      "Derivate Butterfly includes Butterfly, Butterfly(ghost), Butterfly(swallowtail), Butterfly(deep-rooted), Butterfly(delusion) these cards"
     ]
   },
   "Diaphaneity": {
     "TEXT": [
       "Diaphaneity",
       "diaphaneity",
-      "Each stack of you,reduce damage taken 5%； NL Each stack of enemy,increase its damage taken 5%,up to 100%. NL Reduce half stacks at turn start"
+      "On you, reduce damage taken by 5% * quantity. NL On an enemy, increase its damage taken by 5%, up to 100%. NL Reduce by half at start of each turn."
     ]
   },
   "Ghost": {
@@ -33,35 +33,35 @@
       "ghost",
       "Phantom",
       "phantom",
-      "At the end of turn,cause HP loss to a random enemy of ' #bcount #bof #bremaining #bhand ' for #bstacks times . NL At the start of turn,give 1 #yConstricted to a random enemy,reduce 1 stack"
+      "At the end of turn, cause HP loss to a random enemy of ' #bcount #bof #bremaining #bhand ' for #bstacks times. NL At the start of turn, give 1 #yConstricted to a random enemy and reduce by 1."
     ]
   },
   "Constricted": {
     "TEXT": [
       "Constricted",
       "constricted",
-      "At the end of turn,each stack of Constricted cause 1 damage"
+      "Dealt damage equal to Constricted quantity at start of turn."
     ]
   },
   "UpgradeAll": {
     "TEXT": [
       "UpgradeAll",
       "upgradeall",
-      "Upgrade all these cards during the battle"
+      "Upgrade all these cards during the battle."
     ]
   },
   "Reset": {
     "TEXT": [
       "Reset",
       "reset",
-      "degrade the card to initial grade"
+      "degrade the card to initial grade."
     ]
   },
   "Discover": {
     "TEXT": [
       "Discover",
       "discover",
-      "Select a card and place it into hand from X cards"
+      "Select a card and place it into hand from X cards."
     ]
   },
   "Hide": {
@@ -75,7 +75,7 @@
     "TEXT": [
       "Retrieve",
       "retrieve",
-      "Find a card and place it into hand from draw pile or discard pile"
+      "Find a card and place it into hand from draw pile or discard pile."
     ]
   },
   "Revive": {
@@ -89,49 +89,49 @@
     "TEXT": [
       "Sakura(Seal)",
       "sakura(seal)",
-      "A Sakura which can gain 4 Block"
+      "A Sakura which can gain 4 Block."
     ]
   },
   "Sakura(Suicide)": {
     "TEXT": [
       "Sakura(Suicide)",
       "sakura(suicide)",
-      "A Sakura which can gain 1 Phantom"
+      "A Sakura which can gain 1 Phantom."
     ]
   },
   "Sakura(Dormancy)": {
     "TEXT": [
       "Sakura(Dormancy)",
       "sakura(dormancy)",
-      "A Sakura which can gain 2 Diaphaneity"
+      "A Sakura which can gain 2 Diaphaneity."
     ]
   },
   "Sakura(Bloom)": {
     "TEXT": [
       "Sakura(Bloom)",
       "sakura(bloom)",
-      "A Sakura which can UpgradeAll Sakura"
+      "A Sakura which can UpgradeAll Sakura."
     ]
   },
   "Butterfly(Ghost)": {
     "TEXT": [
       "Butterfly(Ghost)",
       "butterfly(ghost)",
-      "A Butterfly which can give 1 Constricted"
+      "A Butterfly which can give 1 Constricted."
     ]
   },
   "Butterfly(Swallowtail)": {
     "TEXT": [
       "Butterfly(Swallowtail)",
       "butterfly(swallowtail)",
-      "A Butterfly which can UpgradeAll Butterfly"
+      "A Butterfly which can UpgradeAll Butterfly."
     ]
   },
   "Butterfly(Deep Rooted)": {
     "TEXT": [
       "Butterfly(Deep-Rooted)",
       "butterfly(deep-rooted)",
-      "A Butterfly which could cause HP loss"
+      "A Butterfly which could cause HP loss."
     ]
   },
   "Butterfly(Delusion)": {

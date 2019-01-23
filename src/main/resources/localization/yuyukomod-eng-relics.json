@@ -19,14 +19,14 @@
     "NAME": "Ghost Lamp",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "At the start of each turn, gain 1 #yPhantom"
+      "At the start of each turn, gain 1 #yPhantom."
     ]
   },
   "Trap Lamp": {
     "NAME": "Trap Lamp",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Every #b3 turns, shuffle 1 random #yDerivate #yButterfly into your draw pile"
+      "Every #b3 turns, shuffle 1 random #yDerivate #yButterfly into your draw pile."
     ]
   },
   "Blue Kimono": {

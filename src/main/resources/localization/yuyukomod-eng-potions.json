@@ -3,36 +3,36 @@
     "NAME": "Firefly",
     "DESCRIPTIONS": [
       "Heal #b",
-      " % of your lost HP"
+      " % of your lost HP."
     ]
   },
   "Keine": {
     "NAME": "Keine",
     "DESCRIPTIONS": [
-      "exhaust or shuffle all cards in discard pile, then draw 2 ",
-      " cards"
+      "Exhaust or shuffle all cards in discard pile, then draw 2 ",
+      " cards."
     ]
   },
   "Gelsemium Tea": {
     "NAME": "Gelsemium Tea",
     "DESCRIPTIONS": [
-      "kill a normal enemy and lose a potion slot"
+      "Kill a normal enemy and lose a potion slot."
     ]
   },
   "Pckles": {
     "NAME": "Pckles",
     "DESCRIPTIONS": [
       "Gain #b",
-      " block , heal #b",
-      " HP , add a copy of this to potion rewards"
+      " block, heal #b",
+      " HP, and add a copy of this to potion rewards."
     ]
   },
   "Turbid Wine": {
     "NAME": "Turbid Wine",
     "DESCRIPTIONS": [
       "Deal #b",
-      " damage to all enemies , give #b",
-      " Weakened to all enemies , add a copy of this to potion rewards"
+      " damage to all enemies, give #b",
+      " Weakened to all enemies, and add a copy of this to potion rewards."
     ]
   }
 }

@@ -13,7 +13,7 @@
   },
   "Faramita's Temptation": {
     "NAME": "Faramita's Temptation",
-    "DESCRIPTION": "Apply 1 Intangible and Fading for each X+!M! HP that enemy has."
+    "DESCRIPTION": "Apply 1 Intangible and Fading for each X+ !M! HP that enemy has."
   },
   "Sakura": {
     "NAME": "Sakura",
@@ -116,7 +116,7 @@
   },
   "Bomb": {
     "NAME": "Bomb",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain 1 Intangible. NL When discarded, add a copy of this card to the discard pile. Exhaust"
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain 1 Intangible. NL When discarded, add a copy of this card to the discard pile. Exhaust."
   },
   "Lunch": {
     "NAME": "Lunch",
@@ -154,22 +154,22 @@
   },
   "Explore Ghostdom": {
     "NAME": "Explore Ghostdom",
-    "DESCRIPTION": "Transform all cards except Derivate to Explore. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Transform all cards except Derivate to Explore+. NL Exhaust"
+    "DESCRIPTION": "Transform all cards except Derivate to Explore. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Transform all cards except Derivate to Explore+. NL Exhaust."
   },
   "Unfulfilling Attachment": {
     "NAME": "Unfulfilling Attachment",
-    "DESCRIPTION": "Discover 1 10 times. Transform all Derivate Sakura with no extra effect to Sakura(Bloom)"
+    "DESCRIPTION": "Discover 1 10 times. Transform all Derivate Sakura with no extra effect to Sakura(Bloom)."
   },
   "Remain Here": {
     "NAME": "Remain Here",
-    "DESCRIPTION": "Gain 100 Fan. Reduce 10 stacks at end of each turn. NL Hide",
-    "UPGRADE_DESCRIPTION": "Gain 100 Fan. Reduce 10 stacks at end of each turn."
+    "DESCRIPTION": "Gain 100 Fan. Reduce Fan by 10 at end of each turn. NL Hide.",
+    "UPGRADE_DESCRIPTION": "Gain 100 Fan. Reduce Fan by 10 at end of each turn."
   },
   "Full Inky Sakura": {
     "NAME": "Full Inky Sakura",
-    "DESCRIPTION": "After playing a Sakura, next Butterfly will add extra 5% of MaxHP HP loss to all enemies. NL Hide.",
-    "UPGRADE_DESCRIPTION": "After playing a Sakura, next Butterfly will add extra 5% of MaxHP HP loss to all enemies."
+    "DESCRIPTION": "After playing a Sakura, next Butterfly will add an extra 5% of MaxHP HP loss to all enemies. NL Hide.",
+    "UPGRADE_DESCRIPTION": "After playing a Sakura, next Butterfly will add an extra 5% of MaxHP HP loss to all enemies."
   },
   "Bury in The Template": {
     "NAME": "Bury in The Template",
@@ -178,7 +178,7 @@
   "Scenery of Papilio": {
     "NAME": "Scenery of Papilio",
     "DESCRIPTION": "Copy all Derivate and place them into discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Copy all Derivate and place them into draw pile. NL Exhaust , Hide."
+    "UPGRADE_DESCRIPTION": "Copy all Derivate and place them into draw pile. NL Exhaust, Hide."
   },
   "The Inky Sakura": {
     "NAME": "The Inky Sakura",
@@ -210,8 +210,8 @@
   },
   "Reverse The Screen": {
     "NAME": "Reverse The Screen",
-    "DESCRIPTION": "Exchange stacks of Diaphaneity with an enemy. Gain Block of the difference between the stacks.",
-    "UPGRADE_DESCRIPTION": "Exchange stacks of Diaphaneity with an enemy. Gain Block of the difference between the stacks. Hide."
+    "DESCRIPTION": "Exchange your Diaphaneity quantity with an enemy's. Gain Block of the difference between the quantities.",
+    "UPGRADE_DESCRIPTION": "Exchange your Diaphaneity quantity with an enemy's. Gain Block of the difference between the stacks. Hide."
   },
   "Unborn Light": {
     "NAME": "Unborn Light",
@@ -219,37 +219,37 @@
   },
   "Elegance": {
     "NAME": "Elegance",
-    "DESCRIPTION": "Gain Diaphaneity of Fan stacks. NL UpgradeAll Sakura.",
-    "UPGRADE_DESCRIPTION": "Gain Diaphaneity of Fan stacks. NL Place a Sakura into draw pile. UpgradeAll Sakura."
+    "DESCRIPTION": "Increase Diaphaneity by your Fan. NL UpgradeAll Sakura.",
+    "UPGRADE_DESCRIPTION": "Increase Diaphaneity by your Fan stacks. NL Place a Sakura into draw pile. UpgradeAll Sakura."
   },
   "End of Faramita": {
     "NAME": "End of Faramita",
-    "DESCRIPTION": "Only can be played when the stacks of Diaphaneity of the enemy are less than 20. Double its stacks. NL Ethereal",
+    "DESCRIPTION": "Only can be played when enemy's Diaphaneity is less than 20. Double its Diaphaneity. NL Ethereal",
     "EXTENDED_DESCRIPTION": [
       "it has too much Diaphaneity"
     ]
   },
   "Gone": {
     "NAME": "Gone",
-    "DESCRIPTION": "Give Diaphaneity of your stacks to ALL enemies."
+    "DESCRIPTION": "Give Diaphaneity of your Diaphaneity to ALL enemies."
   },
   "The Forgotten Winter": {
     "NAME": "The Forgotten Winter",
-    "DESCRIPTION": "At start of next turn,Your Diaphaneity will not reduce. NL Ethereal."
+    "DESCRIPTION": "At start of next turn, your Diaphaneity will not reduce. NL Ethereal."
   },
   "The Nether": {
     "NAME": "The Nether",
-    "DESCRIPTION": "Deal each enemies its own Diaphaneity stacks damage. NL Heal Diaphaneity stacks HP, NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "Deal each enemies its own Diaphaneity stacks damage. NL Heal Diaphaneity stacks HP."
+    "DESCRIPTION": "Deal damage to each enemy equal to its Diaphaneity quantity. NL Heal by Diaphaneity HP. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Deal each enemies its own Diaphaneity stacks damage. NL Heal by Diaphaneity HP."
   },
   "Unreal": {
     "NAME": "Unreal",
-    "DESCRIPTION": "Select an enemy. If its Diaphaneity stacks is greater than 20, gain 1 Intangible. Otherwise, gain Diaphaneity of its Diaphaneity stacks."
+    "DESCRIPTION": "Select an enemy. If its Diaphaneity stacks is greater than 20, gain 1 Intangible. Otherwise, gain Diaphaneity equal to its Diaphaneity."
   },
   "Stifle": {
     "NAME": "Stifle",
-    "DESCRIPTION": "Can only be played when the enemy's Diaphaneity stacks are greater than 20. NL Reduce 20 Diaphaneity and deal damage of half its HP. Ethereal.",
-    "UPGRADE_DESCRIPTION": "Can only be played when the enemy's Diaphaneity stacks are greater than 20. NL Reduce 20 Diaphaneity and deal damage of half its HP.",
+    "DESCRIPTION": "Can only be played when the enemy's Diaphaneity is greater than 20. NL Reduce its Diaphaneity by 20 and deal damage of half its HP. Ethereal.",
+    "UPGRADE_DESCRIPTION": "Can only be played when the enemy's Diaphaneity is greater than 20. NL Reduce its Diaphaneity by 20 and deal damage of half its HP.",
     "EXTENDED_DESCRIPTION": [
       "it doesn't has enough Diaphaneity"
     ]
@@ -269,7 +269,7 @@
   },
   "Death Dancing": {
     "NAME": "Death Dancing",
-    "DESCRIPTION": "Give !M! Diaphaneity, NL Deal damage of stacks of Diaphaneity."
+    "DESCRIPTION": "Give !M! Diaphaneity, NL Then deal damage equal to its Diaphaneity."
   },
   "Phantom Butterflies": {
     "NAME": "Phantom Butterflies",
@@ -281,19 +281,19 @@
   },
   "Snowing Sakura": {
     "NAME": "Snowing Sakura",
-    "DESCRIPTION": "Reduce 1 Fan. Reward in turn:1 Sakura for Diaphaneity, 5 Diaphaneity for Energy, 3 Energy for Sakura(Bloom) (to card pile). Exhaust.",
-    "UPGRADE_DESCRIPTION": "Reduce 1 Fan. Reward in turn:1 Sakura for Diaphaneity, 5 Diaphaneity for Energy, 3 Energy for Sakura(Bloom) (to card pile). Reset.",
+    "DESCRIPTION": "Reduce 1 Fan. Gain (rounding down) 1 Diaphaneity per ALL Sakura, then 1 Energy per 5 Diaphaneity, then 1 Sakura(Bloom) per 3 Energy in card pile. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Reduce 1 Fan. Gain (rounding down) 1 Diaphaneity per ALL Sakura, then 1 Energy per 5 Diaphaneity, then 1 Sakura(Bloom) per 3 Energy in card pile. Reset.",
     "EXTENDED_DESCRIPTION": [
       "I don't have enough Fan"
     ]
   },
   "Living to Die": {
     "NAME": "Living to Die",
-    "DESCRIPTION": "Diaphaneity of enemies will not reduce at turn start. NL When reach 100 stacks, give 1 Intangible and Fading."
+    "DESCRIPTION": "Diaphaneity of enemies will not reduce at turn start. NL When it reaches 100, give 1 Intangible and 1 Fading."
   },
   "Supernatural Nether": {
     "NAME": "Supernatural Nether",
-    "DESCRIPTION": "At next !M! turn start, Increase Diaphaneity of everyone to 20. NL Exhaust."
+    "DESCRIPTION": "At next !M! turn start, increase Diaphaneity of everyone to 20. NL Exhaust."
   },
   "Dancing Butterflies": {
     "NAME": "Dancing Butterflies",
@@ -430,7 +430,7 @@
   },
   "Dying Butterflies": {
     "NAME": "Dying Butterflies",
-    "DESCRIPTION": "Counts as a Butterfly card. Gain !M! Phantom, up to 5 stacks, NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Counts as a Butterfly card. Gain !M! Phantom, up to 5. NL Can be upgraded any number of times. Reset"
   },
   "Phantom Gift": {
     "NAME": "Phantom Gift",
@@ -446,7 +446,7 @@
   },
   "Dying Sakura": {
     "NAME": "Dying Sakura",
-    "DESCRIPTION": "Counts as a Sakura card. Every 3 times upgrade, place 1 Soul into hand. NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Counts as a Sakura card. For every 3 times upgraded, place 1 Soul into hand. NL Can be upgraded any number of times. Reset."
   },
   "Dying Dream": {
     "NAME": "Dying Dream",
