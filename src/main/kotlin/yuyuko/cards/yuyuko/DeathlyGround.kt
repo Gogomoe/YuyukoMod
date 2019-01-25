@@ -22,7 +22,7 @@ class DeathlyGround : CustomCard(
     companion object {
         @JvmStatic
         val ID = "Deathly Ground"
-        val IMAGE_PATH = "images/yuyuko/cards/attack.png"
+        val IMAGE_PATH = "images/yuyuko/cards/DeathlyGround.png"
         val COST = 0
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!

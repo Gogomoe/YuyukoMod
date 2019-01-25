@@ -21,7 +21,7 @@ class FaramitasTemptation : CustomCard(
     companion object {
         @JvmStatic
         val ID = "Faramita's Temptation"
-        val IMAGE_PATH = "images/yuyuko/cards/skill.png"
+        val IMAGE_PATH = "images/yuyuko/cards/FaramitasTemptation.png"
         val COST = -1
         val AMOUNT = 6
         val UPGRADE_PLUS_AMOUNT = 3
