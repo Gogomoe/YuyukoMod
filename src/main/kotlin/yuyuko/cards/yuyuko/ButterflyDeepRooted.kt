@@ -25,7 +25,7 @@ class ButterflyDeepRooted : CustomCard(
     companion object {
         @JvmStatic
         val ID = "Butterfly (Deep Rooted)"
-        val IMAGE_PATH = "images/yuyuko/cards/butterfly.png"
+        val IMAGE_PATH = "images/yuyuko/cards/ButterflyDeepRooted.png"
         val COST = -2
         val ATTACK_DMG = 1
         val UPGRADE_PLUS_DMG = 1

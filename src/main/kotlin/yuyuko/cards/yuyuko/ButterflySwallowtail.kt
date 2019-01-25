@@ -26,7 +26,7 @@ class ButterflySwallowtail : CustomCard(
     companion object {
         @JvmStatic
         val ID = "Butterfly (Swallowtail)"
-        val IMAGE_PATH = "images/yuyuko/cards/butterfly.png"
+        val IMAGE_PATH = "images/yuyuko/cards/ButterflySwallowtail.png"
         val COST = -2
         val ATTACK_DMG = 1
         val UPGRADE_PLUS_DMG = 1
