@@ -23,7 +23,7 @@ class SakuraBloom : CustomCard(
     companion object {
         @JvmStatic
         val ID = "Sakura (Bloom)"
-        val IMAGE_PATH = "images/yuyuko/cards/sakura.png"
+        val IMAGE_PATH = "images/yuyuko/cards/SakuraBloom.png"
         val COST = -2
         val HEAL_AMOUNT = 1
         val UPGRADE_PLUS_AMOUNT = 1
