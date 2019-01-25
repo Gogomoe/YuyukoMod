@@ -2,8 +2,8 @@
   "Fan": {
     "NAME": "Fan",
     "DESCRIPTIONS": [
-      "When you play Sakura or Butterfly , If amount of same type greater than #b",
-      ", Exhaust it. These cards avoid Reset while being exhausted."
+      "When you play Sakura or Butterfly, If amount of same type greater than #b",
+      ", exhaust it. These cards avoid Reset while being exhausted."
     ]
   },
   "Diaphaneity": {
@@ -11,14 +11,14 @@
     "DESCRIPTIONS": [
       "Reduce damage taken #b",
       "Increase damage taken #b",
-      "%, Reduce half stacks at turn start."
+      "%. Reduce by half at start of turn."
     ]
   },
   "Ghost": {
     "NAME": "Phantom",
     "DESCRIPTIONS": [
       "At the end of turn, cause HP loss to a random enemy of ' #bcount #bof #bremaining #bhand ' for #b",
-      " times. NL At the start of turn, give 1 #yConstricted to a random enemy and reduce 1 stack"
+      " times. NL At the start of turn, give 1 #yConstricted to a random enemy and reduce by 1."
     ]
   },
   "Nihility": {
@@ -38,36 +38,36 @@
   "Dizziness": {
     "NAME": "Dizziness",
     "DESCRIPTIONS": [
-      "Skip next turn of enemies"
+      "Skip next turn of enemies."
     ]
   },
   "Become Phantom": {
     "NAME": "Become Phantom",
     "DESCRIPTIONS": [
       "Gain #b",
-      " Phantom at the start of turn"
+      " Phantom at the start of turn."
     ]
   },
   "Float on Moon": {
     "NAME": "Float on Moon",
     "DESCRIPTIONS": [
       "At the start of turn, UpgradeAll Butterfly for #b",
-      " times,Reduce #b",
-      " draw, NL Your Derivate Butterfly will Deal #b",
+      " times. Draw #b",
+      " cards fewer. NL Your Derivate Butterfly will Deal #b",
       " times damage and exhaust"
     ]
   },
   "Supernatural Nether": {
     "NAME": "Supernatural Nether",
     "DESCRIPTIONS": [
-      "At next #b",
-      " turn start, Increase Diaphaneity of everyone to 20"
+      "At start of next #b",
+      " turns, increase Diaphaneity of everyone to 20."
     ]
   },
   "Living to Die": {
     "NAME": "Living to Die",
     "DESCRIPTIONS": [
-      "Diaphaneity of enemies will not reduce at turn start, NL When they reach 100 stacks of it, give 1 Intangible and Fading."
+      "Diaphaneity of enemies will not reduce at turn start, NL When they reach 100 stacks of it, give 1 Intangible and 1 Fading."
     ]
   },
   "Showy Withering": {
@@ -87,7 +87,7 @@
   "Full Inky Sakura": {
     "NAME": "Full Inky Sakura",
     "DESCRIPTIONS": [
-      "After play a Sakura, NL next Butterfly will add extra 5% of MaxHP HP loss to all enemies."
+      "After playing a Sakura, NL next Butterfly will add an extra 5% MaxHP loss to all enemies."
     ]
   },
   "The Forgotten Winter": {
@@ -100,13 +100,13 @@
   "Revive The Butterflies": {
     "NAME": "Revive The Butterflies",
     "DESCRIPTIONS": [
-      "After you play a non-derivate, Revive Butterfly."
+      "After you play a non-derivate, Revive a Butterfly."
     ]
   },
   "Postpone Bloom": {
     "NAME": "Postpone Bloom",
     "DESCRIPTIONS": [
-      "Count when upgrade Sakura. NL At next shuffle, UpgradeAll Sakura for #b",
+      "Count when upgrading Sakura. NL At next shuffle, UpgradeAll Sakura for #b",
       " times and draw #b",
       " cards."
     ]
@@ -114,7 +114,7 @@
   "Prepare Triple Snow": {
     "NAME": "Prepare-Triple Snow",
     "DESCRIPTIONS": [
-      "At the end of the turn, gain 'Triple Snow'"
+      "At the end of the turn, gain 'Triple Snow'."
     ]
   },
   "Triple Snow": {
@@ -134,27 +134,27 @@
   "Chase The Sukhavati": {
     "NAME": "Chase The Sukhavati",
     "DESCRIPTIONS": [
-      "End the turn after you played 10 cards"
+      "End the turn after you play 10 cards"
     ]
   },
   "Past Graveyard": {
     "NAME": "Reunion after Death",
     "DESCRIPTIONS": [
-      "At the end of turn,randomly give all targets 1~ #b",
+      "At the end of turn, randomly give all targets 1~ #b",
       " Diaphaneity."
     ]
   },
   "Cerasus Subhirtella": {
     "NAME": "Cerasus Subhirtella",
     "DESCRIPTIONS": [
-      "When draw Sakura, Upgrade it for #b",
+      "When drawing Sakura, Upgrade it for #b",
       " times."
     ]
   },
   "Trap Lamp": {
     "NAME": "Trap Lamp",
     "DESCRIPTIONS": [
-      "Next turn, place a Trap Lamp into hand."
+      "Next turn, put a Trap Lamp into your hand."
     ]
   },
   "Infinite Reviving": {
@@ -166,7 +166,7 @@
   "Dancing Soul": {
     "NAME": "Dancing Soul",
     "DESCRIPTIONS": [
-      "When drawing Butterfly, put Dancing Soul into hand"
+      "When drawing Butterfly, put Dancing Soul into your hand."
     ]
   },
   "Ticket to Heaven": {
