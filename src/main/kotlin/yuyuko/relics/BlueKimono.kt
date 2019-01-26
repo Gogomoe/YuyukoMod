@@ -62,7 +62,7 @@ class BlueKimono : CustomRelic(
     private class Sakura : ChooseCard(
             BlueKimonoSakura.ID,
             BlueKimonoSakura.NAME,
-            "images/yuyuko/cards/sakura.png",
+            "images/yuyuko/cards/Sakura.png",
             BlueKimonoSakura.DESCRIPTION,
             BlueKimonoSakura()
     )
@@ -70,7 +70,7 @@ class BlueKimono : CustomRelic(
     private class Butterfly : ChooseCard(
             BlueKimonoButterfly.ID,
             BlueKimonoButterfly.NAME,
-            "images/yuyuko/cards/butterfly.png",
+            "images/yuyuko/cards/Butterfly.png",
             BlueKimonoButterfly.DESCRIPTION,
             BlueKimonoButterfly()
     )
