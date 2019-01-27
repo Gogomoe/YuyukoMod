@@ -33,36 +33,36 @@
     "NAME": "Blue Kimono",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Upon pickup,Select a Texture from #ySakura, #yButterfly, #yPhantom, #yFullMoon.",
+      "Upon pickup, select a Texture from #ySakura, #yButterfly, #yPhantom, and #yFullMoon.",
       "Select a Texture"
     ]
   },
   "Blue Kimono (Sakura)": {
     "NAME": "Blue Kimono (Sakura)",
     "FLAVOR": "",
-    "DESCRIPTIONS": [
-      "When draw #ySakura without extra effect,transform it to a #ySakura with random effect. NL #ySakra will deal #b3% HP loss of MaxHP to all enemies."
+    "DESCRIPTIONS": \[
+      "When drawing #ySakura without extra effect, transform it to a #ySakura with random effect. NL #ySakura will deal damage to each enemy equal to #b3% HP of its maxHP."
     ]
   },
   "Blue Kimono (Butterfly)": {
     "NAME": "Blue Kimono (Butterfly)",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "When draw #yButterfly without extra effect,transform it to a #yButterfly with random effect. NL #yButterfly will heal #b3% HP for you."
+      "When drawing #yButterfly without extra effect, transform it to a #yButterfly with random effect. NL #yButterfly will heal you #b3%."
     ]
   },
   "Blue Kimono (Phantom)": {
     "NAME": "Blue Kimono (Phantom)",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Every #b3 turns, trigger #yPhantom extra. NL At the start of turn,place a #ySoul into hand."
+      "After every #b3 turns, gain 1 #yPhantom. NL At the start of each turn, add 1 #ySoul to your hand."
     ]
   },
   "Blue Kimono (FullMoon)": {
     "NAME": "Blue Kimono (FullMoon)",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Each stack of #yDiaphaneity will enhance #b1% effect. NL At the end of turn, every #b5 #yDiaphaneity of you will give 1 #yBLock ,every #b5 #yDiaphaneity of enemy will deal 1 HP loss"
+      "Each #yDiaphaneity will prevent #b6% damage instead of 5%. NL At the end of turn, gain 1 #yBLock for every #b5 #yDiaphaneity on you. For every #b5 #yDiaphaneity on each enemy, deal 1 damage to that enemy."
     ]
   },
   "Obi": {

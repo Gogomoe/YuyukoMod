@@ -67,7 +67,7 @@
   "Living to Die": {
     "NAME": "Living to Die",
     "DESCRIPTIONS": [
-      "Diaphaneity of enemies will not reduce at turn start, NL When they reach 100 stacks of it, give 1 Intangible and 1 Fading."
+      "Diaphaneity of enemies will not reduce at turn start, NL When it reaches 100, give 1 Intangible and 1 Fading."
     ]
   },
   "Showy Withering": {
