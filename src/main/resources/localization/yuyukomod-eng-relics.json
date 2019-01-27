@@ -40,7 +40,7 @@
   "Blue Kimono (Sakura)": {
     "NAME": "Blue Kimono (Sakura)",
     "FLAVOR": "",
-    "DESCRIPTIONS": \[
+    "DESCRIPTIONS": [
       "When drawing #ySakura without extra effect, transform it to a #ySakura with random effect. NL #ySakura will deal damage to each enemy equal to #b3% HP of its maxHP."
     ]
   },
