@@ -12,7 +12,7 @@
     "NAME": "Coronal",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Right click during combat to activate. Gain #b1 #yIntangible and #b1 #Artifact . Recharges after #b5 combats."
+      "Right click during combat to activate. Gain #b1 #yIntangible and #b1 #Artifact. Recharges after #b5 combats."
     ]
   },
   "Ghost Lamp": {
@@ -41,7 +41,7 @@
     "NAME": "Blue Kimono (Sakura)",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "When drawing #ySakura without extra effect, transform it to a #ySakura with random effect. NL #ySakura will deal damage to each enemy equal to #b3% HP of its maxHP."
+      "When drawing #ySakura without extra effect, transform it to a #ySakura with random effect. NL #ySakura will apply HP loss to each enemy equal to #b3% HP of its maxHP."
     ]
   },
   "Blue Kimono (Butterfly)": {
@@ -62,7 +62,7 @@
     "NAME": "Blue Kimono (FullMoon)",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Each #yDiaphaneity will prevent #b6% damage instead of 5%. NL At the end of turn, gain 1 #yBlock for every #b5 #yDiaphaneity on you. For every #b5 #yDiaphaneity on each enemy, deal 1 damage to that enemy."
+      "Each #yDiaphaneity will prevent or add #b6% damage instead of 5%. NL At the end of turn, gain 1 #yBlock for every #b5 #yDiaphaneity on you. For every #b5 #yDiaphaneity on each enemy, deal 1 damage to that enemy."
     ]
   },
   "Obi": {

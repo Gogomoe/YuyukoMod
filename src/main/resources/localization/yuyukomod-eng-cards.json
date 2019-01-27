@@ -49,7 +49,7 @@
   },
   "Butterfly (Deep Rooted)": {
     "NAME": "Butterfly (Deep Rooted)",
-    "DESCRIPTION": "Deal !D! damage. Draw 1 card. NL Can be upgraded any number of times. Reset."
+    "DESCRIPTION": "Deal !D! HP loss. Draw 1 card. NL Can be upgraded any number of times. Reset."
   },
   "Butterfly (Delusion)": {
     "NAME": "Butterfly (Delusion)",
@@ -168,8 +168,8 @@
   },
   "Full Inky Sakura": {
     "NAME": "Full Inky Sakura",
-    "DESCRIPTION": "After playing a Sakura, next Butterfly will damage all enemies by 5% of their MaxHP HP. NL Hide.",
-    "UPGRADE_DESCRIPTION": "After playing a Sakura, next Butterfly will damage all enemies by 5% of their MaxHP."
+    "DESCRIPTION": "After playing a Sakura, next Butterfly will also cause all enemies to lose 5% of their MaxHP HP. NL Hide.",
+    "UPGRADE_DESCRIPTION": "After playing a Sakura, next Butterfly will also cause all enemies to lose 5% of their MaxHP HP."
   },
   "Bury in The Template": {
     "NAME": "Bury in The Template",
@@ -182,7 +182,7 @@
   },
   "The Inky Sakura": {
     "NAME": "The Inky Sakura",
-    "DESCRIPTION": "Counts as a Sakura card. If upgraded 30 times, deal 100% MaxHp damage to all enemies. Otherwise deal 5% of their MaxHP. NL Can be upgraded any number of times. Reset."
+    "DESCRIPTION": "Counts as a Sakura card. If upgraded 30 times, all enemies lose 100% of their HP. Otherwise, they lose 5% of their MaxHP HP. NL Can be upgraded any number of times. Reset."
   },
   "Dream of Spring": {
     "NAME": "Dream of Spring",
@@ -302,7 +302,7 @@
   },
   "Spear of Papilio": {
     "NAME": "Spear of Papilio",
-    "DESCRIPTION": "Deal !D! HP damage. NL Shuffle !M! Butterfly(Deep-Rooted) into your draw pile. NL UpgradeAll Butterfly cards."
+    "DESCRIPTION": "Deal !D! HP loss. NL Shuffle !M! Butterfly(Deep-Rooted) into your draw pile. NL UpgradeAll Butterfly cards."
   },
   "Song of Papilio": {
     "NAME": "Song of Papilio",
