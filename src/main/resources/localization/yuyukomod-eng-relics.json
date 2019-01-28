@@ -12,7 +12,7 @@
     "NAME": "Coronal",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Right click during combat to activate. Gain #b1 #yIntangible and #b1 #Artifact. Recharges after #b5 combats."
+      "Right click during combat to activate. Gain #b1 #yIntangible and #b1 #yArtifact. Recharges after #b5 combats."
     ]
   },
   "Ghost Lamp": {
