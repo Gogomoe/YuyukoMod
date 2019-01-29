@@ -92,7 +92,8 @@ class BlueKimono : CustomRelic(
     )
 
     abstract class ChooseCard(ID: String, NAME: String, img: String, DESCRIPTION: String, val relic: AbstractRelic) : CustomCard(
-            ID, NAME, img, -2, DESCRIPTION, STATUS, CardColorEnum.YUYUKO_COLOR, SPECIAL, NONE) {
+            ID, NAME, img, -2, DESCRIPTION.replace("#.".toRegex(), ""),
+            STATUS, CardColorEnum.YUYUKO_COLOR, SPECIAL, NONE) {
 
         override fun makeCopy(): AbstractCard? = null
 
