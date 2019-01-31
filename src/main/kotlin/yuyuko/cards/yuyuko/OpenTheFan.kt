@@ -19,7 +19,7 @@ class OpenTheFan : CustomCard(
     companion object {
         @JvmStatic
         val ID = "Open The Fan"
-        val IMAGE_PATH = "images/yuyuko/cards/skill2.png"
+        val IMAGE_PATH = "images/yuyuko/cards/OpenTheFan.png"
         val COST = 1
         val DRAW_AMOUNT = 2
         val UPGRADE_PLUS_AMOUNT = 1

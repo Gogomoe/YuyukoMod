@@ -20,7 +20,7 @@ class Bloom : CustomCard(
     companion object {
         @JvmStatic
         val ID = "Bloom"
-        val IMAGE_PATH = "images/yuyuko/cards/skill2.png"
+        val IMAGE_PATH = "images/yuyuko/cards/Bloom.png"
         val COST = 0
         val DRAW_AMOUNT = 1
         val UPGRADE_PLUS_AMOUNT = 1

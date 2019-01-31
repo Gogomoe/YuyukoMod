@@ -19,7 +19,7 @@ class WanderingSoul : CustomCard(
     companion object {
         @JvmStatic
         val ID = "Wandering Soul"
-        val IMAGE_PATH = "images/yuyuko/cards/power2.png"
+        val IMAGE_PATH = "images/yuyuko/cards/WanderingSoul.png"
         val COST = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!

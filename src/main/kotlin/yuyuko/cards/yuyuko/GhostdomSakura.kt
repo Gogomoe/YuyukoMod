@@ -20,7 +20,7 @@ class GhostdomSakura : CustomCard(
     companion object {
         @JvmStatic
         val ID = "Ghostdom Sakura"
-        val IMAGE_PATH = "images/yuyuko/cards/skill2.png"
+        val IMAGE_PATH = "images/yuyuko/cards/GhostdomSakura.png"
         val COST = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
