@@ -15,13 +15,13 @@ import yuyuko.setCantUseMessage
 
 class BecomePhantom : CustomCard(
         ID, NAME, IMAGE_PATH, COST, DESCRIPTION,
-        CardType.SKILL, CardColorEnum.YUYUKO_COLOR,
+        CardType.POWER, CardColorEnum.YUYUKO_COLOR,
         CardRarity.COMMON, CardTarget.SELF
 ) {
     companion object {
         @JvmStatic
         val ID = "Become Phantom"
-        val IMAGE_PATH = "images/yuyuko/cards/skill5.png"
+        val IMAGE_PATH = "images/yuyuko/cards/power.png"
         val COST = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
@@ -30,19 +30,15 @@ class BecomePhantom : CustomCard(
         val EXTENDED_DESCRIPTION = CARD_STRINGS.EXTENDED_DESCRIPTION!!
     }
 
-    init {
-        this.exhaust = true
-    }
-
     override fun makeCopy(): AbstractCard = BecomePhantom()
 
     override fun canUse(self: AbstractPlayer?, target: AbstractMonster?): Boolean =
-            super.canUse(self, target) && self!!.hasEnoughPower(FanPower.POWER_ID).also {
+            super.canUse(self, target) && self!!.hasEnoughPower(FanPower.POWER_ID, 2).also {
                 setCantUseMessage(it, EXTENDED_DESCRIPTION[0])
             }
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {
-        self!!.getPower(FanPower.POWER_ID)?.reducePower(1)
+        self!!.getPower(FanPower.POWER_ID)?.reducePower(2)
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(
                         self, self,
@@ -55,7 +51,7 @@ class BecomePhantom : CustomCard(
     override fun upgrade() {
         if (!this.upgraded) {
             this.upgradeName()
-            this.exhaust = false
+            this.isInnate = true
             this.rawDescription = UPGRADE_DESCRIPTION
             this.initializeDescription()
         }

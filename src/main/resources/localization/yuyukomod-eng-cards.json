@@ -78,7 +78,7 @@
   },
   "Bloom": {
     "NAME": "Bloom",
-    "DESCRIPTION": "UpgradeAll Sakura cards. NL Draw !M! cards."
+    "DESCRIPTION": "UpgradeAll Sakura cards. NL Draw 1 cards. Exhaust."
   },
   "Wandering Soul": {
     "NAME": "Wandering Soul",
@@ -90,7 +90,7 @@
   },
   "Linger over Flower": {
     "NAME": "Linger over Flower",
-    "DESCRIPTION": "Counts as a Sakura and a Butterfly card. NL Shuffle 1 Sakura or a Butterfly into your draw pile. NL Can be upgraded any number of times. Exhaust."
+    "DESCRIPTION": "Counts as a Sakura and a Butterfly card. NL Shuffle 1 Sakura or a Butterfly into your draw pile. NL Can be upgraded any number of times."
   },
   "Cerasus Subhirtella": {
     "NAME": "Cerasus Subhirtella",
@@ -137,7 +137,8 @@
   },
   "Mini Ghostdom": {
     "NAME": "Mini Ghostdom",
-    "DESCRIPTION": "Gain 1 energy, 1 Phantom, and 1 Diaphaneity. Place a random special Sakura and Butterfly into draw pile, UpgradeAll Sakura and Butterfly. Draw 1 card."
+    "DESCRIPTION": "Gain 1 energy, 1 Phantom, and 1 Diaphaneity. Place a random special Sakura and Butterfly into draw pile, UpgradeAll Sakura and Butterfly. Draw 1 card. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 1 energy, 1 Phantom, and 1 Diaphaneity. Place a random special Sakura and Butterfly into draw pile, UpgradeAll Sakura and Butterfly. Draw 1 card."
   },
   "Postpone Bloom": {
     "NAME": "Postpone Bloom",
@@ -204,6 +205,7 @@
   "Reunion after Death": {
     "NAME": "Reunion after Death",
     "DESCRIPTION": "Can only be played when you don't have cards with same name except Basic and Derivate. Exhaust all Basic and Derivate. Gain energy at the start of turn.",
+    "UPGRADE_DESCRIPTION": "Can only be played when you don't have cards with same name except Basic and Derivate. Exhaust all Basic and Derivate. Gain energy at the start of turn. Innate.",
     "EXTENDED_DESCRIPTION": [
       "You can't play the card"
     ]
@@ -385,15 +387,15 @@
   },
   "Become Phantom": {
     "NAME": "Become Phantom",
-    "DESCRIPTION": "Lose 1 Fan. NL At the start of each turn, gain 1 Phantom.",
-    "UPGRADE_DESCRIPTION": "Lose 1 Fan. NL At the start of each turn, gain 1 Phantom.",
+    "DESCRIPTION": "Lose 2 Fan. NL At the start of each turn, gain 1 Phantom.",
+    "UPGRADE_DESCRIPTION": "Lose 2 Fan. NL At the start of each turn, gain 1 Phantom. Innate.",
     "EXTENDED_DESCRIPTION": [
       "I don't have any Fan."
     ]
   },
   "Sweet of Phantom": {
     "NAME": "Sweet of Phantom",
-    "DESCRIPTION": "Gain !M! Phantom. NL Apply !M! Constricted. NL Draw !M! cards."
+    "DESCRIPTION": "Gain !M! Phantom. NL Apply !M! Constricted. NL Draw !M! cards. Exhaust."
   },
   "Steamed Phantom": {
     "NAME": "Steamed Phantom",
@@ -409,8 +411,8 @@
   },
   "Unstable Ward": {
     "NAME": "Unstable Ward",
-    "DESCRIPTION": "Lose 1 Phantom. Draw 1 card. Discover 3.",
-    "UPGRADE_DESCRIPTION": "Lose 1 Phantom. Draw 2 cards. Discover 5.",
+    "DESCRIPTION": "Lose 1 Phantom. Draw 1 card. Discover 3. Exhaust",
+    "UPGRADE_DESCRIPTION": "Lose 1 Phantom. Draw 2 cards. Discover 5. Exhaust",
     "EXTENDED_DESCRIPTION": [
       "I don't have any Phantom."
     ]
@@ -430,11 +432,12 @@
   },
   "Dying Butterflies": {
     "NAME": "Dying Butterflies",
-    "DESCRIPTION": "Counts as a Butterfly card. Gain !M! Phantom, up to 5. NL Can be upgraded any number of times. Reset"
+    "DESCRIPTION": "Counts as a Butterfly card. Gain !M! Phantom, up to 5. NL Can be upgraded any number of times. Exhaust"
   },
   "Phantom Gift": {
     "NAME": "Phantom Gift",
-    "DESCRIPTION": "At the start of each turn, gain 1 Phantom."
+    "DESCRIPTION": "At the start of each turn, gain 1 Phantom.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, gain 1 Phantom. Innate."
   },
   "Trap Lamp": {
     "NAME": "Trap Lamp",
@@ -459,8 +462,8 @@
   },
   "Ticket to Heaven": {
     "NAME": "Ticket to Heaven",
-    "DESCRIPTION": "Apply 10 Fading. Double any Constricted damage target enemy takes. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. Apply 10 Fading. Double any Constricted damage target enemy takes. Exhaust."
+    "DESCRIPTION": "Apply 13 Fading. Double any Constricted damage target enemy takes. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. Apply 13 Fading. Double any Constricted damage target enemy takes. Exhaust."
   },
   "The Way to Death": {
     "NAME": "The Way to Death",

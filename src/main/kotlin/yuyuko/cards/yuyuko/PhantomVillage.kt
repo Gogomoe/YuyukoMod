@@ -22,7 +22,7 @@ class PhantomVillage : CustomCard(
         @JvmStatic
         val ID = "Phantom Village"
         val IMAGE_PATH = "images/yuyuko/cards/skill5.png"
-        val COST = 1
+        val COST = 2
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!

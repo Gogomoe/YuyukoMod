@@ -19,7 +19,7 @@ class ShowyWithering : CustomCard(
         @JvmStatic
         val ID = "Showy Withering"
         val IMAGE_PATH = "images/yuyuko/cards/power2.png"
-        val COST = 1
+        val COST = 3
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!

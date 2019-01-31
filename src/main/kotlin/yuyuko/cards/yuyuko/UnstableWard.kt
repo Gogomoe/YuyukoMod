@@ -29,6 +29,10 @@ class UnstableWard : CustomCard(
         val EXTENDED_DESCRIPTION = CARD_STRINGS.EXTENDED_DESCRIPTION!!
     }
 
+    init {
+        this.exhaust = true
+    }
+
     override fun makeCopy(): AbstractCard = UnstableWard()
 
     override fun canUse(self: AbstractPlayer?, target: AbstractMonster?): Boolean {

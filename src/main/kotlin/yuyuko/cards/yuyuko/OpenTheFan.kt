@@ -21,7 +21,7 @@ class OpenTheFan : CustomCard(
         val ID = "Open The Fan"
         val IMAGE_PATH = "images/yuyuko/cards/OpenTheFan.png"
         val COST = 1
-        val DRAW_AMOUNT = 2
+        val DRAW_AMOUNT = 1
         val UPGRADE_PLUS_AMOUNT = 1
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!

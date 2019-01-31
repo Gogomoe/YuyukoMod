@@ -31,6 +31,7 @@ class DyingButterflies : CustomCard(
     init {
         this.baseMagicNumber = 1
         this.magicNumber = 1
+        this.exhaust = true
     }
 
     override fun makeCopy(): AbstractCard = DyingButterflies()
@@ -43,7 +44,6 @@ class DyingButterflies : CustomCard(
                         this.magicNumber
                 )
         )
-        EventDispenser.emit(DegradeEvent(this, USE, this::degradeToInitiation))
     }
 
     override fun canUpgrade(): Boolean = this.timesUpgraded < 4
@@ -59,15 +59,6 @@ class DyingButterflies : CustomCard(
         ++this.timesUpgraded
         this.upgraded = true
         this.name = "$NAME+$timesUpgraded"
-        this.initializeTitle()
-    }
-
-    fun degradeToInitiation() {
-        this.upgraded = false
-        this.name = NAME
-        this.baseMagicNumber -= this.timesUpgraded
-        this.upgradedMagicNumber = false
-        this.timesUpgraded = 0
         this.initializeTitle()
     }
 }

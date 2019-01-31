@@ -37,8 +37,8 @@ class TicketToHeaven : CustomCard(
         AbstractDungeon.actionManager.addToBottom(
                 ApplyPowerAction(
                         target, self,
-                        FadePower(target!!, 10),
-                        10
+                        FadePower(target!!, 13),
+                        13
                 )
         )
         AbstractDungeon.actionManager.addToBottom(

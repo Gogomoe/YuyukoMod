@@ -27,8 +27,8 @@ class CityOfDeath : CustomCard(
     }
 
     init {
-        this.baseMagicNumber = 3
-        this.magicNumber = 3
+        this.baseMagicNumber = 2
+        this.magicNumber = 2
     }
 
     override fun makeCopy(): AbstractCard = CityOfDeath()
@@ -50,7 +50,7 @@ class CityOfDeath : CustomCard(
     override fun upgrade() {
         if (!this.upgraded) {
             this.upgradeName()
-            this.upgradeMagicNumber(2)
+            this.upgradeMagicNumber(1)
         }
     }
 

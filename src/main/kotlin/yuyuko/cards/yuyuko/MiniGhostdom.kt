@@ -32,6 +32,11 @@ class MiniGhostdom : CustomCard(
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
+        val UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION!!
+    }
+
+    init {
+        this.exhaust = true
     }
 
     override fun makeCopy(): AbstractCard = MiniGhostdom()
@@ -75,7 +80,9 @@ class MiniGhostdom : CustomCard(
     override fun upgrade() {
         if (!this.upgraded) {
             this.upgradeName()
-            this.upgradeBaseCost(2)
+            this.exhaust = false
+            this.rawDescription = UPGRADE_DESCRIPTION
+            this.initializeDescription()
         }
     }
 

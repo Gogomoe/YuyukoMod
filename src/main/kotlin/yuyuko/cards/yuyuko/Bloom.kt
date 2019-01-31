@@ -32,6 +32,7 @@ class Bloom : CustomCard(
     init {
         this.baseMagicNumber = DRAW_AMOUNT
         this.magicNumber = DRAW_AMOUNT
+        this.exhaust = true
     }
 
     override fun makeCopy(): AbstractCard = Bloom()
@@ -41,7 +42,6 @@ class Bloom : CustomCard(
         AbstractDungeon.actionManager.addToBottom(
                 DrawCardAction(self, this.magicNumber)
         )
-
     }
 
     override fun upgrade() {

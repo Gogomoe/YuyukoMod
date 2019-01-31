@@ -78,7 +78,7 @@
   },
   "Bloom": {
     "NAME": "绽放",
-    "DESCRIPTION": "升级所有 樱 ， NL 抽 !M! 张牌"
+    "DESCRIPTION": "升级所有 樱， NL 抽 1 张牌。 消耗"
   },
   "Wandering Soul": {
     "NAME": "彷徨的灵魂",
@@ -90,7 +90,7 @@
   },
   "Linger over Flower": {
     "NAME": "蝶恋花",
-    "DESCRIPTION": "同时是樱和蝶。 NL 选择一项：洗入1张同等级的樱或蝶， NL 可多次升级。 消耗"
+    "DESCRIPTION": "同时是樱和蝶。 NL 选择一项：洗入1张同等级的樱或蝶， NL 可多次升级"
   },
   "Cerasus Subhirtella": {
     "NAME": "白玉楼的垂枝樱",
@@ -137,7 +137,8 @@
   },
   "Mini Ghostdom": {
     "NAME": "盆景灵界",
-    "DESCRIPTION": "获得1点 能量 ，1层 幽灵 ，1层 虚化 ，NL 将随机1张 衍生樱 和1张 衍生蝶 洗入牌堆 ， NL升级所有 樱 和 蝶 ，抽1张牌"
+    "DESCRIPTION": "获得1点 能量 ，1层 幽灵 ，1层 虚化 ，NL 将随机1张 衍生樱 和1张 衍生蝶 洗入牌堆 ， NL 升级所有 樱 和 蝶 ，抽1张牌。 消耗",
+    "UPGRADE_DESCRIPTION": "获得1点 能量 ，1层 幽灵 ，1层 虚化 ，NL 将随机1张 衍生樱 和1张 衍生蝶 洗入牌堆 ， NL 升级所有 樱 和 蝶 ，抽1张牌"
   },
   "Postpone Bloom": {
     "NAME": "紫色彼岸樱推迟绽放",
@@ -204,6 +205,7 @@
   "Reunion after Death": {
     "NAME": "死后一切大团圆",
     "DESCRIPTION": "只有在你的牌组中除了 衍生 和 初始 以外没有相同牌时才能打出。 NL 消耗所有 衍生 和 初始 ，回合开始时，获得1能量",
+    "UPGRADE_DESCRIPTION": "只有在你的牌组中除了 衍生 和 初始 以外没有相同牌时才能打出。 NL 消耗所有 衍生 和 初始 ，回合开始时，获得1能量。 固有",
     "EXTENDED_DESCRIPTION": [
       "你无法打出这张牌"
     ]
@@ -385,15 +387,15 @@
   },
   "Become Phantom": {
     "NAME": "好死之灵",
-    "DESCRIPTION": "减少1层 扇  。 NL 每回合开始时，获得1层 幽灵 。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "减少1层 扇 ，获得1层 幽灵 。 NL 每回合开始时，获得1层 幽灵",
+    "DESCRIPTION": "减少2层 扇  。 NL 每回合开始时，获得1层 幽灵 ",
+    "UPGRADE_DESCRIPTION": "减少2层 扇 。 NL 每回合开始时，获得1层 幽灵 。 固有",
     "EXTENDED_DESCRIPTION": [
       "我没有扇了"
     ]
   },
   "Sweet of Phantom": {
     "NAME": "诱灵的甘蜜",
-    "DESCRIPTION": "获得 !M! 层 幽灵 ， NL 给予 !M! 层 缠绕 ， NL 抽 !M! 张牌"
+    "DESCRIPTION": "获得 !M! 层 幽灵 ， NL 给予 !M! 层 缠绕 ， NL 抽 !M! 张牌。 消耗"
   },
   "Steamed Phantom": {
     "NAME": "幽灵馒头",
@@ -409,8 +411,8 @@
   },
   "Unstable Ward": {
     "NAME": "不稳定的结界",
-    "DESCRIPTION": "损失1层 幽灵 ，抽1张牌， 发现 3",
-    "UPGRADE_DESCRIPTION": "损失1层 幽灵 ，抽2张牌， 发现 5",
+    "DESCRIPTION": "损失1层 幽灵 ，抽1张牌， 发现 3。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "损失1层 幽灵 ，抽2张牌， 发现 5。 NL 消耗",
     "EXTENDED_DESCRIPTION": [
       "我没有幽灵了"
     ]
@@ -430,11 +432,12 @@
   },
   "Dying Butterflies": {
     "NAME": "死蝶灵",
-    "DESCRIPTION": "是 蝶 。获得 !M! 层 幽灵 ，最多5层， NL 可多次升级。 重置"
+    "DESCRIPTION": "是 蝶 。获得 !M! 层 幽灵 ，最多5层， NL 可多次升级。 消耗"
   },
   "Phantom Gift": {
     "NAME": "故人的遗物",
-    "DESCRIPTION": "每回合开始时，获得1层 幽灵"
+    "DESCRIPTION": "每回合开始时，获得1层 幽灵",
+    "UPGRADE_DESCRIPTION": "每回合开始时，获得1层 幽灵。 固有"
   },
   "Trap Lamp": {
     "NAME": "通向黄泉的诱蛾灯",
@@ -459,8 +462,8 @@
   },
   "Ticket to Heaven": {
     "NAME": "通往无寿国的期票",
-    "DESCRIPTION": "给予 10 消逝 ，目标格外受到一倍的 缠绕 伤害。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "给予 10 消逝 ，目标格外受到一倍的 缠绕 伤害。 NL 固有 ， 消耗"
+    "DESCRIPTION": "给予 13 消逝 ，目标额外受到一倍的 缠绕 伤害。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "给予 13 消逝 ，目标格外受到一倍的 缠绕 伤害。 NL 固有 ， 消耗"
   },
   "The Way to Death": {
     "NAME": "黄泉平坂行路",

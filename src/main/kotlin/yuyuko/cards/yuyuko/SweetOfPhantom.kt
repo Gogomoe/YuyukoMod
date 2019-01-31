@@ -30,6 +30,7 @@ class SweetOfPhantom : CustomCard(
     init {
         this.baseMagicNumber = 1
         this.magicNumber = 1
+        this.exhaust = true
     }
 
     override fun makeCopy(): AbstractCard = SweetOfPhantom()

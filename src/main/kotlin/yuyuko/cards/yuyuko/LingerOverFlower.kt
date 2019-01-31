@@ -24,10 +24,6 @@ class LingerOverFlower : CustomCard(
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
     }
 
-    init {
-        this.exhaust = true
-    }
-
     override fun makeCopy(): AbstractCard = LingerOverFlower()
 
     override fun use(self: AbstractPlayer?, target: AbstractMonster?) {

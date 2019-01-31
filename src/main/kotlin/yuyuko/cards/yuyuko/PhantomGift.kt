@@ -19,10 +19,11 @@ class PhantomGift : CustomCard(
         @JvmStatic
         val ID = "Phantom Gift"
         val IMAGE_PATH = "images/yuyuko/cards/power.png"
-        val COST = 1
+        val COST = 2
         private val CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID)
         val NAME = CARD_STRINGS.NAME!!
         val DESCRIPTION = CARD_STRINGS.DESCRIPTION!!
+        val UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION!!
     }
 
     override fun makeCopy(): AbstractCard = PhantomGift()
@@ -40,7 +41,9 @@ class PhantomGift : CustomCard(
     override fun upgrade() {
         if (!this.upgraded) {
             this.upgradeName()
-            this.upgradeBaseCost(0)
+            this.isInnate = true
+            this.rawDescription = UPGRADE_DESCRIPTION
+            this.initializeDescription()
         }
     }
 
