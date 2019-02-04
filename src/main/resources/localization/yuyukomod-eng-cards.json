@@ -200,7 +200,7 @@
   },
   "Home of Suicide": {
     "NAME": "Home of Suicide",
-    "DESCRIPTION": "Play all the Sakura and Butterfly that have been exhausted"
+    "DESCRIPTION": "Play all the Sakura and Butterfly that have been exhausted."
   },
   "Reunion after Death": {
     "NAME": "Reunion after Death",
@@ -213,7 +213,7 @@
   "Reverse The Screen": {
     "NAME": "Reverse The Screen",
     "DESCRIPTION": "Exchange your Diaphaneity quantity with an enemy's. Gain Block of the difference between the quantities.",
-    "UPGRADE_DESCRIPTION": "Exchange your Diaphaneity quantity with an enemy's. Gain Block of the difference between the stacks. Hide."
+    "UPGRADE_DESCRIPTION": "Exchange your Diaphaneity quantity with an enemy's. Gain Block of the difference between the quantities. Hide."
   },
   "Unborn Light": {
     "NAME": "Unborn Light",
@@ -221,8 +221,8 @@
   },
   "Elegance": {
     "NAME": "Elegance",
-    "DESCRIPTION": "Increase Diaphaneity by your Fan. NL UpgradeAll Sakura.",
-    "UPGRADE_DESCRIPTION": "Increase Diaphaneity by your Fan stacks. NL Place a Sakura into draw pile. UpgradeAll Sakura."
+    "DESCRIPTION": "Increase your Diaphaneity by your Fan quantity. NL UpgradeAll Sakura.",
+    "UPGRADE_DESCRIPTION": "Increase your Diaphaneity by your Fan quantity. NL Place a Sakura into draw pile. UpgradeAll Sakura."
   },
   "End of Faramita": {
     "NAME": "End of Faramita",
@@ -242,11 +242,11 @@
   "The Nether": {
     "NAME": "The Nether",
     "DESCRIPTION": "Deal damage to each enemy equal to its Diaphaneity quantity. NL Heal by Diaphaneity HP. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "Deal each enemies its own Diaphaneity stacks damage. NL Heal by Diaphaneity HP."
+    "UPGRADE_DESCRIPTION": "Deal damage to each enemy equal to its Diaphaneity quantity. NL Heal by Diaphaneity HP."
   },
   "Unreal": {
     "NAME": "Unreal",
-    "DESCRIPTION": "Select an enemy. If its Diaphaneity stacks is greater than 20, gain 1 Intangible. Otherwise, gain Diaphaneity equal to its Diaphaneity."
+    "DESCRIPTION": "Select an enemy. If its Diaphaneity quantity is greater than 20, gain 1 Intangible. Otherwise, gain Diaphaneity equal to its Diaphaneity."
   },
   "Stifle": {
     "NAME": "Stifle",
@@ -283,8 +283,8 @@
   },
   "Snowing Sakura": {
     "NAME": "Snowing Sakura",
-    "DESCRIPTION": "Reduce 1 Fan. Gain (rounding down) 1 Diaphaneity per ALL Sakura, then 1 Energy per 5 Diaphaneity, then 1 Sakura(Bloom) per 3 Energy in card pile. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Reduce 1 Fan. Gain (rounding down) 1 Diaphaneity per ALL Sakura, then 1 Energy per 5 Diaphaneity, then 1 Sakura(Bloom) per 3 Energy in card pile. Reset.",
+    "DESCRIPTION": "Reduce 1 Fan. Gain (rounding down) 1 Diaphaneity per ALL Sakura, then 1 Energy per 5 Diaphaneity, then 1 Sakura(Bloom) per 3 Energy in draw pile. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Reduce 1 Fan. Gain (rounding down) 1 Diaphaneity per ALL Sakura, then 1 Energy per 5 Diaphaneity, then 1 Sakura(Bloom) per 3 Energy in draw pile. Reset.",
     "EXTENDED_DESCRIPTION": [
       "I don't have enough Fan"
     ]
@@ -304,7 +304,7 @@
   },
   "Spear of Papilio": {
     "NAME": "Spear of Papilio",
-    "DESCRIPTION": "Apply !D! HP loss. NL Shuffle !M! Butterfly(Deep-Rooted) into your draw pile. NL UpgradeAll Butterfly cards."
+    "DESCRIPTION": "Deal !D! HP loss. NL Shuffle !M! Butterfly(Deep-Rooted) into your draw pile. NL UpgradeAll Butterfly cards."
   },
   "Song of Papilio": {
     "NAME": "Song of Papilio",
@@ -373,8 +373,8 @@
   },
   "Float on Moon": {
     "NAME": "Float on Moon",
-    "DESCRIPTION": "At the start of your turn, UpgradeAll Butterfly cards 3 times. Draw 1 less card at the start of your turn. NL Your Derivate Butterfly will Deal 3 times damage and exhaust.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, UpgradeAll Butterfly cards 3 times. Draw 1 less card at the start of your turn. NL Your Derivate Butterfly will Deal 3 times damage and exhaust. Innate."
+    "DESCRIPTION": "At the start of your turn, UpgradeAll Butterfly cards 3 times. Draw 1 less card at the start of your turn. NL Your Derivate Butterfly will deal 3 times damage and exhaust.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, UpgradeAll Butterfly cards 3 times. Draw 1 less card at the start of your turn. NL Your Derivate Butterfly will deal 3 times damage and exhaust. Innate."
   },
   "Revive The Butterflies": {
     "NAME": "Revive The Butterflies",
@@ -467,6 +467,6 @@
   },
   "The Way to Death": {
     "NAME": "The Way to Death",
-    "DESCRIPTION": "Count the different costs you play each turn. Gain Phantom of their number at the start of next turn"
+    "DESCRIPTION": "Count the different costs you play each turn. Gain Phantom of their number at the start of next turn."
   }
 }
