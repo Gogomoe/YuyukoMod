@@ -14,12 +14,11 @@ class HideAction(val card: AbstractCard) : AbstractGameAction() {
 
     override fun update() {
         val player = AbstractDungeon.player
-        card.unhover()
-        player.hand.removeCard(card)
-        player.drawPile.addToBottom(card)
-        AbstractDungeon.actionManager.addToBottom(
-                DrawCardAction(player, 1)
-        )
+        player.hand.group.remove(card)
+        DrawCardAction.drawnCards.remove(card)
+
+        player.drawPile.addToBottom(card.makeStatEquivalentCopy())
+        player.draw()
         this.isDone = true
     }
 

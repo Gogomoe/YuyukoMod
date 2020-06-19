@@ -8,9 +8,9 @@ import yuyuko.event.EventDispenser
 import yuyuko.event.OnDrawEvent
 
 @SpirePatch(
-        cls = "com.megacrit.cardcrawl.characters.AbstractPlayer",
+        clz = com.megacrit.cardcrawl.characters.AbstractPlayer::class,
         method = "draw",
-        paramtypes = ["int"]
+        paramtypez = [Int::class]
 )
 class OnDrawEventPatch {
 
@@ -18,7 +18,7 @@ class OnDrawEventPatch {
 
         @JvmStatic
         @SpireInsertPatch(
-                rloc = 19,
+                rloc = 14,
                 localvars = ["c"]
         )
         fun Insert(instance: AbstractPlayer, numCards: Int, c: AbstractCard) {
